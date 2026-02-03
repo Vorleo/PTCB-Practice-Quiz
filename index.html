@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PTCB Practice Exam (90 Questions)</title>
+  <meta name="description" content="PTCB practice exam: 90 questions, timer, learning mode, RxNav dynamic meds, and domain weights." />
+
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111; }
+    body { margin: 0; background: #f6f7fb; }
+
+    header { background: #111827; color: #fff; padding: 16px 18px; }
+    header h1 { margin: 0; font-size: 18px; }
+    header p { margin: 6px 0 0; font-size: 13px; opacity: .9; }
+
+    .wrap { max-width: 980px; margin: 18px auto; padding: 0 14px; }
+    .card { background: #fff; border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.06); padding: 16px; }
+    .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; align-items: start; }
+
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .muted { color: #4b5563; }
+    .tiny { font-size: 12px; }
+    .pill { display:inline-flex; gap:8px; align-items:center; padding: 6px 10px; background:#f3f4f6; border-radius: 999px; font-size: 12px; }
+    .pill b { font-weight: 700; }
+
+    .progress { height: 10px; background:#e5e7eb; border-radius:999px; overflow:hidden; }
+    .bar { height: 100%; background:#2563eb; width:0%; transition: width .2s ease; }
+
+    button {
+      border: 0; border-radius: 10px; padding: 10px 12px; cursor: pointer;
+      background: #111827; color:#fff; font-weight: 600;
+    }
+    button.secondary { background:#e5e7eb; color:#111; }
+    button.warn { background:#b91c1c; }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+
+    .qhead { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+    .qtitle { font-size: 16px; margin: 0 0 6px; }
+    .domainTag { font-size: 12px; padding: 5px 10px; border-radius: 999px; background:#eef2ff; color:#1e3a8a; white-space: nowrap; }
+    .stem { margin: 8px 0 12px; line-height: 1.35; }
+    .choices { display:grid; gap: 10px; }
+    label.choice {
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px; border: 1px solid #e5e7eb; border-radius: 12px; cursor:pointer;
+      transition: background .12s ease, border-color .12s ease;
+    }
+    label.choice:hover { background:#f9fafb; border-color:#d1d5db; }
+    input[type="radio"] { margin-top: 3px; }
+
+    .rightPane .card { position: sticky; top: 14px; }
+    .navgrid { display:grid; grid-template-columns: repeat(10, 1fr); gap: 6px; margin-top: 10px; }
+    .navbtn {
+      width: 100%; padding: 8px 0; border-radius: 10px; border: 1px solid #e5e7eb;
+      background:#fff; color:#111; font-weight:600; cursor:pointer; font-size: 12px;
+    }
+    .navbtn.answered { background:#ecfdf5; border-color:#a7f3d0; }
+    .navbtn.flagged { background:#fff7ed; border-color:#fed7aa; }
+    .navbtn.current { outline: 2px solid #2563eb; border-color:#2563eb; }
+
+    .hr { height:1px; background:#e5e7eb; margin: 12px 0; }
+    .reviewItem { border:1px solid #e5e7eb; border-radius: 12px; padding: 12px; margin-bottom: 10px; }
+    .correct { color:#065f46; font-weight: 700; }
+    .incorrect { color:#991b1b; font-weight: 700; }
+    .explain { background:#f9fafb; border-radius: 10px; padding: 10px; margin-top: 8px; color:#374151; }
+
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 12px; background:#111827; color:#fff; padding: 3px 6px; border-radius: 6px; }
+    .note { background:#fefce8; border: 1px solid #fde68a; color:#713f12; padding: 10px 12px; border-radius: 12px; }
+    .ok { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; padding: 10px 12px; border-radius: 12px; }
+    .warnbox { background:#fff7ed; border:1px solid #fed7aa; color:#9a3412; padding: 10px 12px; border-radius: 12px; }
+
+    /* ---- Mobile-friendly adjustments (keeps desktop intact) ---- */
+    @media (max-width: 900px){
+      .grid { grid-template-columns: 1fr; }
+      .rightPane .card { position: static; }
+    }
+    @media (max-width: 520px){
+      header { padding: 14px 14px; }
+      .wrap { padding: 0 10px; }
+      .navgrid { grid-template-columns: repeat(8, 1fr); }
+      button { padding: 12px 12px; }
+      label.choice { padding: 14px; }
+      .pill { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>PTCB Practice Exam — 90 Questions</h1>
+  <p>90 questions • 4 options • Timer • Learning mode • RxNav dynamic meds • GitHub Pages ready</p>
+</header>
+
+<div class="wrap">
+  <div id="startScreen" class="card">
+    <div class="row" style="justify-content:space-between">
+      <div>
+        <h2 style="margin:0 0 6px">Start</h2>
+        <div class="muted tiny">
+          Default weights match what you requested: 40% Medications, 26.25% Patient Safety, 21.25% Order Entry, 12.5% Federal.
+          Optional toggle for official 2026 outline weights exists (OFF by default).
+        </div>
+      </div>
+      <div class="pill"><b>90</b> questions • <b>4</b> options</div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="row">
+      <label class="pill" style="cursor:pointer">
+        <input id="shuffleQ" type="checkbox" checked />
+        Shuffle questions
+      </label>
+      <label class="pill" style="cursor:pointer">
+        <input id="shuffleA" type="checkbox" checked />
+        Shuffle answer choices
+      </label>
+      <label class="pill" style="cursor:pointer">
+        <input id="timed" type="checkbox" />
+        Timed (90 minutes)
+      </label>
+      <label class="pill" style="cursor:pointer">
+        <input id="useOnlineMeds" type="checkbox" checked />
+        Use online meds (RxNav)
+      </label>
+      <label class="pill" style="cursor:pointer">
+        <input id="learningMode" type="checkbox" checked />
+        Learning mode (missed more often)
+      </label>
+      <label class="pill" style="cursor:pointer" title="Official PTCE content outline effective Jan 6, 2026 changes domain weights.">
+        <input id="useOfficial2026Weights" type="checkbox" />
+        Use official 2026 weights (optional)
+      </label>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="note tiny">
+      Keyboard: <span class="kbd">←</span>/<span class="kbd">→</span> prev/next.
+      Navigator: green=answered, orange=flagged, blue outline=current.
+    </div>
+
+    <div id="statusBox" class="ok tiny" style="margin-top:12px; display:none;"></div>
+
+    <div class="row" style="margin-top:12px">
+      <button id="startBtn">Start Exam</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+      <button id="wipeStatsBtn" class="secondary" title="Clears your learning history on this device (localStorage)">
+        Clear Learning History
+      </button>
+    </div>
+
+    <div class="hr"></div>
+    <div class="muted tiny">
+      Notes:
+      <ul style="margin:6px 0 0 18px; padding:0;">
+        <li>This is a practice tool (not official). It’s designed to feel PTCE-like and match your weights.</li>
+        <li>Dynamic meds use NIH/NLM RxNav (RxNorm) to generate fresh generic/brand questions in-browser.</li>
+        <li>Your learning history is stored locally on your device (localStorage).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="examScreen" style="display:none" class="grid">
+    <div class="leftPane">
+      <div class="card">
+        <div class="row" style="justify-content:space-between">
+          <div class="row">
+            <span class="pill"><b id="qCounter">1</b>/90</span>
+            <span class="pill">Answered: <b id="answeredCount">0</b></span>
+            <span class="pill">Flagged: <b id="flagCount">0</b></span>
+          </div>
+          <div class="row">
+            <span id="timerPill" class="pill" style="display:none">Time left: <b id="timeLeft">90:00</b></span>
+            <button id="submitBtn" class="warn">Submit</button>
+          </div>
+        </div>
+
+        <div style="margin:12px 0">
+          <div class="progress"><div id="progressBar" class="bar"></div></div>
+          <div class="tiny muted" style="margin-top:6px">Progress updates as you answer.</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="qhead">
+          <div>
+            <h3 id="qTitle" class="qtitle">Question</h3>
+            <div id="qMeta" class="tiny muted"></div>
+          </div>
+          <div id="domainTag" class="domainTag">Domain</div>
+        </div>
+
+        <div id="qStem" class="stem"></div>
+        <div id="choices" class="choices"></div>
+
+        <div class="hr"></div>
+
+        <div class="row" style="justify-content:space-between">
+          <div class="row">
+            <button id="prevBtn" class="secondary">← Prev</button>
+            <button id="nextBtn">Next →</button>
+          </div>
+          <div class="row">
+            <button id="flagBtn" class="secondary">Flag</button>
+            <button id="clearBtn" class="secondary">Clear Answer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rightPane">
+      <div class="card">
+        <div class="row" style="justify-content:space-between">
+          <h3 style="margin:0">Navigator</h3>
+          <button id="endBtn" class="secondary">Exit</button>
+        </div>
+        <div class="tiny muted" style="margin-top:6px">
+          Green = answered • Orange = flagged • Blue outline = current
+        </div>
+        <div id="navGrid" class="navgrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="resultsScreen" style="display:none" class="card">
+    <div class="row" style="justify-content:space-between; align-items:flex-start">
+      <div>
+        <h2 style="margin:0 0 6px">Results</h2>
+        <div class="muted tiny">Practice scoring + review. (Not official.)</div>
+      </div>
+      <div class="row">
+        <button id="restartBtn">Restart</button>
+        <button id="backHomeBtn" class="secondary">Home</button>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="row">
+      <div class="pill">Overall: <b id="overallScore">0%</b></div>
+      <div class="pill">Correct: <b id="correctCount">0</b></div>
+      <div class="pill">Incorrect: <b id="incorrectCount">0</b></div>
+      <div class="pill">Unanswered: <b id="unansweredCount">0</b></div>
+    </div>
+
+    <div class="hr"></div>
+
+    <h3 style="margin:0 0 8px">Domain Breakdown</h3>
+    <div id="domainBreakdown" class="row" style="gap:8px"></div>
+
+    <div class="hr"></div>
+
+    <h3 style="margin:0 0 8px">Review</h3>
+    <div id="reviewList"></div>
+  </div>
+</div>
+
+<script>
+/**
+ * Default (your requested) weights:
+ * - Medications: 36
+ * - Patient Safety: 24
+ * - Order Entry: 19
+ * - Federal Requirements: 11
+ *
+ * Optional official 2026 outline weights (toggle):
+ * - Medications: 32
+ * - Patient Safety: 21
+ * - Order Entry: 20
+ * - Federal Requirements: 17
+ */
+
+const DOMAIN = {
+  MEDS: "Medications",
+  SAFETY: "Patient Safety",
+  ORDER: "Order Entry",
+  FED: "Federal Requirements"
+};
+
+const COUNTS_USER = {
+  [DOMAIN.MEDS]: 36,
+  [DOMAIN.SAFETY]: 24,
+  [DOMAIN.ORDER]: 19,
+  [DOMAIN.FED]: 11
+};
+
+const COUNTS_2026_OFFICIAL = {
+  [DOMAIN.MEDS]: 32,
+  [DOMAIN.SAFETY]: 21,
+  [DOMAIN.ORDER]: 20,
+  [DOMAIN.FED]: 17
+};
+
+function deepClone(obj){ return JSON.parse(JSON.stringify(obj)); }
+function shuffle(arr){
+  for (let i = arr.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+function fmtTime(sec){
+  const m = Math.floor(sec/60);
+  const s = sec % 60;
+  return `${m}:${String(s).padStart(2,'0')}`;
+}
+function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
+
+// ===== Learning stats =====
+const STATS_KEY = "ptcb_q_stats_v3";
+function loadStats(){ try { return JSON.parse(localStorage.getItem(STATS_KEY) || "{}"); } catch { return {}; } }
+function saveStats(stats){ localStorage.setItem(STATS_KEY, JSON.stringify(stats)); }
+function wipeStats(){ localStorage.removeItem(STATS_KEY); }
+function nowTs(){ return Date.now(); }
+
+function weightForPick(qid, stats){
+  const s = stats[qid] || { attempts:0, correct:0, lastSeen:0 };
+  const attempts = s.attempts || 0;
+  const correct = s.correct || 0;
+  const wrong = Math.max(0, attempts - correct);
+
+  const missFactor = (wrong + 1) / (attempts + 2); // ~0..1
+  const ageMs = Math.max(0, nowTs() - (s.lastSeen || 0));
+  const ageDays = ageMs / (1000*60*60*24);
+  const recencyFactor = clamp(ageDays / 3.0, 0, 1); // 0..1 over 0..3 days
+
+  const base = 0.30;
+  const w = base + (0.85 * missFactor) + (0.55 * recencyFactor);
+  return Math.sqrt(w); // diversity dampener
+}
+
+function weightedSampleNoReplace(items, count, weightFn){
+  const pool = items.slice();
+  const picked = [];
+  while (picked.length < count && pool.length > 0){
+    const weights = pool.map(weightFn);
+    const total = weights.reduce((a,b)=>a+b,0);
+    let r = Math.random() * total;
+    let idx = 0;
+    for (; idx < pool.length; idx++){
+      r -= weights[idx];
+      if (r <= 0) break;
+    }
+    const chosen = pool.splice(Math.min(idx, pool.length-1), 1)[0];
+    picked.push(chosen);
+  }
+  return picked;
+}
+function randomSampleNoReplace(items, count){
+  const s = shuffle(items.slice());
+  return s.slice(0, Math.min(count, s.length));
+}
+
+// ===== RxNav dynamic meds =====
+const RXNAV_BASE = "https://rxnav.nlm.nih.gov/REST";
+
+const MED_SEEDS = [
+  "lisinopril","losartan","valsartan","olmesartan","enalapril","benazepril","ramipril",
+  "amlodipine","diltiazem","verapamil",
+  "metoprolol","carvedilol","atenolol","propranolol",
+  "hydrochlorothiazide","chlorthalidone","furosemide","spironolactone",
+  "atorvastatin","rosuvastatin","simvastatin","pravastatin",
+  "metformin","glipizide","glyburide","sitagliptin","empagliflozin",
+  "insulin glargine","insulin lispro","insulin aspart",
+  "levothyroxine",
+  "omeprazole","pantoprazole","esomeprazole","lansoprazole",
+  "sertraline","fluoxetine","citalopram","escitalopram","paroxetine",
+  "duloxetine","venlafaxine","bupropion",
+  "gabapentin","pregabalin",
+  "amoxicillin","amoxicillin clavulanate","cephalexin","cefuroxime","doxycycline","clindamycin","azithromycin",
+  "sulfamethoxazole trimethoprim",
+  "warfarin","apixaban","rivaroxaban","clopidogrel","aspirin",
+  "albuterol","fluticasone","budesonide","montelukast",
+  "tamsulosin","finasteride",
+  "ondansetron","promethazine",
+  "ibuprofen","naproxen","meloxicam",
+  "tramadol","hydrocodone acetaminophen",
+  "metronidazole","cyclobenzaprine","famotidine",
+  "cetirizine","loratadine","amitriptyline","hydroxyzine",
+  "sildenafil","tadalafil",
+  "allopurinol","colchicine",
+  "prednisone","methotrexate",
+  "valacyclovir","acyclovir","oseltamivir"
+];
+
+function withTimeout(promiseFactory, ms){
+  const ctrl = new AbortController();
+  const t = setTimeout(()=>ctrl.abort(), ms);
+  return { promise: promiseFactory(ctrl.signal).finally(()=>clearTimeout(t)), ctrl };
+}
+async function fetchJson(url, signal){
+  const res = await fetch(url, { signal });
+  if(!res.ok){
+    const err = new Error(`HTTP ${res.status}`);
+    err.status = res.status;
+    throw err;
+  }
+  return await res.json();
+}
+function extractBrandsFromDrugName(rxName){
+  const matches = rxName.match(/\[([^\]]+)\]/g) || [];
+  return matches.map(m => m.replace(/^\[/,'').replace(/\]$/,'').trim()).filter(Boolean);
+}
+async function rxnavBrandsForIngredient(ingredient, signal){
+  const url = `${RXNAV_BASE}/drugs.json?name=${encodeURIComponent(ingredient)}`;
+  const data = await fetchJson(url, signal);
+  const groups = (data?.drugGroup?.conceptGroup) || [];
+  const sbd = groups.find(g => g.tty === "SBD");
+  const concepts = sbd?.conceptProperties || [];
+  const brands = new Set();
+  for(const c of concepts){
+    const name = c?.name || "";
+    for(const b of extractBrandsFromDrugName(name)) brands.add(b);
+  }
+  const bnGroup = groups.find(g => g.tty === "BN");
+  const bnConcepts = bnGroup?.conceptProperties || [];
+  for(const c of bnConcepts){
+    if(c?.name) brands.add(c.name.trim());
+  }
+  return Array.from(brands);
+}
+function makeChoicesWithDistractors(correct, distractors){
+  const wrongs = shuffle(distractors.filter(x => x && x.toLowerCase() !== correct.toLowerCase()));
+  const pickedWrongs = [];
+  for(const w of wrongs){
+    if(pickedWrongs.length >= 3) break;
+    if(!pickedWrongs.some(p => p.toLowerCase() === w.toLowerCase())) pickedWrongs.push(w);
+  }
+  if(pickedWrongs.length < 3) return null;
+  const choices = shuffle([correct, ...pickedWrongs]);
+  return { choices, answerIndex: choices.indexOf(correct) };
+}
+async function buildDynamicMedsQuestions(targetCount){
+  const desired = Math.min(targetCount, 26);
+  const seeds = shuffle(MED_SEEDS.slice()).slice(0, 22);
+
+  const ingredientToBrands = new Map();
+  const concurrency = 5;
+  let i = 0;
+
+  async function worker(){
+    while (i < seeds.length){
+      const ing = seeds[i++];
+      try{
+        const { promise } = withTimeout((signal)=>rxnavBrandsForIngredient(ing, signal), 6500);
+        const brands = await promise;
+        if (brands && brands.length >= 1) ingredientToBrands.set(ing, brands.slice(0, 12));
+      } catch(e){ /* ignore */ }
+    }
+  }
+  await Promise.all(Array.from({length: concurrency}, worker));
+
+  const allBrands = [];
+  ingredientToBrands.forEach(brands => brands.forEach(b => allBrands.push(b)));
+  const uniqBrands = Array.from(new Set(allBrands));
+  shuffle(uniqBrands);
+
+  const questions = [];
+  for(const [ing, brands] of ingredientToBrands.entries()){
+    if(questions.length >= desired) break;
+
+    const correctBrand = brands[Math.floor(Math.random() * brands.length)];
+    const combo1 = makeChoicesWithDistractors(correctBrand, uniqBrands);
+    if(combo1){
+      questions.push({
+        id: `rxnav:gen2brand:${ing.toLowerCase()}:${correctBrand.toLowerCase()}`,
+        domain: DOMAIN.MEDS,
+        stem: `Which brand name corresponds to the generic medication <b>${ing}</b>?`,
+        choices: combo1.choices,
+        answerIndex: combo1.answerIndex,
+        explanation: `Sourced from NIH/NLM RxNav (RxNorm): generic-to-brand mapping extracted from branded drug naming.`,
+        ref: "RxNav/RxNorm (dynamic)"
+      });
+    }
+
+    if(questions.length >= desired) break;
+
+    if(Math.random() < 0.75){
+      const distractorGens = shuffle(MED_SEEDS.filter(x => x.toLowerCase() !== ing.toLowerCase())).slice(0, 12);
+      const combo2 = makeChoicesWithDistractors(ing, distractorGens);
+      if(combo2){
+        questions.push({
+          id: `rxnav:brand2gen:${correctBrand.toLowerCase()}:${ing.toLowerCase()}`,
+          domain: DOMAIN.MEDS,
+          stem: `Which generic medication corresponds to the brand name <b>${correctBrand}</b>?`,
+          choices: combo2.choices,
+          answerIndex: combo2.answerIndex,
+          explanation: `Sourced from NIH/NLM RxNav (RxNorm): brand extracted from RxNorm branded drug naming.`,
+          ref: "RxNav/RxNorm (dynamic)"
+        });
+      }
+    }
+  }
+  return questions.slice(0, targetCount);
+}
+
+// ===== Local question bank =====
+function buildLocalBank(){
+  const bank = [];
+  const pushQ = (domain, stem, correct, wrong, exp, ref, id) => {
+    const choices = shuffle([correct, ...wrong]);
+    bank.push({ id, domain, stem, choices, answerIndex: choices.indexOf(correct), explanation: exp, ref });
+  };
+
+  // MEDS (curated variety beyond generic/brand)
+  const medsItems = [
+    ["A prescription is written for <b>metformin</b>. Most common indication?", "Type 2 diabetes", ["Type 1 diabetes only","Acute bacterial infection","Osteoporosis"], "Metformin is commonly used for type 2 diabetes.", "Indications"],
+    ["A prescription is written for <b>atorvastatin</b>. Most common indication?", "Lower LDL cholesterol", ["Treat acute pain","Treat bacterial pneumonia","Treat seizures"], "Atorvastatin is a statin used to lower LDL.", "Indications"],
+    ["A prescription is written for <b>albuterol</b>. Most common indication?", "Acute relief of bronchospasm", ["Chronic gout prevention","Bacterial meningitis","Hyperthyroidism"], "Albuterol is a rescue bronchodilator.", "Indications"],
+    ["Which medication is a <b>PPI</b>?", "Pantoprazole", ["Metoprolol","Tamsulosin","Gabapentin"], "Pantoprazole is a proton pump inhibitor.", "Classes"],
+    ["Suffix suggesting an <b>ACE inhibitor</b>:", "-pril", ["-sartan","-statin","-olol"], "ACE inhibitors commonly end in -pril.", "Suffixes"],
+    ["Suffix suggesting an <b>ARB</b>:", "-sartan", ["-pril","-prazole","-azole"], "ARBs commonly end in -sartan.", "Suffixes"],
+    ["Suffix suggesting a <b>beta blocker</b>:", "-olol", ["-statin","-pril","-dipine"], "Beta blockers commonly end in -olol.", "Suffixes"],
+    ["Suffix suggesting a <b>statin</b>:", "-statin", ["-prazole","-cycline","-azole"], "Statins end in -statin.", "Suffixes"],
+    ["Which is typically <b>rapid-acting insulin</b>?", "Insulin lispro", ["Insulin glargine","Insulin detemir","NPH insulin"], "Lispro/aspart are rapid; glargine/detemir long; NPH intermediate.", "Insulin types"],
+    ["Which is typically <b>long-acting insulin</b>?", "Insulin glargine", ["Insulin lispro","Regular insulin","Insulin aspart"], "Glargine is long-acting.", "Insulin types"],
+    ["Warfarin patient: OTC increases bleeding risk most:", "NSAIDs (e.g., ibuprofen/naproxen)", ["Calcium carbonate","Saline nasal spray","Artificial tears"], "NSAIDs/aspirin increase bleeding risk with anticoagulants.", "Interactions"],
+    ["Nitroglycerin SL storage:", "Keep in original container; protect from light/moisture", ["Freeze it","Store in sunlight","Transfer to pill organizer"], "Proper storage maintains potency.", "Storage"],
+    ["Orange Book <b>A-rated</b> generic generally means:", "Therapeutically equivalent and substitutable when allowed", ["Different active ingredient same indication","Equivalent only for IV","Equivalent only if DAW 1"], "A-rated indicates therapeutic equivalence to the reference product.", "Equivalence"],
+    ["DAW 1 means:", "Dispense as written; do not substitute generic", ["Generic required","Patient requested brand","Pharmacy chose brand for cost"], "DAW 1 indicates prescriber requires brand (no substitution).", "DAW codes"],
+    ["Therapeutic alternative example:", "Switching from one statin to another for LDL reduction", ["Brand→generic same ingredient","Amoxicillin→generic amoxicillin","Synthroid→generic levothyroxine"], "Different drugs with similar clinical effect.", "Alternatives"],
+
+    // curated generic/brand (extra variety beyond RxNav)
+    ["Brand for <b>atorvastatin</b>:", "Lipitor", ["Zoloft","Lasix","Protonix"], "Atorvastatin = Lipitor.", "Generic/Brand"],
+    ["Brand for <b>levothyroxine</b>:", "Synthroid", ["Crestor","Zofran","Norvasc"], "Levothyroxine = Synthroid.", "Generic/Brand"],
+    ["Brand for <b>sertraline</b>:", "Zoloft", ["Prozac","Cymbalta","Plavix"], "Sertraline = Zoloft.", "Generic/Brand"],
+    ["Brand for <b>apixaban</b>:", "Eliquis", ["Xarelto","Coumadin","Plavix"], "Apixaban = Eliquis.", "Generic/Brand"],
+    ["Brand for <b>rivaroxaban</b>:", "Xarelto", ["Eliquis","Coumadin","Toprol XL"], "Rivaroxaban = Xarelto.", "Generic/Brand"],
+    ["Brand for <b>tamsulosin</b>:", "Flomax", ["Proscar","Zyban","Norvasc"], "Tamsulosin = Flomax.", "Generic/Brand"],
+    ["Brand for <b>ondansetron</b>:", "Zofran", ["Norvasc","Keflex","Toprol XL"], "Ondansetron = Zofran.", "Generic/Brand"]
+  ];
+
+  let medsId = 1;
+  medsItems.forEach(([stem, correct, wrong, exp, ref])=>{
+    pushQ(DOMAIN.MEDS, stem, correct, wrong, exp, ref, `local:meds:${medsId++}`);
+  });
+
+  // SAFETY (pool > needed so runs vary)
+  const safetyItems = [
+    ["Penicillin allergy + amoxicillin fill: safest first step?", "Alert pharmacist and review allergy details before dispensing",
+      ["Dispense anyway","Switch antibiotic yourself","Tell patient to take antihistamine and proceed"],
+      "Allergy concerns require pharmacist review.", "Allergy safety"],
+    ["Reduce look-alike/sound-alike errors:", "Use Tall Man lettering and barcode verification",
+      ["Store similar names together","Remove aux labels","Rely only on bottle color"],
+      "Tall Man + barcode scanning reduce errors.", "LASA safety"],
+    ["High-alert medication example:", "Insulin", ["Docusate","Loratadine","Calcium carbonate"], "Insulin errors can be severe.", "High-alert meds"],
+    ["Wrong patient name on label before pickup:", "Stop, correct label, and re-verify",
+      ["Cross out and dispense","Dispense and explain typo","Fix only if patient complains"],
+      "Identifiers must be correct before dispensing.", "Label safety"],
+    ["Best infection control at counter:", "Hand hygiene and disinfect high-touch surfaces",
+      ["Reuse gloves between patients","Store used tissues on counter","Only clean when visibly dirty"],
+      "Routine hygiene reduces transmission.", "Infection control"],
+    ["Peds dosing priority:", "Verify kg vs lb and calculate carefully",
+      ["Assume pounds","Round without checking","Skip calculation if prescriber wrote it"],
+      "Unit errors are common and dangerous.", "Peds safety"],
+    ["Near miss example:", "Wrong drug selected but caught before dispensing",
+      ["Patient refuses counseling","Out of stock","Claim rejects"],
+      "Near miss is intercepted before reaching patient.", "Quality"],
+    ["Reduce pediatric liquid dosing errors:", "Use oral syringe and mL (avoid teaspoons)",
+      ["Use household spoon","Convert to spoonfuls only","Eyeball dose"],
+      "mL with device prevents dosing errors.", "Dosing devices"],
+    ["Hazardous drug handling best practice:", "Use PPE/containment per policy; minimize exposure",
+      ["Crush on tray unprotected","Open capsules routinely","Use bare hands"],
+      "Hazardous drugs require controls.", "Hazardous drugs"],
+    ["Controlled substance count discrepancy: first step?", "Notify pharmacist immediately and follow policy",
+      ["Wait until end of week","Adjust count silently","Ask cashier"],
+      "Discrepancies require escalation.", "Controlled substances safety"],
+  ];
+  let safetyId = 1;
+  safetyItems.forEach(([stem, correct, wrong, exp, ref])=>{
+    pushQ(DOMAIN.SAFETY, stem, correct, wrong, exp, ref, `local:safety:${safetyId++}`);
+  });
+
+  // ORDER (pool > needed)
+  const orderItems = [
+    ["Sig: “i tab po bid” means:", "Take 1 tablet by mouth twice daily", ["Inject 1 tablet twice daily","Take 2 tablets once daily","Take 1 tablet every other day"], "i=1; po=by mouth; bid=twice daily.", "Sig decoding"],
+    ["Amoxicillin 500 mg #21 “1 cap po tid”. Day supply?", "7 days", ["21 days","10 days","3 days"], "21/3=7.", "Days supply"],
+    ["90 tablets “1 tab bid”. Day supply?", "45 days", ["90","30","60"], "90/2=45.", "Days supply"],
+    ["120 mL “5 mL q6h prn”. Max doses/day?", "4 doses", ["2","6","12"], "24/6=4.", "Sig math"],
+    ["Preferred liquid unit on labels:", "mL", ["teaspoon","tablespoon","drops only"], "mL reduces dosing errors.", "Labeling"],
+    ["Reject: refill too soon. First step:", "Verify last fill/day supply and entry accuracy", ["Override immediately","Dispense and bill later","Change drug"], "Often entry/timing issue.", "Claims"],
+    ["Purpose of NDC:", "Identify product/packaging for billing/inventory", ["Identify schedule","Replace DEA","Indicate diagnosis"], "NDC identifies product for claims/inventory.", "Billing"],
+  ];
+  let orderId = 1;
+  orderItems.forEach(([stem, correct, wrong, exp, ref])=>{
+    pushQ(DOMAIN.ORDER, stem, correct, wrong, exp, ref, `local:order:${orderId++}`);
+  });
+
+  // FED (pool > needed)
+  const fedItems = [
+    ["Schedule with no accepted medical use federally:", "Schedule I", ["Schedule II","Schedule III","Schedule IV"], "Schedule I has no accepted medical use federally.", "CSA schedules"],
+    ["CIII–CV refills federally:", "Up to 5 refills within 6 months", ["Unlimited refills","2 refills in 30 days","No refills allowed"], "CIII–CV: 5 refills/6 months limit.", "Refills"],
+    ["CII refills federally:", "No refills allowed", ["Up to 5 refills/6 months","Unlimited refills","Patient-requested refills allowed"], "CII cannot be refilled.", "CSA refills"],
+    ["Agency enforcing CSA:", "DEA", ["EPA","OSHA","FTC"], "DEA enforces controlled substance laws.", "DEA"],
+    ["HIPAA: appropriate action:", "Share PHI only with authorized individuals (minimum necessary)", ["Discuss meds loudly","Share profile with anyone who asks","Post med list online"], "HIPAA protects PHI.", "HIPAA"],
+  ];
+  let fedId = 1;
+  fedItems.forEach(([stem, correct, wrong, exp, ref])=>{
+    pushQ(DOMAIN.FED, stem, correct, wrong, exp, ref, `local:fed:${fedId++}`);
+  });
+
+  return bank;
+}
+
+// ===== Assembly (always exactly 90) =====
+function partitionByDomain(items){
+  const map = new Map();
+  items.forEach(it=>{
+    if(!map.has(it.domain)) map.set(it.domain, []);
+    map.get(it.domain).push(it);
+  });
+  return map;
+}
+function pickFromDomain(domain, need, candidates, learningMode){
+  if(need <= 0) return [];
+  const stats = loadStats();
+  let picked = learningMode
+    ? weightedSampleNoReplace(candidates, need, (q)=>weightForPick(q.id, stats))
+    : randomSampleNoReplace(candidates, need);
+
+  if(picked.length < need && candidates.length > 0){
+    while(picked.length < need){
+      picked.push(candidates[Math.floor(Math.random()*candidates.length)]);
+    }
+  }
+  return picked.slice(0, need);
+}
+function applyChoiceShuffle(finalQs){
+  finalQs.forEach(item=>{
+    const correctText = item.choices[item.answerIndex];
+    shuffle(item.choices);
+    item.answerIndex = item.choices.indexOf(correctText);
+  });
+}
+function ensureExactly90(finalQs){
+  if(finalQs.length > 90) return finalQs.slice(0, 90);
+  if(finalQs.length === 90) return finalQs;
+
+  const local = buildLocalBank();
+  const existing = new Set(finalQs.map(q => q.id));
+  const filler = local.filter(q => !existing.has(q.id));
+  while(finalQs.length < 90){
+    finalQs.push(filler.length ? filler.pop() : local[Math.floor(Math.random()*local.length)]);
+  }
+  return finalQs.slice(0, 90);
+}
+
+// ===== UI State =====
+let state = {
+  questions: [],
+  index: 0,
+  answers: new Map(),
+  flagged: new Set(),
+  timed: false,
+  timeLeftSec: 90*60,
+  timerHandle: null,
+  shuffleQ: true,
+  shuffleA: true,
+  useOnlineMeds: true,
+  learningMode: true,
+  useOfficial2026Weights: false,
+  activeCounts: COUNTS_USER
+};
+
+// ===== Elements =====
+const startScreen = document.getElementById("startScreen");
+const examScreen = document.getElementById("examScreen");
+const resultsScreen = document.getElementById("resultsScreen");
+
+const startBtn = document.getElementById("startBtn");
+const resetBtn = document.getElementById("resetBtn");
+const wipeStatsBtn = document.getElementById("wipeStatsBtn");
+
+const shuffleQEl = document.getElementById("shuffleQ");
+const shuffleAEl = document.getElementById("shuffleA");
+const timedEl = document.getElementById("timed");
+const useOnlineMedsEl = document.getElementById("useOnlineMeds");
+const learningModeEl = document.getElementById("learningMode");
+const useOfficial2026WeightsEl = document.getElementById("useOfficial2026Weights");
+const statusBox = document.getElementById("statusBox");
+
+const qCounter = document.getElementById("qCounter");
+const answeredCount = document.getElementById("answeredCount");
+const flagCount = document.getElementById("flagCount");
+const progressBar = document.getElementById("progressBar");
+
+const qTitle = document.getElementById("qTitle");
+const qMeta = document.getElementById("qMeta");
+const qStem = document.getElementById("qStem");
+const choicesEl = document.getElementById("choices");
+const domainTag = document.getElementById("domainTag");
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const flagBtn = document.getElementById("flagBtn");
+const clearBtn = document.getElementById("clearBtn");
+const submitBtn = document.getElementById("submitBtn");
+const endBtn = document.getElementById("endBtn");
+const navGrid = document.getElementById("navGrid");
+
+const timerPill = document.getElementById("timerPill");
+const timeLeftEl = document.getElementById("timeLeft");
+
+const overallScoreEl = document.getElementById("overallScore");
+const correctCountEl = document.getElementById("correctCount");
+const incorrectCountEl = document.getElementById("incorrectCount");
+const unansweredCountEl = document.getElementById("unansweredCount");
+const domainBreakdownEl = document.getElementById("domainBreakdown");
+const reviewList = document.getElementById("reviewList");
+
+const restartBtn = document.getElementById("restartBtn");
+const backHomeBtn = document.getElementById("backHomeBtn");
+
+// ===== Timer =====
+function stopTimer(){
+  if(state.timerHandle){
+    clearInterval(state.timerHandle);
+    state.timerHandle = null;
+  }
+}
+function startTimer(){
+  stopTimer();
+  timeLeftEl.textContent = fmtTime(state.timeLeftSec);
+  state.timerHandle = setInterval(() => {
+    state.timeLeftSec -= 1;
+    timeLeftEl.textContent = fmtTime(Math.max(0, state.timeLeftSec));
+    if(state.timeLeftSec <= 0){
+      stopTimer();
+      submitExam(true);
+    }
+  }, 1000);
+}
+
+// ===== Reset =====
+function hardReset(){
+  state = {
+    questions: [],
+    index: 0,
+    answers: new Map(),
+    flagged: new Set(),
+    timed: timedEl.checked,
+    timeLeftSec: 90*60,
+    timerHandle: null,
+    shuffleQ: shuffleQEl.checked,
+    shuffleA: shuffleAEl.checked,
+    useOnlineMeds: useOnlineMedsEl.checked,
+    learningMode: learningModeEl.checked,
+    useOfficial2026Weights: useOfficial2026WeightsEl.checked,
+    activeCounts: useOfficial2026WeightsEl.checked ? COUNTS_2026_OFFICIAL : COUNTS_USER
+  };
+  stopTimer();
+  statusBox.style.display = "none";
+  startScreen.style.display = "";
+  examScreen.style.display = "none";
+  resultsScreen.style.display = "none";
+}
+resetBtn.addEventListener("click", hardReset);
+wipeStatsBtn.addEventListener("click", () => {
+  wipeStats();
+  statusBox.className = "ok tiny";
+  statusBox.style.display = "";
+  statusBox.textContent = "Learning history cleared on this device.";
+});
+endBtn.addEventListener("click", () => hardReset());
+restartBtn.addEventListener("click", () => buildExam());
+backHomeBtn.addEventListener("click", () => hardReset());
+
+// ===== Build exam =====
+async function buildExam(){
+  state.shuffleQ = shuffleQEl.checked;
+  state.shuffleA = shuffleAEl.checked;
+  state.timed = timedEl.checked;
+  state.useOnlineMeds = useOnlineMedsEl.checked;
+  state.learningMode = learningModeEl.checked;
+  state.useOfficial2026Weights = useOfficial2026WeightsEl.checked;
+  state.activeCounts = state.useOfficial2026Weights ? COUNTS_2026_OFFICIAL : COUNTS_USER;
+
+  statusBox.style.display = "none";
+
+  const local = buildLocalBank();
+  const byDomainLocal = partitionByDomain(local);
+
+  const medsTarget = state.activeCounts[DOMAIN.MEDS];
+  let dynamicMeds = [];
+
+  if(state.useOnlineMeds){
+    statusBox.className = "warnbox tiny";
+    statusBox.style.display = "";
+    statusBox.textContent = "Fetching fresh medication questions from RxNav… (If it fails, we backfill locally.)";
+    try{
+      dynamicMeds = await buildDynamicMedsQuestions(medsTarget);
+      statusBox.className = "ok tiny";
+      statusBox.textContent = `Loaded ${dynamicMeds.length} RxNav medication questions. Building your exam…`;
+    } catch(e){
+      statusBox.className = "warnbox tiny";
+      statusBox.textContent = "RxNav fetch failed (offline or rate-limited). Using local meds.";
+      dynamicMeds = [];
+    }
+  }
+
+  const final = [];
+
+  // Meds: dynamic first, then local fill
+  const medsFromDynamic = dynamicMeds.slice(0, medsTarget);
+  const medsRemaining = medsTarget - medsFromDynamic.length;
+  const medsLocalCandidates = byDomainLocal.get(DOMAIN.MEDS) || [];
+  final.push(...medsFromDynamic, ...pickFromDomain(DOMAIN.MEDS, medsRemaining, medsLocalCandidates, state.learningMode));
+
+  // Other domains
+  for(const d of [DOMAIN.SAFETY, DOMAIN.ORDER, DOMAIN.FED]){
+    const target = state.activeCounts[d];
+    const candidates = byDomainLocal.get(d) || [];
+    final.push(...pickFromDomain(d, target, candidates, state.learningMode));
+  }
+
+  let assembled = ensureExactly90(final);
+
+  if(state.shuffleA) applyChoiceShuffle(assembled);
+  if(state.shuffleQ) shuffle(assembled);
+
+  assembled = assembled.slice(0, 90);
+  if(assembled.length !== 90){
+    // Absolute final safety fallback
+    const backup = buildLocalBank();
+    while(assembled.length < 90) assembled.push(backup[Math.floor(Math.random()*backup.length)]);
+    assembled = assembled.slice(0, 90);
+  }
+
+  state.questions = assembled;
+  state.index = 0;
+  state.answers = new Map();
+  state.flagged = new Set();
+  state.timeLeftSec = 90*60;
+
+  startScreen.style.display = "none";
+  resultsScreen.style.display = "none";
+  examScreen.style.display = "";
+  timerPill.style.display = state.timed ? "" : "none";
+  if(state.timed) startTimer();
+
+  renderNav();
+  renderQuestion();
+  renderTopStats();
+}
+
+startBtn.addEventListener("click", buildExam);
+
+// ===== Render =====
+function renderTopStats(){
+  const answered = state.answers.size;
+  const flagged = state.flagged.size;
+  qCounter.textContent = String(state.index + 1);
+  answeredCount.textContent = String(answered);
+  flagCount.textContent = String(flagged);
+  progressBar.style.width = `${Math.round((answered / state.questions.length) * 100)}%`;
+}
+
+function renderQuestion(){
+  const item = state.questions[state.index];
+  qTitle.textContent = `Question ${state.index + 1}`;
+  qMeta.textContent = `Reference focus: ${item.ref}`;
+  domainTag.textContent = item.domain;
+
+  qStem.innerHTML = item.stem;
+  choicesEl.innerHTML = "";
+
+  const selected = state.answers.get(item.id);
+
+  item.choices.forEach((c, idx) => {
+    const lab = document.createElement("label");
+    lab.className = "choice";
+    const inp = document.createElement("input");
+    inp.type = "radio";
+    inp.name = "choice";
+    inp.value = String(idx);
+    if(selected === idx) inp.checked = true;
+
+    inp.addEventListener("change", () => {
+      state.answers.set(item.id, idx);
+      renderTopStats();
+      renderNav();
+    });
+
+    const span = document.createElement("div");
+    span.innerHTML = `<b>${String.fromCharCode(65 + idx)}.</b> ${c}`;
+    lab.appendChild(inp);
+    lab.appendChild(span);
+    choicesEl.appendChild(lab);
+  });
+
+  prevBtn.disabled = state.index === 0;
+  nextBtn.disabled = state.index === state.questions.length - 1;
+
+  flagBtn.textContent = state.flagged.has(item.id) ? "Unflag" : "Flag";
+
+  renderTopStats();
+  renderNav();
+}
+
+function renderNav(){
+  navGrid.innerHTML = "";
+  state.questions.forEach((it, i) => {
+    const b = document.createElement("button");
+    b.className = "navbtn";
+    b.textContent = String(i + 1);
+
+    if(state.answers.has(it.id)) b.classList.add("answered");
+    if(state.flagged.has(it.id)) b.classList.add("flagged");
+    if(i === state.index) b.classList.add("current");
+
+    b.addEventListener("click", () => {
+      state.index = i;
+      renderQuestion();
+    });
+    navGrid.appendChild(b);
+  });
+}
+
+// ===== Controls =====
+prevBtn.addEventListener("click", () => { if(state.index>0){ state.index--; renderQuestion(); } });
+nextBtn.addEventListener("click", () => { if(state.index<state.questions.length-1){ state.index++; renderQuestion(); } });
+
+flagBtn.addEventListener("click", () => {
+  const id = state.questions[state.index].id;
+  if(state.flagged.has(id)) state.flagged.delete(id);
+  else state.flagged.add(id);
+  renderQuestion();
+});
+
+clearBtn.addEventListener("click", () => {
+  const id = state.questions[state.index].id;
+  state.answers.delete(id);
+  renderQuestion();
+});
+
+submitBtn.addEventListener("click", () => submitExam(false));
+
+window.addEventListener("keydown", (e) => {
+  if(examScreen.style.display === "none") return;
+  if(e.key === "ArrowLeft") prevBtn.click();
+  if(e.key === "ArrowRight") nextBtn.click();
+});
+
+// ===== Scoring + learning update =====
+function updateLearningStats(qid, wasCorrect){
+  const stats = loadStats();
+  const s = stats[qid] || { attempts:0, correct:0, lastSeen:0 };
+  s.attempts = (s.attempts || 0) + 1;
+  if(wasCorrect) s.correct = (s.correct || 0) + 1;
+  s.lastSeen = nowTs();
+  stats[qid] = s;
+  saveStats(stats);
+}
+
+function submitExam(fromTimer){
+  stopTimer();
+
+  const qs = state.questions;
+  let correct = 0;
+  let incorrect = 0;
+  let unanswered = 0;
+
+  const byDomain = new Map();
+  qs.forEach(it => {
+    if(!byDomain.has(it.domain)) byDomain.set(it.domain, {correct:0, total:0});
+    byDomain.get(it.domain).total += 1;
+
+    const ans = state.answers.get(it.id);
+    if(ans === undefined){ unanswered++; return; }
+
+    const ok = ans === it.answerIndex;
+    if(ok){ correct++; byDomain.get(it.domain).correct += 1; }
+    else { incorrect++; }
+    updateLearningStats(it.id, ok);
+  });
+
+  const overallPct = Math.round((correct / qs.length) * 100);
+
+  overallScoreEl.textContent = `${overallPct}%`;
+  correctCountEl.textContent = String(correct);
+  incorrectCountEl.textContent = String(incorrect);
+  unansweredCountEl.textContent = String(unanswered);
+
+  domainBreakdownEl.innerHTML = "";
+  [...byDomain.entries()].forEach(([domain, stats]) => {
+    const pct = Math.round((stats.correct / stats.total) * 100);
+    const pill = document.createElement("div");
+    pill.className = "pill";
+    pill.innerHTML = `${domain}: <b>${stats.correct}/${stats.total}</b> (${pct}%)`;
+    domainBreakdownEl.appendChild(pill);
+  });
+
+  reviewList.innerHTML = "";
+  qs.forEach((it, i) => {
+    const userAns = state.answers.get(it.id);
+    const isCorrect = userAns === it.answerIndex;
+    const status = (userAns === undefined) ? "Unanswered" : (isCorrect ? "Correct" : "Incorrect");
+
+    const div = document.createElement("div");
+    div.className = "reviewItem";
+
+    const userText = (userAns === undefined) ? "<i>—</i>" : `${String.fromCharCode(65+userAns)}. ${it.choices[userAns]}`;
+    const correctText = `${String.fromCharCode(65+it.answerIndex)}. ${it.choices[it.answerIndex]}`;
+
+    div.innerHTML = `
+      <div class="row" style="justify-content:space-between">
+        <div><b>Q${i+1}</b> <span class="muted tiny">(${it.domain})</span></div>
+        <div class="${status==='Correct' ? 'correct' : (status==='Incorrect' ? 'incorrect' : 'muted')}">${status}</div>
+      </div>
+      <div class="stem" style="margin-top:8px">${it.stem}</div>
+      <div class="tiny"><b>Your answer:</b> ${userText}</div>
+      <div class="tiny"><b>Correct answer:</b> ${correctText}</div>
+      <div class="explain tiny"><b>Why:</b> ${it.explanation}</div>
+      <div class="tiny muted" style="margin-top:6px"><b>Question ID:</b> ${it.id}</div>
+    `;
+    reviewList.appendChild(div);
+  });
+
+  examScreen.style.display = "none";
+  resultsScreen.style.display = "";
+  startScreen.style.display = "none";
+
+  window.scrollTo({top:0, behavior:"smooth"});
+  if(fromTimer) alert("Time is up. Your exam has been submitted.");
+}
+
+// Boot
+hardReset();
+</script>
+</body>
+</html>
