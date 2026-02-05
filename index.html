@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PTCB Practice Exam (2026-Weighted • 90 Questions)</title>
-  <meta name="description" content="PTCB/PTCE-style practice exam: 90 questions, 4 options, 110-minute timer, learning weighting, dark/light mode, RxNav dynamic meds, realistic workflows + math." />
+  <title>PTCB Practice Exam (2026 Weighted • 90 Questions)</title>
+  <meta name="description" content="PTCB/PTCE-style practice exam: 90 questions, 4 options, timer, dark/light mode, realistic workflows, conversions, DEA forms, USP chapters, optional RxNav dynamic meds." />
 
   <style>
     /* ========= Theme tokens ========= */
@@ -96,7 +96,7 @@
       --choice-selected: #0b2a55;
     }
 
-    /* ========= Base layout ========= */
+    /* ========= Base ========= */
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); }
     body { margin: 0; background: var(--bg); }
 
@@ -108,10 +108,7 @@
       display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
       max-width: 980px; margin: 0 auto;
     }
-
-    .themeControls{
-      display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:flex-end;
-    }
+    .themeControls{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:flex-end; }
 
     .wrap { max-width: 980px; margin: 18px auto; padding: 0 14px; }
     .card { background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 16px; border: 1px solid rgba(0,0,0,0); }
@@ -130,11 +127,20 @@
 
     button {
       border: 0; border-radius: 10px; padding: 10px 12px; cursor: pointer;
-      background: var(--primary); color: var(--primary-text); font-weight: 700;
+      background: var(--primary); color: var(--primary-text); font-weight: 800;
     }
     button.secondary { background: var(--secondary); color: var(--secondary-text); }
     button.warn { background: var(--danger); color: var(--danger-text); }
     button:disabled { opacity:.5; cursor:not-allowed; }
+
+    select{
+      border:1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 9px 10px;
+      font-weight: 800;
+    }
 
     .qhead { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
     .qtitle { font-size: 16px; margin: 0 0 6px; }
@@ -156,7 +162,7 @@
     .navgrid { display:grid; grid-template-columns: repeat(10, 1fr); gap: 6px; margin-top: 10px; }
     .navbtn {
       width: 100%; padding: 8px 0; border-radius: 10px; border: 1px solid var(--border);
-      background: var(--card); color: var(--text); font-weight:700; cursor:pointer; font-size: 12px;
+      background: var(--card); color: var(--text); font-weight:800; cursor:pointer; font-size: 12px;
     }
     .navbtn.answered { background: rgba(16,185,129,.18); border-color: rgba(16,185,129,.35); }
     .navbtn.flagged { background: rgba(245,158,11,.18); border-color: rgba(245,158,11,.35); }
@@ -164,23 +170,14 @@
 
     .hr { height:1px; background: var(--border); margin: 12px 0; }
     .reviewItem { border:1px solid var(--border); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
-    .correct { color:#10b981; font-weight: 800; }
-    .incorrect { color:#ef4444; font-weight: 800; }
+    .correct { color:#10b981; font-weight: 900; }
+    .incorrect { color:#ef4444; font-weight: 900; }
     .explain { background: rgba(127,127,127,.10); border-radius: 10px; padding: 10px; margin-top: 8px; color: var(--text); border: 1px solid var(--border); }
 
     .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 12px; background: var(--primary); color: var(--primary-text); padding: 3px 6px; border-radius: 6px; }
     .note { background: var(--note-bg); border: 1px solid var(--note-border); color: var(--note-text); padding: 10px 12px; border-radius: 12px; }
     .ok { background: var(--ok-bg); border:1px solid var(--ok-border); color: var(--ok-text); padding: 10px 12px; border-radius: 12px; }
     .warnbox { background: var(--warn-bg); border:1px solid var(--warn-border); color: var(--warn-text); padding: 10px 12px; border-radius: 12px; }
-
-    select{
-      border:1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      border-radius: 10px;
-      padding: 9px 10px;
-      font-weight: 700;
-    }
 
     @media (max-width: 900px){
       .grid { grid-template-columns: 1fr; }
@@ -198,17 +195,18 @@
     }
   </style>
 </head>
+
 <body>
 <header>
   <div class="headerRow">
     <div>
       <h1>PTCB Practice Exam — 2026 Weighting • 90 Questions</h1>
-      <p>90 questions • 4 options • Timed 110 minutes (optional) • Learning mode • Dark/Light mode • RxNav dynamic meds</p>
+      <p>90 questions • 4 options • Submit anytime • Optional timer • Dark/Light mode • DEA/USP/Math/Workflow • Optional RxNav meds</p>
     </div>
 
     <div class="themeControls">
       <span class="pill">Theme</span>
-      <button id="themeAutoBtn" class="secondary" title="Follow your device theme">Auto</button>
+      <button id="themeAutoBtn" class="secondary" title="Follow device theme">Auto</button>
       <button id="themeLightBtn" class="secondary">Light</button>
       <button id="themeDarkBtn" class="secondary">Dark</button>
     </div>
@@ -221,9 +219,8 @@
       <div>
         <h2 style="margin:0 0 6px">Start</h2>
         <div class="muted tiny">
-          2026 domain weighting:
-          <b>Medications 35%</b>, <b>Federal 18.75%</b>, <b>Safety 23.75%</b>, <b>Order Entry 22.50%</b>.
-          (This practice exam uses whole-question rounding: 32/17/21/20.)
+          Built for 2026-style weighting mapped to 90 questions:
+          <b>32 Medications</b>, <b>21 Safety</b>, <b>20 Order Entry</b>, <b>17 Federal</b>.
         </div>
       </div>
       <div class="pill"><b>90</b> questions • <b>4</b> options</div>
@@ -232,20 +229,10 @@
     <div class="hr"></div>
 
     <div class="row">
-      <label class="pill" style="cursor:pointer">
-        <input id="shuffleQ" type="checkbox" checked />
-        Shuffle questions
-      </label>
-      <label class="pill" style="cursor:pointer">
-        <input id="shuffleA" type="checkbox" checked />
-        Shuffle answer choices
-      </label>
+      <label class="pill" style="cursor:pointer"><input id="shuffleQ" type="checkbox" checked /> Shuffle questions</label>
+      <label class="pill" style="cursor:pointer"><input id="shuffleA" type="checkbox" checked /> Shuffle answer choices</label>
 
-      <label class="pill" style="cursor:pointer">
-        <input id="timed" type="checkbox" />
-        Timed
-      </label>
-
+      <label class="pill" style="cursor:pointer"><input id="timed" type="checkbox" /> Timed</label>
       <label class="pill" style="cursor:pointer">
         Timer length
         <select id="timerLen">
@@ -255,21 +242,13 @@
         </select>
       </label>
 
-      <label class="pill" style="cursor:pointer">
-        <input id="useOnlineMeds" type="checkbox" checked />
-        Use online meds (RxNav)
-      </label>
-
-      <label class="pill" style="cursor:pointer">
-        <input id="learningMode" type="checkbox" checked />
-        Learning mode (missed more often)
-      </label>
+      <label class="pill" style="cursor:pointer"><input id="useOnlineMeds" type="checkbox" checked /> Use online meds (RxNav)</label>
     </div>
 
     <div class="hr"></div>
 
     <div class="note tiny">
-      You can <b>submit anytime</b> after the exam is built — unanswered questions count as unanswered (not wrong).
+      You can <b>submit anytime</b> after the exam finishes building — unanswered questions stay <b>unanswered</b>.
       Keyboard: <span class="kbd">←</span>/<span class="kbd">→</span> prev/next.
     </div>
 
@@ -278,14 +257,11 @@
     <div class="row" style="margin-top:12px">
       <button id="startBtn">Start Exam</button>
       <button id="resetBtn" class="secondary">Reset</button>
-      <button id="wipeStatsBtn" class="secondary" title="Clears learning history (localStorage)">
-        Clear Learning History
-      </button>
     </div>
 
     <div class="hr"></div>
     <div class="muted tiny">
-      Note: This is a study tool — not official PTCB content. Dynamic medication brand/generic mappings use RxNav/RxNorm when enabled.
+      This is a study simulator (not official PTCB questions). If RxNav is enabled, some brand/generic questions are generated dynamically using RxNorm/RxNav.
     </div>
   </div>
 
@@ -295,13 +271,11 @@
         <div class="row" style="justify-content:space-between">
           <div class="row">
             <span class="pill">Q <b id="qCounter">1</b>/90</span>
-            <span class="pill">Total: <b id="totalQ">90</b></span>
             <span class="pill">Answered: <b id="answeredCount">0</b></span>
             <span class="pill">Flagged: <b id="flagCount">0</b></span>
           </div>
           <div class="row">
             <span id="timerPill" class="pill" style="display:none">Time left: <b id="timeLeft">110:00</b></span>
-            <!-- Submit is ALWAYS allowed after build (even with 0 answered) -->
             <button id="submitBtn" class="warn" disabled>Submit</button>
           </div>
         </div>
@@ -388,13 +362,12 @@
 
 <script>
 /* =========================
-   Theme
+   Theme (Auto/Light/Dark)
 ========================= */
-const THEME_KEY = "ptcb_theme_pref_v1";
+const THEME_KEY = "ptcb_theme_pref_v2";
 function applyTheme(mode){
   const html = document.documentElement;
   if(mode === "auto"){
-    html.setAttribute("data-theme","auto");
     const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     html.setAttribute("data-theme", prefersDark ? "dark" : "light");
     localStorage.setItem(THEME_KEY, "auto");
@@ -405,11 +378,7 @@ function applyTheme(mode){
 }
 function loadTheme(){
   const saved = localStorage.getItem(THEME_KEY) || "auto";
-  if(saved === "auto"){
-    applyTheme("auto");
-  } else {
-    applyTheme(saved);
-  }
+  if(saved === "auto") applyTheme("auto"); else applyTheme(saved);
 }
 document.getElementById("themeAutoBtn").addEventListener("click", ()=>applyTheme("auto"));
 document.getElementById("themeLightBtn").addEventListener("click", ()=>applyTheme("light"));
@@ -417,29 +386,23 @@ document.getElementById("themeDarkBtn").addEventListener("click", ()=>applyTheme
 loadTheme();
 
 /* =========================
-   Core configuration (2026 weights)
+   Core configuration
 ========================= */
-
 const TOTAL_QUESTIONS = 90;
 
-// 2026 PTCE content outline (effective Jan 6, 2026):
-// Medications 35%
-// Federal 18.75%
-// Safety 23.75%
-// Order Entry 22.50%
-// We map to integer counts that sum to 90: 32, 17, 21, 20.
+// 2026-weight mapping to 90 questions (integer allocation):
+// Meds 32, Safety 21, Order 20, Federal 17
 const DOMAIN = {
   MEDS: "Medications",
-  FED: "Federal Requirements",
   SAFETY: "Patient Safety & Quality Assurance",
-  ORDER: "Order Entry & Processing"
+  ORDER: "Order Entry & Processing",
+  FED: "Federal Requirements"
 };
-
 const COUNTS = {
   [DOMAIN.MEDS]: 32,
-  [DOMAIN.FED]: 17,
   [DOMAIN.SAFETY]: 21,
-  [DOMAIN.ORDER]: 20
+  [DOMAIN.ORDER]: 20,
+  [DOMAIN.FED]: 17
 };
 
 function shuffle(arr){
@@ -454,62 +417,11 @@ function fmtTime(sec){
   const s = sec % 60;
   return `${m}:${String(s).padStart(2,'0')}`;
 }
-function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
-
-/* =========================
-   Learning stats (local)
-========================= */
-
-const STATS_KEY = "ptcb_q_stats_v7";
-function loadStats(){ try { return JSON.parse(localStorage.getItem(STATS_KEY) || "{}"); } catch { return {}; } }
-function saveStats(stats){ localStorage.setItem(STATS_KEY, JSON.stringify(stats)); }
-function wipeStats(){ localStorage.removeItem(STATS_KEY); }
-function nowTs(){ return Date.now(); }
-
-function weightForPick(qid, stats){
-  const s = stats[qid] || { attempts:0, correct:0, lastSeen:0 };
-  const attempts = s.attempts || 0;
-  const correct = s.correct || 0;
-  const wrong = Math.max(0, attempts - correct);
-
-  const missFactor = (wrong + 1) / (attempts + 2);
-  const ageMs = Math.max(0, nowTs() - (s.lastSeen || 0));
-  const ageDays = ageMs / (1000*60*60*24);
-  const recencyFactor = clamp(ageDays / 3.0, 0, 1);
-
-  const base = 0.30;
-  const w = base + (0.90 * missFactor) + (0.55 * recencyFactor);
-  return Math.sqrt(w);
-}
-
-function weightedSampleNoReplace(items, count, weightFn){
-  const pool = items.slice();
-  const picked = [];
-  while (picked.length < count && pool.length > 0){
-    const weights = pool.map(weightFn);
-    const total = weights.reduce((a,b)=>a+b,0);
-    let r = Math.random() * total;
-    let idx = 0;
-    for (; idx < pool.length; idx++){
-      r -= weights[idx];
-      if (r <= 0) break;
-    }
-    const chosen = pool.splice(Math.min(idx, pool.length-1), 1)[0];
-    picked.push(chosen);
-  }
-  return picked;
-}
-function randomSampleNoReplace(items, count){
-  const s = shuffle(items.slice());
-  return s.slice(0, Math.min(count, s.length));
-}
 
 /* =========================
    RxNav dynamic meds (optional)
 ========================= */
-
 const RXNAV_BASE = "https://rxnav.nlm.nih.gov/REST";
-
 const MED_SEEDS = [
   "lisinopril","losartan","valsartan","olmesartan","enalapril","benazepril","ramipril",
   "amlodipine","diltiazem","verapamil",
@@ -569,20 +481,20 @@ async function rxnavBrandsForIngredient(ingredient, signal){
   }
   return Array.from(brands);
 }
-function makeChoicesWithDistractors(correct, distractors){
+function makeChoices(correct, distractors){
   const wrongs = shuffle(distractors.filter(x => x && x.toLowerCase() !== correct.toLowerCase()));
-  const pickedWrongs = [];
+  const picked = [];
   for(const w of wrongs){
-    if(pickedWrongs.length >= 3) break;
-    if(!pickedWrongs.some(p => p.toLowerCase() === w.toLowerCase())) pickedWrongs.push(w);
+    if(picked.length >= 3) break;
+    if(!picked.some(p => p.toLowerCase() === w.toLowerCase())) picked.push(w);
   }
-  if(pickedWrongs.length < 3) return null;
-  const choices = shuffle([correct, ...pickedWrongs]);
+  if(picked.length < 3) return null;
+  const choices = shuffle([correct, ...picked]);
   return { choices, answerIndex: choices.indexOf(correct) };
 }
 async function buildDynamicMedsQuestions(targetCount){
-  // Keep dynamic meds a subset so local bank still provides variety.
-  const desired = Math.min(targetCount, 24);
+  // Keep dynamic as a subset to reduce duplicates & keep variety from local bank.
+  const desired = Math.min(targetCount, 20);
   const seeds = shuffle(MED_SEEDS.slice()).slice(0, 24);
 
   const ingredientToBrands = new Map();
@@ -606,265 +518,265 @@ async function buildDynamicMedsQuestions(targetCount){
   const uniqBrands = Array.from(new Set(allBrands));
   shuffle(uniqBrands);
 
-  const questions = [];
+  const qs = [];
   for(const [ing, brands] of ingredientToBrands.entries()){
-    if(questions.length >= desired) break;
+    if(qs.length >= desired) break;
 
-    const correctBrand = brands[Math.floor(Math.random() * brands.length)];
-    const combo1 = makeChoicesWithDistractors(correctBrand, uniqBrands);
-    if(combo1){
-      questions.push({
-        id: `rxnav:gen2brand:${ing.toLowerCase()}:${correctBrand.toLowerCase()}`,
+    const brand = brands[Math.floor(Math.random() * brands.length)];
+    const c1 = makeChoices(brand, uniqBrands);
+    if(c1){
+      qs.push({
+        id: `rxnav:gen2brand:${ing.toLowerCase()}:${brand.toLowerCase()}`,
         domain: DOMAIN.MEDS,
         stem: `Which brand name corresponds to the generic medication <b>${ing}</b>?`,
-        choices: combo1.choices,
-        answerIndex: combo1.answerIndex,
-        explanation: `Dynamic mapping from RxNav/RxNorm brand concepts.`,
+        choices: c1.choices,
+        answerIndex: c1.answerIndex,
+        explanation: `Generated from RxNav/RxNorm (dynamic).`,
         ref: "RxNav/RxNorm (dynamic)"
       });
     }
-    if(questions.length >= desired) break;
+    if(qs.length >= desired) break;
 
-    if(Math.random() < 0.75){
-      const distractorGens = shuffle(MED_SEEDS.filter(x => x.toLowerCase() !== ing.toLowerCase())).slice(0, 16);
-      const combo2 = makeChoicesWithDistractors(ing, distractorGens);
-      if(combo2){
-        questions.push({
-          id: `rxnav:brand2gen:${correctBrand.toLowerCase()}:${ing.toLowerCase()}`,
+    if(Math.random() < 0.7){
+      const distractorGens = shuffle(MED_SEEDS.filter(x => x.toLowerCase() !== ing.toLowerCase())).slice(0, 18);
+      const c2 = makeChoices(ing, distractorGens);
+      if(c2){
+        qs.push({
+          id: `rxnav:brand2gen:${brand.toLowerCase()}:${ing.toLowerCase()}`,
           domain: DOMAIN.MEDS,
-          stem: `Which generic medication corresponds to the brand name <b>${correctBrand}</b>?`,
-          choices: combo2.choices,
-          answerIndex: combo2.answerIndex,
-          explanation: `Dynamic mapping from RxNav/RxNorm brand concepts.`,
+          stem: `Which generic medication corresponds to the brand name <b>${brand}</b>?`,
+          choices: c2.choices,
+          answerIndex: c2.answerIndex,
+          explanation: `Generated from RxNav/RxNorm (dynamic).`,
           ref: "RxNav/RxNorm (dynamic)"
         });
       }
     }
   }
-  return questions.slice(0, targetCount);
+  return qs.slice(0, targetCount);
 }
 
 /* =========================
    Local question bank (expanded)
 ========================= */
-
 function buildLocalBank(){
   const bank = [];
-  const pushQ = (domain, stem, correct, wrong, exp, ref, id) => {
+  const add = (domain, stem, correct, wrong, explanation, ref, id) => {
     const choices = shuffle([correct, ...wrong]);
-    bank.push({ id, domain, stem, choices, answerIndex: choices.indexOf(correct), explanation: exp, ref });
+    bank.push({
+      id,
+      domain,
+      stem,
+      choices,
+      answerIndex: choices.indexOf(correct),
+      explanation,
+      ref
+    });
   };
 
-  let idc = 1;
+  let n = 1;
 
-  // ---------- MEDICATIONS (variety: brands, classes, indications, suffixes, interactions) ----------
+  // ---------- MEDICATIONS ----------
   const M = DOMAIN.MEDS;
 
-  const gb = [
+  const gbPairs = [
     ["atorvastatin","Lipitor"],["rosuvastatin","Crestor"],["simvastatin","Zocor"],["pravastatin","Pravachol"],
     ["lisinopril","Prinivil/Zestril"],["losartan","Cozaar"],["valsartan","Diovan"],["amlodipine","Norvasc"],
-    ["metformin","Glucophage"],["glipizide","Glucotrol"],["sitagliptin","Januvia"],
+    ["metformin","Glucophage"],["glipizide","Glucotrol"],["glyburide","DiaBeta"],["sitagliptin","Januvia"],
     ["levothyroxine","Synthroid"],["omeprazole","Prilosec"],["pantoprazole","Protonix"],
     ["sertraline","Zoloft"],["fluoxetine","Prozac"],["escitalopram","Lexapro"],
-    ["bupropion","Wellbutrin"],["duloxetine","Cymbalta"],["venlafaxine","Effexor"],
+    ["bupropion","Wellbutrin"],["duloxetine","Cymbalta"],["venlafaxine","Effexor XR"],
     ["gabapentin","Neurontin"],["pregabalin","Lyrica"],
-    ["albuterol","Ventolin/ProAir"],["fluticasone","Flonase"],["montelukast","Singulair"],
+    ["albuterol","Ventolin/ProAir"],["fluticasone (nasal)","Flonase"],["montelukast","Singulair"],
     ["tamsulosin","Flomax"],["finasteride","Proscar"],
     ["ondansetron","Zofran"],["famotidine","Pepcid"],
     ["cetirizine","Zyrtec"],["loratadine","Claritin"],
     ["valacyclovir","Valtrex"],["acyclovir","Zovirax"],
-    ["clopidogrel","Plavix"],
+    ["clopidogrel","Plavix"],["furosemide","Lasix"]
   ];
-  gb.forEach(([g,b])=>{
-    pushQ(M, `Brand name for <b>${g}</b>:`, b, ["Lasix","Keflex","Xanax"], `${g} is commonly known by the brand ${b}.`, "Generic/Brand", `local:meds:gb:${idc++}`);
-  });
+  for(const [g,b] of gbPairs){
+    add(M, `Brand name for <b>${g}</b>:`, b,
+      ["Zoloft","Lasix","Protonix"].filter(x=>x!==b).slice(0,3),
+      `Common association: ${g} is known by brand ${b}.`, "Generic/Brand", `local:meds:gb:${n++}`);
+  }
 
-  pushQ(M, "Which suffix suggests an <b>ACE inhibitor</b>?", "-pril", ["-sartan","-prazole","-olol"], "ACE inhibitors often end in -pril.", "Suffixes", `local:meds:suf:${idc++}`);
-  pushQ(M, "Which suffix suggests an <b>ARB</b>?", "-sartan", ["-pril","-prazole","-azole"], "ARBs often end in -sartan.", "Suffixes", `local:meds:suf:${idc++}`);
-  pushQ(M, "Which suffix suggests a <b>beta blocker</b>?", "-olol", ["-pril","-prazole","-statin"], "Many beta blockers end in -olol.", "Suffixes", `local:meds:suf:${idc++}`);
-  pushQ(M, "Which suffix suggests a <b>statin</b>?", "-statin", ["-caine","-mab","-prazole"], "HMG-CoA reductase inhibitors end in -statin.", "Suffixes", `local:meds:suf:${idc++}`);
-  pushQ(M, "Which suffix suggests a <b>PPI</b>?", "-prazole", ["-pril","-sartan","-cycline"], "Proton pump inhibitors often end in -prazole.", "Suffixes", `local:meds:suf:${idc++}`);
-  pushQ(M, "Which medication is commonly used for <b>acute asthma relief</b>?", "Albuterol", ["Fluticasone","Montelukast","Cetirizine"], "Albuterol is a short-acting beta-agonist used for quick relief.", "Indications", `local:meds:ind:${idc++}`);
-  pushQ(M, "A common adverse effect of <b>ACE inhibitors</b> is:", "Dry cough", ["Photosensitivity","Tooth discoloration","Ototoxicity"], "ACE inhibitors can cause cough (bradykinin effect).", "Side effects", `local:meds:se:${idc++}`);
-  pushQ(M, "Which insulin type is typically <b>rapid-acting</b>?", "Insulin lispro", ["Insulin glargine","NPH insulin","Insulin detemir"], "Lispro/aspart are rapid; glargine/detemir long; NPH intermediate.", "Insulin types", `local:meds:ins:${idc++}`);
-  pushQ(M, "Which is a <b>contraindication</b> concern with nitrates + PDE-5 inhibitors (e.g., sildenafil)?", "Severe hypotension", ["Hyperglycemia","Kidney stones","QT shortening"], "Nitrates + sildenafil can cause dangerous hypotension.", "Interactions", `local:meds:int:${idc++}`);
-  pushQ(M, "Warfarin + which OTC most increases bleeding risk?", "NSAIDs (ibuprofen/naproxen)", ["Calcium carbonate","Saline spray","Artificial tears"], "NSAIDs increase bleeding risk with anticoagulants.", "Interactions", `local:meds:int:${idc++}`);
-  pushQ(M, "A common indication for <b>tamsulosin</b> is:", "BPH urinary symptoms", ["Hyperthyroidism","Bacterial pneumonia","Gout flare"], "Tamsulosin is an alpha-1 blocker for BPH symptoms.", "Indications", `local:meds:ind:${idc++}`);
-  pushQ(M, "Which antibiotic is a <b>macrolide</b>?", "Azithromycin", ["Cephalexin","Doxycycline","Amoxicillin"], "Azithromycin is a macrolide.", "Classes", `local:meds:cls:${idc++}`);
-  pushQ(M, "Which is a <b>tetracycline</b> antibiotic?", "Doxycycline", ["Clindamycin","Cephalexin","Azithromycin"], "Doxycycline is a tetracycline.", "Classes", `local:meds:cls:${idc++}`);
-  pushQ(M, "Which is a common indication for <b>metformin</b>?", "Type 2 diabetes", ["Migraine abortive","Atrial fibrillation","GERD"], "Metformin is first-line for type 2 diabetes.", "Indications", `local:meds:ind:${idc++}`);
-  pushQ(M, "Which is a common counseling point for <b>doxycycline</b>?", "Avoid excessive sun exposure", ["Take only with grapefruit juice","Store frozen","Chew tablets for best effect"], "Doxycycline can cause photosensitivity.", "Counseling", `local:meds:coun:${idc++}`);
-  pushQ(M, "Which medication is commonly used for <b>GERD</b>?", "Omeprazole", ["Albuterol","Acyclovir","Tamsulosin"], "PPIs treat GERD.", "Indications", `local:meds:ind:${idc++}`);
-  pushQ(M, "Therapeutic duplication means:", "Two meds from the same class/with same effect used together unnecessarily", ["Two identical NDCs in stock","Two pharmacies fill same Rx","Two refills on one prescription"], "Duplication increases risk without benefit.", "Safety concept", `local:meds:dup:${idc++}`);
-  pushQ(M, "Which is an <b>SSRI</b>?", "Sertraline", ["Duloxetine","Bupropion","Amitriptyline"], "Sertraline is an SSRI.", "Classes", `local:meds:cls:${idc++}`);
-  pushQ(M, "Which medication is used for <b>nausea/vomiting</b>?", "Ondansetron", ["Atorvastatin","Losartan","Metformin"], "Ondansetron is an antiemetic.", "Indications", `local:meds:ind:${idc++}`);
+  add(M, "Which suffix suggests an <b>ACE inhibitor</b>?", "-pril",
+    ["-sartan","-olol","-statin"], "ACE inhibitors commonly end in -pril.", "Suffixes", `local:meds:suf:${n++}`);
+  add(M, "Which suffix suggests an <b>ARB</b>?", "-sartan",
+    ["-pril","-prazole","-olol"], "ARBs commonly end in -sartan.", "Suffixes", `local:meds:suf:${n++}`);
+  add(M, "Which suffix suggests a <b>beta blocker</b>?", "-olol",
+    ["-pril","-prazole","-statin"], "Many beta blockers end in -olol.", "Suffixes", `local:meds:suf:${n++}`);
+  add(M, "Which suffix suggests a <b>statin</b>?", "-statin",
+    ["-mab","-azole","-caine"], "Statins end in -statin.", "Suffixes", `local:meds:suf:${n++}`);
+  add(M, "Which suffix suggests a <b>PPI</b>?", "-prazole",
+    ["-pril","-sartan","-cycline"], "PPIs often end in -prazole.", "Suffixes", `local:meds:suf:${n++}`);
 
-  // ---------- SAFETY / QUALITY / USP / infection control ----------
+  add(M, "Which medication is commonly used for <b>acute asthma relief</b>?", "Albuterol",
+    ["Fluticasone","Montelukast","Cetirizine"], "Albuterol is a short-acting beta agonist for quick relief.", "Indications", `local:meds:ind:${n++}`);
+  add(M, "Which is typically a <b>rapid-acting insulin</b>?", "Insulin lispro",
+    ["Insulin glargine","NPH insulin","Insulin detemir"], "Lispro/aspart are rapid; glargine/detemir long; NPH intermediate.", "Insulin types", `local:meds:ins:${n++}`);
+  add(M, "A common adverse effect of <b>ACE inhibitors</b> is:", "Dry cough",
+    ["Constipation","Hair loss","Tooth discoloration"], "ACE inhibitors can cause a dry cough.", "Side effects", `local:meds:se:${n++}`);
+  add(M, "Warfarin + which OTC most increases bleeding risk?", "NSAIDs (ibuprofen/naproxen)",
+    ["Calcium carbonate","Saline nasal spray","Artificial tears"], "NSAIDs increase bleeding risk with anticoagulants.", "Interactions", `local:meds:int:${n++}`);
+  add(M, "Nitrates + sildenafil can cause:", "Severe hypotension",
+    ["Hyperglycemia","QT shortening","Kidney stones"], "PDE-5 inhibitors + nitrates can dangerously lower blood pressure.", "Interactions", `local:meds:int:${n++}`);
+  add(M, "A common indication for <b>tamsulosin</b> is:", "BPH urinary symptoms",
+    ["Hyperthyroidism","Bacterial pneumonia","Gout flare"], "Tamsulosin is an alpha-1 blocker used for BPH symptoms.", "Indications", `local:meds:ind:${n++}`);
+  add(M, "Which antibiotic is a <b>macrolide</b>?", "Azithromycin",
+    ["Cephalexin","Doxycycline","Amoxicillin"], "Azithromycin is a macrolide.", "Classes", `local:meds:cls:${n++}`);
+  add(M, "Which is a <b>tetracycline</b> antibiotic?", "Doxycycline",
+    ["Clindamycin","Cephalexin","Azithromycin"], "Doxycycline is a tetracycline.", "Classes", `local:meds:cls:${n++}`);
+  add(M, "Which medication is commonly used for <b>GERD</b>?", "Omeprazole",
+    ["Albuterol","Acyclovir","Tamsulosin"], "PPIs are commonly used for GERD.", "Indications", `local:meds:ind:${n++}`);
+  add(M, "Therapeutic duplication means:", "Two meds with same effect used together unnecessarily",
+    ["Two pharmacies fill one Rx","Two NDCs in a bin","Two refills on a label"], "Duplication increases risk without benefit.", "Safety concept", `local:meds:dup:${n++}`);
+
+  // ---------- SAFETY / QUALITY / USP / STERILE / ERROR PREVENTION ----------
   const S = DOMAIN.SAFETY;
 
-  pushQ(S, "USP <795> covers:", "Non-sterile compounding", ["Sterile compounding","Controlled substance ordering","Insurance billing"], "USP 795: non-sterile compounding standards.", "USP", `local:safety:usp:${idc++}`);
-  pushQ(S, "USP <797> covers:", "Sterile compounding", ["Non-sterile compounding","Look-alike/sound-alike rules","DEA forms"], "USP 797: sterile compounding standards.", "USP", `local:safety:usp:${idc++}`);
-  pushQ(S, "USP <800> focuses on:", "Hazardous drug handling safety", ["Sterile technique only","DSCSA requirements","PBM claims"], "USP 800: hazardous drug handling to reduce exposure.", "USP", `local:safety:usp:${idc++}`);
+  add(S, "USP <795> covers:", "Non-sterile compounding",
+    ["Sterile compounding","Controlled substance ordering","Insurance billing"],
+    "USP 795: non-sterile compounding standards.", "USP", `local:safety:usp:${n++}`);
+  add(S, "USP <797> covers:", "Sterile compounding",
+    ["Non-sterile compounding","Look-alike/sound-alike policies","DEA ordering"],
+    "USP 797: sterile compounding standards.", "USP", `local:safety:usp:${n++}`);
+  add(S, "USP <800> focuses on:", "Hazardous drug handling safety",
+    ["Sterile technique only","DSCSA only","PBM claims"],
+    "USP 800: handling hazardous drugs to reduce exposure.", "USP", `local:safety:usp:${n++}`);
 
-  pushQ(S, "Best practice for a <b>leading zero</b> is:", "Write 0.5 mg (not .5 mg)", ["Write .5 mg only","Write 00.5 mg","Never use decimals"], "Leading zeros reduce tenfold errors.", "Error prevention", `local:safety:err:${idc++}`);
-  pushQ(S, "Best practice for a <b>trailing zero</b> is:", "Avoid 5.0 mg; write 5 mg", ["Always write 5.0 mg","Write 5.00 mg for clarity","Use commas instead"], "Trailing zeros can cause tenfold errors.", "Error prevention", `local:safety:err:${idc++}`);
-
-  pushQ(S, "A high-alert medication example is:", "Insulin", ["Acetaminophen","Docusate","Loratadine"], "Insulin is commonly classified high-alert due to harm potential.", "High-alert", `local:safety:ha:${idc++}`);
-  pushQ(S, "LASA stands for:", "Look-alike/sound-alike", ["Label-all/store-all","Long-acting/short-acting","Lot-and-serial-audit"], "LASA meds are a major error source.", "Terminology", `local:safety:lasa:${idc++}`);
-
-  pushQ(S, "Sterile compounding: best garbing order (simplified):", "Hand hygiene → gown → mask → gloves",
+  add(S, "Sterile compounding: best garbing order (simplified):", "Hand hygiene → gown → mask → gloves",
     ["Gloves → gown → mask → hands","Mask → gloves → gown → hands","Gown → gloves → hands → mask"],
-    "Hand hygiene first; then garb to reduce contamination.", "Sterile technique", `local:safety:garb:${idc++}`);
+    "Hand hygiene first; then don garb to reduce contamination risk.", "Sterile technique", `local:safety:garb:${n++}`);
 
-  pushQ(S, "A situation requiring pharmacist intervention is:", "Potential serious drug interaction", ["Patient requests water","Printer out of paper","Counting tray needs cleaning"], "Interactions/DUR issues require pharmacist review.", "Workflow safety", `local:safety:pharm:${idc++}`);
-  pushQ(S, "MedWatch is primarily used to report:", "Serious adverse events/product issues to FDA", ["Lost controlled substances to DEA","Insurance fraud to PBM","HIPAA violations to OCR"], "MedWatch is FDA’s safety reporting program.", "Reporting", `local:safety:report:${idc++}`);
+  add(S, "Best practice for a <b>leading zero</b> is:", "Write 0.5 mg (not .5 mg)",
+    ["Write .5 mg only","Write 00.5 mg","Never use decimals"],
+    "Leading zeros reduce tenfold errors.", "Error prevention", `local:safety:err:${n++}`);
+  add(S, "Best practice for a <b>trailing zero</b> is:", "Avoid 5.0 mg; write 5 mg",
+    ["Always write 5.0 mg","Write 5.00 mg","Use commas instead"],
+    "Trailing zeros can cause tenfold errors.", "Error prevention", `local:safety:err:${n++}`);
+  add(S, "LASA stands for:", "Look-alike/sound-alike",
+    ["Long-acting/short-acting","Lot-and-serial-audit","Label-all/store-all"],
+    "LASA meds are a common source of dispensing errors.", "Terminology", `local:safety:lasa:${n++}`);
+  add(S, "A high-alert medication example is:", "Insulin",
+    ["Acetaminophen","Docusate","Loratadine"],
+    "Insulin is commonly classified high-alert due to harm potential.", "High-alert", `local:safety:ha:${n++}`);
 
-  // ---------- ORDER ENTRY / PROCESSING / MATH / INSURANCE ----------
+  add(S, "What should a tech do if a prescription has a potentially dangerous dose?", "Refer to the pharmacist for clinical review",
+    ["Change the dose in the system","Fill as written without question","Call insurance first"],
+    "Clinical assessment/intervention is pharmacist responsibility.", "Scope/Workflow", `local:safety:scope:${n++}`);
+
+  add(S, "MedWatch is used to report:", "Serious adverse events/product quality issues to the FDA",
+    ["Theft/loss to the DEA","HIPAA violations to OCR","Insurance fraud to PBM"],
+    "MedWatch is FDA’s safety reporting program.", "Reporting", `local:safety:report:${n++}`);
+
+  // ---------- ORDER ENTRY / PROCESSING / MATH / INSURANCE / COMPOUNDING ----------
   const O = DOMAIN.ORDER;
 
   // Conversions
-  pushQ(O, "How many <b>mcg</b> are in <b>1 mg</b>?", "1000 mcg", ["100 mcg","10 mcg","10,000 mcg"], "1 mg = 1000 mcg.", "Conversions", `local:order:conv:${idc++}`);
-  pushQ(O, "How many <b>mg</b> are in <b>1 g</b>?", "1000 mg", ["100 mg","10 mg","10,000 mg"], "1 g = 1000 mg.", "Conversions", `local:order:conv:${idc++}`);
-  pushQ(O, "Convert <b>2.5 g</b> to mg:", "2500 mg", ["250 mg","25,000 mg","2,500,000 mg"], "Multiply grams by 1000.", "Conversions", `local:order:conv:${idc++}`);
-  pushQ(O, "Convert 220 lb to kg (rounded).", "100 kg", ["90 kg","110 kg","75 kg"], "kg = lb ÷ 2.2; 220 ÷ 2.2 = 100.", "Conversions", `local:order:conv:${idc++}`);
-  pushQ(O, "Convert <b>5 mL</b> to teaspoons (tsp).", "1 tsp", ["0.5 tsp","2 tsp","3 tsp"], "1 tsp = 5 mL.", "Conversions", `local:order:conv:${idc++}`);
+  add(O, "How many <b>mcg</b> are in <b>1 mg</b>?", "1000 mcg",
+    ["100 mcg","10 mcg","10,000 mcg"], "1 mg = 1000 mcg.", "Conversions", `local:order:conv:${n++}`);
+  add(O, "How many <b>mg</b> are in <b>1 g</b>?", "1000 mg",
+    ["100 mg","10 mg","10,000 mg"], "1 g = 1000 mg.", "Conversions", `local:order:conv:${n++}`);
+  add(O, "Convert <b>2.5 g</b> to mg:", "2500 mg",
+    ["250 mg","25,000 mg","2,500,000 mg"], "Multiply grams by 1000.", "Conversions", `local:order:conv:${n++}`);
+  add(O, "Convert 220 lb to kg (rounded).", "100 kg",
+    ["90 kg","110 kg","75 kg"], "kg = lb ÷ 2.2; 220 ÷ 2.2 = 100.", "Conversions", `local:order:conv:${n++}`);
+  add(O, "Convert <b>5 mL</b> to teaspoons (tsp).", "1 tsp",
+    ["0.5 tsp","2 tsp","3 tsp"], "1 tsp = 5 mL.", "Conversions", `local:order:conv:${n++}`);
+  add(O, "Convert <b>30 mL</b> to ounces (approx).", "1 oz",
+    ["2 oz","0.5 oz","3 oz"], "Common approximation: 30 mL ≈ 1 oz.", "Conversions", `local:order:conv:${n++}`);
 
-  // Multi-step scenarios
-  pushQ(O,
-    "Scenario: Child weighs <b>44 lb</b>. Rx: <b>amoxicillin 20 mg/kg/day</b> divided <b>BID</b>. What is <b>mg per dose</b>?",
+  // Multi-step scenario math
+  add(O, "Scenario: Child weighs <b>44 lb</b>. Rx: <b>amoxicillin 20 mg/kg/day</b> divided <b>BID</b>. What is <b>mg per dose</b>?",
     "200 mg per dose",
     ["400 mg per dose","100 mg per dose","20 mg per dose"],
     "44 lb = 20 kg. Daily dose = 20×20 = 400 mg/day. BID → 200 mg/dose.",
-    "Multi-step dosing", `local:order:ms:${idc++}`
-  );
+    "Multi-step dosing", `local:order:ms:${n++}`);
 
-  pushQ(O,
-    "IV infusion: <b>1000 mL over 8 hours</b>. Rate in <b>mL/hr</b>?",
-    "125 mL/hr",
-    ["80 mL/hr","100 mL/hr","150 mL/hr"],
-    "1000 ÷ 8 = 125 mL/hr.",
-    "IV calculations", `local:order:iv:${idc++}`
-  );
-
-  pushQ(O,
-    "Scenario: Rx says <b>Take 1 tab PO QID x 10 days</b>. Quantity needed?",
+  add(O, "Scenario: Rx says <b>Take 1 tab PO QID x 10 days</b>. Quantity needed?",
     "40 tablets",
     ["10 tablets","30 tablets","60 tablets"],
     "QID = 4/day. 4×10 = 40.",
-    "Days supply/quantity", `local:order:ds:${idc++}`
-  );
+    "Days supply/quantity", `local:order:ds:${n++}`);
 
-  pushQ(O,
-    "Alligation is most commonly used to calculate:",
-    "Mixtures of different strengths to reach a target strength",
-    ["Days supply for inhalers","NDC selection","DEA schedule"],
-    "Alligation helps find parts of each strength to mix.",
-    "Calculations", `local:order:all:${idc++}`
-  );
+  add(O, "IV infusion: <b>1000 mL over 8 hours</b>. Rate in <b>mL/hr</b>?",
+    "125 mL/hr",
+    ["80 mL/hr","100 mL/hr","150 mL/hr"],
+    "1000 ÷ 8 = 125 mL/hr.",
+    "IV calculations", `local:order:iv:${n++}`);
 
-  // Workflow / insurance
-  pushQ(O,
-    "Insurance reject: <b>Refill too soon</b>. Best first step?",
+  add(O, "A DAW code generally relates to:", "Dispense As Written / substitution instructions",
+    ["Drug assay weight","Dose after withdrawal","DEA audit window"],
+    "DAW codes indicate substitution permissions/requirements.", "Order entry", `local:order:daw:${n++}`);
+
+  add(O, "Insurance reject: <b>Refill too soon</b>. Best first step?",
     "Verify last fill date, day supply, and data entry accuracy",
     ["Override immediately","Dispense without billing","Change drug without prescriber"],
-    "Start by verifying timing and entry; then follow plan policy.",
-    "Insurance workflow", `local:order:ins:${idc++}`
-  );
+    "Start by verifying timing and entry; then follow plan policy.", "Insurance workflow", `local:order:ins:${n++}`);
 
-  pushQ(O,
-    "A prior authorization (PA) is typically required when:",
-    "Plan needs clinical justification before coverage",
-    ["Patient wants cash price","NDC is missing","Label printer is down"],
-    "PA = prescriber/plan clinical approval process.",
-    "Insurance workflow", `local:order:ins:${idc++}`
-  );
+  add(O, "A prior authorization (PA) is typically required when:", "Plan requires clinical justification before coverage",
+    ["Patient wants cash price","Label printer is down","NDC is missing"],
+    "PA is a coverage requirement needing prescriber/plan approval.", "Insurance workflow", `local:order:ins:${n++}`);
 
-  pushQ(O,
-    "A DAW code generally relates to:",
-    "Dispense As Written / substitution instructions",
-    ["Drug assay weight","Dose after withdrawal","DEA audit window"],
-    "DAW codes indicate substitution permissions/requirements.",
-    "Order entry", `local:order:daw:${idc++}`
-  );
+  // Compounding basics
+  add(O, "A common purpose of a <b>levigating agent</b> is to:", "Help form a smooth paste when incorporating powders",
+    ["Sterilize a product","Increase pH rapidly","Increase controlled substance security"],
+    "Levigating agents help incorporate powders into bases smoothly.", "Compounding", `local:order:comp:${n++}`);
 
-  // Compounding (non-sterile basics)
-  pushQ(O, "A common purpose of a <b>levigating agent</b> is to:", "Help form a smooth paste when triturating powders",
-    ["Increase pH rapidly","Sterilize a product","Increase controlled substance security"],
-    "Levigating agents help incorporate powders into bases smoothly.", "Compounding", `local:order:comp:${idc++}`);
+  add(O, "Alligation is most commonly used to calculate:", "Mixtures of different strengths to reach a target strength",
+    ["Days supply for inhalers","NDC selection","DEA schedule"],
+    "Alligation helps find proportions needed to reach a target strength.", "Calculations", `local:order:all:${n++}`);
 
-  pushQ(O, "Which is a common non-sterile dosage form?", "Ointment", ["IV admixture","TPN bag","Sterile syringe prep"], "Ointments are non-sterile compounds in many settings.", "Compounding", `local:order:comp:${idc++}`);
-
-  // ---------- FEDERAL (DEA forms, controlled substances, DSCSA/serialization, retention) ----------
+  // ---------- FEDERAL (DEA forms, CS rules, retention, HIPAA, DSCSA) ----------
   const F = DOMAIN.FED;
 
-  pushQ(F, "DEA Form used to order Schedule II controlled substances:", "DEA Form 222",
+  add(F, "DEA Form used to order <b>Schedule II</b> controlled substances:", "DEA Form 222",
     ["DEA Form 106","DEA Form 41","DEA Form 224"],
-    "DEA 222 is used for ordering Schedule II controlled substances.",
-    "DEA forms", `local:fed:dea:${idc++}`
-  );
+    "DEA 222 is used for ordering Schedule II controlled substances.", "DEA forms", `local:fed:dea:${n++}`);
 
-  pushQ(F, "DEA Form used to report theft/significant loss of controlled substances:", "DEA Form 106",
+  add(F, "DEA Form used to report theft/significant loss of controlled substances:", "DEA Form 106",
     ["DEA Form 222","DEA Form 41","DEA Form 224"],
-    "DEA 106 is used for theft/loss reporting.",
-    "DEA forms", `local:fed:dea:${idc++}`
-  );
+    "DEA 106 is commonly used for theft/loss reporting.", "DEA forms", `local:fed:dea:${n++}`);
 
-  pushQ(F, "DEA Form commonly used to document controlled substance destruction:", "DEA Form 41",
-    ["DEA Form 106","DEA Form 222","DEA Form 363"],
-    "DEA Form 41 documents controlled substance destruction (where applicable).",
-    "DEA forms", `local:fed:dea:${idc++}`
-  );
+  add(F, "DEA Form commonly used to document controlled substance destruction (where applicable):", "DEA Form 41",
+    ["DEA Form 106","DEA Form 222","DEA Form 224"],
+    "DEA Form 41 is commonly referenced for destruction documentation in training contexts.", "DEA forms", `local:fed:dea:${n++}`);
 
-  pushQ(F, "A DEA registration application for many registrants is:", "DEA Form 224",
+  add(F, "A common DEA registration application form number referenced in training contexts is:", "DEA Form 224",
     ["DEA Form 222","DEA Form 106","DEA Form 41"],
-    "DEA 224 is a common registration form number referenced in training contexts.",
-    "DEA forms", `local:fed:dea:${idc++}`
-  );
+    "DEA 224 is commonly referenced as a registration form number.", "DEA forms", `local:fed:dea:${n++}`);
 
-  pushQ(F, "Schedule II prescriptions federally:", "Cannot be refilled",
+  add(F, "Schedule II prescriptions federally:", "Cannot be refilled",
     ["Up to 5 refills in 6 months","Unlimited refills","Refill allowed if pharmacist approves"],
-    "CII cannot be refilled under federal law.",
-    "Controlled substance rules", `local:fed:c:${idc++}`
-  );
+    "CII cannot be refilled under federal law.", "Controlled substance rules", `local:fed:cs:${n++}`);
 
-  pushQ(F, "Schedule III–V refills federally (typical rule):", "Up to 5 refills within 6 months",
+  add(F, "Schedule III–V refills (typical federal rule):", "Up to 5 refills within 6 months",
     ["No refills allowed","Unlimited refills","Exactly 2 refills"],
-    "CIII–V commonly: 5 refills/6 months (subject to state/plan).",
-    "Controlled substance rules", `local:fed:c:${idc++}`
-  );
+    "Common federal rule: CIII–V up to 5 refills within 6 months.", "Controlled substance rules", `local:fed:cs:${n++}`);
 
-  pushQ(F, "Federal controlled substance record retention minimum is commonly:", "2 years",
+  add(F, "Federal controlled substance record retention minimum is commonly:", "2 years",
     ["6 months","1 year","10 years"],
-    "Federal baseline is commonly 2 years (state may require longer).",
-    "Record retention", `local:fed:rr:${idc++}`
-  );
+    "Federal baseline is commonly 2 years (states may require longer).", "Record retention", `local:fed:rr:${n++}`);
 
-  pushQ(F, "DSCSA primarily relates to:", "Drug supply chain security (serialization/traceability)",
-    ["Patient privacy only","DEA scheduling only","Insurance billing rules only"],
-    "DSCSA focuses on tracing/verification and supply chain integrity.",
-    "FDA/DSCSA", `local:fed:dscsa:${idc++}`
-  );
+  add(F, "HIPAA primarily protects:", "Patient health information privacy",
+    ["Drug pricing rules","DEA scheduling","NDC formatting"],
+    "HIPAA regulates privacy/security of protected health information.", "Privacy", `local:fed:hipaa:${n++}`);
 
-  pushQ(F, "Pseudoephedrine sales controls are most associated with:", "Combat Methamphetamine Epidemic Act (CMEA)-type restrictions",
-    ["HIPAA only","CLIA only","REMS only"],
-    "Pseudoephedrine is regulated due to diversion concerns.",
-    "Restricted products", `local:fed:pse:${idc++}`
-  );
+  add(F, "DSCSA primarily relates to:", "Drug supply chain security and traceability",
+    ["Patient counseling requirements","DEA diversion reporting only","Insurance formularies"],
+    "DSCSA focuses on supply chain tracing/verification.", "FDA/DSCSA", `local:fed:dscsa:${n++}`);
 
-  pushQ(F, "HIPAA primarily protects:", "Patient health information privacy",
-    ["Drug pricing rules","Controlled substance ordering","NDC formatting"],
-    "HIPAA regulates privacy/security of PHI.",
-    "Privacy", `local:fed:hipaa:${idc++}`
-  );
+  add(F, "Pseudoephedrine sales controls are most associated with:", "Combat Methamphetamine Epidemic Act-type restrictions",
+    ["CLIA regulations","REMS programs","OSHA standards"],
+    "Pseudoephedrine is regulated due to diversion risk.", "Restricted products", `local:fed:pse:${n++}`);
 
-  // Make sure each domain has enough candidates; repeats are allowed if needed.
   return bank;
 }
 
 /* =========================
-   Assembly helpers
+   Assembly helpers (no learning mode)
 ========================= */
-
 function partitionByDomain(items){
   const map = new Map();
   items.forEach(it=>{
@@ -873,14 +785,13 @@ function partitionByDomain(items){
   });
   return map;
 }
-
-function pickFromDomain(domain, need, candidates, learningMode){
+function randomSampleNoReplace(items, count){
+  const s = shuffle(items.slice());
+  return s.slice(0, Math.min(count, s.length));
+}
+function pickFromDomain(domain, need, candidates){
   if(need <= 0) return [];
-  const stats = loadStats();
-  const picked = learningMode
-    ? weightedSampleNoReplace(candidates, need, (q)=>weightForPick(q.id, stats))
-    : randomSampleNoReplace(candidates, need);
-
+  let picked = randomSampleNoReplace(candidates, need);
   // backfill with repeats if needed
   if(picked.length < need && candidates.length > 0){
     while(picked.length < need){
@@ -889,7 +800,6 @@ function pickFromDomain(domain, need, candidates, learningMode){
   }
   return picked.slice(0, need);
 }
-
 function applyChoiceShuffle(finalQs){
   finalQs.forEach(item=>{
     const correctText = item.choices[item.answerIndex];
@@ -897,64 +807,57 @@ function applyChoiceShuffle(finalQs){
     item.answerIndex = item.choices.indexOf(correctText);
   });
 }
-
 function ensureExactly90(finalQs){
   const allLocal = buildLocalBank();
   const existing = new Set(finalQs.map(q => q.id));
-  let safetyCounter = 0;
-
-  while(finalQs.length < TOTAL_QUESTIONS && safetyCounter < 10000){
-    safetyCounter++;
-    const candidate = allLocal[Math.floor(Math.random()*allLocal.length)];
-    if(!existing.has(candidate.id) || finalQs.length > TOTAL_QUESTIONS - 6){
-      finalQs.push(candidate);
-      existing.add(candidate.id);
+  let safety = 0;
+  while(finalQs.length < TOTAL_QUESTIONS && safety < 20000){
+    safety++;
+    const c = allLocal[Math.floor(Math.random()*allLocal.length)];
+    if(!existing.has(c.id) || finalQs.length > TOTAL_QUESTIONS - 8){
+      finalQs.push(c);
+      existing.add(c.id);
     }
   }
   return finalQs.slice(0, TOTAL_QUESTIONS);
 }
 
 /* =========================
-   UI State
+   State
+   IMPORTANT: answers stored by INDEX (fixes “answering one answers another”)
 ========================= */
-
 let state = {
   questions: [],
   index: 0,
-  answers: new Map(),
-  flagged: new Set(),
+  answers: new Map(),     // key: question index, value: selected choice index
+  flagged: new Set(),     // stores question index
   timed: false,
   timeLeftSec: 110*60,
   timerHandle: null,
   shuffleQ: true,
   shuffleA: true,
   useOnlineMeds: true,
-  learningMode: true,
   isBuilt: false
 };
 
 /* =========================
    Elements
 ========================= */
-
 const startScreen = document.getElementById("startScreen");
 const examScreen = document.getElementById("examScreen");
 const resultsScreen = document.getElementById("resultsScreen");
 
 const startBtn = document.getElementById("startBtn");
 const resetBtn = document.getElementById("resetBtn");
-const wipeStatsBtn = document.getElementById("wipeStatsBtn");
 
 const shuffleQEl = document.getElementById("shuffleQ");
 const shuffleAEl = document.getElementById("shuffleA");
 const timedEl = document.getElementById("timed");
 const timerLenEl = document.getElementById("timerLen");
 const useOnlineMedsEl = document.getElementById("useOnlineMeds");
-const learningModeEl = document.getElementById("learningMode");
 const statusBox = document.getElementById("statusBox");
 
 const qCounter = document.getElementById("qCounter");
-const totalQEl = document.getElementById("totalQ");
 const answeredCount = document.getElementById("answeredCount");
 const flagCount = document.getElementById("flagCount");
 const progressBar = document.getElementById("progressBar");
@@ -989,7 +892,6 @@ const backHomeBtn = document.getElementById("backHomeBtn");
 /* =========================
    Timer
 ========================= */
-
 function stopTimer(){
   if(state.timerHandle){
     clearInterval(state.timerHandle);
@@ -1012,7 +914,6 @@ function startTimer(){
 /* =========================
    Reset / navigation
 ========================= */
-
 function hardReset(){
   state.questions = [];
   state.index = 0;
@@ -1026,7 +927,6 @@ function hardReset(){
   state.shuffleQ = shuffleQEl.checked;
   state.shuffleA = shuffleAEl.checked;
   state.useOnlineMeds = useOnlineMedsEl.checked;
-  state.learningMode = learningModeEl.checked;
   state.isBuilt = false;
 
   stopTimer();
@@ -1035,34 +935,26 @@ function hardReset(){
   examScreen.style.display = "none";
   resultsScreen.style.display = "none";
 
-  submitBtn.disabled = true; // only until built
+  submitBtn.disabled = true; // enabled only after build
   startBtn.disabled = false;
 }
-
 resetBtn.addEventListener("click", hardReset);
-wipeStatsBtn.addEventListener("click", () => {
-  wipeStats();
-  statusBox.className = "ok tiny";
-  statusBox.style.display = "";
-  statusBox.textContent = "Learning history cleared on this device.";
-});
 endBtn.addEventListener("click", () => hardReset());
 restartBtn.addEventListener("click", () => buildExam());
 backHomeBtn.addEventListener("click", () => hardReset());
 
 /* =========================
-   Build exam (atomic)
+   Build exam (atomic build)
+   - Submit allowed anytime AFTER build
 ========================= */
-
 async function buildExam(){
   startBtn.disabled = true;
-  submitBtn.disabled = true; // disabled only during build
+  submitBtn.disabled = true;
 
   state.shuffleQ = shuffleQEl.checked;
   state.shuffleA = shuffleAEl.checked;
   state.timed = timedEl.checked;
   state.useOnlineMeds = useOnlineMedsEl.checked;
-  state.learningMode = learningModeEl.checked;
 
   const mins = parseInt(timerLenEl.value, 10) || 110;
   state.timeLeftSec = mins * 60;
@@ -1072,7 +964,6 @@ async function buildExam(){
   const local = buildLocalBank();
   const byDomainLocal = partitionByDomain(local);
 
-  // Medications domain: allow some dynamic meds but keep local variety too.
   const medsTarget = COUNTS[DOMAIN.MEDS];
   let dynamicMeds = [];
 
@@ -1093,15 +984,15 @@ async function buildExam(){
 
   const final = [];
 
-  // Meds
+  // Medications
   const medsFromDynamic = dynamicMeds.slice(0, medsTarget);
   const medsRemaining = medsTarget - medsFromDynamic.length;
-  final.push(...medsFromDynamic, ...pickFromDomain(DOMAIN.MEDS, medsRemaining, byDomainLocal.get(DOMAIN.MEDS)||[], state.learningMode));
+  final.push(...medsFromDynamic, ...pickFromDomain(DOMAIN.MEDS, medsRemaining, byDomainLocal.get(DOMAIN.MEDS)||[]));
 
-  // Other domains
-  final.push(...pickFromDomain(DOMAIN.FED, COUNTS[DOMAIN.FED], byDomainLocal.get(DOMAIN.FED)||[], state.learningMode));
-  final.push(...pickFromDomain(DOMAIN.SAFETY, COUNTS[DOMAIN.SAFETY], byDomainLocal.get(DOMAIN.SAFETY)||[], state.learningMode));
-  final.push(...pickFromDomain(DOMAIN.ORDER, COUNTS[DOMAIN.ORDER], byDomainLocal.get(DOMAIN.ORDER)||[], state.learningMode));
+  // Safety / Order / Federal
+  final.push(...pickFromDomain(DOMAIN.SAFETY, COUNTS[DOMAIN.SAFETY], byDomainLocal.get(DOMAIN.SAFETY)||[]));
+  final.push(...pickFromDomain(DOMAIN.ORDER, COUNTS[DOMAIN.ORDER], byDomainLocal.get(DOMAIN.ORDER)||[]));
+  final.push(...pickFromDomain(DOMAIN.FED, COUNTS[DOMAIN.FED], byDomainLocal.get(DOMAIN.FED)||[]));
 
   let assembled = ensureExactly90(final);
 
@@ -1110,20 +1001,24 @@ async function buildExam(){
 
   assembled = ensureExactly90(assembled).slice(0, TOTAL_QUESTIONS);
 
+  // IMPORTANT FIX: ensure each question instance has a unique runtimeId
+  assembled = assembled.map(q => ({
+    ...q,
+    runtimeId: q.id + "__RUN__" + Math.random().toString(36).slice(2)
+  }));
+
   state.questions = assembled;
   state.index = 0;
   state.answers = new Map();
   state.flagged = new Set();
   state.isBuilt = (state.questions.length === TOTAL_QUESTIONS);
 
-  // Reveal exam UI
+  // Reveal exam
   startScreen.style.display = "none";
   resultsScreen.style.display = "none";
   examScreen.style.display = "";
 
   timerPill.style.display = state.timed ? "" : "none";
-  totalQEl.textContent = String(TOTAL_QUESTIONS);
-
   if(state.timed){
     timeLeftEl.textContent = fmtTime(state.timeLeftSec);
     startTimer();
@@ -1135,16 +1030,14 @@ async function buildExam(){
   renderQuestion();
   renderTopStats();
 
-  // Submit is enabled immediately after build, regardless of unanswered count.
+  // Submit enabled AFTER build, regardless of unanswered
   submitBtn.disabled = false;
 }
-
 startBtn.addEventListener("click", buildExam);
 
 /* =========================
    Render
 ========================= */
-
 function renderTopStats(){
   const answered = state.answers.size;
   const flagged = state.flagged.size;
@@ -1163,7 +1056,8 @@ function renderQuestion(){
   qStem.innerHTML = item.stem;
   choicesEl.innerHTML = "";
 
-  const selected = state.answers.get(item.id);
+  // KEY FIX: selection stored by INDEX (not by id)
+  const selected = state.answers.get(state.index);
 
   item.choices.forEach((c, idx) => {
     const lab = document.createElement("label");
@@ -1175,10 +1069,10 @@ function renderQuestion(){
     if(selected === idx) inp.checked = true;
 
     inp.addEventListener("change", () => {
-      state.answers.set(item.id, idx);
+      state.answers.set(state.index, idx);
       renderTopStats();
       renderNav();
-      renderQuestion(); // refresh selected styling
+      renderQuestion(); // refresh selection styling
     });
 
     const span = document.createElement("div");
@@ -1191,7 +1085,7 @@ function renderQuestion(){
   prevBtn.disabled = state.index === 0;
   nextBtn.disabled = state.index === state.questions.length - 1;
 
-  flagBtn.textContent = state.flagged.has(item.id) ? "Unflag" : "Flag";
+  flagBtn.textContent = state.flagged.has(state.index) ? "Unflag" : "Flag";
 
   renderTopStats();
   renderNav();
@@ -1199,13 +1093,13 @@ function renderQuestion(){
 
 function renderNav(){
   navGrid.innerHTML = "";
-  state.questions.forEach((it, i) => {
+  state.questions.forEach((_, i) => {
     const b = document.createElement("button");
     b.className = "navbtn";
     b.textContent = String(i + 1);
 
-    if(state.answers.has(it.id)) b.classList.add("answered");
-    if(state.flagged.has(it.id)) b.classList.add("flagged");
+    if(state.answers.has(i)) b.classList.add("answered");
+    if(state.flagged.has(i)) b.classList.add("flagged");
     if(i === state.index) b.classList.add("current");
 
     b.addEventListener("click", () => {
@@ -1219,20 +1113,17 @@ function renderNav(){
 /* =========================
    Controls
 ========================= */
-
 prevBtn.addEventListener("click", () => { if(state.index>0){ state.index--; renderQuestion(); } });
 nextBtn.addEventListener("click", () => { if(state.index<state.questions.length-1){ state.index++; renderQuestion(); } });
 
 flagBtn.addEventListener("click", () => {
-  const id = state.questions[state.index].id;
-  if(state.flagged.has(id)) state.flagged.delete(id);
-  else state.flagged.add(id);
+  if(state.flagged.has(state.index)) state.flagged.delete(state.index);
+  else state.flagged.add(state.index);
   renderQuestion();
 });
 
 clearBtn.addEventListener("click", () => {
-  const id = state.questions[state.index].id;
-  state.answers.delete(id);
+  state.answers.delete(state.index);
   renderQuestion();
 });
 
@@ -1245,23 +1136,11 @@ window.addEventListener("keydown", (e) => {
 });
 
 /* =========================
-   Scoring + learning update
+   Scoring + Review
 ========================= */
-
-function updateLearningStats(qid, wasCorrect){
-  const stats = loadStats();
-  const s = stats[qid] || { attempts:0, correct:0, lastSeen:0 };
-  s.attempts = (s.attempts || 0) + 1;
-  if(wasCorrect) s.correct = (s.correct || 0) + 1;
-  s.lastSeen = nowTs();
-  stats[qid] = s;
-  saveStats(stats);
-}
-
 function submitExam(fromTimer){
   stopTimer();
 
-  // Hard lock scoring base to 90 questions always.
   const qs = (state.questions && state.questions.length === TOTAL_QUESTIONS)
     ? state.questions
     : ensureExactly90(state.questions || []);
@@ -1271,17 +1150,17 @@ function submitExam(fromTimer){
   let unanswered = 0;
 
   const byDomain = new Map();
-  qs.forEach(it => {
+  qs.forEach((it, i) => {
     if(!byDomain.has(it.domain)) byDomain.set(it.domain, {correct:0, total:0});
     byDomain.get(it.domain).total += 1;
 
-    const ans = state.answers.get(it.id);
+    // KEY FIX: answer stored by INDEX
+    const ans = state.answers.get(i);
     if(ans === undefined){ unanswered++; return; }
 
     const ok = ans === it.answerIndex;
     if(ok){ correct++; byDomain.get(it.domain).correct += 1; }
     else { incorrect++; }
-    updateLearningStats(it.id, ok);
   });
 
   const overallPct = Math.round((correct / TOTAL_QUESTIONS) * 100);
@@ -1302,7 +1181,7 @@ function submitExam(fromTimer){
 
   reviewList.innerHTML = "";
   qs.forEach((it, i) => {
-    const userAns = state.answers.get(it.id);
+    const userAns = state.answers.get(i);
     const isCorrect = userAns === it.answerIndex;
     const status = (userAns === undefined) ? "Unanswered" : (isCorrect ? "Correct" : "Incorrect");
 
@@ -1321,7 +1200,7 @@ function submitExam(fromTimer){
       <div class="tiny"><b>Your answer:</b> ${userText}</div>
       <div class="tiny"><b>Correct answer:</b> ${correctText}</div>
       <div class="explain tiny"><b>Why:</b> ${it.explanation}</div>
-      <div class="tiny muted" style="margin-top:6px"><b>Question ID:</b> ${it.id}</div>
+      <div class="tiny muted" style="margin-top:6px"><b>Question ref:</b> ${it.ref}</div>
     `;
     reviewList.appendChild(div);
   });
@@ -1329,12 +1208,14 @@ function submitExam(fromTimer){
   examScreen.style.display = "none";
   resultsScreen.style.display = "";
   startScreen.style.display = "none";
-
   window.scrollTo({top:0, behavior:"smooth"});
+
   if(fromTimer) alert("Time is up. Your exam has been submitted.");
 }
 
-// Boot
+/* =========================
+   Boot
+========================= */
 hardReset();
 </script>
 </body>
