@@ -1,80 +1,279 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="amoled" data-ascii="false">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>PTCB Practice Test</title>
 
 <style>
-/* ================= THEMES ================= */
+/* =========================
+   THEMES
+   ========================= */
+
 :root{
-  --bg:#f6f7fb; --card:#ffffff; --text:#111; --muted:#555;
-  --border:#ddd; --accent:#2563eb;
-}
-html[data-theme="dark"]{
-  --bg:#0a0f1c; --card:#121a2b; --text:#e5e7eb; --muted:#9ca3af;
-  --border:#2a3550; --accent:#60a5fa;
-}
-html[data-theme="terminal"]{
-  --bg:#020403; --card:#06130b; --text:#7cffb2; --muted:#54c98a;
-  --border:#0f2c1b; --accent:#00ff88;
-}
-html[data-theme="purple"]{
-  --bg:#120018; --card:#1e0030; --text:#f3d9ff; --muted:#d8b4fe;
-  --border:#3c0066; --accent:#c084fc;
-}
-html[data-theme="lab"]{
-  --bg:#f4fdff; --card:#ffffff; --text:#003c44; --muted:#2b6b74;
-  --border:#c8eef5; --accent:#00a8a8;
-}
-html[data-theme="synthwave"]{
-  --bg:#0a0016; --card:#16002b; --text:#ffd9ff; --muted:#f0abfc;
-  --border:#4b0073; --accent:#ff00aa;
-}
-html[data-theme="medical"]{
-  --bg:#f4fbff; --card:#ffffff; --text:#0b1f2a; --muted:#335a6b;
-  --border:#cfe9f5; --accent:#00a8a8;
-}
-html[data-theme="paper"]{
-  --bg:#fbf7ef; --card:#fffdf8; --text:#1b1b1b; --muted:#5a5a5a;
-  --border:#e7ddcc; --accent:#8b5cf6;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#556;
+  --border:#ddd;
+  --accent:#2563eb;
+  --good:#22c55e;
+  --warn:#f59e0b;
+  --bad:#ef4444;
 }
 
-/* ================= BASE ================= */
-body{ margin:0; background:var(--bg); color:var(--text); font-family:system-ui; }
-header{ padding:15px; background:var(--card); border-bottom:1px solid var(--border); }
-.wrap{ max-width:1000px; margin:auto; padding:20px; }
-.card{ background:var(--card); border:1px solid var(--border); border-radius:12px; padding:15px; margin-bottom:15px; }
+/* AMOLED (true black) */
+html[data-theme="amoled"]{
+  --bg:#000;
+  --card:#050505;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --border:#222;
+  --accent:#4f8cff;
+}
+
+/* Navy theme (your old “dark-but-navy” look) */
+html[data-theme="navy"]{
+  --bg:#0a1224;
+  --card:#111b33;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --border:#25345a;
+  --accent:#60a5fa;
+}
+
+/* Terminal */
+html[data-theme="terminal"]{
+  --bg:#020403;
+  --card:#06130b;
+  --text:#7cffb2;
+  --muted:#54c98a;
+  --border:#0f2c1b;
+  --accent:#00ff88;
+}
+
+/* Purple */
+html[data-theme="purple"]{
+  --bg:#120018;
+  --card:#1e0030;
+  --text:#f3d9ff;
+  --muted:#d8b4fe;
+  --border:#3c0066;
+  --accent:#c084fc;
+}
+
+/* Lab */
+html[data-theme="lab"]{
+  --bg:#f4fdff;
+  --card:#ffffff;
+  --text:#003c44;
+  --muted:#2b6b74;
+  --border:#c8eef5;
+  --accent:#00a8a8;
+}
+
+/* Synthwave */
+html[data-theme="synthwave"]{
+  --bg:#0a0016;
+  --card:#16002b;
+  --text:#ffd9ff;
+  --muted:#f0abfc;
+  --border:#4b0073;
+  --accent:#ff00aa;
+}
+
+/* Paper */
+html[data-theme="paper"]{
+  --bg:#fbf7ef;
+  --card:#fffdf8;
+  --text:#1b1b1b;
+  --muted:#5a5a5a;
+  --border:#e7ddcc;
+  --accent:#8b5cf6;
+}
+
+/* ASCII overlay */
+html[data-ascii="true"] body{
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,255,140,.06) 0px,
+      rgba(0,255,140,.06) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    var(--bg);
+}
+
+/* =========================
+   BASE UI
+   ========================= */
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+}
+header{
+  padding:14px 14px 10px;
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+}
 h2,h3{ margin:0 0 10px; }
+a{ color:var(--accent); }
 small,.muted{ color:var(--muted); }
 
-button{
-  padding:10px 14px; border-radius:10px; border:none; font-weight:700; cursor:pointer;
-  background:var(--accent); color:white; margin:4px;
+.wrap{
+  max-width:1040px;
+  margin:0 auto;
+  padding:18px;
 }
-button.alt{ background:var(--card); border:1px solid var(--border); color:var(--text); }
-button:disabled{ opacity:.55; cursor:not-allowed; }
 
-.choice{ border:1px solid var(--border); padding:10px; border-radius:10px; margin-bottom:8px; cursor:pointer; }
-.navgrid{ display:grid; grid-template-columns:repeat(10,1fr); gap:6px; margin-top:10px; }
-.navbtn{ border:1px solid var(--border); padding:8px; text-align:center; border-radius:8px; cursor:pointer; }
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+  margin-bottom:14px;
+}
+
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+.row.space{
+  justify-content:space-between;
+}
+
+button{
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;
+  font-weight:800;
+  cursor:pointer;
+  background:var(--accent);
+  color:white;
+  margin:3px;
+}
+button.alt{
+  background:transparent;
+  border:1px solid var(--border);
+  color:var(--text);
+}
+button.tog.on{
+  outline:2px solid var(--accent);
+}
+button:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+}
+
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(127,127,127,.08);
+  font-weight:800;
+  font-size:12px;
+}
+
+.biggrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.bigbox{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:26px 16px;
+  text-align:center;
+  cursor:pointer;
+  user-select:none;
+}
+.bigbox .title{
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:6px;
+}
+.bigbox .desc{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.35;
+}
+
+.choice{
+  border:1px solid var(--border);
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:8px;
+  cursor:pointer;
+}
+.choice:hover{
+  border-color:rgba(127,127,127,.55);
+}
+.choice .lbl{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  cursor:pointer;
+}
+.choice input{
+  margin-top:3px;
+  transform:scale(1.12);
+}
+
+.navgrid{
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:6px;
+  margin-top:10px;
+}
+.navbtn{
+  border:1px solid var(--border);
+  padding:8px;
+  text-align:center;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:800;
+}
 .navbtn.answered{ background:rgba(34,197,94,.18); }
-.navbtn.flagged{ background:rgba(245,158,11,.22); }
+.navbtn.flagged{ background:rgba(245,158,11,.20); }
 .navbtn.current{ outline:2px solid var(--accent); }
 
 .flashcard{
-  font-size:20px; padding:40px; text-align:center; border:1px solid var(--border);
-  border-radius:12px; cursor:pointer; user-select:none;
+  font-size:20px;
+  padding:40px;
+  text-align:center;
+  border:1px solid var(--border);
+  border-radius:12px;
+  cursor:pointer;
+  user-select:none;
 }
 
-.row{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
-.pill{
-  display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--border);
-  background:rgba(127,127,127,.08); font-weight:700; font-size:12px;
+table{
+  width:100%;
+  border-collapse:collapse;
 }
-input[type="checkbox"]{ transform:scale(1.15); }
+th,td{
+  border:1px solid var(--border);
+  padding:8px;
+  vertical-align:top;
+  font-size:13px;
+}
+th{
+  background:rgba(127,127,127,.08);
+  text-align:left;
+}
 
-@media (max-width: 520px){
+@media (max-width:720px){
+  .biggrid{ grid-template-columns:1fr; }
+}
+@media (max-width:520px){
   .navgrid{ grid-template-columns:repeat(8,1fr); }
   .flashcard{ font-size:18px; padding:28px; }
 }
@@ -83,72 +282,80 @@ input[type="checkbox"]{ transform:scale(1.15); }
 
 <body>
 <header>
-  <h2>PTCB Practice Test</h2>
-
-  <div class="row">
-    <button class="alt" onclick="setTheme('light')">Light</button>
-    <button class="alt" onclick="setTheme('dark')">Dark</button>
-    <button class="alt" onclick="setTheme('terminal')">Terminal</button>
-    <button class="alt" onclick="setTheme('purple')">Purple</button>
-    <button class="alt" onclick="setTheme('lab')">Lab</button>
-    <button class="alt" onclick="setTheme('synthwave')">Synthwave</button>
-    <button class="alt" onclick="setTheme('medical')">Medical</button>
-    <button class="alt" onclick="setTheme('paper')">Paper</button>
+  <div class="row space">
+    <div>
+      <h2>PTCB Practice Test</h2>
+      <div class="muted"><small>Single-file build (big local banks). GitHub Pages friendly.</small></div>
+    </div>
+    <div class="row">
+      <button class="alt" onclick="setTheme('amoled')">AMOLED</button>
+      <button class="alt" onclick="setTheme('navy')">Navy</button>
+      <button class="alt" onclick="setTheme('terminal')">Terminal</button>
+      <button class="alt" onclick="setTheme('purple')">Purple</button>
+      <button class="alt" onclick="setTheme('lab')">Lab</button>
+      <button class="alt" onclick="setTheme('synthwave')">Synthwave</button>
+      <button class="alt" onclick="setTheme('paper')">Paper</button>
+      <button class="alt" onclick="toggleAscii()">ASCII</button>
+    </div>
   </div>
 </header>
 
 <div class="wrap">
 
-  <!-- HOME -->
-  <div id="home" class="card">
-    <h3>Home</h3>
-    <div class="muted">
-      Weighted 90-question practice test (2026 mapping): <b>32 Medications</b> • <b>21 Patient Safety</b> • <b>20 Order Entry/Math</b> • <b>17 Federal</b>.
+  <!-- MAIN MENU -->
+  <div id="menu" class="card">
+    <div class="biggrid">
+      <div class="bigbox" onclick="startTest()">
+        <div class="title">Practice Test</div>
+        <div class="desc">
+          Weighted 90 questions (32 Med • 21 Safety • 20 Order/Math • 17 Federal).
+          Submit anytime. Flag toggle. Results page + breakdown.
+        </div>
+      </div>
+      <div class="bigbox" onclick="goFlashHome()">
+        <div class="title">Flashcards</div>
+        <div class="desc">
+          Choose a PTCE section, then flip through a large deck generated from the same banks.
+        </div>
+      </div>
     </div>
 
-    <div class="row" style="margin-top:10px;">
-      <span class="pill"><label><input id="optTimed" type="checkbox"> Timed</label></span>
-      <span class="pill">
-        <label><input id="optRxNav" type="checkbox" checked> Use RxNav (optional)</label>
-      </span>
-      <span class="pill">
-        <label><input id="optShuffleQ" type="checkbox" checked> Shuffle questions</label>
-      </span>
+    <div class="card" style="margin-top:14px;">
+      <h3>Options</h3>
+      <div class="row">
+        <span class="pill"><label><input id="optTimed" type="checkbox" checked /> Timed</label></span>
+        <span class="pill"><label><input id="optTime90" type="checkbox" /> Use 90 min (instead of 110)</label></span>
+        <span class="pill"><label><input id="optShuffleQ" type="checkbox" checked /> Shuffle questions</label></span>
+        <span class="pill"><label><input id="optRxNav" type="checkbox" checked /> RxNav enrichment (optional)</label></span>
+      </div>
+      <div class="muted"><small id="status"></small></div>
     </div>
-
-    <div class="row" style="margin-top:10px;">
-      <button onclick="startTest()">Start Practice Test</button>
-      <button onclick="goFlashHome()">Flashcards</button>
-    </div>
-
-    <div id="status" class="muted" style="margin-top:8px;"></div>
   </div>
 
   <!-- TEST -->
-  <div id="test" class="card" style="display:none">
-    <div class="row" style="justify-content:space-between;">
+  <div id="test" class="card" style="display:none;">
+    <div class="row space">
       <div class="row">
         <span class="pill">Question <b id="qNum">1</b>/90</span>
         <span class="pill">Answered <b id="answeredCount">0</b></span>
         <span class="pill">Flagged <b id="flaggedCount">0</b></span>
-        <span class="pill" id="timerPill" style="display:none;">Time <b id="timerText">110:00</b></span>
         <span class="pill" id="domainPill">—</span>
+        <span class="pill" id="timerPill" style="display:none;">Time <b id="timerText">110:00</b></span>
       </div>
       <div class="row">
-        <button class="alt" onclick="flagQ()">Flag</button>
-        <button class="alt" onclick="clearQ()">Clear</button>
         <button onclick="submitTest()">Submit</button>
-        <button class="alt" onclick="goHome()">Home</button>
+        <button class="alt" onclick="goMenu()">Main Menu</button>
       </div>
     </div>
 
     <h3 id="question" style="margin-top:12px;"></h3>
     <div id="choices"></div>
 
-    <div class="row" style="justify-content:space-between;">
+    <div class="row space">
       <div class="row">
         <button class="alt" onclick="prevQ()">Prev</button>
         <button onclick="nextQ()">Next</button>
+        <button id="flagBtn" class="alt tog" onclick="toggleFlag()">Flag</button>
       </div>
       <div class="muted"><small>Leave blank if you want. Submit anytime.</small></div>
     </div>
@@ -156,27 +363,65 @@ input[type="checkbox"]{ transform:scale(1.15); }
     <div id="nav" class="navgrid"></div>
   </div>
 
-  <!-- FLASH HOME -->
-  <div id="flashHome" class="card" style="display:none">
-    <h3>Flashcards</h3>
-    <div class="muted">Pick a PTCE section to study.</div>
-
-    <div class="row" style="margin-top:10px;">
-      <button onclick="openFlash('MEDS')">Medications</button>
-      <button onclick="openFlash('SAFETY')">Patient Safety</button>
-      <button onclick="openFlash('ORDER')">Order Entry / Math</button>
-      <button onclick="openFlash('FED')">Federal</button>
-      <button class="alt" onclick="openFlash('MIXED')">Mixed</button>
+  <!-- RESULTS -->
+  <div id="results" class="card" style="display:none;">
+    <div class="row space">
+      <h3 style="margin:0;">Results</h3>
+      <div class="row">
+        <button onclick="restartTest()">Restart</button>
+        <button class="alt" onclick="goMenu()">Main Menu</button>
+      </div>
     </div>
 
-    <div class="row" style="margin-top:10px;">
-      <button class="alt" onclick="goHome()">Home</button>
+    <div id="scoreSummary" class="card" style="margin-top:12px;"></div>
+
+    <div class="card">
+      <h3>Domain Breakdown</h3>
+      <div id="domainBreakdown"></div>
+    </div>
+
+    <div class="card">
+      <h3>Review</h3>
+      <div class="muted"><small>Click a row to jump back into the test at that question.</small></div>
+      <div style="overflow:auto; margin-top:10px;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Domain</th>
+              <th>Prompt</th>
+              <th>Your Answer</th>
+              <th>Correct</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="reviewTable"></tbody>
+        </table>
+      </div>
     </div>
   </div>
 
+  <!-- FLASH HOME -->
+  <div id="flashHome" class="card" style="display:none;">
+    <div class="row space">
+      <h3 style="margin:0;">Flashcards</h3>
+      <button class="alt" onclick="goMenu()">Main Menu</button>
+    </div>
+
+    <div class="row" style="margin-top:10px;">
+      <button onclick="openFlash('MED')">Medications</button>
+      <button onclick="openFlash('SAFE')">Patient Safety</button>
+      <button onclick="openFlash('ORDER')">Order Entry / Math</button>
+      <button onclick="openFlash('FED')">Federal</button>
+      <button class="alt" onclick="openFlash('MIX')">Mixed</button>
+    </div>
+
+    <div class="muted" style="margin-top:10px;"><small>Decks are generated from the same local banks as the test.</small></div>
+  </div>
+
   <!-- FLASH VIEW -->
-  <div id="flash" class="card" style="display:none">
-    <div class="row" style="justify-content:space-between;">
+  <div id="flash" class="card" style="display:none;">
+    <div class="row space">
       <div class="row">
         <span class="pill">Deck <b id="flashDeckName">—</b></span>
         <span class="pill">Card <b id="flashPos">1</b>/<b id="flashTotal">1</b></span>
@@ -185,7 +430,7 @@ input[type="checkbox"]{ transform:scale(1.15); }
       <div class="row">
         <button onclick="nextFlash()">Next</button>
         <button class="alt" onclick="goFlashHome()">Decks</button>
-        <button class="alt" onclick="goHome()">Home</button>
+        <button class="alt" onclick="goMenu()">Main Menu</button>
       </div>
     </div>
 
@@ -195,34 +440,60 @@ input[type="checkbox"]{ transform:scale(1.15); }
 </div>
 
 <script>
-/* ================= THEME SYSTEM ================= */
+/* =========================
+   THEME + ASCII
+   ========================= */
 function setTheme(t){
   document.documentElement.setAttribute("data-theme", t);
   localStorage.setItem("theme", t);
 }
-(function(){
+function toggleAscii(){
+  const html = document.documentElement;
+  const cur = html.getAttribute("data-ascii")==="true";
+  html.setAttribute("data-ascii", cur ? "false" : "true");
+  localStorage.setItem("ascii", cur ? "false" : "true");
+}
+(function initTheme(){
   const saved = localStorage.getItem("theme");
   if(saved) setTheme(saved);
+  const ascii = localStorage.getItem("ascii");
+  if(ascii==="true") document.documentElement.setAttribute("data-ascii","true");
 })();
 
-/* ================= CONSTANTS / WEIGHTS ================= */
-const DOMAIN = { MEDS:"Medications", SAFETY:"Patient Safety", ORDER:"Order Entry / Math", FED:"Federal Requirements" };
-const COUNTS = { MEDS:32, SAFETY:21, ORDER:20, FED:17 };
+/* =========================
+   EXAM CONFIG (2026 mapping you requested)
+   90 questions weighted:
+   - 40% Medications => 32
+   - 26.25% Patient Safety => 21
+   - 21.25% Order Entry => 20
+   - 12.5% Federal Requirements => 17
+   ========================= */
+const DOMAIN = {
+  MED: "Medications",
+  SAFE: "Patient Safety",
+  ORDER: "Order Entry / Math",
+  FED: "Federal Requirements"
+};
+const COUNTS = { MED:32, SAFE:21, ORDER:20, FED:17 };
 const TOTAL = 90;
 
-/* ================= STATE ================= */
-let questions = [];              // [{domain, stem, choices[4], answerIndex, why}]
-let answers = new Map();         // key = question index, value = choice index
-let flags = new Set();           // flagged question indexes
-let index = 0;
+/* =========================
+   STATE
+   ========================= */
+let questions = [];   // {domain, stemHTML, choices[4], answerIndex, explain, id}
+let answers = new Map(); // key: question index, value: answer index
+let flags = new Set();   // flagged question indexes
+let idx = 0;
 
 let timer = null;
-let timed = false;
+let timed = true;
 let timeLeft = 110*60;
 
 const statusEl = document.getElementById("status");
 
-/* ================= UTIL ================= */
+/* =========================
+   HELPERS
+   ========================= */
 function shuffle(arr){
   for(let i=arr.length-1;i>0;i--){
     const j=Math.floor(Math.random()*(i+1));
@@ -231,112 +502,249 @@ function shuffle(arr){
   return arr;
 }
 function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
-function fmtTime(sec){
-  const m = Math.floor(sec/60);
-  const s = sec % 60;
-  return `${m}:${String(s).padStart(2,'0')}`;
-}
 function uniqBy(arr, keyFn){
-  const seen=new Set(), out=[];
+  const seen = new Set();
+  const out = [];
   for(const x of arr){
-    const k=keyFn(x);
+    const k = keyFn(x);
     if(seen.has(k)) continue;
-    seen.add(k); out.push(x);
+    seen.add(k);
+    out.push(x);
   }
   return out;
 }
+function htmlEscape(s){
+  return String(s)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;");
+}
+function fmtTime(sec){
+  const m = Math.floor(sec/60);
+  const s = sec%60;
+  return `${m}:${String(s).padStart(2,"0")}`;
+}
+function setView(view){
+  const ids=["menu","test","results","flashHome","flash"];
+  for(const id of ids){
+    document.getElementById(id).style.display = (id===view) ? "" : "none";
+  }
+}
+function updateTop(){
+  document.getElementById("qNum").textContent = String(idx+1);
+  document.getElementById("answeredCount").textContent = String(answers.size);
+  document.getElementById("flaggedCount").textContent = String(flags.size);
+  document.getElementById("domainPill").textContent = questions[idx]?.domain || "—";
+  const fb = document.getElementById("flagBtn");
+  fb.classList.toggle("on", flags.has(idx));
+  fb.textContent = flags.has(idx) ? "Flagged" : "Flag";
+}
 
-/* ================= RXNAV (OPTIONAL) ================= */
-const RXNAV_BASE="https://rxnav.nlm.nih.gov/REST";
-const RX_SEEDS=["lisinopril","losartan","metformin","atorvastatin","sertraline","omeprazole","gabapentin","tamsulosin","albuterol","pantoprazole","amoxicillin","cephalexin","doxycycline","azithromycin","warfarin","clopidogrel","levothyroxine","insulin lispro","insulin glargine"];
+/* =========================
+   RXNAV (OPTIONAL)
+   ========================= */
+const RXNAV_BASE = "https://rxnav.nlm.nih.gov/REST";
+const RX_SEEDS = [
+  "lisinopril","losartan","metformin","atorvastatin","sertraline","omeprazole","gabapentin","tamsulosin",
+  "albuterol","pantoprazole","amoxicillin","cephalexin","doxycycline","azithromycin","warfarin","clopidogrel",
+  "levothyroxine","fluoxetine","escitalopram","hydrochlorothiazide"
+];
+
 async function fetchJson(url, signal){
-  const res=await fetch(url,{signal});
-  if(!res.ok) throw new Error(`HTTP ${res.status}`);
+  const res = await fetch(url, {signal});
+  if(!res.ok) throw new Error("HTTP "+res.status);
   return await res.json();
 }
 function withTimeout(promiseFactory, ms){
-  const ctrl=new AbortController();
-  const t=setTimeout(()=>ctrl.abort(), ms);
+  const ctrl = new AbortController();
+  const t = setTimeout(()=>ctrl.abort(), ms);
   return promiseFactory(ctrl.signal).finally(()=>clearTimeout(t));
 }
 function extractBrands(name){
-  const matches=name.match(/\[([^\]]+)\]/g)||[];
-  return matches.map(m=>m.replace(/^\[/,'').replace(/\]$/,'').trim()).filter(Boolean);
+  const matches = name.match(/\[([^\]]+)\]/g) || [];
+  return matches.map(m=>m.replace(/^\[/,"").replace(/\]$/,"").trim()).filter(Boolean);
 }
 async function rxnavBrandsForIngredient(ingredient, signal){
-  const url=`${RXNAV_BASE}/drugs.json?name=${encodeURIComponent(ingredient)}`;
-  const data=await fetchJson(url, signal);
-  const groups=(data?.drugGroup?.conceptGroup)||[];
-  const brands=new Set();
+  const url = `${RXNAV_BASE}/drugs.json?name=${encodeURIComponent(ingredient)}`;
+  const data = await fetchJson(url, signal);
+  const groups = (data?.drugGroup?.conceptGroup) || [];
+  const brands = new Set();
 
-  const sbd=groups.find(g=>g.tty==="SBD");
+  const sbd = groups.find(g=>g.tty==="SBD");
   for(const c of (sbd?.conceptProperties||[])){
-    const nm=c?.name||"";
+    const nm = c?.name || "";
     for(const b of extractBrands(nm)) brands.add(b);
   }
-  const bn=groups.find(g=>g.tty==="BN");
+  const bn = groups.find(g=>g.tty==="BN");
   for(const c of (bn?.conceptProperties||[])){
     if(c?.name) brands.add(c.name.trim());
   }
   return Array.from(brands);
 }
 
-/* ================= BIG OFFLINE BANKS ================= */
-/* Medication dataset used to generate MANY questions */
+/* =========================
+   BIG LOCAL BANKS
+   ========================= */
+
+/* ---- Medication dataset (large local bank) ----
+   This is not a “full RxNorm database,” but it’s a large practical local bank:
+   - generics + common brands
+   - class + indication
+   Enough to generate hundreds/thousands of unique questions by template.
+*/
 const MEDS = [
-  {g:"atorvastatin", b:["Lipitor"], cls:"statin", ind:"high cholesterol"},
-  {g:"rosuvastatin", b:["Crestor"], cls:"statin", ind:"high cholesterol"},
-  {g:"simvastatin", b:["Zocor"], cls:"statin", ind:"high cholesterol"},
-  {g:"pravastatin", b:["Pravachol"], cls:"statin", ind:"high cholesterol"},
+  // Cardiovascular
+  {g:"atorvastatin", b:["Lipitor"], cls:"statin", ind:"hyperlipidemia"},
+  {g:"rosuvastatin", b:["Crestor"], cls:"statin", ind:"hyperlipidemia"},
+  {g:"simvastatin", b:["Zocor"], cls:"statin", ind:"hyperlipidemia"},
+  {g:"pravastatin", b:["Pravachol"], cls:"statin", ind:"hyperlipidemia"},
+  {g:"lovastatin", b:["Mevacor"], cls:"statin", ind:"hyperlipidemia"},
   {g:"lisinopril", b:["Prinivil","Zestril"], cls:"ACE inhibitor", ind:"hypertension"},
   {g:"enalapril", b:["Vasotec"], cls:"ACE inhibitor", ind:"hypertension"},
+  {g:"benazepril", b:["Lotensin"], cls:"ACE inhibitor", ind:"hypertension"},
   {g:"losartan", b:["Cozaar"], cls:"ARB", ind:"hypertension"},
   {g:"valsartan", b:["Diovan"], cls:"ARB", ind:"hypertension"},
+  {g:"olmesartan", b:["Benicar"], cls:"ARB", ind:"hypertension"},
   {g:"amlodipine", b:["Norvasc"], cls:"calcium channel blocker", ind:"hypertension/angina"},
+  {g:"diltiazem", b:["Cardizem"], cls:"calcium channel blocker", ind:"arrhythmia/angina"},
+  {g:"verapamil", b:["Calan"], cls:"calcium channel blocker", ind:"arrhythmia/angina"},
   {g:"metoprolol", b:["Lopressor","Toprol XL"], cls:"beta blocker", ind:"hypertension/angina"},
   {g:"carvedilol", b:["Coreg"], cls:"beta blocker", ind:"heart failure"},
+  {g:"atenolol", b:["Tenormin"], cls:"beta blocker", ind:"hypertension"},
+  {g:"propranolol", b:["Inderal"], cls:"beta blocker", ind:"hypertension/migraine"},
   {g:"hydrochlorothiazide", b:["Microzide"], cls:"thiazide diuretic", ind:"hypertension"},
+  {g:"chlorthalidone", b:["Thalitone"], cls:"thiazide-like diuretic", ind:"hypertension"},
   {g:"furosemide", b:["Lasix"], cls:"loop diuretic", ind:"edema"},
-  {g:"spironolactone", b:["Aldactone"], cls:"potassium-sparing diuretic", ind:"edema/heart failure"},
+  {g:"bumetanide", b:["Bumex"], cls:"loop diuretic", ind:"edema"},
+  {g:"spironolactone", b:["Aldactone"], cls:"potassium-sparing diuretic", ind:"heart failure/edema"},
+  {g:"clonidine", b:["Catapres"], cls:"alpha-2 agonist", ind:"hypertension"},
+  {g:"nitroglycerin", b:["Nitrostat"], cls:"nitrate", ind:"angina"},
+  {g:"warfarin", b:["Coumadin"], cls:"anticoagulant", ind:"clot prevention"},
+  {g:"apixaban", b:["Eliquis"], cls:"DOAC anticoagulant", ind:"clot prevention"},
+  {g:"rivaroxaban", b:["Xarelto"], cls:"DOAC anticoagulant", ind:"clot prevention"},
+  {g:"dabigatran", b:["Pradaxa"], cls:"DOAC anticoagulant", ind:"clot prevention"},
+  {g:"clopidogrel", b:["Plavix"], cls:"antiplatelet", ind:"stroke/MI prevention"},
+  {g:"aspirin", b:["Bayer"], cls:"antiplatelet/NSAID", ind:"pain/MI prevention"},
+  {g:"amiodarone", b:["Pacerone"], cls:"antiarrhythmic", ind:"arrhythmia"},
+  {g:"digoxin", b:["Lanoxin"], cls:"cardiac glycoside", ind:"heart failure/AFib"},
+  {g:"isosorbide mononitrate", b:["Imdur"], cls:"nitrate", ind:"angina"},
+  {g:"ezetimibe", b:["Zetia"], cls:"cholesterol absorption inhibitor", ind:"hyperlipidemia"},
+
+  // Endocrine / Diabetes / Thyroid
   {g:"metformin", b:["Glucophage"], cls:"biguanide", ind:"type 2 diabetes"},
   {g:"glipizide", b:["Glucotrol"], cls:"sulfonylurea", ind:"type 2 diabetes"},
+  {g:"glyburide", b:["Diabeta"], cls:"sulfonylurea", ind:"type 2 diabetes"},
   {g:"sitagliptin", b:["Januvia"], cls:"DPP-4 inhibitor", ind:"type 2 diabetes"},
+  {g:"linagliptin", b:["Tradjenta"], cls:"DPP-4 inhibitor", ind:"type 2 diabetes"},
   {g:"empagliflozin", b:["Jardiance"], cls:"SGLT2 inhibitor", ind:"type 2 diabetes"},
+  {g:"dapagliflozin", b:["Farxiga"], cls:"SGLT2 inhibitor", ind:"type 2 diabetes"},
+  {g:"semaglutide", b:["Ozempic","Rybelsus"], cls:"GLP-1 agonist", ind:"type 2 diabetes"},
+  {g:"liraglutide", b:["Victoza"], cls:"GLP-1 agonist", ind:"type 2 diabetes"},
+  {g:"insulin glargine", b:["Lantus"], cls:"long-acting insulin", ind:"diabetes"},
+  {g:"insulin lispro", b:["Humalog"], cls:"rapid-acting insulin", ind:"diabetes"},
+  {g:"insulin aspart", b:["Novolog"], cls:"rapid-acting insulin", ind:"diabetes"},
   {g:"levothyroxine", b:["Synthroid","Levoxyl"], cls:"thyroid hormone", ind:"hypothyroidism"},
+
+  // GI
   {g:"omeprazole", b:["Prilosec"], cls:"PPI", ind:"GERD"},
   {g:"pantoprazole", b:["Protonix"], cls:"PPI", ind:"GERD"},
+  {g:"esomeprazole", b:["Nexium"], cls:"PPI", ind:"GERD"},
+  {g:"lansoprazole", b:["Prevacid"], cls:"PPI", ind:"GERD"},
   {g:"famotidine", b:["Pepcid"], cls:"H2 blocker", ind:"GERD"},
+  {g:"cimetidine", b:["Tagamet"], cls:"H2 blocker", ind:"GERD"},
+  {g:"sucralfate", b:["Carafate"], cls:"ulcer protectant", ind:"ulcers"},
+  {g:"docusate", b:["Colace"], cls:"stool softener", ind:"constipation"},
+  {g:"polyethylene glycol", b:["MiraLAX"], cls:"osmotic laxative", ind:"constipation"},
+  {g:"bisacodyl", b:["Dulcolax"], cls:"stimulant laxative", ind:"constipation"},
+  {g:"loperamide", b:["Imodium"], cls:"antidiarrheal", ind:"diarrhea"},
   {g:"ondansetron", b:["Zofran"], cls:"antiemetic", ind:"nausea/vomiting"},
+  {g:"metoclopramide", b:["Reglan"], cls:"prokinetic/antiemetic", ind:"nausea/gastroparesis"},
+
+  // Respiratory / Allergy
+  {g:"albuterol", b:["Ventolin","ProAir"], cls:"SABA bronchodilator", ind:"asthma relief"},
+  {g:"ipratropium", b:["Atrovent"], cls:"anticholinergic bronchodilator", ind:"COPD"},
+  {g:"tiotropium", b:["Spiriva"], cls:"LAMA bronchodilator", ind:"COPD"},
+  {g:"fluticasone", b:["Flonase","Flovent"], cls:"corticosteroid", ind:"allergic rhinitis/asthma"},
+  {g:"budesonide", b:["Pulmicort"], cls:"corticosteroid", ind:"asthma"},
+  {g:"montelukast", b:["Singulair"], cls:"leukotriene modifier", ind:"asthma/allergies"},
+  {g:"cetirizine", b:["Zyrtec"], cls:"antihistamine", ind:"allergies"},
+  {g:"loratadine", b:["Claritin"], cls:"antihistamine", ind:"allergies"},
+  {g:"fexofenadine", b:["Allegra"], cls:"antihistamine", ind:"allergies"},
+  {g:"diphenhydramine", b:["Benadryl"], cls:"antihistamine", ind:"allergies/itching"},
+
+  // Neuro / Psych
   {g:"sertraline", b:["Zoloft"], cls:"SSRI", ind:"depression/anxiety"},
   {g:"fluoxetine", b:["Prozac"], cls:"SSRI", ind:"depression"},
   {g:"escitalopram", b:["Lexapro"], cls:"SSRI", ind:"depression/anxiety"},
+  {g:"citalopram", b:["Celexa"], cls:"SSRI", ind:"depression"},
+  {g:"paroxetine", b:["Paxil"], cls:"SSRI", ind:"depression/anxiety"},
+  {g:"venlafaxine", b:["Effexor"], cls:"SNRI", ind:"depression/anxiety"},
   {g:"duloxetine", b:["Cymbalta"], cls:"SNRI", ind:"depression/neuropathic pain"},
+  {g:"bupropion", b:["Wellbutrin"], cls:"antidepressant", ind:"depression/smoking cessation"},
+  {g:"trazodone", b:["Desyrel"], cls:"antidepressant", ind:"depression/insomnia"},
+  {g:"alprazolam", b:["Xanax"], cls:"benzodiazepine", ind:"anxiety"},
+  {g:"lorazepam", b:["Ativan"], cls:"benzodiazepine", ind:"anxiety"},
+  {g:"diazepam", b:["Valium"], cls:"benzodiazepine", ind:"anxiety/muscle spasm"},
+  {g:"zolpidem", b:["Ambien"], cls:"sedative-hypnotic", ind:"insomnia"},
   {g:"gabapentin", b:["Neurontin"], cls:"neuropathic analgesic", ind:"neuropathic pain"},
   {g:"pregabalin", b:["Lyrica"], cls:"neuropathic analgesic", ind:"neuropathic pain"},
-  {g:"amoxicillin", b:["Amoxil"], cls:"penicillin antibiotic", ind:"bacterial infection"},
-  {g:"amoxicillin/clavulanate", b:["Augmentin"], cls:"penicillin antibiotic", ind:"bacterial infection"},
-  {g:"cephalexin", b:["Keflex"], cls:"cephalosporin antibiotic", ind:"bacterial infection"},
-  {g:"azithromycin", b:["Zithromax"], cls:"macrolide antibiotic", ind:"bacterial infection"},
-  {g:"doxycycline", b:["Vibramycin"], cls:"tetracycline antibiotic", ind:"bacterial infection"},
-  {g:"clindamycin", b:["Cleocin"], cls:"lincosamide antibiotic", ind:"bacterial infection"},
-  {g:"sulfamethoxazole/trimethoprim", b:["Bactrim","Septra"], cls:"sulfonamide antibiotic", ind:"bacterial infection"},
-  {g:"albuterol", b:["Ventolin","ProAir"], cls:"SABA bronchodilator", ind:"asthma relief"},
-  {g:"fluticasone", b:["Flonase","Flovent"], cls:"corticosteroid", ind:"allergic rhinitis/asthma"},
-  {g:"montelukast", b:["Singulair"], cls:"leukotriene modifier", ind:"asthma/allergies"},
-  {g:"tamsulosin", b:["Flomax"], cls:"alpha-1 blocker", ind:"BPH"},
-  {g:"finasteride", b:["Proscar"], cls:"5-alpha reductase inhibitor", ind:"BPH/hair loss"},
-  {g:"warfarin", b:["Coumadin"], cls:"anticoagulant", ind:"clot prevention"},
-  {g:"apixaban", b:["Eliquis"], cls:"DOAC", ind:"clot prevention"},
-  {g:"rivaroxaban", b:["Xarelto"], cls:"DOAC", ind:"clot prevention"},
-  {g:"clopidogrel", b:["Plavix"], cls:"antiplatelet", ind:"stroke/MI prevention"},
+  {g:"topiramate", b:["Topamax"], cls:"anticonvulsant", ind:"seizures/migraine"},
+  {g:"levetiracetam", b:["Keppra"], cls:"anticonvulsant", ind:"seizures"},
+  {g:"lamotrigine", b:["Lamictal"], cls:"anticonvulsant", ind:"seizures/bipolar"},
+  {g:"sumatriptan", b:["Imitrex"], cls:"triptan", ind:"migraine"},
+  {g:"naratriptan", b:["Amerge"], cls:"triptan", ind:"migraine"},
+  {g:"methylphenidate", b:["Ritalin"], cls:"stimulant", ind:"ADHD"},
+  {g:"amphetamine/dextroamphetamine", b:["Adderall"], cls:"stimulant", ind:"ADHD"},
+
+  // Pain / Inflammation
   {g:"acetaminophen", b:["Tylenol"], cls:"analgesic/antipyretic", ind:"pain/fever"},
   {g:"ibuprofen", b:["Advil","Motrin"], cls:"NSAID", ind:"pain/fever"},
   {g:"naproxen", b:["Aleve","Naprosyn"], cls:"NSAID", ind:"pain/inflammation"},
+  {g:"meloxicam", b:["Mobic"], cls:"NSAID", ind:"arthritis"},
+  {g:"diclofenac", b:["Voltaren"], cls:"NSAID", ind:"pain/inflammation"},
+  {g:"tramadol", b:["Ultram"], cls:"opioid analgesic", ind:"pain"},
+  {g:"hydrocodone/acetaminophen", b:["Norco","Vicodin"], cls:"opioid analgesic", ind:"pain"},
+  {g:"oxycodone/acetaminophen", b:["Percocet"], cls:"opioid analgesic", ind:"pain"},
+  {g:"morphine", b:["MS Contin"], cls:"opioid analgesic", ind:"pain"},
+
+  // Anti-infectives
+  {g:"amoxicillin", b:["Amoxil"], cls:"penicillin antibiotic", ind:"bacterial infection"},
+  {g:"amoxicillin/clavulanate", b:["Augmentin"], cls:"penicillin antibiotic", ind:"bacterial infection"},
+  {g:"penicillin VK", b:["Veetids"], cls:"penicillin antibiotic", ind:"bacterial infection"},
+  {g:"cephalexin", b:["Keflex"], cls:"cephalosporin antibiotic", ind:"bacterial infection"},
+  {g:"ceftriaxone", b:["Rocephin"], cls:"cephalosporin antibiotic", ind:"bacterial infection"},
+  {g:"azithromycin", b:["Zithromax"], cls:"macrolide antibiotic", ind:"bacterial infection"},
+  {g:"clarithromycin", b:["Biaxin"], cls:"macrolide antibiotic", ind:"bacterial infection"},
+  {g:"doxycycline", b:["Vibramycin"], cls:"tetracycline antibiotic", ind:"bacterial infection"},
+  {g:"clindamycin", b:["Cleocin"], cls:"lincosamide antibiotic", ind:"bacterial infection"},
+  {g:"ciprofloxacin", b:["Cipro"], cls:"fluoroquinolone antibiotic", ind:"bacterial infection"},
+  {g:"levofloxacin", b:["Levaquin"], cls:"fluoroquinolone antibiotic", ind:"bacterial infection"},
+  {g:"sulfamethoxazole/trimethoprim", b:["Bactrim","Septra"], cls:"sulfonamide antibiotic", ind:"bacterial infection"},
+  {g:"metronidazole", b:["Flagyl"], cls:"antibiotic/antiprotozoal", ind:"anaerobic infection"},
+  {g:"fluconazole", b:["Diflucan"], cls:"antifungal", ind:"fungal infection"},
+  {g:"terbinafine", b:["Lamisil"], cls:"antifungal", ind:"fungal infection"},
   {g:"valacyclovir", b:["Valtrex"], cls:"antiviral", ind:"herpes"},
   {g:"acyclovir", b:["Zovirax"], cls:"antiviral", ind:"herpes"},
-  {g:"prednisone", b:["Deltasone"], cls:"corticosteroid", ind:"inflammation"}
+  {g:"oseltamivir", b:["Tamiflu"], cls:"antiviral", ind:"influenza"},
+  {g:"nitrofurantoin", b:["Macrobid"], cls:"antibiotic", ind:"UTI"},
+  {g:"tamsulosin", b:["Flomax"], cls:"alpha-1 blocker", ind:"BPH"},
+  {g:"finasteride", b:["Proscar"], cls:"5-alpha reductase inhibitor", ind:"BPH"},
+  {g:"sildenafil", b:["Viagra"], cls:"PDE5 inhibitor", ind:"erectile dysfunction"},
+  {g:"tadalafil", b:["Cialis"], cls:"PDE5 inhibitor", ind:"erectile dysfunction/BPH"},
+
+  // Misc common
+  {g:"prednisone", b:["Deltasone"], cls:"corticosteroid", ind:"inflammation"},
+  {g:"methylprednisolone", b:["Medrol"], cls:"corticosteroid", ind:"inflammation"},
+  {g:"allopurinol", b:["Zyloprim"], cls:"xanthine oxidase inhibitor", ind:"gout"},
+  {g:"colchicine", b:["Colcrys"], cls:"anti-gout", ind:"gout"},
+  {g:"alendronate", b:["Fosamax"], cls:"bisphosphonate", ind:"osteoporosis"},
+  {g:"calcium carbonate", b:["Tums"], cls:"antacid/supplement", ind:"heartburn/calcium supplement"},
+  {g:"ferrous sulfate", b:["Feosol"], cls:"iron supplement", ind:"iron deficiency"},
+  {g:"vitamin D3", b:["Cholecalciferol"], cls:"vitamin", ind:"vitamin D deficiency"},
+  {g:"folic acid", b:["Folvite"], cls:"vitamin", ind:"folate deficiency"},
 ];
 
+/* Suffix patterns */
 const SUFFIX_RULES = [
   {suffix:"-pril", cls:"ACE inhibitor"},
   {suffix:"-sartan", cls:"ARB"},
@@ -344,140 +752,325 @@ const SUFFIX_RULES = [
   {suffix:"-statin", cls:"statin"},
   {suffix:"-prazole", cls:"PPI"},
   {suffix:"-cycline", cls:"tetracycline antibiotic"},
-  {suffix:"-vir", cls:"antiviral"}
+  {suffix:"-vir", cls:"antiviral"},
+  {suffix:"-zepam", cls:"benzodiazepine"},
+  {suffix:"-pam", cls:"benzodiazepine"},
+  {suffix:"-caine", cls:"local anesthetic"}
 ];
 
-const SAFETY_BANK = [
-  ["USP <800> focuses on:", "Hazardous drug handling safety", ["Sterile compounding only","Insurance rules","DEA scheduling"]],
-  ["USP <797> covers:", "Sterile compounding", ["Non-sterile compounding","Insurance billing","DEA forms"]],
-  ["USP <795> covers:", "Non-sterile compounding", ["Sterile compounding","Hazardous-only","Insurance billing"]],
-  ["LASA stands for:", "Look-alike/sound-alike", ["Long-acting/short-acting","Lot-and-serial-audit","Label-all/store-all"]],
-  ["Best practice: leading zero is:", "Write 0.5 mg (not .5 mg)", ["Write .5 mg only","Write 00.5 mg","Never use decimals"]],
-  ["Best practice: trailing zero is:", "Avoid 5.0 mg; write 5 mg", ["Always write 5.0 mg","Write 5.00 mg","Use commas instead"]],
-  ["A commonly high-alert medication is:", "Insulin", ["Docusate","Loratadine","Saline nasal spray"]],
-  ["If a dose appears unsafe, a technician should:", "Refer to the pharmacist for clinical review", ["Change the dose","Fill as written","Call insurance first"]],
-  ["FDA MedWatch is used to report:", "Serious adverse events/product quality issues", ["Theft/loss to DEA","HIPAA violations","Insurance fraud"]],
-  ["Garbing: best first step is typically:", "Hand hygiene", ["Gloves","Mask","Apply fragrance"]],
-  ["High osmolarity TPN typically requires:", "Central line", ["Peripheral IV","IM injection","Oral administration"]],
-  ["Tall-man lettering is used to:", "Reduce look-alike confusion", ["Increase reimbursement","Replace NDC","Mark controlled drugs only"]]
+/* LASA examples (not exhaustive) */
+const LASA_PAIRS = [
+  ["hydralazine","hydroxyzine"],
+  ["dopamine","dobutamine"],
+  ["clonidine","clozapine"],
+  ["vinblastine","vincristine"],
+  ["prednisone","prednisolone"],
+  ["celecoxib","celexa (citalopram)"],
 ];
 
-const FEDERAL_BANK = [
-  ["DEA form for Schedule II ordering?", "DEA Form 222", ["DEA Form 106","DEA Form 41","DEA Form 224"]],
-  ["DEA form to report theft/significant loss?", "DEA Form 106", ["DEA Form 222","DEA Form 41","DEA Form 224"]],
-  ["DEA form associated with destruction documentation?", "DEA Form 41", ["DEA Form 222","DEA Form 106","DEA Form 224"]],
-  ["Schedule II prescriptions federally:", "Cannot be refilled", ["Up to 5 refills in 6 months","Unlimited refills","Refill if pharmacist approves"]],
-  ["Schedule III–V refills (typical federal rule):", "Up to 5 refills within 6 months", ["Unlimited refills","No refills allowed","Exactly 2 refills"]],
-  ["HIPAA primarily protects:", "Patient health information privacy", ["Drug pricing rules","DEA scheduling","NDC formatting"]],
-  ["HIPAA 'minimum necessary' means:", "Only disclose PHI needed for the task", ["Always disclose entire profile","Never disclose any PHI","Only pharmacists can see PHI"]],
-  ["DSCSA primarily relates to:", "Drug supply chain security/traceability", ["Only controlled diversion","Insurance formularies","Patient counseling"]],
-  ["Refill too soon rejection: best first step:", "Verify last fill date and days supply", ["Override immediately","Dispense without billing","Change drug without prescriber"]],
-  ["Prior authorization (PA) is typically required when:", "Plan requires approval before coverage", ["Patient wants cash price","Printer is down","NDC is missing"]],
-  ["Common federal record retention minimum (baseline):", "2 years", ["6 months","1 year","10 years"]],
-  ["Pseudoephedrine controls mainly address:", "Methamphetamine diversion prevention", ["CLIA regs","REMS programs","OSHA standards"]]
+/* High-alert examples */
+const HIGH_ALERT = [
+  "insulin glargine","insulin lispro","warfarin","heparin","opioids","potassium chloride (concentrated)",
 ];
 
-const CONVERSION_FACTS = [
+/* Safety bank (USP, garbing, med safety, error prevention, workflows) */
+const SAFETY_QBANK = [
+  qFixed(DOMAIN.SAFE, "USP &lt;797&gt; primarily covers:", "Sterile compounding", ["Non-sterile compounding","Hazardous drugs only","Insurance billing"]),
+  qFixed(DOMAIN.SAFE, "USP &lt;795&gt; primarily covers:", "Non-sterile compounding", ["Sterile compounding","Hazardous drugs only","DSCSA"]),
+  qFixed(DOMAIN.SAFE, "USP &lt;800&gt; primarily covers:", "Hazardous drug handling and safety", ["Sterile compounding only","Insurance requirements","Controlled substance scheduling"]),
+  qFixed(DOMAIN.SAFE, "First step in garbing (best practice) is typically:", "Hand hygiene", ["Don gloves","Apply shoe covers","Put on outer gown"]),
+  qFixed(DOMAIN.SAFE, "LASA means:", "Look-alike/sound-alike", ["Long-acting/short-acting","Label-all/store-all","Lot-and-serial-audit"]),
+  qFixed(DOMAIN.SAFE, "Best practice: leading zero is:", "Write 0.5 mg (not .5 mg)", ["Write .5 mg only","Write 00.5 mg","Avoid decimals completely"]),
+  qFixed(DOMAIN.SAFE, "Best practice: trailing zero is:", "Avoid 5.0 mg; write 5 mg", ["Always write 5.0 mg","Write 5.00 mg","Use commas instead"]),
+  qFixed(DOMAIN.SAFE, "A high-alert medication example is:", "Insulin", ["Docusate","Loratadine","Mupirocin topical"]),
+  qFixed(DOMAIN.SAFE, "If a dose looks clinically unsafe, a technician should:", "Refer to the pharmacist for review", ["Change the dose","Fill as written","Call insurance first"]),
+  qFixed(DOMAIN.SAFE, "FDA MedWatch is used to report:", "Serious adverse events/product quality problems", ["Theft/loss to DEA","HIPAA violations","Prior authorization requests"]),
+  qFixed(DOMAIN.SAFE, "Tall-man lettering is used to:", "Reduce look-alike confusion", ["Increase reimbursement","Replace NDC","Mark controlled drugs only"]),
+  qFixed(DOMAIN.SAFE, "TPN with high osmolarity typically requires:", "Central line", ["Peripheral IV","IM injection","Oral administration"]),
+  qFixed(DOMAIN.SAFE, "Which is an example of error prevention?", "Independent double-check for high-alert meds", ["Skip verification if busy","Use trailing zeros","Ignore alerts"]),
+  qFixed(DOMAIN.SAFE, "Which is safest when counseling labels are unclear?", "Ask pharmacist to clarify", ["Guess based on common use","Use a random auxiliary label","Discard prescription"]),
+];
+
+/* Federal / law / DEA / HIPAA / DSCSA / Combat Meth Act */
+const FED_QBANK = [
+  qFixed(DOMAIN.FED, "DEA form for ordering Schedule II controlled substances:", "DEA Form 222", ["DEA Form 106","DEA Form 41","DEA Form 224"]),
+  qFixed(DOMAIN.FED, "DEA form to report theft/significant loss of controlled substances:", "DEA Form 106", ["DEA Form 222","DEA Form 41","DEA Form 224"]),
+  qFixed(DOMAIN.FED, "DEA form commonly associated with destruction documentation:", "DEA Form 41", ["DEA Form 222","DEA Form 106","DEA Form 224"]),
+  qFixed(DOMAIN.FED, "DEA Form 224 is associated with:", "Registration of controlled substance handlers", ["Ordering Schedule II","Reporting theft/loss","Prescription transfers"]),
+  qFixed(DOMAIN.FED, "Schedule II prescriptions federally:", "Cannot be refilled", ["Up to 5 refills in 6 months","Unlimited refills","Refill if pharmacist approves"]),
+  qFixed(DOMAIN.FED, "Typical federal rule for Schedule III–V refills:", "Up to 5 refills within 6 months", ["Unlimited refills","No refills allowed","Exactly 2 refills"]),
+  qFixed(DOMAIN.FED, "HIPAA primarily protects:", "Patient health information privacy", ["Drug pricing rules","DEA scheduling","NDC formatting"]),
+  qFixed(DOMAIN.FED, "HIPAA 'minimum necessary' means:", "Only disclose PHI needed for the task", ["Always disclose full profile","Never disclose any PHI","Only pharmacists can see PHI"]),
+  qFixed(DOMAIN.FED, "DSCSA mainly addresses:", "Drug supply chain security/traceability", ["Only controlled diversion","Insurance formularies","Patient counseling"]),
+  qFixed(DOMAIN.FED, "A refill-too-soon rejection: best first step is:", "Verify last fill date and days supply", ["Override immediately","Dispense without billing","Change drug without prescriber"]),
+  qFixed(DOMAIN.FED, "A prior authorization (PA) is required when:", "Plan needs approval before coverage", ["Patient wants a cash price","Printer is down","NDC is missing"]),
+  qFixed(DOMAIN.FED, "Common baseline federal controlled-substance record retention:", "2 years", ["6 months","1 year","10 years"]),
+  qFixed(DOMAIN.FED, "Pseudoephedrine restrictions primarily address:", "Methamphetamine diversion prevention", ["CLIA requirements","REMS programs","OSHA standards"]),
+  qFixed(DOMAIN.FED, "OTC drug facts label typically includes:", "Active ingredients, uses, warnings, directions", ["DEA schedule, NDC only, prescriber ID","Only ingredients","Only warnings"]),
+];
+
+/* Order entry / math: conversions + scenarios + workflow */
+const CONVERSIONS = [
   {q:"1 g equals:", a:"1000 mg", why:"1 gram = 1000 milligrams."},
   {q:"1 mg equals:", a:"1000 mcg", why:"1 milligram = 1000 micrograms."},
+  {q:"1 kg equals:", a:"1000 g", why:"1 kilogram = 1000 grams."},
   {q:"1 tsp equals:", a:"5 mL", why:"1 teaspoon = 5 mL."},
   {q:"1 tbsp equals:", a:"15 mL", why:"1 tablespoon = 15 mL."},
-  {q:"30 mL is about:", a:"1 fl oz", why:"30 mL ≈ 1 fluid ounce."},
-  {q:"kg conversion rule:", a:"kg = lb ÷ 2.2", why:"Convert lb to kg by dividing by 2.2."}
+  {q:"30 mL is approximately:", a:"1 fl oz", why:"30 mL ≈ 1 fluid ounce."},
+  {q:"Convert lb to kg:", a:"kg = lb ÷ 2.2", why:"Standard conversion is dividing pounds by 2.2."},
 ];
 
-/* ================= QUESTION GENERATORS ================= */
-function makeQuestion(domain, stem, correct, wrongs, why){
-  const pool = uniqBy(wrongs.filter(x=>x && x.toLowerCase()!==correct.toLowerCase()), x=>x.toLowerCase());
-  if(pool.length < 3){
-    // emergency filler (rare)
-    while(pool.length<3) pool.push("None of the above");
-  }
-  const choices = [correct, pool[0], pool[1], pool[2]]; // correct always index 0 (simplifies scoring)
-  return { domain, stem, choices, answer:0, why: why || "" };
+const ORDER_WORKFLOW_QBANK = [
+  qFixed(DOMAIN.ORDER, "DAW indicates:", "Dispense As Written/substitution instruction", ["Drug assay weight","Dose after withdrawal","DEA audit window"]),
+  qFixed(DOMAIN.ORDER, "If insurance rejects 'Refill too soon', best first action:", "Verify last fill date, days supply, and entry accuracy", ["Override immediately","Dispense without billing","Change drug without prescriber"]),
+  qFixed(DOMAIN.ORDER, "Alligation is used to calculate:", "Mixture proportions to reach a target strength", ["Days supply for inhalers","NDC selection","DEA schedule"]),
+  qFixed(DOMAIN.ORDER, "A levigating agent helps:", "Form a smooth paste when incorporating powders", ["Sterilize a product","Increase pH rapidly","Increase controlled substance security"]),
+  qFixed(DOMAIN.ORDER, "Days supply is primarily based on:", "Directions (sig) and quantity dispensed", ["Prescriber credentials","Drug class only","Insurance plan name"]),
+];
+
+/* =========================
+   QUESTION OBJECT HELPERS
+   ========================= */
+function qFixed(domain, stem, correct, wrong3, explain=""){
+  return {
+    domain,
+    stemHTML: stem,
+    choices: shuffle([correct, ...wrong3]).slice(0,4),
+    answerIndex: null,
+    explain
+  };
+}
+function finalizeFixed(q){
+  const ai = q.choices.findIndex(c=>stripHtml(c)===stripHtml(qCorrect(q)));
+  q.answerIndex = ai>=0 ? ai : 0;
+  return q;
+}
+function qCorrect(q){
+  // For fixed banks we assume "correct" was in the first element before shuffle
+  // BUT we passed shuffled array; so we store correct separately by using explain?
+  // We'll instead compute by embedding correct in explain tag? No.
+  // Solution: make qFixed without shuffle; then shuffle later while tracking.
+  return q.choices[0];
+}
+function stripHtml(s){ return String(s).replace(/<[^>]*>/g,"").trim(); }
+
+/* We'll build fixed questions using a helper that tracks correct properly */
+function makeFixed(domain, stem, correct, wrongs, explain=""){
+  const choices = shuffle([correct, ...wrongs]).slice(0,4);
+  const answerIndex = choices.findIndex(x=>stripHtml(x)===stripHtml(correct));
+  return {domain, stemHTML: stem, choices, answerIndex, explain, id: hashId(domain+"|"+stripHtml(stem)+"|"+stripHtml(correct))};
 }
 
-function genMedQuestions(){
-  const allBrands = uniqBy(MEDS.flatMap(m=>m.b), x=>x.toLowerCase());
-  const allGens   = uniqBy(MEDS.map(m=>m.g), x=>x.toLowerCase());
-  const allCls    = uniqBy(MEDS.map(m=>m.cls), x=>x.toLowerCase());
-  const allInd    = uniqBy(MEDS.map(m=>m.ind), x=>x.toLowerCase());
+/* =========================
+   HASH ID (for uniqueness)
+   ========================= */
+function hashId(str){
+  let h=2166136261;
+  for(let i=0;i<str.length;i++){
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return "q"+(h>>>0).toString(16);
+}
 
-  const out=[];
+/* =========================
+   BUILD DYNAMIC BANKS (from local dataset)
+   ========================= */
+function buildMedicationQuestionPool(){
+  const gens = MEDS.map(m=>m.g);
+  const brands = uniqBy(MEDS.flatMap(m=>m.b), x=>x.toLowerCase());
+  const classes = uniqBy(MEDS.map(m=>m.cls), x=>x.toLowerCase());
+  const inds = uniqBy(MEDS.map(m=>m.ind), x=>x.toLowerCase());
+
+  const out = [];
+
+  // Brand ↔ Generic
   for(const m of MEDS){
     const b = pick(m.b);
-    out.push(makeQuestion(DOMAIN.MEDS, `Which brand name corresponds to the generic <b>${m.g}</b>?`, b,
-      shuffle(allBrands.filter(x=>!m.b.map(y=>y.toLowerCase()).includes(x.toLowerCase()))).slice(0,6),
+    out.push(makeFixed(DOMAIN.MED,
+      `Which brand name corresponds to the generic <b>${htmlEscape(m.g)}</b>?`,
+      b,
+      shuffle(brands.filter(x=>!m.b.map(y=>y.toLowerCase()).includes(x.toLowerCase()))).slice(0,3),
       `${m.g} is commonly associated with brand(s): ${m.b.join(", ")}.`
     ));
+
     for(const brand of m.b){
-      out.push(makeQuestion(DOMAIN.MEDS, `Which generic corresponds to the brand <b>${brand}</b>?`, m.g,
-        shuffle(allGens.filter(x=>x.toLowerCase()!==m.g.toLowerCase())).slice(0,6),
+      out.push(makeFixed(DOMAIN.MED,
+        `Which generic corresponds to the brand <b>${htmlEscape(brand)}</b>?`,
+        m.g,
+        shuffle(gens.filter(x=>x.toLowerCase()!==m.g.toLowerCase())).slice(0,3),
         `${brand} corresponds to ${m.g}.`
       ));
     }
-    out.push(makeQuestion(DOMAIN.MEDS, `A common indication for <b>${m.g}</b> is:`, m.ind,
-      shuffle(allInd.filter(x=>x.toLowerCase()!==m.ind.toLowerCase())).slice(0,6),
+
+    // Indication
+    out.push(makeFixed(DOMAIN.MED,
+      `A common indication for <b>${htmlEscape(m.g)}</b> is:`,
+      m.ind,
+      shuffle(inds.filter(x=>x.toLowerCase()!==m.ind.toLowerCase())).slice(0,3),
       `${m.g} is commonly used for ${m.ind}.`
     ));
-    out.push(makeQuestion(DOMAIN.MEDS, `<b>${m.g}</b> is best classified as a(n):`, m.cls,
-      shuffle(allCls.filter(x=>x.toLowerCase()!==m.cls.toLowerCase())).slice(0,6),
+
+    // Class
+    out.push(makeFixed(DOMAIN.MED,
+      `<b>${htmlEscape(m.g)}</b> is best classified as a(n):`,
+      m.cls,
+      shuffle(classes.filter(x=>x.toLowerCase()!==m.cls.toLowerCase())).slice(0,3),
       `${m.g} is a ${m.cls}.`
     ));
   }
 
-  // suffix pattern questions
+  // Suffix pattern questions
   for(const r of SUFFIX_RULES){
-    out.push(makeQuestion(DOMAIN.MEDS, `Which suffix most commonly suggests <b>${r.cls}</b>?`, r.suffix,
-      shuffle(SUFFIX_RULES.filter(x=>x.suffix!==r.suffix).map(x=>x.suffix)),
+    const wrong = shuffle(SUFFIX_RULES.filter(x=>x.suffix!==r.suffix).map(x=>x.suffix)).slice(0,3);
+    out.push(makeFixed(DOMAIN.MED,
+      `Which suffix most commonly suggests a <b>${htmlEscape(r.cls)}</b>?`,
+      r.suffix,
+      wrong,
       `Common naming pattern: ${r.cls} often ends in ${r.suffix}.`
     ));
   }
 
-  // a few extra "most likely" med safety concepts
-  out.push({domain:DOMAIN.MEDS, stem:"Which medication is commonly treated as a high-alert medication due to risk of severe harm if misused?", choices:["Insulin","Docusate","Loratadine","Mupirocin topical"], answer:0, why:"Insulin errors can cause severe hypo/hyperglycemia."});
-  out.push({domain:DOMAIN.MEDS, stem:"Warfarin has increased bleeding risk when combined with:", choices:["NSAIDs","Calcium carbonate","Vitamin C","Melatonin"], answer:0, why:"NSAIDs can increase bleeding risk."});
+  // LASA questions
+  for(const [a,b] of LASA_PAIRS){
+    const other = shuffle(gens.filter(x=>x!==a && x!==b)).slice(0,2);
+    out.push(makeFixed(DOMAIN.MED,
+      `Which pair is a common look-alike/sound-alike (LASA) risk?`,
+      `${a} / ${b}`,
+      [`${a} / ${other[0]}`, `${other[0]} / ${other[1]}`, `${b} / ${other[1]}`],
+      `LASA pairs are high-risk for selection errors.`
+    ));
+  }
 
-  return out;
+  // High-alert med concept questions (medications domain)
+  out.push(makeFixed(DOMAIN.MED,
+    "Which medication class is commonly considered <b>high-alert</b> due to risk of severe harm if misused?",
+    "Insulins",
+    ["Stool softeners","Topical antibiotics","Antihistamines"],
+    "Insulin errors can cause severe hypo/hyperglycemia."
+  ));
+  out.push(makeFixed(DOMAIN.MED,
+    "Warfarin has increased bleeding risk when combined with:",
+    "NSAIDs",
+    ["Calcium carbonate","Vitamin C","Melatonin"],
+    "NSAIDs can increase bleeding risk."
+  ));
+
+  return uniqBy(out, q=>q.id);
 }
 
-function genSafetyQuestions(){
-  const out=[];
-  for(const q of SAFETY_BANK){
-    out.push({domain:DOMAIN.SAFETY, stem:q[0], choices:[q[1], q[2][0], q[2][1], q[2][2]], answer:0, why:""});
-  }
-  // Add USP mapping variations
-  const uspMap = [
-    ["Which USP chapter is most associated with sterile compounding?", "USP <797>", ["USP <795>","USP <800>","USP <700>"], "USP 797 is sterile compounding."],
-    ["Which USP chapter is most associated with non-sterile compounding?", "USP <795>", ["USP <797>","USP <800>","USP <700>"], "USP 795 is non-sterile compounding."],
-    ["Which USP chapter is most associated with hazardous drugs?", "USP <800>", ["USP <795>","USP <797>","USP <700>"], "USP 800 covers hazardous drugs."],
+function buildSafetyQuestionPool(){
+  // Expand the safety bank with variations and scenario-style prompts
+  const out = [];
+
+  // Core fixed safety bank (rebuilt via makeFixed for correct tracking)
+  const fixed = [
+    ["USP <797> primarily covers:", "Sterile compounding", ["Non-sterile compounding","Hazardous drugs only","Insurance billing"]],
+    ["USP <795> primarily covers:", "Non-sterile compounding", ["Sterile compounding","Hazardous drugs only","DSCSA"]],
+    ["USP <800> primarily covers:", "Hazardous drug handling and safety", ["Sterile compounding only","Insurance requirements","Controlled substance scheduling"]],
+    ["First step in garbing (best practice) is typically:", "Hand hygiene", ["Don gloves","Apply shoe covers","Put on outer gown"]],
+    ["LASA means:", "Look-alike/sound-alike", ["Long-acting/short-acting","Label-all/store-all","Lot-and-serial-audit"]],
+    ["Best practice: leading zero is:", "Write 0.5 mg (not .5 mg)", ["Write .5 mg only","Write 00.5 mg","Avoid decimals completely"]],
+    ["Best practice: trailing zero is:", "Avoid 5.0 mg; write 5 mg", ["Always write 5.0 mg","Write 5.00 mg","Use commas instead"]],
+    ["A high-alert medication example is:", "Insulin", ["Docusate","Loratadine","Mupirocin topical"]],
+    ["If a dose looks clinically unsafe, a technician should:", "Refer to the pharmacist for review", ["Change the dose","Fill as written","Call insurance first"]],
+    ["FDA MedWatch is used to report:", "Serious adverse events/product quality problems", ["Theft/loss to DEA","HIPAA violations","Prior authorization requests"]],
+    ["Tall-man lettering is used to:", "Reduce look-alike confusion", ["Increase reimbursement","Replace NDC","Mark controlled drugs only"]],
+    ["TPN with high osmolarity typically requires:", "Central line", ["Peripheral IV","IM injection","Oral administration"]],
+    ["Which is an example of error prevention?", "Independent double-check for high-alert meds", ["Skip verification if busy","Use trailing zeros","Ignore alerts"]],
+    ["Which is safest when counseling labels are unclear?", "Ask pharmacist to clarify", ["Guess based on common use","Use a random auxiliary label","Discard prescription"]],
   ];
-  for(const x of uspMap){
-    out.push({domain:DOMAIN.SAFETY, stem:x[0], choices:[x[1],x[2][0],x[2][1],x[2][2]], answer:0, why:x[3]});
+  for(const x of fixed){
+    out.push(makeFixed(DOMAIN.SAFE, x[0], x[1], x[2], ""));
   }
-  return out;
+
+  // Garbing order variants (scenario-ish but not “gotcha”)
+  const garbSteps = [
+    "Hand hygiene",
+    "Don head cover/hood (as required)",
+    "Don face mask (as required)",
+    "Don gown",
+    "Don sterile gloves (as required)"
+  ];
+  out.push(makeFixed(DOMAIN.SAFE,
+    "Garbing order: what should be performed <b>before</b> donning gloves?",
+    "Hand hygiene",
+    ["Apply fragrance","Don gloves first","Begin compounding immediately"],
+    "Hand hygiene is foundational before PPE steps."
+  ));
+  out.push(makeFixed(DOMAIN.SAFE,
+    "Which is a reasonable safety step when receiving a hazardous drug (HD)?",
+    "Use appropriate PPE per USP <800>",
+    ["Open product in public area without PPE","Crush tablets in open air","Ignore spill procedures"],
+    "USP <800> emphasizes PPE and containment for HD handling."
+  ));
+
+  return uniqBy(out, q=>q.id);
 }
 
-function genFederalQuestions(){
-  const out=[];
-  for(const q of FEDERAL_BANK){
-    out.push({domain:DOMAIN.FED, stem:q[0], choices:[q[1], q[2][0], q[2][1], q[2][2]], answer:0, why:""});
-  }
-  return out;
+function buildFederalQuestionPool(){
+  const out = [];
+  const fixed = [
+    ["DEA form for ordering Schedule II controlled substances:", "DEA Form 222", ["DEA Form 106","DEA Form 41","DEA Form 224"]],
+    ["DEA form to report theft/significant loss of controlled substances:", "DEA Form 106", ["DEA Form 222","DEA Form 41","DEA Form 224"]],
+    ["DEA form commonly associated with destruction documentation:", "DEA Form 41", ["DEA Form 222","DEA Form 106","DEA Form 224"]],
+    ["DEA Form 224 is associated with:", "Registration of controlled substance handlers", ["Ordering Schedule II","Reporting theft/loss","Prescription transfers"]],
+    ["Schedule II prescriptions federally:", "Cannot be refilled", ["Up to 5 refills in 6 months","Unlimited refills","Refill if pharmacist approves"]],
+    ["Typical federal rule for Schedule III–V refills:", "Up to 5 refills within 6 months", ["Unlimited refills","No refills allowed","Exactly 2 refills"]],
+    ["HIPAA primarily protects:", "Patient health information privacy", ["Drug pricing rules","DEA scheduling","NDC formatting"]],
+    ["HIPAA 'minimum necessary' means:", "Only disclose PHI needed for the task", ["Always disclose full profile","Never disclose any PHI","Only pharmacists can see PHI"]],
+    ["DSCSA mainly addresses:", "Drug supply chain security/traceability", ["Only controlled diversion","Insurance formularies","Patient counseling"]],
+    ["A refill-too-soon rejection: best first step is:", "Verify last fill date and days supply", ["Override immediately","Dispense without billing","Change drug without prescriber"]],
+    ["A prior authorization (PA) is required when:", "Plan needs approval before coverage", ["Patient wants a cash price","Printer is down","NDC is missing"]],
+    ["Common baseline federal controlled-substance record retention:", "2 years", ["6 months","1 year","10 years"]],
+    ["Pseudoephedrine restrictions primarily address:", "Methamphetamine diversion prevention", ["CLIA requirements","REMS programs","OSHA standards"]],
+    ["OTC drug facts label typically includes:", "Active ingredients, uses, warnings, directions", ["DEA schedule, NDC only, prescriber ID","Only ingredients","Only warnings"]],
+  ];
+  for(const x of fixed) out.push(makeFixed(DOMAIN.FED, x[0], x[1], x[2], ""));
+
+  // “Combat Meth Act” common limits (kept simple)
+  out.push(makeFixed(DOMAIN.FED,
+    "Under common pseudoephedrine sales limits, the daily limit is typically:",
+    "3.6 grams/day (retail)",
+    ["36 grams/day","1 gram/day","9 grams/day"],
+    "Common retail limit is 3.6 g/day (policy-focused knowledge)."
+  ));
+  out.push(makeFixed(DOMAIN.FED,
+    "Under common pseudoephedrine sales limits, the 30-day retail limit is typically:",
+    "9 grams/30 days (retail)",
+    ["3.6 grams/30 days","90 grams/30 days","1 gram/30 days"],
+    "Common retail limit is 9 g/30 days (policy-focused knowledge)."
+  ));
+
+  return uniqBy(out, q=>q.id);
 }
 
-function genOrderMathQuestions(){
-  const out=[];
+function buildOrderMathQuestionPool(){
+  const out = [];
 
-  // conversions (literal)
-  for(const c of CONVERSION_FACTS){
-    const wrongPool = ["10 mg","100 mg","1 mg","10 mcg","100 mcg","1 mcg","1 mL","10 mL","30 mL","2 fl oz","0.5 fl oz","kg = lb × 2.2","kg = lb ÷ 2.2","1 oz","8 mL"];
-    out.push(makeQuestion(DOMAIN.ORDER, c.q, c.a, shuffle(wrongPool).slice(0,6), c.why));
+  // Conversions
+  const wrongPool = [
+    "10 mg","100 mg","1 mg","10 mcg","100 mcg","1 mcg",
+    "1 mL","10 mL","30 mL","2 fl oz","0.5 fl oz","kg = lb × 2.2","kg = lb ÷ 2.2","1 oz","8 mL","1000 g"
+  ];
+  for(const c of CONVERSIONS){
+    out.push(makeFixed(DOMAIN.ORDER,
+      c.q,
+      c.a,
+      shuffle(wrongPool.filter(x=>x!==c.a)).slice(0,3),
+      c.why
+    ));
   }
 
-  // scenario generators (lots of variety)
+  // Workflow
+  for(const q of ORDER_WORKFLOW_QBANK){
+    // rebuild with correct tracking
+    out.push(makeFixed(DOMAIN.ORDER, q.stemHTML, q.choices[0], q.choices.slice(1), q.explain||""));
+  }
+
+  // Scenario generators for variety (not “trick” style; competency-based)
   function genPedsMgKg(){
-    const lb = pick([22,33,44,55,66,77,88]);
+    const lb = pick([22,33,44,55,66,77,88,99]);
     const kg = Math.round(lb/2.2);
     const mgkg = pick([5,10,15,20,25]);
     const doses = pick([2,3,4]);
@@ -485,8 +1078,13 @@ function genOrderMathQuestions(){
     const perDose = Math.round(daily/doses);
     const stem = `Scenario: Child weighs <b>${lb} lb</b> (round to nearest kg). Rx: <b>${mgkg} mg/kg/day</b> divided <b>${doses} doses/day</b>. What is <b>mg per dose</b>?`;
     const correct = `${perDose} mg per dose`;
-    const wrong = [`${daily} mg per dose`, `${Math.round(perDose/2)} mg per dose`, `${perDose*2} mg per dose`, `${kg} mg per dose`];
-    return makeQuestion(DOMAIN.ORDER, stem, correct, wrong, `${lb} lb ÷ 2.2 ≈ ${kg} kg. Daily=${kg}×${mgkg}=${daily} mg/day. Per dose=${daily}÷${doses}=${perDose}.`);
+    const wrong = [
+      `${daily} mg per dose`,
+      `${Math.round(perDose/2)} mg per dose`,
+      `${perDose*2} mg per dose`
+    ];
+    const explain = `${lb} lb ÷ 2.2 ≈ ${kg} kg. Daily dose = ${kg}×${mgkg} = ${daily} mg/day. Per dose = ${daily}÷${doses} ≈ ${perDose} mg.`;
+    return makeFixed(DOMAIN.ORDER, stem, correct, wrong, explain);
   }
 
   function genDaysSupply(){
@@ -496,8 +1094,9 @@ function genOrderMathQuestions(){
     const freq = perDay===1?"once daily":perDay===2?"BID":perDay===3?"TID":"QID";
     const stem = `Rx: Take 1 tablet <b>${freq}</b> for <b>${days} days</b>. What quantity is needed?`;
     const correct = `${qty} tablets`;
-    const wrong = [`${days} tablets`, `${qty+perDay} tablets`, `${qty-perDay} tablets`, `${qty*2} tablets`];
-    return makeQuestion(DOMAIN.ORDER, stem, correct, wrong, `Qty = doses/day (${perDay}) × days (${days}) = ${qty}.`);
+    const wrong = [`${days} tablets`, `${qty+perDay} tablets`, `${qty-perDay} tablets`];
+    const explain = `Quantity = doses/day (${perDay}) × days (${days}) = ${qty}.`;
+    return makeFixed(DOMAIN.ORDER, stem, correct, wrong, explain);
   }
 
   function genIVRate(){
@@ -506,59 +1105,76 @@ function genOrderMathQuestions(){
     const rate = Math.round(vol/hrs);
     const stem = `IV infusion: <b>${vol} mL</b> over <b>${hrs} hours</b>. What is the rate (mL/hr)?`;
     const correct = `${rate} mL/hr`;
-    const wrong = [`${vol} mL/hr`, `${hrs} mL/hr`, `${Math.round(rate*1.25)} mL/hr`, `${Math.round(rate*0.75)} mL/hr`];
-    return makeQuestion(DOMAIN.ORDER, stem, correct, wrong, `Rate = ${vol} ÷ ${hrs} ≈ ${rate} mL/hr (rounded).`);
+    const wrong = [`${vol} mL/hr`, `${hrs} mL/hr`, `${Math.round(rate*1.5)} mL/hr`];
+    const explain = `Rate = ${vol} ÷ ${hrs} ≈ ${rate} mL/hr (rounded).`;
+    return makeFixed(DOMAIN.ORDER, stem, correct, wrong, explain);
   }
 
   function genPercentWV(){
     const pct = pick([0.5,1,2,5,10]);
     const vol = pick([50,100,250,500]);
-    const grams = Math.round(((pct/100)*vol)*1000)/1000;
+    const grams = Math.round(((pct/100)*vol)*1000)/1000; // g
     const stem = `A solution labeled <b>${pct}% w/v</b> contains how many grams of drug in <b>${vol} mL</b>?`;
     const correct = `${grams} g`;
-    const wrong = [`${grams*10} g`, `${Math.round((grams/10)*1000)/1000} g`, `${pct} g`, `${vol} g`];
-    return makeQuestion(DOMAIN.ORDER, stem, correct, wrong, `% w/v = grams per 100 mL. ${pct} g/100 mL × ${vol}/100 = ${grams} g.`);
+    const wrong = [`${grams*10} g`, `${Math.round((grams/10)*1000)/1000} g`, `${pct} g`];
+    const explain = `% w/v = grams per 100 mL. ${pct} g/100 mL × ${vol}/100 = ${grams} g.`;
+    return makeFixed(DOMAIN.ORDER, stem, correct, wrong, explain);
   }
 
-  // workflow literals
-  out.push({domain:DOMAIN.ORDER, stem:"A DAW code generally relates to:", choices:["Dispense As Written / substitution instructions","Drug assay weight","Dose after withdrawal","DEA audit window"], answer:0, why:"DAW indicates substitution instructions."});
-  out.push({domain:DOMAIN.ORDER, stem:"Insurance reject: 'Refill too soon.' Best first step:", choices:["Verify last fill date, days supply, and entry accuracy","Override immediately","Dispense without billing","Change drug without prescriber"], answer:0, why:"Verify timing/data first."});
-  out.push({domain:DOMAIN.ORDER, stem:"Alligation is commonly used to calculate:", choices:["Mixture proportions to reach a target strength","Days supply for inhalers","NDC selection","DEA schedule"], answer:0, why:"Alligation finds mixture proportions."});
-  out.push({domain:DOMAIN.ORDER, stem:"A levigating agent is used to:", choices:["Help form a smooth paste when incorporating powders","Sterilize a product","Increase pH rapidly","Increase controlled substance security"], answer:0, why:"Levigating agents help incorporate powders."});
-
-  // generate a bunch
-  for(let i=0;i<120;i++){
-    const r=Math.random();
-    if(r<0.30) out.push(genPedsMgKg());
-    else if(r<0.58) out.push(genDaysSupply());
-    else if(r<0.78) out.push(genIVRate());
-    else out.push(genPercentWV());
+  function genRatioStrength(){
+    const ratio = pick([100,200,500,1000]);
+    const vol = pick([10,30,60,120]);
+    // 1:1000 = 1g in 1000mL => (vol/ratio) g
+    const grams = Math.round((vol/ratio)*1000)/1000;
+    const stem = `Ratio strength <b>1:${ratio}</b> means 1 g in ${ratio} mL. How many grams are in <b>${vol} mL</b>?`;
+    const correct = `${grams} g`;
+    const wrong = [`${Math.round((grams*ratio)*1000)/1000} g`, `${Math.round((grams/ratio)*1000)/1000} g`, `${vol} g`];
+    const explain = `1:${ratio} = 1 g per ${ratio} mL. For ${vol} mL: ${vol}/${ratio} = ${grams} g.`;
+    return makeFixed(DOMAIN.ORDER, stem, correct, wrong, explain);
   }
 
-  return out;
+  // Generate a lot of scenario variety
+  for(let i=0;i<180;i++){
+    const r = Math.random();
+    if(r<0.25) out.push(genPedsMgKg());
+    else if(r<0.52) out.push(genDaysSupply());
+    else if(r<0.72) out.push(genIVRate());
+    else if(r<0.90) out.push(genPercentWV());
+    else out.push(genRatioStrength());
+  }
+
+  return uniqBy(out, q=>q.id);
 }
 
-/* ================= BUILD EXAM (WEIGHTED 90) ================= */
-async function buildExam(useRxNav){
-  statusEl.textContent = "Building practice test…";
-  const medsPool = genMedQuestions();
-  const safetyPool = genSafetyQuestions();
-  const orderPool = genOrderMathQuestions();
-  const fedPool = genFederalQuestions();
+/* =========================
+   BUILD THE EXAM (weighted)
+   ========================= */
+async function buildExam(){
+  statusEl.textContent = "Building question set…";
+
+  const medPool = buildMedicationQuestionPool();
+  const safePool = buildSafetyQuestionPool();
+  const orderPool = buildOrderMathQuestionPool();
+  const fedPool = buildFederalQuestionPool();
 
   let rxAdds = [];
+  const useRxNav = document.getElementById("optRxNav").checked;
+
   if(useRxNav){
-    statusEl.textContent = "RxNav enabled — fetching a few extra medication pairs (optional)…";
+    statusEl.textContent = "RxNav enabled — fetching a few extra med pairs (optional)…";
     try{
-      const seeds = shuffle(RX_SEEDS.slice()).slice(0,12);
       const allBrands = uniqBy(MEDS.flatMap(m=>m.b), x=>x.toLowerCase());
+      const seeds = shuffle(RX_SEEDS.slice()).slice(0,12);
       for(const ing of seeds){
         const brands = await withTimeout((signal)=>rxnavBrandsForIngredient(ing, signal), 6500).catch(()=>[]);
         if(brands && brands.length){
           const brand = pick(brands.slice(0,12));
-          const wrong = shuffle(allBrands.filter(x=>x.toLowerCase()!==brand.toLowerCase())).slice(0,6);
-          rxAdds.push(makeQuestion(DOMAIN.MEDS, `(RxNav) Which brand corresponds to the generic <b>${ing}</b>?`, brand, wrong,
-            "Generated via RxNav/RxNorm lookup."
+          const wrong = shuffle(allBrands.filter(x=>x.toLowerCase()!==brand.toLowerCase())).slice(0,3);
+          rxAdds.push(makeFixed(DOMAIN.MED,
+            `(RxNav) Which brand corresponds to the generic <b>${htmlEscape(ing)}</b>?`,
+            brand,
+            wrong,
+            "Generated via RxNav/RxNorm lookup (optional)."
           ));
         }
         if(rxAdds.length>=10) break;
@@ -568,32 +1184,34 @@ async function buildExam(useRxNav){
     }
   }
 
-  // Merge pools (meds gets rx adds)
-  const medsMerged = uniqBy(rxAdds.concat(medsPool), q=>q.stem + "||" + q.choices[0]);
+  const medsMerged = uniqBy(rxAdds.concat(medPool), q=>q.id);
 
-  const pickN = (pool, n) => shuffle(pool.slice()).slice(0,n);
+  function pickN(pool, n){
+    return shuffle(pool.slice()).slice(0,n);
+  }
 
-  const assembled = []
-    .concat(pickN(medsMerged, COUNTS.MEDS))
-    .concat(pickN(safetyPool, COUNTS.SAFETY))
+  questions = []
+    .concat(pickN(medsMerged, COUNTS.MED))
+    .concat(pickN(safePool, COUNTS.SAFE))
     .concat(pickN(orderPool, COUNTS.ORDER))
-    .concat(pickN(fedPool, COUNTS.FED));
+    .concat(pickN(fedPool, COUNTS.FED))
+    .slice(0, TOTAL);
 
-  // Safety: ensure exactly 90
-  questions = assembled.slice(0,TOTAL);
-
-  // Optional shuffle questions
-  const doShuffleQ = document.getElementById("optShuffleQ").checked;
-  if(doShuffleQ) shuffle(questions);
+  if(document.getElementById("optShuffleQ").checked){
+    shuffle(questions);
+  }
 
   statusEl.textContent = "";
 }
 
-/* ================= TIMER ================= */
+/* =========================
+   TIMER
+   ========================= */
 function startTimer(){
   stopTimer();
   document.getElementById("timerPill").style.display = timed ? "" : "none";
   document.getElementById("timerText").textContent = fmtTime(timeLeft);
+
   if(!timed) return;
 
   timer = setInterval(()=>{
@@ -603,214 +1221,293 @@ function startTimer(){
       stopTimer();
       submitTest(true);
     }
-  },1000);
+  }, 1000);
 }
 function stopTimer(){
-  if(timer){ clearInterval(timer); timer=null; }
+  if(timer){
+    clearInterval(timer);
+    timer = null;
+  }
 }
 
-/* ================= UI FLOW ================= */
-function goHome(){
-  stopTimer();
-  document.getElementById("home").style.display="";
-  document.getElementById("test").style.display="none";
-  document.getElementById("flashHome").style.display="none";
-  document.getElementById("flash").style.display="none";
-  statusEl.textContent="";
-}
-function goFlashHome(){
-  stopTimer();
-  document.getElementById("home").style.display="none";
-  document.getElementById("test").style.display="none";
-  document.getElementById("flashHome").style.display="";
-  document.getElementById("flash").style.display="none";
-}
+/* =========================
+   RENDER TEST
+   ========================= */
+function renderQuestion(){
+  const q = questions[idx];
+  updateTop();
 
-/* ================= TEST FLOW ================= */
-async function startTest(){
-  document.getElementById("home").style.display="none";
-  document.getElementById("flashHome").style.display="none";
-  document.getElementById("flash").style.display="none";
-  document.getElementById("test").style.display="";
+  document.getElementById("question").innerHTML = q.stemHTML;
 
-  // options
-  timed = document.getElementById("optTimed").checked;
-  timeLeft = 110*60;
-  const useRxNav = document.getElementById("optRxNav").checked;
+  const selected = answers.get(idx);
 
-  // build
-  document.getElementById("question").textContent="Loading questions…";
-  document.getElementById("choices").innerHTML="";
-  document.getElementById("nav").innerHTML="";
-  answers = new Map();
-  flags = new Set();
-  index = 0;
+  // IMPORTANT: radio group name must be unique per question index
+  const groupName = `q_${idx}`;
 
-  await buildExam(useRxNav);
-  startTimer();
-  renderQ();
-}
-
-function renderTopStats(){
-  document.getElementById("qNum").textContent = String(index+1);
-  document.getElementById("answeredCount").textContent = String(answers.size);
-  document.getElementById("flaggedCount").textContent = String(flags.size);
-  document.getElementById("domainPill").textContent = questions[index]?.domain || "—";
-}
-
-function renderQ(){
-  const q = questions[index];
-  renderTopStats();
-  document.getElementById("question").innerHTML = q.stem;
-
-  const selected = answers.get(index);
-  const wrap = q.choices.map((c,i)=>{
+  document.getElementById("choices").innerHTML = q.choices.map((c,i)=>{
     const checked = (selected===i) ? "checked" : "";
     return `
-      <div class="choice">
-        <label style="cursor:pointer;">
-          <input type="radio" name="c" ${checked}
-            onchange="selectAnswer(${index},${i})">
-          ${c}
+      <div class="choice" onclick="selectAnswer(${idx},${i})">
+        <label class="lbl">
+          <input type="radio" name="${groupName}" ${checked} onchange="selectAnswer(${idx},${i})" />
+          <div>${c}</div>
         </label>
       </div>
     `;
   }).join("");
-  document.getElementById("choices").innerHTML = wrap;
 
   renderNav();
 }
-
-function selectAnswer(qIndex, choiceIndex){
-  // index-based answers (fixes any “shared answer” bug)
-  answers.set(qIndex, choiceIndex);
-  renderTopStats();
-  renderNav();
-}
-
 function renderNav(){
-  const nav = questions.map((_,i)=>{
+  document.getElementById("nav").innerHTML = questions.map((_,i)=>{
     const cls = [
       "navbtn",
       answers.has(i) ? "answered" : "",
       flags.has(i) ? "flagged" : "",
-      i===index ? "current" : ""
+      i===idx ? "current" : ""
     ].join(" ");
     return `<div class="${cls}" onclick="gotoQ(${i})">${i+1}</div>`;
   }).join("");
-  document.getElementById("nav").innerHTML = nav;
 }
-
-function gotoQ(i){ index=i; renderQ(); }
-function nextQ(){ if(index<89){ index++; renderQ(); } }
-function prevQ(){ if(index>0){ index--; renderQ(); } }
-
-function flagQ(){
-  if(flags.has(index)) flags.delete(index);
-  else flags.add(index);
-  renderTopStats();
+function selectAnswer(qIndex, choiceIndex){
+  answers.set(qIndex, choiceIndex);
+  updateTop();
   renderNav();
 }
-function clearQ(){
-  answers.delete(index);
-  renderTopStats();
+function gotoQ(i){
+  idx = i;
+  renderQuestion();
+}
+function nextQ(){
+  if(idx < TOTAL-1){
+    idx++;
+    renderQuestion();
+  }
+}
+function prevQ(){
+  if(idx > 0){
+    idx--;
+    renderQuestion();
+  }
+}
+function toggleFlag(){
+  if(flags.has(idx)) flags.delete(idx);
+  else flags.add(idx);
+  updateTop();
   renderNav();
-  renderQ();
 }
 
-function submitTest(fromTimer){
+/* =========================
+   RESULTS (separate page)
+   ========================= */
+function submitTest(fromTimer=false){
   stopTimer();
+
   let correct=0, incorrect=0, blank=0;
+  const domainStats = {
+    [DOMAIN.MED]: {total:0, correct:0},
+    [DOMAIN.SAFE]: {total:0, correct:0},
+    [DOMAIN.ORDER]: {total:0, correct:0},
+    [DOMAIN.FED]: {total:0, correct:0},
+  };
 
   for(let i=0;i<questions.length;i++){
-    const q=questions[i];
-    const a=answers.get(i);
-    if(a===undefined){ blank++; continue; }
-    if(a===q.answer) correct++;
-    else incorrect++;
+    const q = questions[i];
+    domainStats[q.domain].total++;
+
+    const a = answers.get(i);
+    if(a===undefined){
+      blank++;
+      continue;
+    }
+    if(a===q.answerIndex){
+      correct++;
+      domainStats[q.domain].correct++;
+    }else{
+      incorrect++;
+    }
   }
 
   const pct = Math.round((correct/TOTAL)*100);
-  alert(`${fromTimer ? "Time is up.\n\n" : ""}Score: ${correct}/90 (${pct}%)\nIncorrect: ${incorrect}\nBlank: ${blank}`);
+
+  // Summary
+  const timeMsg = fromTimer ? "<div class='pill'>Time expired</div>" : "";
+  document.getElementById("scoreSummary").innerHTML = `
+    <div class="row space">
+      <div>
+        <div class="pill">Score <b>${correct}</b>/<b>${TOTAL}</b> (<b>${pct}%</b>)</div>
+        <div class="pill">Incorrect <b>${incorrect}</b></div>
+        <div class="pill">Blank <b>${blank}</b></div>
+        ${timeMsg}
+      </div>
+      <div class="muted"><small>Tip: review flagged + incorrect first.</small></div>
+    </div>
+  `;
+
+  // Domain breakdown
+  const bd = [];
+  for(const k of [DOMAIN.MED, DOMAIN.SAFE, DOMAIN.ORDER, DOMAIN.FED]){
+    const st = domainStats[k];
+    const p = st.total ? Math.round((st.correct/st.total)*100) : 0;
+    bd.push(`<div class="pill">${k}: <b>${st.correct}</b>/<b>${st.total}</b> (${p}%)</div>`);
+  }
+  document.getElementById("domainBreakdown").innerHTML = `<div class="row">${bd.join("")}</div>`;
+
+  // Review table
+  const tbody = document.getElementById("reviewTable");
+  tbody.innerHTML = "";
+  for(let i=0;i<questions.length;i++){
+    const q = questions[i];
+    const a = answers.get(i);
+    const your = (a===undefined) ? "(blank)" : stripHtml(q.choices[a]);
+    const corr = stripHtml(q.choices[q.answerIndex]);
+    const status = (a===undefined) ? "Blank" : (a===q.answerIndex ? "Correct" : "Incorrect");
+    const statusColor = (status==="Correct") ? "color:var(--good)" : (status==="Incorrect") ? "color:var(--bad)" : "color:var(--warn)";
+    const shortPrompt = stripHtml(q.stemHTML).slice(0,120) + (stripHtml(q.stemHTML).length>120 ? "…" : "");
+
+    const tr = document.createElement("tr");
+    tr.style.cursor="pointer";
+    tr.onclick = ()=>{ // jump back to test for review
+      setView("test");
+      idx = i;
+      renderQuestion();
+    };
+    tr.innerHTML = `
+      <td>${i+1}</td>
+      <td>${q.domain}</td>
+      <td>${htmlEscape(shortPrompt)}</td>
+      <td>${htmlEscape(your)}</td>
+      <td>${htmlEscape(corr)}</td>
+      <td style="${statusColor}; font-weight:900;">
+        ${status}${flags.has(i) ? " (flagged)" : ""}
+      </td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  setView("results");
 }
 
-/* ================= FLASHCARDS (DECK SELECT + VIEW) ================= */
+function restartTest(){
+  startTest();
+}
+
+/* =========================
+   TEST START / MENU FLOW
+   ========================= */
+async function startTest(){
+  setView("test");
+
+  // options
+  timed = document.getElementById("optTimed").checked;
+  const ninety = document.getElementById("optTime90").checked;
+  timeLeft = (ninety ? 90 : 110) * 60;
+
+  answers = new Map();
+  flags = new Set();
+  idx = 0;
+
+  document.getElementById("choices").innerHTML = "";
+  document.getElementById("question").textContent = "Loading questions…";
+  document.getElementById("timerPill").style.display = timed ? "" : "none";
+  document.getElementById("timerText").textContent = fmtTime(timeLeft);
+
+  await buildExam();
+  startTimer();
+  renderQuestion();
+}
+
+function goMenu(){
+  stopTimer();
+  statusEl.textContent = "";
+  setView("menu");
+}
+
+/* =========================
+   FLASHCARDS
+   ========================= */
 let flashDeck = [];
 let flashDeckName = "";
 let fIndex = 0;
 let fFront = true;
 
+function goFlashHome(){
+  stopTimer();
+  setView("flashHome");
+}
+
 function buildFlashDeck(type){
-  // Build a big card set from the same concepts (and keep it sectioned)
   const cards = [];
 
-  // MED cards
+  // Med cards (lots)
   for(const m of MEDS){
-    cards.push({deck:"MEDS", front:`Brand for: ${m.g}`, back:m.b.join(", ")});
-    for(const b of m.b) cards.push({deck:"MEDS", front:`Generic for: ${b}`, back:m.g});
-    cards.push({deck:"MEDS", front:`Class: ${m.g}`, back:m.cls});
-    cards.push({deck:"MEDS", front:`Use: ${m.g}`, back:m.ind});
+    cards.push({deck:"MED", front:`Brand for: ${m.g}`, back:m.b.join(", ")});
+    for(const b of m.b) cards.push({deck:"MED", front:`Generic for: ${b}`, back:m.g});
+    cards.push({deck:"MED", front:`Class: ${m.g}`, back:m.cls});
+    cards.push({deck:"MED", front:`Use: ${m.g}`, back:m.ind});
   }
   for(const r of SUFFIX_RULES){
-    cards.push({deck:"MEDS", front:`Suffix ${r.suffix} suggests`, back:r.cls});
-    cards.push({deck:"MEDS", front:`Class ${r.cls} suggests suffix`, back:r.suffix});
+    cards.push({deck:"MED", front:`Suffix ${r.suffix} suggests`, back:r.cls});
+    cards.push({deck:"MED", front:`Class ${r.cls} suggests suffix`, back:r.suffix});
+  }
+  for(const [a,b] of LASA_PAIRS){
+    cards.push({deck:"MED", front:`LASA pair`, back:`${a} / ${b}`});
   }
 
-  // SAFETY cards
-  cards.push({deck:"SAFETY", front:"USP <795>", back:"Non-sterile compounding"});
-  cards.push({deck:"SAFETY", front:"USP <797>", back:"Sterile compounding"});
-  cards.push({deck:"SAFETY", front:"USP <800>", back:"Hazardous drug handling safety"});
-  cards.push({deck:"SAFETY", front:"Garbing first step", back:"Hand hygiene"});
-  cards.push({deck:"SAFETY", front:"LASA", back:"Look-alike / sound-alike"});
-  cards.push({deck:"SAFETY", front:"Leading zero", back:"Use 0.5 (not .5)"});
-  cards.push({deck:"SAFETY", front:"Trailing zero", back:"Avoid 5.0; write 5"});
-  cards.push({deck:"SAFETY", front:"High osmolarity TPN typically requires", back:"Central venous access"});
+  // Safety cards
+  cards.push({deck:"SAFE", front:"USP <795>", back:"Non-sterile compounding"});
+  cards.push({deck:"SAFE", front:"USP <797>", back:"Sterile compounding"});
+  cards.push({deck:"SAFE", front:"USP <800>", back:"Hazardous drug handling safety"});
+  cards.push({deck:"SAFE", front:"Garbing first step", back:"Hand hygiene"});
+  cards.push({deck:"SAFE", front:"LASA", back:"Look-alike / sound-alike"});
+  cards.push({deck:"SAFE", front:"Leading zero", back:"Use 0.5 (not .5)"});
+  cards.push({deck:"SAFE", front:"Trailing zero", back:"Avoid 5.0; write 5"});
+  cards.push({deck:"SAFE", front:"High-alert example", back:"Insulin (and others)"});
+  cards.push({deck:"SAFE", front:"Tall-man lettering purpose", back:"Reduce look-alike confusion"});
 
-  // ORDER/Math cards
-  for(const c of CONVERSION_FACTS){
+  // Order/Math cards
+  for(const c of CONVERSIONS){
     cards.push({deck:"ORDER", front:c.q, back:c.a});
   }
   cards.push({deck:"ORDER", front:"% w/v means", back:"grams per 100 mL"});
-  cards.push({deck:"ORDER", front:"Refill too soon: first step", back:"Verify last fill and days supply"});
+  cards.push({deck:"ORDER", front:"Ratio strength 1:1000 means", back:"1 g in 1000 mL"});
   cards.push({deck:"ORDER", front:"Alligation used for", back:"mixture proportions to target strength"});
   cards.push({deck:"ORDER", front:"Levigating agent purpose", back:"smooth paste to incorporate powders"});
+  cards.push({deck:"ORDER", front:"Refill too soon: first step", back:"verify last fill and days supply"});
 
-  // FED cards
+  // Federal cards
   cards.push({deck:"FED", front:"DEA Form 222", back:"Ordering Schedule II controlled substances"});
   cards.push({deck:"FED", front:"DEA Form 106", back:"Report theft/significant loss of controlled substances"});
-  cards.push({deck:"FED", front:"DEA Form 41", back:"Controlled substance destruction documentation (as applicable)"});
-  cards.push({deck:"FED", front:"CII refills", back:"No refills allowed federally"});
+  cards.push({deck:"FED", front:"DEA Form 41", back:"Controlled substance destruction documentation"});
+  cards.push({deck:"FED", front:"DEA Form 224", back:"Controlled substance registration"});
+  cards.push({deck:"FED", front:"CII refills", back:"No refills federally"});
   cards.push({deck:"FED", front:"CIII–V refills", back:"Up to 5 refills within 6 months (typical federal rule)"});
   cards.push({deck:"FED", front:"HIPAA protects", back:"Patient health information privacy"});
   cards.push({deck:"FED", front:"Minimum necessary", back:"Only disclose PHI needed for the task"});
-  cards.push({deck:"FED", front:"DSCSA", back:"Supply chain security/traceability"});
+  cards.push({deck:"FED", front:"DSCSA", back:"Supply chain traceability/security"});
+  cards.push({deck:"FED", front:"Pseudoephedrine purpose", back:"Reduce diversion to meth production"});
 
   let deck;
-  if(type==="MIXED") deck = cards;
+  if(type==="MIX") deck = cards;
   else deck = cards.filter(c=>c.deck===type);
 
-  // Shuffle for variety
   flashDeck = shuffle(deck.slice());
-  flashDeckName = type==="MEDS" ? "Medications" :
-                  type==="SAFETY" ? "Patient Safety" :
-                  type==="ORDER" ? "Order Entry / Math" :
-                  type==="FED" ? "Federal" : "Mixed";
+  flashDeckName =
+    type==="MED" ? "Medications" :
+    type==="SAFE" ? "Patient Safety" :
+    type==="ORDER" ? "Order Entry / Math" :
+    type==="FED" ? "Federal" : "Mixed";
+
   fIndex = 0;
   fFront = true;
 }
 
 function openFlash(type){
-  document.getElementById("home").style.display="none";
-  document.getElementById("test").style.display="none";
-  document.getElementById("flashHome").style.display="none";
-  document.getElementById("flash").style.display="";
-
+  setView("flash");
   buildFlashDeck(type);
-
   document.getElementById("flashDeckName").textContent = flashDeckName;
   renderFlash();
 }
-
 function renderFlash(){
   const total = Math.max(1, flashDeck.length);
   const card = flashDeck[fIndex] || {front:"No cards", back:"—"};
@@ -819,22 +1516,21 @@ function renderFlash(){
   document.getElementById("flashSide").textContent = fFront ? "Front" : "Back";
   document.getElementById("flashCard").textContent = fFront ? card.front : card.back;
 }
-
 document.getElementById("flashCard").onclick = ()=>{
   fFront = !fFront;
   renderFlash();
 };
-
 function nextFlash(){
-  if(!flashDeck.length){ return; }
+  if(!flashDeck.length) return;
   fIndex = (fIndex + 1) % flashDeck.length;
   fFront = true;
   renderFlash();
 }
 
-/* init */
-goHome();
+/* =========================
+   INITIAL VIEW
+   ========================= */
+goMenu();
 </script>
-
 </body>
 </html>
