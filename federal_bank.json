@@ -1,0 +1,3502 @@
+[
+  {
+    "question": "FED Question 0?",
+    "correct": "FED Correct 0",
+    "wrong": [
+      "FED Wrong 0A",
+      "FED Wrong 0B",
+      "FED Wrong 0C"
+    ],
+    "explanation": "FED Correct 0 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 1?",
+    "correct": "FED Correct 1",
+    "wrong": [
+      "FED Wrong 1A",
+      "FED Wrong 1B",
+      "FED Wrong 1C"
+    ],
+    "explanation": "FED Correct 1 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 2?",
+    "correct": "FED Correct 2",
+    "wrong": [
+      "FED Wrong 2A",
+      "FED Wrong 2B",
+      "FED Wrong 2C"
+    ],
+    "explanation": "FED Correct 2 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 3?",
+    "correct": "FED Correct 3",
+    "wrong": [
+      "FED Wrong 3A",
+      "FED Wrong 3B",
+      "FED Wrong 3C"
+    ],
+    "explanation": "FED Correct 3 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 4?",
+    "correct": "FED Correct 4",
+    "wrong": [
+      "FED Wrong 4A",
+      "FED Wrong 4B",
+      "FED Wrong 4C"
+    ],
+    "explanation": "FED Correct 4 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 5?",
+    "correct": "FED Correct 5",
+    "wrong": [
+      "FED Wrong 5A",
+      "FED Wrong 5B",
+      "FED Wrong 5C"
+    ],
+    "explanation": "FED Correct 5 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 6?",
+    "correct": "FED Correct 6",
+    "wrong": [
+      "FED Wrong 6A",
+      "FED Wrong 6B",
+      "FED Wrong 6C"
+    ],
+    "explanation": "FED Correct 6 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 7?",
+    "correct": "FED Correct 7",
+    "wrong": [
+      "FED Wrong 7A",
+      "FED Wrong 7B",
+      "FED Wrong 7C"
+    ],
+    "explanation": "FED Correct 7 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 8?",
+    "correct": "FED Correct 8",
+    "wrong": [
+      "FED Wrong 8A",
+      "FED Wrong 8B",
+      "FED Wrong 8C"
+    ],
+    "explanation": "FED Correct 8 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 9?",
+    "correct": "FED Correct 9",
+    "wrong": [
+      "FED Wrong 9A",
+      "FED Wrong 9B",
+      "FED Wrong 9C"
+    ],
+    "explanation": "FED Correct 9 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 10?",
+    "correct": "FED Correct 10",
+    "wrong": [
+      "FED Wrong 10A",
+      "FED Wrong 10B",
+      "FED Wrong 10C"
+    ],
+    "explanation": "FED Correct 10 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 11?",
+    "correct": "FED Correct 11",
+    "wrong": [
+      "FED Wrong 11A",
+      "FED Wrong 11B",
+      "FED Wrong 11C"
+    ],
+    "explanation": "FED Correct 11 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 12?",
+    "correct": "FED Correct 12",
+    "wrong": [
+      "FED Wrong 12A",
+      "FED Wrong 12B",
+      "FED Wrong 12C"
+    ],
+    "explanation": "FED Correct 12 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 13?",
+    "correct": "FED Correct 13",
+    "wrong": [
+      "FED Wrong 13A",
+      "FED Wrong 13B",
+      "FED Wrong 13C"
+    ],
+    "explanation": "FED Correct 13 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 14?",
+    "correct": "FED Correct 14",
+    "wrong": [
+      "FED Wrong 14A",
+      "FED Wrong 14B",
+      "FED Wrong 14C"
+    ],
+    "explanation": "FED Correct 14 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 15?",
+    "correct": "FED Correct 15",
+    "wrong": [
+      "FED Wrong 15A",
+      "FED Wrong 15B",
+      "FED Wrong 15C"
+    ],
+    "explanation": "FED Correct 15 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 16?",
+    "correct": "FED Correct 16",
+    "wrong": [
+      "FED Wrong 16A",
+      "FED Wrong 16B",
+      "FED Wrong 16C"
+    ],
+    "explanation": "FED Correct 16 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 17?",
+    "correct": "FED Correct 17",
+    "wrong": [
+      "FED Wrong 17A",
+      "FED Wrong 17B",
+      "FED Wrong 17C"
+    ],
+    "explanation": "FED Correct 17 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 18?",
+    "correct": "FED Correct 18",
+    "wrong": [
+      "FED Wrong 18A",
+      "FED Wrong 18B",
+      "FED Wrong 18C"
+    ],
+    "explanation": "FED Correct 18 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 19?",
+    "correct": "FED Correct 19",
+    "wrong": [
+      "FED Wrong 19A",
+      "FED Wrong 19B",
+      "FED Wrong 19C"
+    ],
+    "explanation": "FED Correct 19 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 20?",
+    "correct": "FED Correct 20",
+    "wrong": [
+      "FED Wrong 20A",
+      "FED Wrong 20B",
+      "FED Wrong 20C"
+    ],
+    "explanation": "FED Correct 20 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 21?",
+    "correct": "FED Correct 21",
+    "wrong": [
+      "FED Wrong 21A",
+      "FED Wrong 21B",
+      "FED Wrong 21C"
+    ],
+    "explanation": "FED Correct 21 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 22?",
+    "correct": "FED Correct 22",
+    "wrong": [
+      "FED Wrong 22A",
+      "FED Wrong 22B",
+      "FED Wrong 22C"
+    ],
+    "explanation": "FED Correct 22 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 23?",
+    "correct": "FED Correct 23",
+    "wrong": [
+      "FED Wrong 23A",
+      "FED Wrong 23B",
+      "FED Wrong 23C"
+    ],
+    "explanation": "FED Correct 23 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 24?",
+    "correct": "FED Correct 24",
+    "wrong": [
+      "FED Wrong 24A",
+      "FED Wrong 24B",
+      "FED Wrong 24C"
+    ],
+    "explanation": "FED Correct 24 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 25?",
+    "correct": "FED Correct 25",
+    "wrong": [
+      "FED Wrong 25A",
+      "FED Wrong 25B",
+      "FED Wrong 25C"
+    ],
+    "explanation": "FED Correct 25 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 26?",
+    "correct": "FED Correct 26",
+    "wrong": [
+      "FED Wrong 26A",
+      "FED Wrong 26B",
+      "FED Wrong 26C"
+    ],
+    "explanation": "FED Correct 26 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 27?",
+    "correct": "FED Correct 27",
+    "wrong": [
+      "FED Wrong 27A",
+      "FED Wrong 27B",
+      "FED Wrong 27C"
+    ],
+    "explanation": "FED Correct 27 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 28?",
+    "correct": "FED Correct 28",
+    "wrong": [
+      "FED Wrong 28A",
+      "FED Wrong 28B",
+      "FED Wrong 28C"
+    ],
+    "explanation": "FED Correct 28 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 29?",
+    "correct": "FED Correct 29",
+    "wrong": [
+      "FED Wrong 29A",
+      "FED Wrong 29B",
+      "FED Wrong 29C"
+    ],
+    "explanation": "FED Correct 29 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 30?",
+    "correct": "FED Correct 30",
+    "wrong": [
+      "FED Wrong 30A",
+      "FED Wrong 30B",
+      "FED Wrong 30C"
+    ],
+    "explanation": "FED Correct 30 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 31?",
+    "correct": "FED Correct 31",
+    "wrong": [
+      "FED Wrong 31A",
+      "FED Wrong 31B",
+      "FED Wrong 31C"
+    ],
+    "explanation": "FED Correct 31 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 32?",
+    "correct": "FED Correct 32",
+    "wrong": [
+      "FED Wrong 32A",
+      "FED Wrong 32B",
+      "FED Wrong 32C"
+    ],
+    "explanation": "FED Correct 32 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 33?",
+    "correct": "FED Correct 33",
+    "wrong": [
+      "FED Wrong 33A",
+      "FED Wrong 33B",
+      "FED Wrong 33C"
+    ],
+    "explanation": "FED Correct 33 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 34?",
+    "correct": "FED Correct 34",
+    "wrong": [
+      "FED Wrong 34A",
+      "FED Wrong 34B",
+      "FED Wrong 34C"
+    ],
+    "explanation": "FED Correct 34 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 35?",
+    "correct": "FED Correct 35",
+    "wrong": [
+      "FED Wrong 35A",
+      "FED Wrong 35B",
+      "FED Wrong 35C"
+    ],
+    "explanation": "FED Correct 35 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 36?",
+    "correct": "FED Correct 36",
+    "wrong": [
+      "FED Wrong 36A",
+      "FED Wrong 36B",
+      "FED Wrong 36C"
+    ],
+    "explanation": "FED Correct 36 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 37?",
+    "correct": "FED Correct 37",
+    "wrong": [
+      "FED Wrong 37A",
+      "FED Wrong 37B",
+      "FED Wrong 37C"
+    ],
+    "explanation": "FED Correct 37 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 38?",
+    "correct": "FED Correct 38",
+    "wrong": [
+      "FED Wrong 38A",
+      "FED Wrong 38B",
+      "FED Wrong 38C"
+    ],
+    "explanation": "FED Correct 38 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 39?",
+    "correct": "FED Correct 39",
+    "wrong": [
+      "FED Wrong 39A",
+      "FED Wrong 39B",
+      "FED Wrong 39C"
+    ],
+    "explanation": "FED Correct 39 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 40?",
+    "correct": "FED Correct 40",
+    "wrong": [
+      "FED Wrong 40A",
+      "FED Wrong 40B",
+      "FED Wrong 40C"
+    ],
+    "explanation": "FED Correct 40 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 41?",
+    "correct": "FED Correct 41",
+    "wrong": [
+      "FED Wrong 41A",
+      "FED Wrong 41B",
+      "FED Wrong 41C"
+    ],
+    "explanation": "FED Correct 41 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 42?",
+    "correct": "FED Correct 42",
+    "wrong": [
+      "FED Wrong 42A",
+      "FED Wrong 42B",
+      "FED Wrong 42C"
+    ],
+    "explanation": "FED Correct 42 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 43?",
+    "correct": "FED Correct 43",
+    "wrong": [
+      "FED Wrong 43A",
+      "FED Wrong 43B",
+      "FED Wrong 43C"
+    ],
+    "explanation": "FED Correct 43 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 44?",
+    "correct": "FED Correct 44",
+    "wrong": [
+      "FED Wrong 44A",
+      "FED Wrong 44B",
+      "FED Wrong 44C"
+    ],
+    "explanation": "FED Correct 44 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 45?",
+    "correct": "FED Correct 45",
+    "wrong": [
+      "FED Wrong 45A",
+      "FED Wrong 45B",
+      "FED Wrong 45C"
+    ],
+    "explanation": "FED Correct 45 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 46?",
+    "correct": "FED Correct 46",
+    "wrong": [
+      "FED Wrong 46A",
+      "FED Wrong 46B",
+      "FED Wrong 46C"
+    ],
+    "explanation": "FED Correct 46 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 47?",
+    "correct": "FED Correct 47",
+    "wrong": [
+      "FED Wrong 47A",
+      "FED Wrong 47B",
+      "FED Wrong 47C"
+    ],
+    "explanation": "FED Correct 47 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 48?",
+    "correct": "FED Correct 48",
+    "wrong": [
+      "FED Wrong 48A",
+      "FED Wrong 48B",
+      "FED Wrong 48C"
+    ],
+    "explanation": "FED Correct 48 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 49?",
+    "correct": "FED Correct 49",
+    "wrong": [
+      "FED Wrong 49A",
+      "FED Wrong 49B",
+      "FED Wrong 49C"
+    ],
+    "explanation": "FED Correct 49 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 50?",
+    "correct": "FED Correct 50",
+    "wrong": [
+      "FED Wrong 50A",
+      "FED Wrong 50B",
+      "FED Wrong 50C"
+    ],
+    "explanation": "FED Correct 50 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 51?",
+    "correct": "FED Correct 51",
+    "wrong": [
+      "FED Wrong 51A",
+      "FED Wrong 51B",
+      "FED Wrong 51C"
+    ],
+    "explanation": "FED Correct 51 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 52?",
+    "correct": "FED Correct 52",
+    "wrong": [
+      "FED Wrong 52A",
+      "FED Wrong 52B",
+      "FED Wrong 52C"
+    ],
+    "explanation": "FED Correct 52 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 53?",
+    "correct": "FED Correct 53",
+    "wrong": [
+      "FED Wrong 53A",
+      "FED Wrong 53B",
+      "FED Wrong 53C"
+    ],
+    "explanation": "FED Correct 53 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 54?",
+    "correct": "FED Correct 54",
+    "wrong": [
+      "FED Wrong 54A",
+      "FED Wrong 54B",
+      "FED Wrong 54C"
+    ],
+    "explanation": "FED Correct 54 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 55?",
+    "correct": "FED Correct 55",
+    "wrong": [
+      "FED Wrong 55A",
+      "FED Wrong 55B",
+      "FED Wrong 55C"
+    ],
+    "explanation": "FED Correct 55 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 56?",
+    "correct": "FED Correct 56",
+    "wrong": [
+      "FED Wrong 56A",
+      "FED Wrong 56B",
+      "FED Wrong 56C"
+    ],
+    "explanation": "FED Correct 56 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 57?",
+    "correct": "FED Correct 57",
+    "wrong": [
+      "FED Wrong 57A",
+      "FED Wrong 57B",
+      "FED Wrong 57C"
+    ],
+    "explanation": "FED Correct 57 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 58?",
+    "correct": "FED Correct 58",
+    "wrong": [
+      "FED Wrong 58A",
+      "FED Wrong 58B",
+      "FED Wrong 58C"
+    ],
+    "explanation": "FED Correct 58 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 59?",
+    "correct": "FED Correct 59",
+    "wrong": [
+      "FED Wrong 59A",
+      "FED Wrong 59B",
+      "FED Wrong 59C"
+    ],
+    "explanation": "FED Correct 59 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 60?",
+    "correct": "FED Correct 60",
+    "wrong": [
+      "FED Wrong 60A",
+      "FED Wrong 60B",
+      "FED Wrong 60C"
+    ],
+    "explanation": "FED Correct 60 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 61?",
+    "correct": "FED Correct 61",
+    "wrong": [
+      "FED Wrong 61A",
+      "FED Wrong 61B",
+      "FED Wrong 61C"
+    ],
+    "explanation": "FED Correct 61 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 62?",
+    "correct": "FED Correct 62",
+    "wrong": [
+      "FED Wrong 62A",
+      "FED Wrong 62B",
+      "FED Wrong 62C"
+    ],
+    "explanation": "FED Correct 62 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 63?",
+    "correct": "FED Correct 63",
+    "wrong": [
+      "FED Wrong 63A",
+      "FED Wrong 63B",
+      "FED Wrong 63C"
+    ],
+    "explanation": "FED Correct 63 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 64?",
+    "correct": "FED Correct 64",
+    "wrong": [
+      "FED Wrong 64A",
+      "FED Wrong 64B",
+      "FED Wrong 64C"
+    ],
+    "explanation": "FED Correct 64 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 65?",
+    "correct": "FED Correct 65",
+    "wrong": [
+      "FED Wrong 65A",
+      "FED Wrong 65B",
+      "FED Wrong 65C"
+    ],
+    "explanation": "FED Correct 65 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 66?",
+    "correct": "FED Correct 66",
+    "wrong": [
+      "FED Wrong 66A",
+      "FED Wrong 66B",
+      "FED Wrong 66C"
+    ],
+    "explanation": "FED Correct 66 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 67?",
+    "correct": "FED Correct 67",
+    "wrong": [
+      "FED Wrong 67A",
+      "FED Wrong 67B",
+      "FED Wrong 67C"
+    ],
+    "explanation": "FED Correct 67 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 68?",
+    "correct": "FED Correct 68",
+    "wrong": [
+      "FED Wrong 68A",
+      "FED Wrong 68B",
+      "FED Wrong 68C"
+    ],
+    "explanation": "FED Correct 68 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 69?",
+    "correct": "FED Correct 69",
+    "wrong": [
+      "FED Wrong 69A",
+      "FED Wrong 69B",
+      "FED Wrong 69C"
+    ],
+    "explanation": "FED Correct 69 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 70?",
+    "correct": "FED Correct 70",
+    "wrong": [
+      "FED Wrong 70A",
+      "FED Wrong 70B",
+      "FED Wrong 70C"
+    ],
+    "explanation": "FED Correct 70 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 71?",
+    "correct": "FED Correct 71",
+    "wrong": [
+      "FED Wrong 71A",
+      "FED Wrong 71B",
+      "FED Wrong 71C"
+    ],
+    "explanation": "FED Correct 71 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 72?",
+    "correct": "FED Correct 72",
+    "wrong": [
+      "FED Wrong 72A",
+      "FED Wrong 72B",
+      "FED Wrong 72C"
+    ],
+    "explanation": "FED Correct 72 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 73?",
+    "correct": "FED Correct 73",
+    "wrong": [
+      "FED Wrong 73A",
+      "FED Wrong 73B",
+      "FED Wrong 73C"
+    ],
+    "explanation": "FED Correct 73 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 74?",
+    "correct": "FED Correct 74",
+    "wrong": [
+      "FED Wrong 74A",
+      "FED Wrong 74B",
+      "FED Wrong 74C"
+    ],
+    "explanation": "FED Correct 74 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 75?",
+    "correct": "FED Correct 75",
+    "wrong": [
+      "FED Wrong 75A",
+      "FED Wrong 75B",
+      "FED Wrong 75C"
+    ],
+    "explanation": "FED Correct 75 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 76?",
+    "correct": "FED Correct 76",
+    "wrong": [
+      "FED Wrong 76A",
+      "FED Wrong 76B",
+      "FED Wrong 76C"
+    ],
+    "explanation": "FED Correct 76 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 77?",
+    "correct": "FED Correct 77",
+    "wrong": [
+      "FED Wrong 77A",
+      "FED Wrong 77B",
+      "FED Wrong 77C"
+    ],
+    "explanation": "FED Correct 77 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 78?",
+    "correct": "FED Correct 78",
+    "wrong": [
+      "FED Wrong 78A",
+      "FED Wrong 78B",
+      "FED Wrong 78C"
+    ],
+    "explanation": "FED Correct 78 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 79?",
+    "correct": "FED Correct 79",
+    "wrong": [
+      "FED Wrong 79A",
+      "FED Wrong 79B",
+      "FED Wrong 79C"
+    ],
+    "explanation": "FED Correct 79 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 80?",
+    "correct": "FED Correct 80",
+    "wrong": [
+      "FED Wrong 80A",
+      "FED Wrong 80B",
+      "FED Wrong 80C"
+    ],
+    "explanation": "FED Correct 80 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 81?",
+    "correct": "FED Correct 81",
+    "wrong": [
+      "FED Wrong 81A",
+      "FED Wrong 81B",
+      "FED Wrong 81C"
+    ],
+    "explanation": "FED Correct 81 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 82?",
+    "correct": "FED Correct 82",
+    "wrong": [
+      "FED Wrong 82A",
+      "FED Wrong 82B",
+      "FED Wrong 82C"
+    ],
+    "explanation": "FED Correct 82 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 83?",
+    "correct": "FED Correct 83",
+    "wrong": [
+      "FED Wrong 83A",
+      "FED Wrong 83B",
+      "FED Wrong 83C"
+    ],
+    "explanation": "FED Correct 83 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 84?",
+    "correct": "FED Correct 84",
+    "wrong": [
+      "FED Wrong 84A",
+      "FED Wrong 84B",
+      "FED Wrong 84C"
+    ],
+    "explanation": "FED Correct 84 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 85?",
+    "correct": "FED Correct 85",
+    "wrong": [
+      "FED Wrong 85A",
+      "FED Wrong 85B",
+      "FED Wrong 85C"
+    ],
+    "explanation": "FED Correct 85 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 86?",
+    "correct": "FED Correct 86",
+    "wrong": [
+      "FED Wrong 86A",
+      "FED Wrong 86B",
+      "FED Wrong 86C"
+    ],
+    "explanation": "FED Correct 86 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 87?",
+    "correct": "FED Correct 87",
+    "wrong": [
+      "FED Wrong 87A",
+      "FED Wrong 87B",
+      "FED Wrong 87C"
+    ],
+    "explanation": "FED Correct 87 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 88?",
+    "correct": "FED Correct 88",
+    "wrong": [
+      "FED Wrong 88A",
+      "FED Wrong 88B",
+      "FED Wrong 88C"
+    ],
+    "explanation": "FED Correct 88 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 89?",
+    "correct": "FED Correct 89",
+    "wrong": [
+      "FED Wrong 89A",
+      "FED Wrong 89B",
+      "FED Wrong 89C"
+    ],
+    "explanation": "FED Correct 89 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 90?",
+    "correct": "FED Correct 90",
+    "wrong": [
+      "FED Wrong 90A",
+      "FED Wrong 90B",
+      "FED Wrong 90C"
+    ],
+    "explanation": "FED Correct 90 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 91?",
+    "correct": "FED Correct 91",
+    "wrong": [
+      "FED Wrong 91A",
+      "FED Wrong 91B",
+      "FED Wrong 91C"
+    ],
+    "explanation": "FED Correct 91 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 92?",
+    "correct": "FED Correct 92",
+    "wrong": [
+      "FED Wrong 92A",
+      "FED Wrong 92B",
+      "FED Wrong 92C"
+    ],
+    "explanation": "FED Correct 92 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 93?",
+    "correct": "FED Correct 93",
+    "wrong": [
+      "FED Wrong 93A",
+      "FED Wrong 93B",
+      "FED Wrong 93C"
+    ],
+    "explanation": "FED Correct 93 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 94?",
+    "correct": "FED Correct 94",
+    "wrong": [
+      "FED Wrong 94A",
+      "FED Wrong 94B",
+      "FED Wrong 94C"
+    ],
+    "explanation": "FED Correct 94 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 95?",
+    "correct": "FED Correct 95",
+    "wrong": [
+      "FED Wrong 95A",
+      "FED Wrong 95B",
+      "FED Wrong 95C"
+    ],
+    "explanation": "FED Correct 95 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 96?",
+    "correct": "FED Correct 96",
+    "wrong": [
+      "FED Wrong 96A",
+      "FED Wrong 96B",
+      "FED Wrong 96C"
+    ],
+    "explanation": "FED Correct 96 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 97?",
+    "correct": "FED Correct 97",
+    "wrong": [
+      "FED Wrong 97A",
+      "FED Wrong 97B",
+      "FED Wrong 97C"
+    ],
+    "explanation": "FED Correct 97 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 98?",
+    "correct": "FED Correct 98",
+    "wrong": [
+      "FED Wrong 98A",
+      "FED Wrong 98B",
+      "FED Wrong 98C"
+    ],
+    "explanation": "FED Correct 98 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 99?",
+    "correct": "FED Correct 99",
+    "wrong": [
+      "FED Wrong 99A",
+      "FED Wrong 99B",
+      "FED Wrong 99C"
+    ],
+    "explanation": "FED Correct 99 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 100?",
+    "correct": "FED Correct 100",
+    "wrong": [
+      "FED Wrong 100A",
+      "FED Wrong 100B",
+      "FED Wrong 100C"
+    ],
+    "explanation": "FED Correct 100 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 101?",
+    "correct": "FED Correct 101",
+    "wrong": [
+      "FED Wrong 101A",
+      "FED Wrong 101B",
+      "FED Wrong 101C"
+    ],
+    "explanation": "FED Correct 101 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 102?",
+    "correct": "FED Correct 102",
+    "wrong": [
+      "FED Wrong 102A",
+      "FED Wrong 102B",
+      "FED Wrong 102C"
+    ],
+    "explanation": "FED Correct 102 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 103?",
+    "correct": "FED Correct 103",
+    "wrong": [
+      "FED Wrong 103A",
+      "FED Wrong 103B",
+      "FED Wrong 103C"
+    ],
+    "explanation": "FED Correct 103 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 104?",
+    "correct": "FED Correct 104",
+    "wrong": [
+      "FED Wrong 104A",
+      "FED Wrong 104B",
+      "FED Wrong 104C"
+    ],
+    "explanation": "FED Correct 104 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 105?",
+    "correct": "FED Correct 105",
+    "wrong": [
+      "FED Wrong 105A",
+      "FED Wrong 105B",
+      "FED Wrong 105C"
+    ],
+    "explanation": "FED Correct 105 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 106?",
+    "correct": "FED Correct 106",
+    "wrong": [
+      "FED Wrong 106A",
+      "FED Wrong 106B",
+      "FED Wrong 106C"
+    ],
+    "explanation": "FED Correct 106 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 107?",
+    "correct": "FED Correct 107",
+    "wrong": [
+      "FED Wrong 107A",
+      "FED Wrong 107B",
+      "FED Wrong 107C"
+    ],
+    "explanation": "FED Correct 107 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 108?",
+    "correct": "FED Correct 108",
+    "wrong": [
+      "FED Wrong 108A",
+      "FED Wrong 108B",
+      "FED Wrong 108C"
+    ],
+    "explanation": "FED Correct 108 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 109?",
+    "correct": "FED Correct 109",
+    "wrong": [
+      "FED Wrong 109A",
+      "FED Wrong 109B",
+      "FED Wrong 109C"
+    ],
+    "explanation": "FED Correct 109 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 110?",
+    "correct": "FED Correct 110",
+    "wrong": [
+      "FED Wrong 110A",
+      "FED Wrong 110B",
+      "FED Wrong 110C"
+    ],
+    "explanation": "FED Correct 110 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 111?",
+    "correct": "FED Correct 111",
+    "wrong": [
+      "FED Wrong 111A",
+      "FED Wrong 111B",
+      "FED Wrong 111C"
+    ],
+    "explanation": "FED Correct 111 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 112?",
+    "correct": "FED Correct 112",
+    "wrong": [
+      "FED Wrong 112A",
+      "FED Wrong 112B",
+      "FED Wrong 112C"
+    ],
+    "explanation": "FED Correct 112 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 113?",
+    "correct": "FED Correct 113",
+    "wrong": [
+      "FED Wrong 113A",
+      "FED Wrong 113B",
+      "FED Wrong 113C"
+    ],
+    "explanation": "FED Correct 113 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 114?",
+    "correct": "FED Correct 114",
+    "wrong": [
+      "FED Wrong 114A",
+      "FED Wrong 114B",
+      "FED Wrong 114C"
+    ],
+    "explanation": "FED Correct 114 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 115?",
+    "correct": "FED Correct 115",
+    "wrong": [
+      "FED Wrong 115A",
+      "FED Wrong 115B",
+      "FED Wrong 115C"
+    ],
+    "explanation": "FED Correct 115 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 116?",
+    "correct": "FED Correct 116",
+    "wrong": [
+      "FED Wrong 116A",
+      "FED Wrong 116B",
+      "FED Wrong 116C"
+    ],
+    "explanation": "FED Correct 116 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 117?",
+    "correct": "FED Correct 117",
+    "wrong": [
+      "FED Wrong 117A",
+      "FED Wrong 117B",
+      "FED Wrong 117C"
+    ],
+    "explanation": "FED Correct 117 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 118?",
+    "correct": "FED Correct 118",
+    "wrong": [
+      "FED Wrong 118A",
+      "FED Wrong 118B",
+      "FED Wrong 118C"
+    ],
+    "explanation": "FED Correct 118 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 119?",
+    "correct": "FED Correct 119",
+    "wrong": [
+      "FED Wrong 119A",
+      "FED Wrong 119B",
+      "FED Wrong 119C"
+    ],
+    "explanation": "FED Correct 119 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 120?",
+    "correct": "FED Correct 120",
+    "wrong": [
+      "FED Wrong 120A",
+      "FED Wrong 120B",
+      "FED Wrong 120C"
+    ],
+    "explanation": "FED Correct 120 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 121?",
+    "correct": "FED Correct 121",
+    "wrong": [
+      "FED Wrong 121A",
+      "FED Wrong 121B",
+      "FED Wrong 121C"
+    ],
+    "explanation": "FED Correct 121 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 122?",
+    "correct": "FED Correct 122",
+    "wrong": [
+      "FED Wrong 122A",
+      "FED Wrong 122B",
+      "FED Wrong 122C"
+    ],
+    "explanation": "FED Correct 122 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 123?",
+    "correct": "FED Correct 123",
+    "wrong": [
+      "FED Wrong 123A",
+      "FED Wrong 123B",
+      "FED Wrong 123C"
+    ],
+    "explanation": "FED Correct 123 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 124?",
+    "correct": "FED Correct 124",
+    "wrong": [
+      "FED Wrong 124A",
+      "FED Wrong 124B",
+      "FED Wrong 124C"
+    ],
+    "explanation": "FED Correct 124 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 125?",
+    "correct": "FED Correct 125",
+    "wrong": [
+      "FED Wrong 125A",
+      "FED Wrong 125B",
+      "FED Wrong 125C"
+    ],
+    "explanation": "FED Correct 125 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 126?",
+    "correct": "FED Correct 126",
+    "wrong": [
+      "FED Wrong 126A",
+      "FED Wrong 126B",
+      "FED Wrong 126C"
+    ],
+    "explanation": "FED Correct 126 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 127?",
+    "correct": "FED Correct 127",
+    "wrong": [
+      "FED Wrong 127A",
+      "FED Wrong 127B",
+      "FED Wrong 127C"
+    ],
+    "explanation": "FED Correct 127 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 128?",
+    "correct": "FED Correct 128",
+    "wrong": [
+      "FED Wrong 128A",
+      "FED Wrong 128B",
+      "FED Wrong 128C"
+    ],
+    "explanation": "FED Correct 128 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 129?",
+    "correct": "FED Correct 129",
+    "wrong": [
+      "FED Wrong 129A",
+      "FED Wrong 129B",
+      "FED Wrong 129C"
+    ],
+    "explanation": "FED Correct 129 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 130?",
+    "correct": "FED Correct 130",
+    "wrong": [
+      "FED Wrong 130A",
+      "FED Wrong 130B",
+      "FED Wrong 130C"
+    ],
+    "explanation": "FED Correct 130 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 131?",
+    "correct": "FED Correct 131",
+    "wrong": [
+      "FED Wrong 131A",
+      "FED Wrong 131B",
+      "FED Wrong 131C"
+    ],
+    "explanation": "FED Correct 131 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 132?",
+    "correct": "FED Correct 132",
+    "wrong": [
+      "FED Wrong 132A",
+      "FED Wrong 132B",
+      "FED Wrong 132C"
+    ],
+    "explanation": "FED Correct 132 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 133?",
+    "correct": "FED Correct 133",
+    "wrong": [
+      "FED Wrong 133A",
+      "FED Wrong 133B",
+      "FED Wrong 133C"
+    ],
+    "explanation": "FED Correct 133 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 134?",
+    "correct": "FED Correct 134",
+    "wrong": [
+      "FED Wrong 134A",
+      "FED Wrong 134B",
+      "FED Wrong 134C"
+    ],
+    "explanation": "FED Correct 134 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 135?",
+    "correct": "FED Correct 135",
+    "wrong": [
+      "FED Wrong 135A",
+      "FED Wrong 135B",
+      "FED Wrong 135C"
+    ],
+    "explanation": "FED Correct 135 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 136?",
+    "correct": "FED Correct 136",
+    "wrong": [
+      "FED Wrong 136A",
+      "FED Wrong 136B",
+      "FED Wrong 136C"
+    ],
+    "explanation": "FED Correct 136 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 137?",
+    "correct": "FED Correct 137",
+    "wrong": [
+      "FED Wrong 137A",
+      "FED Wrong 137B",
+      "FED Wrong 137C"
+    ],
+    "explanation": "FED Correct 137 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 138?",
+    "correct": "FED Correct 138",
+    "wrong": [
+      "FED Wrong 138A",
+      "FED Wrong 138B",
+      "FED Wrong 138C"
+    ],
+    "explanation": "FED Correct 138 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 139?",
+    "correct": "FED Correct 139",
+    "wrong": [
+      "FED Wrong 139A",
+      "FED Wrong 139B",
+      "FED Wrong 139C"
+    ],
+    "explanation": "FED Correct 139 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 140?",
+    "correct": "FED Correct 140",
+    "wrong": [
+      "FED Wrong 140A",
+      "FED Wrong 140B",
+      "FED Wrong 140C"
+    ],
+    "explanation": "FED Correct 140 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 141?",
+    "correct": "FED Correct 141",
+    "wrong": [
+      "FED Wrong 141A",
+      "FED Wrong 141B",
+      "FED Wrong 141C"
+    ],
+    "explanation": "FED Correct 141 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 142?",
+    "correct": "FED Correct 142",
+    "wrong": [
+      "FED Wrong 142A",
+      "FED Wrong 142B",
+      "FED Wrong 142C"
+    ],
+    "explanation": "FED Correct 142 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 143?",
+    "correct": "FED Correct 143",
+    "wrong": [
+      "FED Wrong 143A",
+      "FED Wrong 143B",
+      "FED Wrong 143C"
+    ],
+    "explanation": "FED Correct 143 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 144?",
+    "correct": "FED Correct 144",
+    "wrong": [
+      "FED Wrong 144A",
+      "FED Wrong 144B",
+      "FED Wrong 144C"
+    ],
+    "explanation": "FED Correct 144 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 145?",
+    "correct": "FED Correct 145",
+    "wrong": [
+      "FED Wrong 145A",
+      "FED Wrong 145B",
+      "FED Wrong 145C"
+    ],
+    "explanation": "FED Correct 145 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 146?",
+    "correct": "FED Correct 146",
+    "wrong": [
+      "FED Wrong 146A",
+      "FED Wrong 146B",
+      "FED Wrong 146C"
+    ],
+    "explanation": "FED Correct 146 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 147?",
+    "correct": "FED Correct 147",
+    "wrong": [
+      "FED Wrong 147A",
+      "FED Wrong 147B",
+      "FED Wrong 147C"
+    ],
+    "explanation": "FED Correct 147 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 148?",
+    "correct": "FED Correct 148",
+    "wrong": [
+      "FED Wrong 148A",
+      "FED Wrong 148B",
+      "FED Wrong 148C"
+    ],
+    "explanation": "FED Correct 148 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 149?",
+    "correct": "FED Correct 149",
+    "wrong": [
+      "FED Wrong 149A",
+      "FED Wrong 149B",
+      "FED Wrong 149C"
+    ],
+    "explanation": "FED Correct 149 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 150?",
+    "correct": "FED Correct 150",
+    "wrong": [
+      "FED Wrong 150A",
+      "FED Wrong 150B",
+      "FED Wrong 150C"
+    ],
+    "explanation": "FED Correct 150 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 151?",
+    "correct": "FED Correct 151",
+    "wrong": [
+      "FED Wrong 151A",
+      "FED Wrong 151B",
+      "FED Wrong 151C"
+    ],
+    "explanation": "FED Correct 151 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 152?",
+    "correct": "FED Correct 152",
+    "wrong": [
+      "FED Wrong 152A",
+      "FED Wrong 152B",
+      "FED Wrong 152C"
+    ],
+    "explanation": "FED Correct 152 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 153?",
+    "correct": "FED Correct 153",
+    "wrong": [
+      "FED Wrong 153A",
+      "FED Wrong 153B",
+      "FED Wrong 153C"
+    ],
+    "explanation": "FED Correct 153 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 154?",
+    "correct": "FED Correct 154",
+    "wrong": [
+      "FED Wrong 154A",
+      "FED Wrong 154B",
+      "FED Wrong 154C"
+    ],
+    "explanation": "FED Correct 154 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 155?",
+    "correct": "FED Correct 155",
+    "wrong": [
+      "FED Wrong 155A",
+      "FED Wrong 155B",
+      "FED Wrong 155C"
+    ],
+    "explanation": "FED Correct 155 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 156?",
+    "correct": "FED Correct 156",
+    "wrong": [
+      "FED Wrong 156A",
+      "FED Wrong 156B",
+      "FED Wrong 156C"
+    ],
+    "explanation": "FED Correct 156 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 157?",
+    "correct": "FED Correct 157",
+    "wrong": [
+      "FED Wrong 157A",
+      "FED Wrong 157B",
+      "FED Wrong 157C"
+    ],
+    "explanation": "FED Correct 157 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 158?",
+    "correct": "FED Correct 158",
+    "wrong": [
+      "FED Wrong 158A",
+      "FED Wrong 158B",
+      "FED Wrong 158C"
+    ],
+    "explanation": "FED Correct 158 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 159?",
+    "correct": "FED Correct 159",
+    "wrong": [
+      "FED Wrong 159A",
+      "FED Wrong 159B",
+      "FED Wrong 159C"
+    ],
+    "explanation": "FED Correct 159 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 160?",
+    "correct": "FED Correct 160",
+    "wrong": [
+      "FED Wrong 160A",
+      "FED Wrong 160B",
+      "FED Wrong 160C"
+    ],
+    "explanation": "FED Correct 160 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 161?",
+    "correct": "FED Correct 161",
+    "wrong": [
+      "FED Wrong 161A",
+      "FED Wrong 161B",
+      "FED Wrong 161C"
+    ],
+    "explanation": "FED Correct 161 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 162?",
+    "correct": "FED Correct 162",
+    "wrong": [
+      "FED Wrong 162A",
+      "FED Wrong 162B",
+      "FED Wrong 162C"
+    ],
+    "explanation": "FED Correct 162 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 163?",
+    "correct": "FED Correct 163",
+    "wrong": [
+      "FED Wrong 163A",
+      "FED Wrong 163B",
+      "FED Wrong 163C"
+    ],
+    "explanation": "FED Correct 163 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 164?",
+    "correct": "FED Correct 164",
+    "wrong": [
+      "FED Wrong 164A",
+      "FED Wrong 164B",
+      "FED Wrong 164C"
+    ],
+    "explanation": "FED Correct 164 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 165?",
+    "correct": "FED Correct 165",
+    "wrong": [
+      "FED Wrong 165A",
+      "FED Wrong 165B",
+      "FED Wrong 165C"
+    ],
+    "explanation": "FED Correct 165 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 166?",
+    "correct": "FED Correct 166",
+    "wrong": [
+      "FED Wrong 166A",
+      "FED Wrong 166B",
+      "FED Wrong 166C"
+    ],
+    "explanation": "FED Correct 166 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 167?",
+    "correct": "FED Correct 167",
+    "wrong": [
+      "FED Wrong 167A",
+      "FED Wrong 167B",
+      "FED Wrong 167C"
+    ],
+    "explanation": "FED Correct 167 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 168?",
+    "correct": "FED Correct 168",
+    "wrong": [
+      "FED Wrong 168A",
+      "FED Wrong 168B",
+      "FED Wrong 168C"
+    ],
+    "explanation": "FED Correct 168 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 169?",
+    "correct": "FED Correct 169",
+    "wrong": [
+      "FED Wrong 169A",
+      "FED Wrong 169B",
+      "FED Wrong 169C"
+    ],
+    "explanation": "FED Correct 169 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 170?",
+    "correct": "FED Correct 170",
+    "wrong": [
+      "FED Wrong 170A",
+      "FED Wrong 170B",
+      "FED Wrong 170C"
+    ],
+    "explanation": "FED Correct 170 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 171?",
+    "correct": "FED Correct 171",
+    "wrong": [
+      "FED Wrong 171A",
+      "FED Wrong 171B",
+      "FED Wrong 171C"
+    ],
+    "explanation": "FED Correct 171 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 172?",
+    "correct": "FED Correct 172",
+    "wrong": [
+      "FED Wrong 172A",
+      "FED Wrong 172B",
+      "FED Wrong 172C"
+    ],
+    "explanation": "FED Correct 172 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 173?",
+    "correct": "FED Correct 173",
+    "wrong": [
+      "FED Wrong 173A",
+      "FED Wrong 173B",
+      "FED Wrong 173C"
+    ],
+    "explanation": "FED Correct 173 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 174?",
+    "correct": "FED Correct 174",
+    "wrong": [
+      "FED Wrong 174A",
+      "FED Wrong 174B",
+      "FED Wrong 174C"
+    ],
+    "explanation": "FED Correct 174 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 175?",
+    "correct": "FED Correct 175",
+    "wrong": [
+      "FED Wrong 175A",
+      "FED Wrong 175B",
+      "FED Wrong 175C"
+    ],
+    "explanation": "FED Correct 175 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 176?",
+    "correct": "FED Correct 176",
+    "wrong": [
+      "FED Wrong 176A",
+      "FED Wrong 176B",
+      "FED Wrong 176C"
+    ],
+    "explanation": "FED Correct 176 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 177?",
+    "correct": "FED Correct 177",
+    "wrong": [
+      "FED Wrong 177A",
+      "FED Wrong 177B",
+      "FED Wrong 177C"
+    ],
+    "explanation": "FED Correct 177 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 178?",
+    "correct": "FED Correct 178",
+    "wrong": [
+      "FED Wrong 178A",
+      "FED Wrong 178B",
+      "FED Wrong 178C"
+    ],
+    "explanation": "FED Correct 178 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 179?",
+    "correct": "FED Correct 179",
+    "wrong": [
+      "FED Wrong 179A",
+      "FED Wrong 179B",
+      "FED Wrong 179C"
+    ],
+    "explanation": "FED Correct 179 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 180?",
+    "correct": "FED Correct 180",
+    "wrong": [
+      "FED Wrong 180A",
+      "FED Wrong 180B",
+      "FED Wrong 180C"
+    ],
+    "explanation": "FED Correct 180 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 181?",
+    "correct": "FED Correct 181",
+    "wrong": [
+      "FED Wrong 181A",
+      "FED Wrong 181B",
+      "FED Wrong 181C"
+    ],
+    "explanation": "FED Correct 181 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 182?",
+    "correct": "FED Correct 182",
+    "wrong": [
+      "FED Wrong 182A",
+      "FED Wrong 182B",
+      "FED Wrong 182C"
+    ],
+    "explanation": "FED Correct 182 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 183?",
+    "correct": "FED Correct 183",
+    "wrong": [
+      "FED Wrong 183A",
+      "FED Wrong 183B",
+      "FED Wrong 183C"
+    ],
+    "explanation": "FED Correct 183 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 184?",
+    "correct": "FED Correct 184",
+    "wrong": [
+      "FED Wrong 184A",
+      "FED Wrong 184B",
+      "FED Wrong 184C"
+    ],
+    "explanation": "FED Correct 184 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 185?",
+    "correct": "FED Correct 185",
+    "wrong": [
+      "FED Wrong 185A",
+      "FED Wrong 185B",
+      "FED Wrong 185C"
+    ],
+    "explanation": "FED Correct 185 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 186?",
+    "correct": "FED Correct 186",
+    "wrong": [
+      "FED Wrong 186A",
+      "FED Wrong 186B",
+      "FED Wrong 186C"
+    ],
+    "explanation": "FED Correct 186 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 187?",
+    "correct": "FED Correct 187",
+    "wrong": [
+      "FED Wrong 187A",
+      "FED Wrong 187B",
+      "FED Wrong 187C"
+    ],
+    "explanation": "FED Correct 187 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 188?",
+    "correct": "FED Correct 188",
+    "wrong": [
+      "FED Wrong 188A",
+      "FED Wrong 188B",
+      "FED Wrong 188C"
+    ],
+    "explanation": "FED Correct 188 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 189?",
+    "correct": "FED Correct 189",
+    "wrong": [
+      "FED Wrong 189A",
+      "FED Wrong 189B",
+      "FED Wrong 189C"
+    ],
+    "explanation": "FED Correct 189 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 190?",
+    "correct": "FED Correct 190",
+    "wrong": [
+      "FED Wrong 190A",
+      "FED Wrong 190B",
+      "FED Wrong 190C"
+    ],
+    "explanation": "FED Correct 190 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 191?",
+    "correct": "FED Correct 191",
+    "wrong": [
+      "FED Wrong 191A",
+      "FED Wrong 191B",
+      "FED Wrong 191C"
+    ],
+    "explanation": "FED Correct 191 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 192?",
+    "correct": "FED Correct 192",
+    "wrong": [
+      "FED Wrong 192A",
+      "FED Wrong 192B",
+      "FED Wrong 192C"
+    ],
+    "explanation": "FED Correct 192 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 193?",
+    "correct": "FED Correct 193",
+    "wrong": [
+      "FED Wrong 193A",
+      "FED Wrong 193B",
+      "FED Wrong 193C"
+    ],
+    "explanation": "FED Correct 193 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 194?",
+    "correct": "FED Correct 194",
+    "wrong": [
+      "FED Wrong 194A",
+      "FED Wrong 194B",
+      "FED Wrong 194C"
+    ],
+    "explanation": "FED Correct 194 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 195?",
+    "correct": "FED Correct 195",
+    "wrong": [
+      "FED Wrong 195A",
+      "FED Wrong 195B",
+      "FED Wrong 195C"
+    ],
+    "explanation": "FED Correct 195 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 196?",
+    "correct": "FED Correct 196",
+    "wrong": [
+      "FED Wrong 196A",
+      "FED Wrong 196B",
+      "FED Wrong 196C"
+    ],
+    "explanation": "FED Correct 196 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 197?",
+    "correct": "FED Correct 197",
+    "wrong": [
+      "FED Wrong 197A",
+      "FED Wrong 197B",
+      "FED Wrong 197C"
+    ],
+    "explanation": "FED Correct 197 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 198?",
+    "correct": "FED Correct 198",
+    "wrong": [
+      "FED Wrong 198A",
+      "FED Wrong 198B",
+      "FED Wrong 198C"
+    ],
+    "explanation": "FED Correct 198 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 199?",
+    "correct": "FED Correct 199",
+    "wrong": [
+      "FED Wrong 199A",
+      "FED Wrong 199B",
+      "FED Wrong 199C"
+    ],
+    "explanation": "FED Correct 199 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 200?",
+    "correct": "FED Correct 200",
+    "wrong": [
+      "FED Wrong 200A",
+      "FED Wrong 200B",
+      "FED Wrong 200C"
+    ],
+    "explanation": "FED Correct 200 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 201?",
+    "correct": "FED Correct 201",
+    "wrong": [
+      "FED Wrong 201A",
+      "FED Wrong 201B",
+      "FED Wrong 201C"
+    ],
+    "explanation": "FED Correct 201 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 202?",
+    "correct": "FED Correct 202",
+    "wrong": [
+      "FED Wrong 202A",
+      "FED Wrong 202B",
+      "FED Wrong 202C"
+    ],
+    "explanation": "FED Correct 202 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 203?",
+    "correct": "FED Correct 203",
+    "wrong": [
+      "FED Wrong 203A",
+      "FED Wrong 203B",
+      "FED Wrong 203C"
+    ],
+    "explanation": "FED Correct 203 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 204?",
+    "correct": "FED Correct 204",
+    "wrong": [
+      "FED Wrong 204A",
+      "FED Wrong 204B",
+      "FED Wrong 204C"
+    ],
+    "explanation": "FED Correct 204 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 205?",
+    "correct": "FED Correct 205",
+    "wrong": [
+      "FED Wrong 205A",
+      "FED Wrong 205B",
+      "FED Wrong 205C"
+    ],
+    "explanation": "FED Correct 205 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 206?",
+    "correct": "FED Correct 206",
+    "wrong": [
+      "FED Wrong 206A",
+      "FED Wrong 206B",
+      "FED Wrong 206C"
+    ],
+    "explanation": "FED Correct 206 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 207?",
+    "correct": "FED Correct 207",
+    "wrong": [
+      "FED Wrong 207A",
+      "FED Wrong 207B",
+      "FED Wrong 207C"
+    ],
+    "explanation": "FED Correct 207 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 208?",
+    "correct": "FED Correct 208",
+    "wrong": [
+      "FED Wrong 208A",
+      "FED Wrong 208B",
+      "FED Wrong 208C"
+    ],
+    "explanation": "FED Correct 208 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 209?",
+    "correct": "FED Correct 209",
+    "wrong": [
+      "FED Wrong 209A",
+      "FED Wrong 209B",
+      "FED Wrong 209C"
+    ],
+    "explanation": "FED Correct 209 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 210?",
+    "correct": "FED Correct 210",
+    "wrong": [
+      "FED Wrong 210A",
+      "FED Wrong 210B",
+      "FED Wrong 210C"
+    ],
+    "explanation": "FED Correct 210 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 211?",
+    "correct": "FED Correct 211",
+    "wrong": [
+      "FED Wrong 211A",
+      "FED Wrong 211B",
+      "FED Wrong 211C"
+    ],
+    "explanation": "FED Correct 211 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 212?",
+    "correct": "FED Correct 212",
+    "wrong": [
+      "FED Wrong 212A",
+      "FED Wrong 212B",
+      "FED Wrong 212C"
+    ],
+    "explanation": "FED Correct 212 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 213?",
+    "correct": "FED Correct 213",
+    "wrong": [
+      "FED Wrong 213A",
+      "FED Wrong 213B",
+      "FED Wrong 213C"
+    ],
+    "explanation": "FED Correct 213 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 214?",
+    "correct": "FED Correct 214",
+    "wrong": [
+      "FED Wrong 214A",
+      "FED Wrong 214B",
+      "FED Wrong 214C"
+    ],
+    "explanation": "FED Correct 214 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 215?",
+    "correct": "FED Correct 215",
+    "wrong": [
+      "FED Wrong 215A",
+      "FED Wrong 215B",
+      "FED Wrong 215C"
+    ],
+    "explanation": "FED Correct 215 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 216?",
+    "correct": "FED Correct 216",
+    "wrong": [
+      "FED Wrong 216A",
+      "FED Wrong 216B",
+      "FED Wrong 216C"
+    ],
+    "explanation": "FED Correct 216 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 217?",
+    "correct": "FED Correct 217",
+    "wrong": [
+      "FED Wrong 217A",
+      "FED Wrong 217B",
+      "FED Wrong 217C"
+    ],
+    "explanation": "FED Correct 217 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 218?",
+    "correct": "FED Correct 218",
+    "wrong": [
+      "FED Wrong 218A",
+      "FED Wrong 218B",
+      "FED Wrong 218C"
+    ],
+    "explanation": "FED Correct 218 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 219?",
+    "correct": "FED Correct 219",
+    "wrong": [
+      "FED Wrong 219A",
+      "FED Wrong 219B",
+      "FED Wrong 219C"
+    ],
+    "explanation": "FED Correct 219 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 220?",
+    "correct": "FED Correct 220",
+    "wrong": [
+      "FED Wrong 220A",
+      "FED Wrong 220B",
+      "FED Wrong 220C"
+    ],
+    "explanation": "FED Correct 220 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 221?",
+    "correct": "FED Correct 221",
+    "wrong": [
+      "FED Wrong 221A",
+      "FED Wrong 221B",
+      "FED Wrong 221C"
+    ],
+    "explanation": "FED Correct 221 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 222?",
+    "correct": "FED Correct 222",
+    "wrong": [
+      "FED Wrong 222A",
+      "FED Wrong 222B",
+      "FED Wrong 222C"
+    ],
+    "explanation": "FED Correct 222 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 223?",
+    "correct": "FED Correct 223",
+    "wrong": [
+      "FED Wrong 223A",
+      "FED Wrong 223B",
+      "FED Wrong 223C"
+    ],
+    "explanation": "FED Correct 223 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 224?",
+    "correct": "FED Correct 224",
+    "wrong": [
+      "FED Wrong 224A",
+      "FED Wrong 224B",
+      "FED Wrong 224C"
+    ],
+    "explanation": "FED Correct 224 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 225?",
+    "correct": "FED Correct 225",
+    "wrong": [
+      "FED Wrong 225A",
+      "FED Wrong 225B",
+      "FED Wrong 225C"
+    ],
+    "explanation": "FED Correct 225 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 226?",
+    "correct": "FED Correct 226",
+    "wrong": [
+      "FED Wrong 226A",
+      "FED Wrong 226B",
+      "FED Wrong 226C"
+    ],
+    "explanation": "FED Correct 226 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 227?",
+    "correct": "FED Correct 227",
+    "wrong": [
+      "FED Wrong 227A",
+      "FED Wrong 227B",
+      "FED Wrong 227C"
+    ],
+    "explanation": "FED Correct 227 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 228?",
+    "correct": "FED Correct 228",
+    "wrong": [
+      "FED Wrong 228A",
+      "FED Wrong 228B",
+      "FED Wrong 228C"
+    ],
+    "explanation": "FED Correct 228 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 229?",
+    "correct": "FED Correct 229",
+    "wrong": [
+      "FED Wrong 229A",
+      "FED Wrong 229B",
+      "FED Wrong 229C"
+    ],
+    "explanation": "FED Correct 229 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 230?",
+    "correct": "FED Correct 230",
+    "wrong": [
+      "FED Wrong 230A",
+      "FED Wrong 230B",
+      "FED Wrong 230C"
+    ],
+    "explanation": "FED Correct 230 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 231?",
+    "correct": "FED Correct 231",
+    "wrong": [
+      "FED Wrong 231A",
+      "FED Wrong 231B",
+      "FED Wrong 231C"
+    ],
+    "explanation": "FED Correct 231 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 232?",
+    "correct": "FED Correct 232",
+    "wrong": [
+      "FED Wrong 232A",
+      "FED Wrong 232B",
+      "FED Wrong 232C"
+    ],
+    "explanation": "FED Correct 232 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 233?",
+    "correct": "FED Correct 233",
+    "wrong": [
+      "FED Wrong 233A",
+      "FED Wrong 233B",
+      "FED Wrong 233C"
+    ],
+    "explanation": "FED Correct 233 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 234?",
+    "correct": "FED Correct 234",
+    "wrong": [
+      "FED Wrong 234A",
+      "FED Wrong 234B",
+      "FED Wrong 234C"
+    ],
+    "explanation": "FED Correct 234 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 235?",
+    "correct": "FED Correct 235",
+    "wrong": [
+      "FED Wrong 235A",
+      "FED Wrong 235B",
+      "FED Wrong 235C"
+    ],
+    "explanation": "FED Correct 235 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 236?",
+    "correct": "FED Correct 236",
+    "wrong": [
+      "FED Wrong 236A",
+      "FED Wrong 236B",
+      "FED Wrong 236C"
+    ],
+    "explanation": "FED Correct 236 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 237?",
+    "correct": "FED Correct 237",
+    "wrong": [
+      "FED Wrong 237A",
+      "FED Wrong 237B",
+      "FED Wrong 237C"
+    ],
+    "explanation": "FED Correct 237 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 238?",
+    "correct": "FED Correct 238",
+    "wrong": [
+      "FED Wrong 238A",
+      "FED Wrong 238B",
+      "FED Wrong 238C"
+    ],
+    "explanation": "FED Correct 238 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 239?",
+    "correct": "FED Correct 239",
+    "wrong": [
+      "FED Wrong 239A",
+      "FED Wrong 239B",
+      "FED Wrong 239C"
+    ],
+    "explanation": "FED Correct 239 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 240?",
+    "correct": "FED Correct 240",
+    "wrong": [
+      "FED Wrong 240A",
+      "FED Wrong 240B",
+      "FED Wrong 240C"
+    ],
+    "explanation": "FED Correct 240 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 241?",
+    "correct": "FED Correct 241",
+    "wrong": [
+      "FED Wrong 241A",
+      "FED Wrong 241B",
+      "FED Wrong 241C"
+    ],
+    "explanation": "FED Correct 241 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 242?",
+    "correct": "FED Correct 242",
+    "wrong": [
+      "FED Wrong 242A",
+      "FED Wrong 242B",
+      "FED Wrong 242C"
+    ],
+    "explanation": "FED Correct 242 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 243?",
+    "correct": "FED Correct 243",
+    "wrong": [
+      "FED Wrong 243A",
+      "FED Wrong 243B",
+      "FED Wrong 243C"
+    ],
+    "explanation": "FED Correct 243 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 244?",
+    "correct": "FED Correct 244",
+    "wrong": [
+      "FED Wrong 244A",
+      "FED Wrong 244B",
+      "FED Wrong 244C"
+    ],
+    "explanation": "FED Correct 244 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 245?",
+    "correct": "FED Correct 245",
+    "wrong": [
+      "FED Wrong 245A",
+      "FED Wrong 245B",
+      "FED Wrong 245C"
+    ],
+    "explanation": "FED Correct 245 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 246?",
+    "correct": "FED Correct 246",
+    "wrong": [
+      "FED Wrong 246A",
+      "FED Wrong 246B",
+      "FED Wrong 246C"
+    ],
+    "explanation": "FED Correct 246 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 247?",
+    "correct": "FED Correct 247",
+    "wrong": [
+      "FED Wrong 247A",
+      "FED Wrong 247B",
+      "FED Wrong 247C"
+    ],
+    "explanation": "FED Correct 247 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 248?",
+    "correct": "FED Correct 248",
+    "wrong": [
+      "FED Wrong 248A",
+      "FED Wrong 248B",
+      "FED Wrong 248C"
+    ],
+    "explanation": "FED Correct 248 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 249?",
+    "correct": "FED Correct 249",
+    "wrong": [
+      "FED Wrong 249A",
+      "FED Wrong 249B",
+      "FED Wrong 249C"
+    ],
+    "explanation": "FED Correct 249 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 250?",
+    "correct": "FED Correct 250",
+    "wrong": [
+      "FED Wrong 250A",
+      "FED Wrong 250B",
+      "FED Wrong 250C"
+    ],
+    "explanation": "FED Correct 250 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 251?",
+    "correct": "FED Correct 251",
+    "wrong": [
+      "FED Wrong 251A",
+      "FED Wrong 251B",
+      "FED Wrong 251C"
+    ],
+    "explanation": "FED Correct 251 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 252?",
+    "correct": "FED Correct 252",
+    "wrong": [
+      "FED Wrong 252A",
+      "FED Wrong 252B",
+      "FED Wrong 252C"
+    ],
+    "explanation": "FED Correct 252 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 253?",
+    "correct": "FED Correct 253",
+    "wrong": [
+      "FED Wrong 253A",
+      "FED Wrong 253B",
+      "FED Wrong 253C"
+    ],
+    "explanation": "FED Correct 253 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 254?",
+    "correct": "FED Correct 254",
+    "wrong": [
+      "FED Wrong 254A",
+      "FED Wrong 254B",
+      "FED Wrong 254C"
+    ],
+    "explanation": "FED Correct 254 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 255?",
+    "correct": "FED Correct 255",
+    "wrong": [
+      "FED Wrong 255A",
+      "FED Wrong 255B",
+      "FED Wrong 255C"
+    ],
+    "explanation": "FED Correct 255 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 256?",
+    "correct": "FED Correct 256",
+    "wrong": [
+      "FED Wrong 256A",
+      "FED Wrong 256B",
+      "FED Wrong 256C"
+    ],
+    "explanation": "FED Correct 256 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 257?",
+    "correct": "FED Correct 257",
+    "wrong": [
+      "FED Wrong 257A",
+      "FED Wrong 257B",
+      "FED Wrong 257C"
+    ],
+    "explanation": "FED Correct 257 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 258?",
+    "correct": "FED Correct 258",
+    "wrong": [
+      "FED Wrong 258A",
+      "FED Wrong 258B",
+      "FED Wrong 258C"
+    ],
+    "explanation": "FED Correct 258 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 259?",
+    "correct": "FED Correct 259",
+    "wrong": [
+      "FED Wrong 259A",
+      "FED Wrong 259B",
+      "FED Wrong 259C"
+    ],
+    "explanation": "FED Correct 259 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 260?",
+    "correct": "FED Correct 260",
+    "wrong": [
+      "FED Wrong 260A",
+      "FED Wrong 260B",
+      "FED Wrong 260C"
+    ],
+    "explanation": "FED Correct 260 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 261?",
+    "correct": "FED Correct 261",
+    "wrong": [
+      "FED Wrong 261A",
+      "FED Wrong 261B",
+      "FED Wrong 261C"
+    ],
+    "explanation": "FED Correct 261 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 262?",
+    "correct": "FED Correct 262",
+    "wrong": [
+      "FED Wrong 262A",
+      "FED Wrong 262B",
+      "FED Wrong 262C"
+    ],
+    "explanation": "FED Correct 262 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 263?",
+    "correct": "FED Correct 263",
+    "wrong": [
+      "FED Wrong 263A",
+      "FED Wrong 263B",
+      "FED Wrong 263C"
+    ],
+    "explanation": "FED Correct 263 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 264?",
+    "correct": "FED Correct 264",
+    "wrong": [
+      "FED Wrong 264A",
+      "FED Wrong 264B",
+      "FED Wrong 264C"
+    ],
+    "explanation": "FED Correct 264 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 265?",
+    "correct": "FED Correct 265",
+    "wrong": [
+      "FED Wrong 265A",
+      "FED Wrong 265B",
+      "FED Wrong 265C"
+    ],
+    "explanation": "FED Correct 265 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 266?",
+    "correct": "FED Correct 266",
+    "wrong": [
+      "FED Wrong 266A",
+      "FED Wrong 266B",
+      "FED Wrong 266C"
+    ],
+    "explanation": "FED Correct 266 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 267?",
+    "correct": "FED Correct 267",
+    "wrong": [
+      "FED Wrong 267A",
+      "FED Wrong 267B",
+      "FED Wrong 267C"
+    ],
+    "explanation": "FED Correct 267 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 268?",
+    "correct": "FED Correct 268",
+    "wrong": [
+      "FED Wrong 268A",
+      "FED Wrong 268B",
+      "FED Wrong 268C"
+    ],
+    "explanation": "FED Correct 268 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 269?",
+    "correct": "FED Correct 269",
+    "wrong": [
+      "FED Wrong 269A",
+      "FED Wrong 269B",
+      "FED Wrong 269C"
+    ],
+    "explanation": "FED Correct 269 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 270?",
+    "correct": "FED Correct 270",
+    "wrong": [
+      "FED Wrong 270A",
+      "FED Wrong 270B",
+      "FED Wrong 270C"
+    ],
+    "explanation": "FED Correct 270 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 271?",
+    "correct": "FED Correct 271",
+    "wrong": [
+      "FED Wrong 271A",
+      "FED Wrong 271B",
+      "FED Wrong 271C"
+    ],
+    "explanation": "FED Correct 271 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 272?",
+    "correct": "FED Correct 272",
+    "wrong": [
+      "FED Wrong 272A",
+      "FED Wrong 272B",
+      "FED Wrong 272C"
+    ],
+    "explanation": "FED Correct 272 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 273?",
+    "correct": "FED Correct 273",
+    "wrong": [
+      "FED Wrong 273A",
+      "FED Wrong 273B",
+      "FED Wrong 273C"
+    ],
+    "explanation": "FED Correct 273 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 274?",
+    "correct": "FED Correct 274",
+    "wrong": [
+      "FED Wrong 274A",
+      "FED Wrong 274B",
+      "FED Wrong 274C"
+    ],
+    "explanation": "FED Correct 274 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 275?",
+    "correct": "FED Correct 275",
+    "wrong": [
+      "FED Wrong 275A",
+      "FED Wrong 275B",
+      "FED Wrong 275C"
+    ],
+    "explanation": "FED Correct 275 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 276?",
+    "correct": "FED Correct 276",
+    "wrong": [
+      "FED Wrong 276A",
+      "FED Wrong 276B",
+      "FED Wrong 276C"
+    ],
+    "explanation": "FED Correct 276 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 277?",
+    "correct": "FED Correct 277",
+    "wrong": [
+      "FED Wrong 277A",
+      "FED Wrong 277B",
+      "FED Wrong 277C"
+    ],
+    "explanation": "FED Correct 277 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 278?",
+    "correct": "FED Correct 278",
+    "wrong": [
+      "FED Wrong 278A",
+      "FED Wrong 278B",
+      "FED Wrong 278C"
+    ],
+    "explanation": "FED Correct 278 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 279?",
+    "correct": "FED Correct 279",
+    "wrong": [
+      "FED Wrong 279A",
+      "FED Wrong 279B",
+      "FED Wrong 279C"
+    ],
+    "explanation": "FED Correct 279 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 280?",
+    "correct": "FED Correct 280",
+    "wrong": [
+      "FED Wrong 280A",
+      "FED Wrong 280B",
+      "FED Wrong 280C"
+    ],
+    "explanation": "FED Correct 280 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 281?",
+    "correct": "FED Correct 281",
+    "wrong": [
+      "FED Wrong 281A",
+      "FED Wrong 281B",
+      "FED Wrong 281C"
+    ],
+    "explanation": "FED Correct 281 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 282?",
+    "correct": "FED Correct 282",
+    "wrong": [
+      "FED Wrong 282A",
+      "FED Wrong 282B",
+      "FED Wrong 282C"
+    ],
+    "explanation": "FED Correct 282 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 283?",
+    "correct": "FED Correct 283",
+    "wrong": [
+      "FED Wrong 283A",
+      "FED Wrong 283B",
+      "FED Wrong 283C"
+    ],
+    "explanation": "FED Correct 283 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 284?",
+    "correct": "FED Correct 284",
+    "wrong": [
+      "FED Wrong 284A",
+      "FED Wrong 284B",
+      "FED Wrong 284C"
+    ],
+    "explanation": "FED Correct 284 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 285?",
+    "correct": "FED Correct 285",
+    "wrong": [
+      "FED Wrong 285A",
+      "FED Wrong 285B",
+      "FED Wrong 285C"
+    ],
+    "explanation": "FED Correct 285 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 286?",
+    "correct": "FED Correct 286",
+    "wrong": [
+      "FED Wrong 286A",
+      "FED Wrong 286B",
+      "FED Wrong 286C"
+    ],
+    "explanation": "FED Correct 286 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 287?",
+    "correct": "FED Correct 287",
+    "wrong": [
+      "FED Wrong 287A",
+      "FED Wrong 287B",
+      "FED Wrong 287C"
+    ],
+    "explanation": "FED Correct 287 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 288?",
+    "correct": "FED Correct 288",
+    "wrong": [
+      "FED Wrong 288A",
+      "FED Wrong 288B",
+      "FED Wrong 288C"
+    ],
+    "explanation": "FED Correct 288 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 289?",
+    "correct": "FED Correct 289",
+    "wrong": [
+      "FED Wrong 289A",
+      "FED Wrong 289B",
+      "FED Wrong 289C"
+    ],
+    "explanation": "FED Correct 289 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 290?",
+    "correct": "FED Correct 290",
+    "wrong": [
+      "FED Wrong 290A",
+      "FED Wrong 290B",
+      "FED Wrong 290C"
+    ],
+    "explanation": "FED Correct 290 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 291?",
+    "correct": "FED Correct 291",
+    "wrong": [
+      "FED Wrong 291A",
+      "FED Wrong 291B",
+      "FED Wrong 291C"
+    ],
+    "explanation": "FED Correct 291 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 292?",
+    "correct": "FED Correct 292",
+    "wrong": [
+      "FED Wrong 292A",
+      "FED Wrong 292B",
+      "FED Wrong 292C"
+    ],
+    "explanation": "FED Correct 292 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 293?",
+    "correct": "FED Correct 293",
+    "wrong": [
+      "FED Wrong 293A",
+      "FED Wrong 293B",
+      "FED Wrong 293C"
+    ],
+    "explanation": "FED Correct 293 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 294?",
+    "correct": "FED Correct 294",
+    "wrong": [
+      "FED Wrong 294A",
+      "FED Wrong 294B",
+      "FED Wrong 294C"
+    ],
+    "explanation": "FED Correct 294 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 295?",
+    "correct": "FED Correct 295",
+    "wrong": [
+      "FED Wrong 295A",
+      "FED Wrong 295B",
+      "FED Wrong 295C"
+    ],
+    "explanation": "FED Correct 295 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 296?",
+    "correct": "FED Correct 296",
+    "wrong": [
+      "FED Wrong 296A",
+      "FED Wrong 296B",
+      "FED Wrong 296C"
+    ],
+    "explanation": "FED Correct 296 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 297?",
+    "correct": "FED Correct 297",
+    "wrong": [
+      "FED Wrong 297A",
+      "FED Wrong 297B",
+      "FED Wrong 297C"
+    ],
+    "explanation": "FED Correct 297 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 298?",
+    "correct": "FED Correct 298",
+    "wrong": [
+      "FED Wrong 298A",
+      "FED Wrong 298B",
+      "FED Wrong 298C"
+    ],
+    "explanation": "FED Correct 298 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 299?",
+    "correct": "FED Correct 299",
+    "wrong": [
+      "FED Wrong 299A",
+      "FED Wrong 299B",
+      "FED Wrong 299C"
+    ],
+    "explanation": "FED Correct 299 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 300?",
+    "correct": "FED Correct 300",
+    "wrong": [
+      "FED Wrong 300A",
+      "FED Wrong 300B",
+      "FED Wrong 300C"
+    ],
+    "explanation": "FED Correct 300 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 301?",
+    "correct": "FED Correct 301",
+    "wrong": [
+      "FED Wrong 301A",
+      "FED Wrong 301B",
+      "FED Wrong 301C"
+    ],
+    "explanation": "FED Correct 301 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 302?",
+    "correct": "FED Correct 302",
+    "wrong": [
+      "FED Wrong 302A",
+      "FED Wrong 302B",
+      "FED Wrong 302C"
+    ],
+    "explanation": "FED Correct 302 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 303?",
+    "correct": "FED Correct 303",
+    "wrong": [
+      "FED Wrong 303A",
+      "FED Wrong 303B",
+      "FED Wrong 303C"
+    ],
+    "explanation": "FED Correct 303 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 304?",
+    "correct": "FED Correct 304",
+    "wrong": [
+      "FED Wrong 304A",
+      "FED Wrong 304B",
+      "FED Wrong 304C"
+    ],
+    "explanation": "FED Correct 304 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 305?",
+    "correct": "FED Correct 305",
+    "wrong": [
+      "FED Wrong 305A",
+      "FED Wrong 305B",
+      "FED Wrong 305C"
+    ],
+    "explanation": "FED Correct 305 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 306?",
+    "correct": "FED Correct 306",
+    "wrong": [
+      "FED Wrong 306A",
+      "FED Wrong 306B",
+      "FED Wrong 306C"
+    ],
+    "explanation": "FED Correct 306 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 307?",
+    "correct": "FED Correct 307",
+    "wrong": [
+      "FED Wrong 307A",
+      "FED Wrong 307B",
+      "FED Wrong 307C"
+    ],
+    "explanation": "FED Correct 307 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 308?",
+    "correct": "FED Correct 308",
+    "wrong": [
+      "FED Wrong 308A",
+      "FED Wrong 308B",
+      "FED Wrong 308C"
+    ],
+    "explanation": "FED Correct 308 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 309?",
+    "correct": "FED Correct 309",
+    "wrong": [
+      "FED Wrong 309A",
+      "FED Wrong 309B",
+      "FED Wrong 309C"
+    ],
+    "explanation": "FED Correct 309 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 310?",
+    "correct": "FED Correct 310",
+    "wrong": [
+      "FED Wrong 310A",
+      "FED Wrong 310B",
+      "FED Wrong 310C"
+    ],
+    "explanation": "FED Correct 310 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 311?",
+    "correct": "FED Correct 311",
+    "wrong": [
+      "FED Wrong 311A",
+      "FED Wrong 311B",
+      "FED Wrong 311C"
+    ],
+    "explanation": "FED Correct 311 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 312?",
+    "correct": "FED Correct 312",
+    "wrong": [
+      "FED Wrong 312A",
+      "FED Wrong 312B",
+      "FED Wrong 312C"
+    ],
+    "explanation": "FED Correct 312 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 313?",
+    "correct": "FED Correct 313",
+    "wrong": [
+      "FED Wrong 313A",
+      "FED Wrong 313B",
+      "FED Wrong 313C"
+    ],
+    "explanation": "FED Correct 313 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 314?",
+    "correct": "FED Correct 314",
+    "wrong": [
+      "FED Wrong 314A",
+      "FED Wrong 314B",
+      "FED Wrong 314C"
+    ],
+    "explanation": "FED Correct 314 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 315?",
+    "correct": "FED Correct 315",
+    "wrong": [
+      "FED Wrong 315A",
+      "FED Wrong 315B",
+      "FED Wrong 315C"
+    ],
+    "explanation": "FED Correct 315 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 316?",
+    "correct": "FED Correct 316",
+    "wrong": [
+      "FED Wrong 316A",
+      "FED Wrong 316B",
+      "FED Wrong 316C"
+    ],
+    "explanation": "FED Correct 316 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 317?",
+    "correct": "FED Correct 317",
+    "wrong": [
+      "FED Wrong 317A",
+      "FED Wrong 317B",
+      "FED Wrong 317C"
+    ],
+    "explanation": "FED Correct 317 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 318?",
+    "correct": "FED Correct 318",
+    "wrong": [
+      "FED Wrong 318A",
+      "FED Wrong 318B",
+      "FED Wrong 318C"
+    ],
+    "explanation": "FED Correct 318 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 319?",
+    "correct": "FED Correct 319",
+    "wrong": [
+      "FED Wrong 319A",
+      "FED Wrong 319B",
+      "FED Wrong 319C"
+    ],
+    "explanation": "FED Correct 319 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 320?",
+    "correct": "FED Correct 320",
+    "wrong": [
+      "FED Wrong 320A",
+      "FED Wrong 320B",
+      "FED Wrong 320C"
+    ],
+    "explanation": "FED Correct 320 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 321?",
+    "correct": "FED Correct 321",
+    "wrong": [
+      "FED Wrong 321A",
+      "FED Wrong 321B",
+      "FED Wrong 321C"
+    ],
+    "explanation": "FED Correct 321 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 322?",
+    "correct": "FED Correct 322",
+    "wrong": [
+      "FED Wrong 322A",
+      "FED Wrong 322B",
+      "FED Wrong 322C"
+    ],
+    "explanation": "FED Correct 322 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 323?",
+    "correct": "FED Correct 323",
+    "wrong": [
+      "FED Wrong 323A",
+      "FED Wrong 323B",
+      "FED Wrong 323C"
+    ],
+    "explanation": "FED Correct 323 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 324?",
+    "correct": "FED Correct 324",
+    "wrong": [
+      "FED Wrong 324A",
+      "FED Wrong 324B",
+      "FED Wrong 324C"
+    ],
+    "explanation": "FED Correct 324 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 325?",
+    "correct": "FED Correct 325",
+    "wrong": [
+      "FED Wrong 325A",
+      "FED Wrong 325B",
+      "FED Wrong 325C"
+    ],
+    "explanation": "FED Correct 325 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 326?",
+    "correct": "FED Correct 326",
+    "wrong": [
+      "FED Wrong 326A",
+      "FED Wrong 326B",
+      "FED Wrong 326C"
+    ],
+    "explanation": "FED Correct 326 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 327?",
+    "correct": "FED Correct 327",
+    "wrong": [
+      "FED Wrong 327A",
+      "FED Wrong 327B",
+      "FED Wrong 327C"
+    ],
+    "explanation": "FED Correct 327 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 328?",
+    "correct": "FED Correct 328",
+    "wrong": [
+      "FED Wrong 328A",
+      "FED Wrong 328B",
+      "FED Wrong 328C"
+    ],
+    "explanation": "FED Correct 328 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 329?",
+    "correct": "FED Correct 329",
+    "wrong": [
+      "FED Wrong 329A",
+      "FED Wrong 329B",
+      "FED Wrong 329C"
+    ],
+    "explanation": "FED Correct 329 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 330?",
+    "correct": "FED Correct 330",
+    "wrong": [
+      "FED Wrong 330A",
+      "FED Wrong 330B",
+      "FED Wrong 330C"
+    ],
+    "explanation": "FED Correct 330 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 331?",
+    "correct": "FED Correct 331",
+    "wrong": [
+      "FED Wrong 331A",
+      "FED Wrong 331B",
+      "FED Wrong 331C"
+    ],
+    "explanation": "FED Correct 331 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 332?",
+    "correct": "FED Correct 332",
+    "wrong": [
+      "FED Wrong 332A",
+      "FED Wrong 332B",
+      "FED Wrong 332C"
+    ],
+    "explanation": "FED Correct 332 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 333?",
+    "correct": "FED Correct 333",
+    "wrong": [
+      "FED Wrong 333A",
+      "FED Wrong 333B",
+      "FED Wrong 333C"
+    ],
+    "explanation": "FED Correct 333 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 334?",
+    "correct": "FED Correct 334",
+    "wrong": [
+      "FED Wrong 334A",
+      "FED Wrong 334B",
+      "FED Wrong 334C"
+    ],
+    "explanation": "FED Correct 334 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 335?",
+    "correct": "FED Correct 335",
+    "wrong": [
+      "FED Wrong 335A",
+      "FED Wrong 335B",
+      "FED Wrong 335C"
+    ],
+    "explanation": "FED Correct 335 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 336?",
+    "correct": "FED Correct 336",
+    "wrong": [
+      "FED Wrong 336A",
+      "FED Wrong 336B",
+      "FED Wrong 336C"
+    ],
+    "explanation": "FED Correct 336 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 337?",
+    "correct": "FED Correct 337",
+    "wrong": [
+      "FED Wrong 337A",
+      "FED Wrong 337B",
+      "FED Wrong 337C"
+    ],
+    "explanation": "FED Correct 337 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 338?",
+    "correct": "FED Correct 338",
+    "wrong": [
+      "FED Wrong 338A",
+      "FED Wrong 338B",
+      "FED Wrong 338C"
+    ],
+    "explanation": "FED Correct 338 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 339?",
+    "correct": "FED Correct 339",
+    "wrong": [
+      "FED Wrong 339A",
+      "FED Wrong 339B",
+      "FED Wrong 339C"
+    ],
+    "explanation": "FED Correct 339 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 340?",
+    "correct": "FED Correct 340",
+    "wrong": [
+      "FED Wrong 340A",
+      "FED Wrong 340B",
+      "FED Wrong 340C"
+    ],
+    "explanation": "FED Correct 340 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 341?",
+    "correct": "FED Correct 341",
+    "wrong": [
+      "FED Wrong 341A",
+      "FED Wrong 341B",
+      "FED Wrong 341C"
+    ],
+    "explanation": "FED Correct 341 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 342?",
+    "correct": "FED Correct 342",
+    "wrong": [
+      "FED Wrong 342A",
+      "FED Wrong 342B",
+      "FED Wrong 342C"
+    ],
+    "explanation": "FED Correct 342 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 343?",
+    "correct": "FED Correct 343",
+    "wrong": [
+      "FED Wrong 343A",
+      "FED Wrong 343B",
+      "FED Wrong 343C"
+    ],
+    "explanation": "FED Correct 343 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 344?",
+    "correct": "FED Correct 344",
+    "wrong": [
+      "FED Wrong 344A",
+      "FED Wrong 344B",
+      "FED Wrong 344C"
+    ],
+    "explanation": "FED Correct 344 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 345?",
+    "correct": "FED Correct 345",
+    "wrong": [
+      "FED Wrong 345A",
+      "FED Wrong 345B",
+      "FED Wrong 345C"
+    ],
+    "explanation": "FED Correct 345 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 346?",
+    "correct": "FED Correct 346",
+    "wrong": [
+      "FED Wrong 346A",
+      "FED Wrong 346B",
+      "FED Wrong 346C"
+    ],
+    "explanation": "FED Correct 346 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 347?",
+    "correct": "FED Correct 347",
+    "wrong": [
+      "FED Wrong 347A",
+      "FED Wrong 347B",
+      "FED Wrong 347C"
+    ],
+    "explanation": "FED Correct 347 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 348?",
+    "correct": "FED Correct 348",
+    "wrong": [
+      "FED Wrong 348A",
+      "FED Wrong 348B",
+      "FED Wrong 348C"
+    ],
+    "explanation": "FED Correct 348 is correct because it aligns with PTCE standards."
+  },
+  {
+    "question": "FED Question 349?",
+    "correct": "FED Correct 349",
+    "wrong": [
+      "FED Wrong 349A",
+      "FED Wrong 349B",
+      "FED Wrong 349C"
+    ],
+    "explanation": "FED Correct 349 is correct because it aligns with PTCE standards."
+  }
+]

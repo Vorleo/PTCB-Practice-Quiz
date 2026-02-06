@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="fallout">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTCE Study Tool</title>
+
+
+<style>
+body{ margin:0; font-family: monospace; background:#020403; color:#7cff9e; padding:20px;}
+[data-theme="vegas"] body{ color:#ffb347; background:#0b0703;}
+[data-theme="pink"] body{ color:#ff9ad5; background:#1a0011;}
+
+button{ background:currentColor; color:black; border:none; padding:10px; margin:5px; font-weight:bold; cursor:pointer;}
+.choice{ border:1px solid currentColor; padding:8px; margin:6px 0; cursor:pointer;}
+pre{ border:1px solid currentColor; padding:12px; }
+</style>
+</head>
+
+<body>
+
+<pre>
+PTCE STUDY TOOL
+A Vault Tec program by Joshua Vorhies
+</pre>
+
+<div>
+<button onclick="setTheme('fallout')">Fallout</button>
+<button onclick="setTheme('vegas')">New Vegas</button>
+<button onclick="setTheme('pink')">Pink Cutesy</button>
+</div>
+
+<hr>
+
+<div>
+<button onclick="startTest()">Start Test</button>
+<button onclick="startFlash()">Flashcards</button>
+</div>
+
+<hr>
+
+<div id="app"></div>
+
+<script>
+
+function setTheme(t){
+ document.documentElement.setAttribute("data-theme", t);
+}
+
+let BANKS={};
+let test=[];
+let idx=0;
+let answers={};
+
+async function loadBanks(){
+ BANKS.med = await fetch("med_bank.json").then(r=>r.json());
+ BANKS.safe = await fetch("safety_bank.json").then(r=>r.json());
+ BANKS.order = await fetch("order_bank.json").then(r=>r.json());
+ BANKS.fed = await fetch("federal_bank.json").then(r=>r.json());
+}
+
+loadBanks();
+
+function pick(arr,n){
+ let out=[];
+ while(out.length<n) out.push(arr[Math.floor(Math.random()*arr.length)]);
+ return out;
+}
+
+function buildTest(){
+ test=[
+ ...pick(BANKS.med,32),
+ ...pick(BANKS.safe,21),
+ ...pick(BANKS.order,20),
+ ...pick(BANKS.fed,17)
+ ];
+}
+
+function startTest(){
+ if(!BANKS.med) return alert("Loading banks...");
+ buildTest();
+ idx=0;
+ renderQ();
+}
+
+function renderQ(){
+ let q=test[idx];
+ let opts=[q.correct,...q.wrong].sort(()=>Math.random()-.5);
+ document.getElementById("app").innerHTML =
+ `<h3>Q ${idx+1} / 90</h3>
+ <div>${q.question}</div>
+ ` +
+ opts.map(o=>`<div class="choice" onclick="answers[${idx}]='${o}'">${o}</div>`).join("") +
+ `<br>
+ <button onclick="prev()">Prev</button>
+ <button onclick="next()">Next</button>
+ <button onclick="submitTest()">Submit</button>`;
+}
+
+function next(){ if(idx<89){ idx++; renderQ(); } }
+function prev(){ if(idx>0){ idx--; renderQ(); } }
+
+function submitTest(){
+ let c=0;
+ test.forEach((q,i)=>{ if(answers[i]===q.correct) c++; });
+ alert("Score "+c+"/90");
+}
+
+let flash=[];
+let fIdx=0;
+
+function startFlash(){
+ if(!BANKS.med) return alert("Loading banks...");
+ flash=BANKS.med.slice(0,200);
+ fIdx=0;
+ showFlash();
+}
+
+function showFlash(){
+ let f=flash[fIdx];
+ document.getElementById("app").innerHTML =
+ `<h3>Flash ${fIdx+1}</h3>
+ <div>${f.question}</div>
+ <div><b>${f.correct}</b></div>
+ <button onclick="nextFlash()">Next</button>`;
+}
+
+function nextFlash(){ fIdx=(fIdx+1)%flash.length; showFlash(); }
+
+</script>
+
+</body>
+</html>
