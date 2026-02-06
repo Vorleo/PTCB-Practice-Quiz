@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en" data-theme="amoled" data-crt="off" data-fx="off">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PTCE Study Tool</title>
+  <link rel='icon' href='favicon.png'>
+  <style>
+    :root {
+      --bg:#000;
+      --panel:#0b0b0b;
+      --panel2:#070707;
+      --text:#e9e9e9;
+      --muted:#bdbdbd;
+      --border:#2a2a2a;
+      --accent:#e9e9e9;
+      --accent2:#bdbdbd;
+      --danger:#ff6b6b;
+      --warn:#ffd56a;
+      --ok:#79ffb2;
+      --shadow: 0 14px 30px rgba(0,0,0,.75);
+      --chip: rgba(255,255,255,.07);
+      --radius: 14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --ui: var(--mono);
+    }
+
+    html[data-theme="amoled"] {
+      --bg:#000;
+      --panel:#0b0b0b;
+      --panel2:#070707;
+      --text:#e9e9e9;
+      --muted:#bdbdbd;
+      --border:#2a2a2a;
+      --accent:#e9e9e9;
+      --accent2:#bdbdbd;
+      --chip: rgba(255,255,255,.07);
+      --ui: var(--mono);
+    }
+
+    html[data-theme="navy"] {
+      --bg:#050a1b;
+      --panel:#081531;
+      --panel2:#061028;
+      --text:#d7e6ff;
+      --muted:#a9c2ff;
+      --border:#2b5cff;
+      --accent:#a9c2ff;
+      --accent2:#d7e6ff;
+      --chip: rgba(43,92,255,.12);
+      --ui: var(--mono);
+    }
+
+    html[data-theme="pink"] {
+      --bg:#140015;
+      --panel:#22001f;
+      --panel2:#180014;
+      --text:#ffe3f2;
+      --muted:#ff9ad1;
+      --border:#5b0f46;
+      --accent:#ff5fb8;
+      --accent2:#ff9ad1;
+      --chip: rgba(255,95,184,.12);
+      --ui: var(--mono);
+    }
+
+    html[data-theme="vermillion"] {
+      --bg:#120404;
+      --panel:#1f0707;
+      --panel2:#170505;
+      --text:#ffe2df;
+      --muted:#ffb3ab;
+      --border:#ff3b2f;
+      --accent:#ff3b2f;
+      --accent2:#ffb3ab;
+      --chip: rgba(255,59,47,.10);
+      --ui: var(--mono);
+    }
+
+    /* Fallout (Pip-Boy-ish) */
+    html[data-theme="fallout"] {
+      --bg:#020403;
+      --panel:#071208;
+      --panel2:#041006;
+      --text:#c8ffd8;
+      --muted:#86ffad;
+      --border:#2cff82;
+      --accent:#7cff9e;
+      --accent2:#9affbf;
+      --chip: rgba(124,255,158,.10);
+      /* "game-like" font feel without external downloads */
+      --ui: "Trebuchet MS", "Arial Narrow", Arial, var(--mono);
+    }
+
+    /* Fallout: New Vegas amber */
+    html[data-theme="vegas"] {
+      --bg:#0b0703;
+      --panel:#1a1209;
+      --panel2:#120b05;
+      --text:#ffe4be;
+      --muted:#ffd49a;
+      --border:#7a4b16;
+      --accent:#ffb347;
+      --accent2:#ffd49a;
+      --chip: rgba(255,180,71,.10);
+      --ui: "Trebuchet MS", "Arial Narrow", Arial, var(--mono);
+    }
+
+    * { box-sizing:border-box; }
+    html, body { height:100%; }
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: var(--ui);
+      overflow-x:hidden;
+    }
+
+    /* Header: themes left, title right */
+    .header {
+      position:sticky; top:0; z-index:50;
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 10px 14px;
+    }
+    .headerRow {
+      max-width: 1200px;
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .themeBar {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px;
+      align-items:center;
+    }
+    .title {
+      font-weight: 900;
+      letter-spacing: .08em;
+      font-size: 16px;
+      text-align:right;
+      white-space:nowrap;
+    }
+
+    .btn {
+      appearance:none;
+      border:1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      cursor:pointer;
+      transition: transform .05s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover { background: rgba(255,255,255,.06); }
+    .btn:active { transform: translateY(1px); }
+    .btn.primary {
+      background: var(--accent);
+      color: #001006;
+      border-color: transparent;
+      font-weight: 900;
+    }
+    html[data-theme="amoled"] .btn.primary { color:#000; }
+    .btn.danger { border-color: var(--danger); color: var(--danger); }
+    .btn.toggle.on {
+      background: var(--accent);
+      color: #001006;
+      border-color: transparent;
+      font-weight: 900;
+    }
+    .btn.small { padding: 6px 8px; border-radius: 10px; }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+
+    .card {
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+    .grid2 {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+
+    .desc { color: var(--muted); opacity:.9; font-size: 12px; line-height: 1.35; }
+
+    .pill {
+      display:inline-flex;
+      align-items:center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background: var(--chip);
+      font-size: 12px;
+    }
+
+    /* Views */
+    #viewHome { display:block; }
+    #viewTest, #viewResults, #viewFlashHome, #viewFlash { display:none; }
+
+    /* Test layout */
+    .testTop {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .testTopLeft { display:flex; gap: 8px; flex-wrap:wrap; }
+    .questionBox {
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.18);
+      border-radius: 14px;
+      padding: 12px;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+    .choices { display:flex; flex-direction:column; gap: 8px; margin-top: 10px; }
+    .choice {
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.12);
+      border-radius: 14px;
+      padding: 10px;
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      cursor:pointer;
+      user-select:none;
+    }
+    .choice input { margin-top: 2px; }
+    .choice.elim { opacity:.45; text-decoration:line-through; }
+    .navWrap { margin-top: 12px; display:flex; flex-direction:column; gap: 10px; }
+    .navGrid {
+      display:grid;
+      grid-template-columns: repeat(15, minmax(0,1fr));
+      gap: 6px;
+    }
+    @media (max-width: 900px) { .navGrid { grid-template-columns: repeat(10, minmax(0,1fr)); } }
+    @media (max-width: 520px) { .navGrid { grid-template-columns: repeat(9, minmax(0,1fr)); gap:5px; } }
+    .navBtn {
+      min-height: 32px;
+      border-radius: 10px;
+      border:1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 12px;
+      cursor:pointer;
+      position:relative;
+    }
+    .navBtn.cur { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .navBtn.ans { background: rgba(255,255,255,.06); }
+    .navBtn.flag::after {
+      content:"⚑";
+      position:absolute;
+      top:2px;
+      right:6px;
+      font-size: 10px;
+      color: var(--warn);
+    }
+
+    .bottomRow {
+      margin-top: 10px;
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .leftBtns, .rightBtns { display:flex; gap: 8px; flex-wrap:wrap; align-items:center; }
+
+    /* Flashcards */
+    .flashCard {
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.12);
+      border-radius: 14px;
+      padding: 18px;
+      min-height: 160px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      line-height:1.35;
+      cursor:pointer;
+      user-select:none;
+    }
+
+    /* Results */
+    .tableWrap {
+      overflow:auto;
+      border:1px solid var(--border);
+      border-radius: 14px;
+    }
+    table { width:100%; border-collapse:collapse; font-size:12px; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,.08); vertical-align: top; }
+    tr.good td { color: var(--ok); }
+    tr.bad td { color: var(--danger); }
+    tr.warn td { color: var(--warn); }
+    tr:hover { background: rgba(255,255,255,.04); cursor:pointer; }
+
+    /* Global CRT scanlines toggle */
+    html[data-crt="on"] body::after {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background: repeating-linear-gradient(
+        rgba(0,0,0,.18) 0px,
+        rgba(0,0,0,.18) 2px,
+        transparent 2px,
+        transparent 6px
+      );
+      mix-blend-mode: multiply;
+    }
+
+    /* Fallout FX toggle (extra glow/vignette only for fallout/vegas) */
+    #fxOverlay {
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:20;
+      opacity:0;
+    }
+    html[data-fx="on"] #fxOverlay { opacity:1; }
+    #fxOverlay::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at center, rgba(255,255,255,.10), transparent 55%);
+      opacity:.55;
+    }
+    html[data-theme="fallout"][data-fx="on"] #fxOverlay::before {
+      background: radial-gradient(circle at center, rgba(124,255,158,.18), transparent 55%);
+    }
+    html[data-theme="vegas"][data-fx="on"] #fxOverlay::before {
+      background: radial-gradient(circle at center, rgba(255,180,71,.18), transparent 55%);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="fxOverlay" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="headerRow">
+      <div class="themeBar">
+        <button class="btn small" onclick="setTheme('amoled')">AMOLED</button>
+        <button class="btn small" onclick="setTheme('fallout')">Fallout</button>
+        <button class="btn small" onclick="setTheme('vegas')">New Vegas</button>
+        <button class="btn small" onclick="setTheme('pink')">Pink</button>
+        <button class="btn small" onclick="setTheme('navy')">Navy</button>
+        <button class="btn small" onclick="setTheme('vermillion')">Vermillion</button>
+
+        <button class="btn small toggle" id="crtBtn" onclick="toggleCRT()">CRT</button>
+        <button class="btn small toggle" id="fxBtn" onclick="toggleFX()">FX</button>
+        <button class="btn small toggle" id="sndBtn" onclick="toggleSound()">SND</button>
+      </div>
+      <div class="title">PTCE STUDY TOOL</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HOME -->
+    <section id="viewHome" class="grid2">
+      <div class="card">
+        <h2 style="margin:0 0 8px; letter-spacing:.06em;">Practice Test</h2>
+        <div class="desc">90 questions • 2026 domain weighting • flags • submit anytime • local question banks</div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;">
+          <span class="pill">Shuffle <input id="optShuffle" type="checkbox" checked style="margin-left:6px;"></span>
+          <span class="pill">Timed <input id="optTimed" type="checkbox" checked style="margin-left:6px;"></span>
+          <span class="pill">Tips 50/50 <input id="optTips" type="checkbox" checked style="margin-left:6px;"></span>
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; align-items:center;">
+          <span class="pill">Timer preset:
+            <select id="timePreset" style="margin-left:6px; background:transparent; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:4px 8px;">
+              <option value="110">PTCE (110 min)</option>
+              <option value="90">90 min</option>
+              <option value="60">60 min</option>
+              <option value="30">30 min</option>
+              <option value="120">120 min</option>
+              <option value="150">150 min</option>
+            </select>
+          </span>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn primary" onclick="startTest()">Start Test</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 8px; letter-spacing:.06em;">Flashcards</h2>
+        <div class="desc">Pick a PTCE domain deck, then tap to flip. Local banks (no RxNav dependency).</div>
+        <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn primary" onclick="openFlashHome()">Open Flashcards</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEST -->
+    <section id="viewTest" class="card">
+      <div class="testTop">
+        <div class="testTopLeft">
+          <span class="pill">Q <b id="qNum">1</b>/90</span>
+          <span class="pill">Domain <b id="qDomain">—</b></span>
+          <span class="pill">Answered <b id="answeredCount">0</b></span>
+          <span class="pill">Flagged <b id="flaggedCount">0</b></span>
+          <span class="pill" id="timerPill" style="display:none;">Time <b id="timerText">00:00</b></span>
+          <span class="pill" id="tipsPill" style="display:none;">Tips <b id="tipsLeft">0</b></span>
+        </div>
+        <div>
+          <button class="btn danger" onclick="submitTest()">Submit</button>
+        </div>
+      </div>
+
+      <div class="questionBox" id="questionText"></div>
+      <div class="choices" id="choices"></div>
+
+      <div class="bottomRow">
+        <div class="leftBtns">
+          <button class="btn" onclick="prevQ()">Prev</button>
+          <button class="btn toggle" id="flagBtn" onclick="toggleFlag()">Flag</button>
+          <button class="btn" onclick="nextQ()">Next</button>
+        </div>
+        <div class="rightBtns">
+          <button class="btn" id="tipBtn" onclick="useTip()">Use Tip</button>
+          <button class="btn" onclick="goHome()">Home</button>
+        </div>
+      </div>
+
+      <div class="navWrap">
+        <div class="desc">Jump to question:</div>
+        <div class="navGrid" id="navGrid"></div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="viewResults" class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+        <h2 style="margin:0; letter-spacing:.06em;">Results</h2>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn" onclick="retake()">Retake</button>
+          <button class="btn" onclick="goHome()">Home</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:10px;">
+        <div id="scoreSummary"></div>
+        <div id="domainSummary" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;"></div>
+      </div>
+
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <span class="pill">Filter:
+          <select id="reviewFilter" style="margin-left:6px; background:transparent; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:4px 8px;">
+            <option value="all">All</option>
+            <option value="missed">Missed + Blank</option>
+            <option value="flagged">Flagged</option>
+          </select>
+        </span>
+      </div>
+
+      <div class="tableWrap" style="margin-top:10px;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Domain</th><th>Question</th><th>Your Answer</th><th>Correct</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="reviewBody"></tbody>
+        </table>
+      </div>
+
+      <div class="card" id="explainPanel" style="margin-top:10px; display:none;">
+        <h3 style="margin:0 0 6px;">Why the correct answer is correct</h3>
+        <div class="desc" id="explainMeta"></div>
+        <div id="explainText" style="margin-top:10px; white-space:pre-wrap;"></div>
+      </div>
+    </section>
+
+    <!-- FLASH HOME -->
+    <section id="viewFlashHome" class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+        <h2 style="margin:0; letter-spacing:.06em;">Flashcards</h2>
+        <button class="btn" onclick="goHome()">Home</button>
+      </div>
+      <div class="desc" style="margin-top:6px;">Choose a section:</div>
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn primary" onclick="startFlash('MED')">Medications</button>
+        <button class="btn primary" onclick="startFlash('SAFE')">Patient Safety</button>
+        <button class="btn primary" onclick="startFlash('ORDER')">Order Entry</button>
+        <button class="btn primary" onclick="startFlash('FED')">Federal</button>
+        <button class="btn primary" onclick="startFlash('MIX')">Mixed</button>
+      </div>
+    </section>
+
+    <!-- FLASH -->
+    <section id="viewFlash" class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="pill"><b id="flashDeck">Deck</b></span>
+          <span class="pill">Card <b id="flashPos">1</b>/<b id="flashTotal">1</b></span>
+          <span class="pill">Side <b id="flashSide">Front</b></span>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn" onclick="openFlashHome()">Decks</button>
+          <button class="btn" onclick="goHome()">Home</button>
+        </div>
+      </div>
+      <div class="flashCard" id="flashCard" title="Tap to flip"></div>
+      <div class="bottomRow">
+        <div class="leftBtns">
+          <button class="btn" onclick="prevFlash()">Prev</button>
+          <button class="btn" onclick="flipFlash()">Flip</button>
+          <button class="btn" onclick="nextFlash()">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // ---------- Sound (pip-boy-ish click beeps on Fallout themes only) ----------
+    let soundOn = (localStorage.getItem("sound") !== "off");
+    function beep(freq=880, dur=0.03){
+      if(!soundOn) return;
+      const theme = document.documentElement.getAttribute("data-theme");
+      if(theme !== "fallout" && theme !== "vegas") return; // only pip-boy sound for fallout themes
+      try {
+        const ctx = beep._ctx || (beep._ctx = new (window.AudioContext||window.webkitAudioContext)());
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = "square";
+        o.frequency.value = freq;
+        g.gain.value = 0.02;
+        o.connect(g); g.connect(ctx.destination);
+        o.start();
+        o.stop(ctx.currentTime + dur);
+      } catch(e){}
+    }
+    function toggleSound(){
+      soundOn = !soundOn;
+      localStorage.setItem("sound", soundOn ? "on" : "off");
+      document.getElementById("sndBtn").classList.toggle("on", soundOn);
+      beep(soundOn?980:520, 0.03);
+    }
+
+    // ---------- Theme + toggles ----------
+    function setTheme(t){
+      document.documentElement.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+      // Fallout themes default CRT+FX on (but user can toggle)
+      if(t === "fallout" || t === "vegas") beep(900, 0.03);
+      else beep(700, 0.02);
+    }
+    function toggleCRT(){
+      const el = document.documentElement;
+      const next = (el.getAttribute("data-crt") === "on") ? "off" : "on";
+      el.setAttribute("data-crt", next);
+      localStorage.setItem("crt", next);
+      document.getElementById("crtBtn").classList.toggle("on", next==="on");
+      beep(next==="on"?920:520, 0.03);
+    }
+    function toggleFX(){
+      const el = document.documentElement;
+      const next = (el.getAttribute("data-fx") === "on") ? "off" : "on";
+      el.setAttribute("data-fx", next);
+      localStorage.setItem("fx", next);
+      document.getElementById("fxBtn").classList.toggle("on", next==="on");
+      beep(next==="on"?940:520, 0.03);
+    }
+
+    // ---------- View switching ----------
+    const V = {
+      home: document.getElementById("viewHome"),
+      test: document.getElementById("viewTest"),
+      results: document.getElementById("viewResults"),
+      flashHome: document.getElementById("viewFlashHome"),
+      flash: document.getElementById("viewFlash"),
+    };
+    function show(which){
+      Object.values(V).forEach(el => el.style.display = "none");
+      V[which].style.display = (which==="home") ? "grid" : "block";
+    }
+    function goHome(){
+      stopTimer();
+      show("home");
+      document.getElementById("explainPanel").style.display = "none";
+      beep(720, 0.02);
+    }
+    function openFlashHome(){
+      stopTimer();
+      show("flashHome");
+      document.getElementById("explainPanel").style.display = "none";
+      beep(760, 0.02);
+    }
+
+    // ---------- Banks ----------
+    const BANKS = { MED:[], SAFE:[], ORDER:[], FED:[] };
+    let banksReady = false;
+    function normalize(item){
+      if(!item) return null;
+      if(typeof item==="object" && item.question && item.correct && Array.isArray(item.wrong)) return item;
+      if(Array.isArray(item) && item.length>=3) return {question:item[0], correct:item[1], wrong:item[2], explanation:""};
+      return null;
+    }
+    async function loadBanks(){
+      const [m,s,o,f] = await Promise.all([
+        fetch("./med_bank.json").then(r=>r.json()),
+        fetch("./safety_bank.json").then(r=>r.json()),
+        fetch("./order_bank.json").then(r=>r.json()),
+        fetch("./federal_bank.json").then(r=>r.json()),
+      ]);
+      BANKS.MED = m.map(normalize).filter(Boolean);
+      BANKS.SAFE = s.map(normalize).filter(Boolean);
+      BANKS.ORDER = o.map(normalize).filter(Boolean);
+      BANKS.FED = f.map(normalize).filter(Boolean);
+      banksReady = true;
+    }
+
+    // ---------- Test engine (90Q; 2026 weighting you specified) ----------
+    const DOMAIN_COUNTS = { MED:32, SAFE:21, ORDER:20, FED:17 };
+    const DOMAIN_LABELS = { MED:"Medications", SAFE:"Patient Safety", ORDER:"Order Entry", FED:"Federal" };
+
+    let test = [];
+    let answers = new Array(90).fill(null);
+    let flags = new Array(90).fill(false);
+    let eliminated = new Array(90).fill(null).map(()=>new Set());
+    let cur = 0;
+    let tipsLeft = 0;
+
+    const timer = { enabled:true, remaining: 110*60, handle:null };
+
+    function shuffle(a){
+      for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+      return a;
+    }
+    function pickCycle(domain, n){
+      const src = BANKS[domain] || [];
+      if(src.length===0) return [];
+      let pool = shuffle([...src]);
+      const out = [];
+      while(out.length<n){
+        if(pool.length===0) pool = shuffle([...src]);
+        out.push(pool.pop());
+      }
+      return out;
+    }
+    function buildTest(){
+      const parts = [
+        ...pickCycle("MED", DOMAIN_COUNTS.MED).map(x=>({domain:"MED", src:x})),
+        ...pickCycle("SAFE", DOMAIN_COUNTS.SAFE).map(x=>({domain:"SAFE", src:x})),
+        ...pickCycle("ORDER", DOMAIN_COUNTS.ORDER).map(x=>({domain:"ORDER", src:x})),
+        ...pickCycle("FED", DOMAIN_COUNTS.FED).map(x=>({domain:"FED", src:x})),
+      ];
+      test = parts.map(p=>{
+        const q=p.src;
+        const choices = shuffle([q.correct, ...q.wrong].slice(0,4));
+        const correctIndex = choices.indexOf(q.correct);
+        return { domain:p.domain, prompt:q.question, choices, correctIndex, explanation:q.explanation||"" };
+      });
+      if(document.getElementById("optShuffle").checked) shuffle(test);
+      test = test.slice(0,90);
+    }
+
+    function startTimer(){
+      stopTimer();
+      if(!timer.enabled) return;
+      timer.handle = setInterval(()=>{
+        timer.remaining = Math.max(0, timer.remaining-1);
+        document.getElementById("timerText").textContent = fmtTime(timer.remaining);
+        if(timer.remaining<=0){ stopTimer(); submitTest(); }
+      }, 1000);
+    }
+    function stopTimer(){ if(timer.handle){ clearInterval(timer.handle); timer.handle=null; } }
+    function fmtTime(sec){
+      const m=Math.floor(sec/60), s=sec%60;
+      return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+    }
+
+    function updateMeta(){
+      document.getElementById("qNum").textContent = String(cur+1);
+      document.getElementById("qDomain").textContent = DOMAIN_LABELS[test[cur].domain] || test[cur].domain;
+      document.getElementById("answeredCount").textContent = String(answers.filter(v=>v!==null).length);
+      document.getElementById("flaggedCount").textContent = String(flags.filter(Boolean).length);
+      document.getElementById("flagBtn").classList.toggle("on", !!flags[cur]);
+      document.getElementById("tipsLeft").textContent = String(tipsLeft);
+      document.getElementById("tipBtn").disabled = (tipsLeft<=0);
+    }
+
+    function renderNav(){
+      const grid=document.getElementById("navGrid");
+      if(grid.childElementCount===0){
+        for(let i=0;i<90;i++){ 
+          const b=document.createElement("button");
+          b.className="navBtn";
+          b.textContent=String(i+1);
+          b.onclick=()=>{ renderQ(i); };
+          grid.appendChild(b);
+        }
+      }
+      const nodes = grid.querySelectorAll(".navBtn");
+      nodes.forEach((b,i)=>{
+        b.classList.toggle("cur", i===cur);
+        b.classList.toggle("ans", answers[i]!==null);
+        b.classList.toggle("flag", !!flags[i]);
+      });
+    }
+
+    function renderQ(i){
+      cur = i;
+      const q = test[cur];
+      document.getElementById("questionText").textContent = q.prompt;
+      const wrap = document.getElementById("choices");
+      wrap.innerHTML = "";
+      q.choices.forEach((txt, idx)=>{
+        const lab=document.createElement("label");
+        lab.className="choice";
+        if(eliminated[cur].has(idx)) lab.classList.add("elim");
+
+        const input=document.createElement("input");
+        input.type="radio";
+        input.name="q_"+cur; // UNIQUE PER QUESTION (pre-answer bug fix)
+        input.value=String(idx);
+        input.checked = (answers[cur]===idx);
+        input.disabled = eliminated[cur].has(idx);
+        input.onchange=()=>{
+          answers[cur]=idx;
+          updateMeta();
+          renderNav();
+          beep(780,0.02);
+        };
+
+        const span=document.createElement("span");
+        span.textContent = txt;
+
+        lab.appendChild(input);
+        lab.appendChild(span);
+
+        lab.onclick=()=>{ if(!input.disabled) input.checked = true; };
+        wrap.appendChild(lab);
+      });
+      updateMeta();
+      renderNav();
+    }
+
+    function prevQ(){ if(cur>0){ renderQ(cur-1); beep(700,0.02); } }
+    function nextQ(){ if(cur<89){ renderQ(cur+1); beep(720,0.02); } }
+    function toggleFlag(){ flags[cur]=!flags[cur]; updateMeta(); renderNav(); beep(flags[cur]?980:520,0.03); }
+    function useTip(){
+      if(tipsLeft<=0) return;
+      const q=test[cur];
+      const candidates=[];
+      for(let i=0;i<q.choices.length;i++) if(i!==q.correctIndex && !eliminated[cur].has(i)) candidates.push(i);
+      shuffle(candidates);
+      candidates.slice(0,2).forEach(i=>eliminated[cur].add(i));
+      if(answers[cur]!==null && eliminated[cur].has(answers[cur])) answers[cur]=null;
+      tipsLeft--;
+      renderQ(cur);
+      beep(900,0.04);
+    }
+
+    function startTest(){
+      if(!banksReady){ alert("Banks are still loading. Try again in a second."); return; }
+      buildTest();
+      answers = new Array(90).fill(null);
+      flags = new Array(90).fill(false);
+      eliminated = new Array(90).fill(null).map(()=>new Set());
+      cur = 0;
+
+      // timer + tips
+      timer.enabled = document.getElementById("optTimed").checked;
+      const mins = parseInt(document.getElementById("timePreset").value,10) || 110;
+      timer.remaining = mins*60;
+      document.getElementById("timerPill").style.display = timer.enabled ? "" : "none";
+      document.getElementById("timerText").textContent = fmtTime(timer.remaining);
+
+      const tipsOn = document.getElementById("optTips").checked;
+      tipsLeft = tipsOn ? 5 : 0;
+      document.getElementById("tipsPill").style.display = tipsOn ? "" : "none";
+      document.getElementById("tipBtn").style.display = tipsOn ? "" : "none";
+
+      show("test");
+      renderNav();
+      renderQ(0);
+      startTimer();
+      beep(880,0.03);
+    }
+
+    // Results with explanations (click row)
+    let reviewRows = [];
+    function submitTest(){
+      stopTimer();
+      let correct=0;
+      const stats={ MED:{t:0,c:0}, SAFE:{t:0,c:0}, ORDER:{t:0,c:0}, FED:{t:0,c:0} };
+      reviewRows=[];
+
+      for(let i=0;i<90;i++){ 
+        const q=test[i];
+        const a=answers[i];
+        const ok = (a!==null && a===q.correctIndex);
+        if(ok) correct++;
+        stats[q.domain].t++; if(ok) stats[q.domain].c++;
+
+        reviewRows.push({
+          idx:i,
+          domain:q.domain,
+          prompt:q.prompt,
+          your: (a===null) ? "" : q.choices[a],
+          correct: q.choices[q.correctIndex],
+          status: ok ? "Correct" : ((a===null) ? "Blank" : "Incorrect"),
+          explanation: q.explanation || ""
+        });
+      }
+
+      const pct = Math.round((correct/90)*100);
+      document.getElementById("scoreSummary").innerHTML = `
+        <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:flex-end;">
+          <div>
+            <div style="font-size:26px; font-weight:900; letter-spacing:.06em;">${pct}%</div>
+            <div class="desc">${correct}/90 correct</div>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="pill">Answered <b>${answers.filter(v=>v!==null).length}</b></span>
+            <span class="pill">Flagged <b>${flags.filter(Boolean).length}</b></span>
+          </div>
+        </div>
+      `;
+
+      const ds = document.getElementById("domainSummary");
+      ds.innerHTML="";
+      ["MED","SAFE","ORDER","FED"].forEach(k=>{
+        const st=stats[k];
+        const p=st.t?Math.round((st.c/st.t)*100):0;
+        const el=document.createElement("span");
+        el.className="pill";
+        el.innerHTML = `${DOMAIN_LABELS[k]}: <b>${st.c}/${st.t}</b> (${p}%)`;
+        ds.appendChild(el);
+      });
+
+      document.getElementById("reviewFilter").value="all";
+      renderReview();
+      document.getElementById("explainPanel").style.display="none";
+      show("results");
+      beep(1100,0.04);
+    }
+
+    function esc(s){ return String(s||"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+    function trimQ(s){ const t=String(s||"").replace(/\s+/g," ").trim(); return t.length>120?t.slice(0,117)+"…":t; }
+
+    function renderReview(){
+      const filter=document.getElementById("reviewFilter").value;
+      const body=document.getElementById("reviewBody");
+      body.innerHTML="";
+
+      const rows = reviewRows.filter(r=>{
+        if(filter==="all") return true;
+        if(filter==="missed") return r.status!=="Correct";
+        if(filter==="flagged") return !!flags[r.idx];
+        return true;
+      });
+
+      rows.forEach(r=>{
+        const tr=document.createElement("tr");
+        tr.className = (r.status==="Correct") ? "good" : ((r.status==="Blank") ? "warn" : "bad");
+        tr.innerHTML = `
+          <td>${r.idx+1}</td>
+          <td>${DOMAIN_LABELS[r.domain]}</td>
+          <td>${esc(trimQ(r.prompt))}</td>
+          <td>${esc(r.your)}</td>
+          <td>${esc(r.correct)}</td>
+          <td>${r.status}</td>
+        `;
+        tr.onclick=()=>{
+          document.getElementById("explainPanel").style.display="";
+          document.getElementById("explainMeta").textContent = `Q${r.idx+1} • ${DOMAIN_LABELS[r.domain]} • Correct: ${r.correct}`;
+          document.getElementById("explainText").textContent = r.explanation || "(No explanation provided yet for this question.)";
+          beep(820,0.02);
+        };
+        body.appendChild(tr);
+      });
+    }
+    document.getElementById("reviewFilter").addEventListener("change", renderReview);
+
+    function retake(){ goHome(); startTest(); }
+
+    // ---------- Flashcards ----------
+    let flashDeck="MED";
+    let flashList=[];
+    let flashPos=0;
+    let flashBack=false;
+
+    function startFlash(deck){
+      if(!banksReady){ alert("Banks are still loading. Try again in a second."); return; }
+      flashDeck = deck;
+      const pick = (k)=> (BANKS[k]||[]).slice(0,500);
+      if(deck==="MIX") flashList = shuffle([...pick("MED"),...pick("SAFE"),...pick("ORDER"),...pick("FED")]).slice(0,500);
+      else flashList = shuffle(pick(deck)).slice(0,500);
+      flashPos=0; flashBack=false;
+      document.getElementById("flashDeck").textContent = (deck==="MIX") ? "Mixed" : DOMAIN_LABELS[deck];
+      show("flash");
+      renderFlash();
+      beep(760,0.02);
+    }
+
+    function renderFlash(){
+      const item = flashList[flashPos];
+      document.getElementById("flashPos").textContent = String(flashPos+1);
+      document.getElementById("flashTotal").textContent = String(flashList.length);
+      document.getElementById("flashSide").textContent = flashBack ? "Back" : "Front";
+      document.getElementById("flashCard").textContent = flashBack ? item.correct : item.question;
+    }
+    function flipFlash(){ flashBack=!flashBack; renderFlash(); beep(780,0.02); }
+    function nextFlash(){ flashPos=(flashPos+1)%flashList.length; flashBack=false; renderFlash(); beep(720,0.02); }
+    function prevFlash(){ flashPos=(flashPos-1+flashList.length)%flashList.length; flashBack=false; renderFlash(); beep(700,0.02); }
+    document.getElementById("flashCard").addEventListener("click", flipFlash);
+
+    // ---------- Persist + init ----------
+    (function init(){
+      const theme = localStorage.getItem("theme") || "amoled";
+      const crt = localStorage.getItem("crt") || "off";
+      const fx = localStorage.getItem("fx") || "off";
+      setTheme(theme);
+      document.documentElement.setAttribute("data-crt", crt);
+      document.documentElement.setAttribute("data-fx", fx);
+      document.getElementById("crtBtn").classList.toggle("on", crt==="on");
+      document.getElementById("fxBtn").classList.toggle("on", fx==="on");
+      document.getElementById("sndBtn").classList.toggle("on", soundOn);
+      loadBanks().then(()=>{ /* ready */ });
+    })();
+  </script>
+</body>
+</html>
