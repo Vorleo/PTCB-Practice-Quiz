@@ -1,0 +1,4002 @@
+[
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Thyroid replacement drug?",
+    "correct": "levothyroxine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "levothyroxine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Generic for Lipitor?",
+    "correct": "atorvastatin",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "atorvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Beta blocker example?",
+    "correct": "metoprolol",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "metoprolol is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "SSRI example?",
+    "correct": "fluoxetine",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "fluoxetine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Loop diuretic example?",
+    "correct": "furosemide",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "furosemide is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "GERD treatment PPI?",
+    "correct": "omeprazole",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "omeprazole is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Calcium channel blocker?",
+    "correct": "amlodipine",
+    "wrong": [
+      "rosuvastatin",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "amlodipine is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Brand for sertraline?",
+    "correct": "Zoloft",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "lisinopril"
+    ],
+    "explanation": "Zoloft is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "Statin example?",
+    "correct": "rosuvastatin",
+    "wrong": [
+      "amlodipine",
+      "lisinopril",
+      "Zoloft"
+    ],
+    "explanation": "rosuvastatin is correct because it is the clinically recognized medication used for this indication or class."
+  },
+  {
+    "question": "ACE inhibitor example?",
+    "correct": "lisinopril",
+    "wrong": [
+      "amlodipine",
+      "rosuvastatin",
+      "Zoloft"
+    ],
+    "explanation": "lisinopril is correct because it is the clinically recognized medication used for this indication or class."
+  }
+]
