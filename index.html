@@ -370,6 +370,58 @@ html[data-theme="vegas"] .terminal-scroll{animation:termScroll 46s linear infini
   background:radial-gradient(circle at center, rgba(255,255,255,.10), transparent 60%);
   opacity:.45;
 }
+
+/* ===== FIXED FALLOUT TERMINAL BOOT ===== */
+#bootOverlay{
+ position:fixed;
+ inset:0;
+ background:#020403;
+ color:#7cff9e;
+ font-family: ui-monospace, monospace;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ z-index:9999;
+}
+
+#bootOverlay.vegas{
+ background:#0b0703;
+ color:#ffb347;
+}
+
+.bootTerminal{
+ width:min(700px,90vw);
+ height:220px;
+ border:1px solid currentColor;
+ padding:12px;
+ overflow:hidden;
+ background:rgba(0,0,0,.65);
+ box-shadow:0 0 25px rgba(0,255,120,.15);
+ font-size:13px;
+ line-height:1.4;
+}
+
+.bootBarWrap{
+ width:min(700px,90vw);
+ height:8px;
+ border:1px solid currentColor;
+ margin-top:16px;
+}
+
+.bootBar{
+ height:100%;
+ width:0%;
+ background:currentColor;
+ transition:width 3s linear;
+}
+
+.bootHint{
+ margin-top:14px;
+ font-size:12px;
+ opacity:.7;
+}
+
 </style>
 </head>
 
