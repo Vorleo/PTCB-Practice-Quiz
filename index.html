@@ -1351,39 +1351,47 @@ DOM("flashCard").addEventListener("click", flipFlash);
 /* =========================
    INIT
    ========================= */
-document.addEventListener("DOMContentLoaded", async ()=>{
+document.addEventListener("DOMContentLoaded", ()=>{
   applySavedSettings();
   initTerminalBG();
-  DOM("status").textContent = "Loading banks…";
-  await loadBanks();
-  DOM("status").textContent = "Ready.";
-  show("menu");
-  runBoot();
+
+  // Start boot immediately (never block UI)
+  try{ runBoot(); }catch(e){ console.error("boot error", e); const l=DOM("bootTerminalLayer"); if(l){ l.style.display="none"; } }
+
+  // Show menu immediately (banks can finish loading in the background)
+  try{ show("menu"); }catch(e){ /* ignore */ }
+
+  // Load banks in background; update status when done
+  try{
+    DOM("status").textContent = "Loading banks…";
+    Promise.resolve(loadBanks()).then(()=>{
+      DOM("status").textContent = "Ready.";
+    }).catch((e)=>{
+      console.error("loadBanks error", e);
+      DOM("status").textContent = "Banks failed to load (check JSON files).";
+    });
+  }catch(e){
+    console.error(e);
+  }
 });
 
-/* SAFE BOOT FAILSAFE PATCH */
+/* SAFE BOOT FAILSAFE (non-blocking)
+   Guarantees you can always exit the boot overlay even if animations or bank loads fail.
+*/
 (function(){
-  const boot = document.getElementById("boot");
-  if(!boot) return;
-
-  // Always allow click to skip
-  boot.addEventListener("click", ()=>{
-    boot.style.display = "none";
-  });
-
-  // Always allow space / enter
+  function hideBoot(){
+    const layer = document.getElementById("bootTerminalLayer");
+    if(!layer) return;
+    layer.style.opacity = "0";
+    setTimeout(()=>{ try{ layer.remove(); }catch(_e){ layer.style.display="none"; } }, 250);
+  }
   window.addEventListener("keydown",(e)=>{
-    if(e.code==="Space" || e.code==="Enter"){
-      boot.style.display="none";
-    }
+    if(e.code==="Space" || e.code==="Enter" || e.key===" " || e.key==="Enter") hideBoot();
   });
-
-  // HARD FAILSAFE AUTO HIDE
-  setTimeout(()=>{
-    if(boot) boot.style.display="none";
-  }, 2500);
+  window.addEventListener("click", ()=>hideBoot(), {passive:true});
+  window.addEventListener("touchstart", ()=>hideBoot(), {passive:true});
+  setTimeout(()=>hideBoot(), 4500);
 })();
-
 </script>
 
 </body>
