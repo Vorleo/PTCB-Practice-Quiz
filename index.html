@@ -1360,6 +1360,30 @@ document.addEventListener("DOMContentLoaded", async ()=>{
   show("menu");
   runBoot();
 });
+
+/* SAFE BOOT FAILSAFE PATCH */
+(function(){
+  const boot = document.getElementById("boot");
+  if(!boot) return;
+
+  // Always allow click to skip
+  boot.addEventListener("click", ()=>{
+    boot.style.display = "none";
+  });
+
+  // Always allow space / enter
+  window.addEventListener("keydown",(e)=>{
+    if(e.code==="Space" || e.code==="Enter"){
+      boot.style.display="none";
+    }
+  });
+
+  // HARD FAILSAFE AUTO HIDE
+  setTimeout(()=>{
+    if(boot) boot.style.display="none";
+  }, 2500);
+})();
+
 </script>
 
 </body>
