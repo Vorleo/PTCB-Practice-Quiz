@@ -1,1379 +1,188 @@
-<!doctype html>
-<html lang="en" data-theme="amoled" data-fx="on">
+
+<!DOCTYPE html>
+<html lang="en" data-theme="fallout">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PTCB Practice Test</title>
 
 <style>
-/* =========================
-   THEME VARS (themes affect borders/cards/buttons)
-   ========================= */
 :root{
-  --bg:#f6f7fb;
-  --card:#ffffff;
-  --text:#111;
-  --muted:#556;
-  --border:#ddd;
-  --accent:#2563eb;
-  --accent2:#1d4ed8;
-  --chip:rgba(127,127,127,.10);
-  --good:#22c55e;
-  --warn:#f59e0b;
-  --bad:#ef4444;
-  --shadow:0 8px 24px rgba(0,0,0,.12);
+ --fallout:#7cff9e;
+ --vegas:#ffb347;
 }
 
-/* AMOLED */
-html[data-theme="amoled"]{
-  --bg:#000;
-  --card:#050505;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-  --border:#222;
-  --accent:#4f8cff;
-  --accent2:#2f6fff;
-  --chip:rgba(255,255,255,.08);
-  --shadow:0 10px 26px rgba(0,0,0,.55);
-}
-
-/* Navy */
-html[data-theme="navy"]{
-  --bg:#0a1224;
-  --card:#111b33;
-  --text:#e5e7eb;
-  --muted:#b7c0d6;
-  --border:#25345a;
-  --accent:#60a5fa;
-  --accent2:#3b82f6;
-  --chip:rgba(255,255,255,.08);
-  --shadow:0 10px 26px rgba(0,0,0,.35);
-}
-
-/* Terminal */
-html[data-theme="terminal"]{
-  --bg:#020403;
-  --card:#06130b;
-  --text:#7cffb2;
-  --muted:#54c98a;
-  --border:#0f2c1b;
-  --accent:#00ff88;
-  --accent2:#00d973;
-  --chip:rgba(0,255,136,.10);
-  --shadow:0 10px 26px rgba(0,0,0,.55);
-}
-
-/* Purple */
-html[data-theme="purple"]{
-  --bg:#120018;
-  --card:#1e0030;
-  --text:#f3d9ff;
-  --muted:#d8b4fe;
-  --border:#3c0066;
-  --accent:#c084fc;
-  --accent2:#a855f7;
-  --chip:rgba(192,132,252,.12);
-  --shadow:0 10px 26px rgba(0,0,0,.50);
-}
-
-/* Lab */
-html[data-theme="lab"]{
-  --bg:#f4fdff;
-  --card:#ffffff;
-  --text:#003c44;
-  --muted:#2b6b74;
-  --border:#c8eef5;
-  --accent:#00a8a8;
-  --accent2:#008888;
-  --chip:rgba(0,168,168,.10);
-  --shadow:0 10px 26px rgba(0,0,0,.12);
-}
-
-/* Synthwave */
-html[data-theme="synthwave"]{
-  --bg:#0a0016;
-  --card:#16002b;
-  --text:#ffd9ff;
-  --muted:#f0abfc;
-  --border:#4b0073;
-  --accent:#ff00aa;
-  --accent2:#d1008a;
-  --chip:rgba(255,0,170,.10);
-  --shadow:0 10px 26px rgba(0,0,0,.55);
-}
-
-/* Paper */
-html[data-theme="paper"]{
-  --bg:#fbf7ef;
-  --card:#fffdf8;
-  --text:#1b1b1b;
-  --muted:#5a5a5a;
-  --border:#e7ddcc;
-  --accent:#8b5cf6;
-  --accent2:#6d28d9;
-  --chip:rgba(139,92,246,.08);
-  --shadow:0 8px 20px rgba(0,0,0,.10);
-}
-
-/* Fallout / Pip-Boy */
-html[data-theme="fallout"]{
-  --bg:#071208;
-  --card:#0b1c0f;
-  --text:#7cff9e;
-  --muted:#58d679;
-  --border:#1f4a2d;
-  --accent:#7cff9e;
-  --accent2:#58d679;
-  --chip:rgba(124,255,158,.10);
-  --shadow:0 12px 30px rgba(0,0,0,.70);
-}
-html[data-theme="fallout"] body{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
-  text-shadow: 0 0 6px rgba(124,255,158,.35);
-  background:
-    radial-gradient(circle at 50% 0%, rgba(124,255,158,.06), transparent 45%),
-    var(--bg);
-}
-
-/* Fallout FX overlay (toggleable) */
-html[data-theme="fallout"][data-fx="on"] body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background: radial-gradient(circle at center, transparent 55%, rgba(0,0,0,.35) 100%);
-}
-html[data-theme="fallout"][data-fx="on"] body::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    repeating-linear-gradient(
-      rgba(0,0,0,0.22) 0px,
-      rgba(0,0,0,0.22) 2px,
-      transparent 2px,
-      transparent 5px
-    );
-  animation:scanMove 6s linear infinite;
-}
-@keyframes scanMove{
-  from{ background-position:0 0; }
-  to{ background-position:0 120px; }
-}
-html[data-theme="fallout"][data-fx="on"]{
-  animation:crtFlicker 8s infinite;
-}
-@keyframes crtFlicker{
-  0%,100%{ filter:brightness(1); }
-  48%{ filter:brightness(.96); }
-  50%{ filter:brightness(1.05); }
-}
-
-/* =========================
-   BASE
-   ========================= */
-*{ box-sizing:border-box; }
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
-}
-header{
-  padding:14px;
-  background:var(--card);
-  border-bottom:1px solid var(--border);
-}
-h2,h3{ margin:0 0 10px; }
-small,.muted{ color:var(--muted); }
-.wrap{
-  max-width:1040px;
-  margin:0 auto;
-  padding:18px;
-}
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:14px;
-  margin-bottom:14px;
-  box-shadow:var(--shadow);
-}
-.row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  align-items:center;
-}
-.row.space{ justify-content:space-between; }
-button{
-  padding:10px 14px;
-  border-radius:10px;
-  border:1px solid transparent;
-  font-weight:900;
-  cursor:pointer;
-  background:var(--accent);
-  color:var(--bg);
-  margin:3px;
-}
-button:hover{ filter:brightness(1.03); }
-button:active{ transform:translateY(1px); }
-button.alt{
-  background:transparent;
-  border:1px solid var(--border);
-  color:var(--text);
-}
-button.alt:hover{ border-color:var(--accent2); }
-button.tog.on{ outline:2px solid var(--accent); }
-button:disabled{ opacity:.55; cursor:not-allowed; }
-
-.pill{
-  display:inline-block;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  background:var(--chip);
-  font-weight:900;
-  font-size:12px;
-}
-.biggrid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-.bigbox{
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:24px 16px;
-  text-align:center;
-  cursor:pointer;
-  user-select:none;
-  background:rgba(127,127,127,.05);
-}
-.bigbox:hover{ border-color:var(--accent2); }
-.bigbox .title{ font-size:22px; font-weight:1000; margin-bottom:6px; }
-.bigbox .desc{ color:var(--muted); font-size:13px; }
-
-.choice{
-  border:1px solid var(--border);
-  padding:10px;
-  border-radius:10px;
-  margin-bottom:8px;
-  cursor:pointer;
-  background:rgba(127,127,127,.04);
-}
-.choice:hover{ border-color:rgba(127,127,127,.55); }
-.choice .lbl{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  cursor:pointer;
-}
-.choice input{ margin-top:3px; transform:scale(1.12); }
-.choice.disabled{ opacity:.35; cursor:not-allowed; }
-.choice.disabled:hover{ border-color:var(--border); }
-
-.navgrid{
-  display:grid;
-  grid-template-columns:repeat(10,1fr);
-  gap:6px;
-  margin-top:10px;
-}
-.navbtn{
-  border:1px solid var(--border);
-  padding:8px;
-  text-align:center;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:900;
-  background:rgba(127,127,127,.04);
-}
-.navbtn.answered{ background:rgba(34,197,94,.18); }
-.navbtn.flagged{ background:rgba(245,158,11,.20); }
-.navbtn.current{ outline:2px solid var(--accent); }
-
-.flashcard{
-  font-size:20px;
-  padding:40px;
-  text-align:center;
-  border:1px solid var(--border);
-  border-radius:12px;
-  cursor:pointer;
-  user-select:none;
-  background:rgba(127,127,127,.04);
+ margin:0;
+ background:#020403;
+ color:var(--fallout);
+ font-family:ui-monospace, monospace;
 }
 
-table{ width:100%; border-collapse:collapse; }
-th,td{
-  border:1px solid var(--border);
-  padding:8px;
-  vertical-align:top;
-  font-size:13px;
-}
-th{ background:rgba(127,127,127,.08); text-align:left; }
-
-select{
-  padding:10px 12px;
-  border-radius:10px;
-  border:1px solid var(--border);
-  background:var(--card);
-  color:var(--text);
-  font-weight:900;
-}
-
-@media (max-width:720px){
-  .biggrid{ grid-template-columns:1fr; }
-}
-@media (max-width:520px){
-  .navgrid{ grid-template-columns:repeat(8,1fr); }
-  .flashcard{ font-size:18px; padding:28px; }
-}
-
-/* ===== FALLOUT / NEW VEGAS TERMINAL BOOT (INTEGRATED) ===== */
-#bootTerminalLayer{
+#boot{
  position:fixed;
  inset:0;
  background:#020403;
- color:#7cff9e;
- font-family: ui-monospace, monospace;
  display:flex;
  flex-direction:column;
  justify-content:center;
  align-items:center;
  z-index:999999;
-}
-
-#bootTerminalLayer.vegas{
- background:#0b0703;
- color:#ffb347;
-}
-
-.bootCRT{
- width:min(760px,92vw);
- height:260px;
- border:1px solid currentColor;
- padding:14px;
  overflow:hidden;
- background:rgba(0,0,0,.7);
- box-shadow:0 0 35px rgba(0,255,120,.18);
- font-size:13px;
- line-height:1.45;
- letter-spacing:.03em;
 }
 
-.bootBarWrap{
- width:min(760px,92vw);
- height:10px;
- border:1px solid currentColor;
- margin-top:18px;
+#boot.vegas{
+ background:#0b0703;
+ color:var(--vegas);
 }
 
-.bootBar{
- height:100%;
- width:0%;
- background:currentColor;
- transition:width 3.2s linear;
-}
-
-.bootHint{
- margin-top:14px;
- font-size:12px;
+.scanlines{
+ position:absolute;
+ inset:0;
+ pointer-events:none;
+ background:repeating-linear-gradient(
+   rgba(0,0,0,.3) 0px,
+   rgba(0,0,0,.3) 2px,
+   transparent 2px,
+   transparent 6px
+ );
  opacity:.7;
 }
 
+.crt{
+ width:min(800px,90vw);
+ height:280px;
+ border:1px solid currentColor;
+ padding:12px;
+ overflow:hidden;
+ background:rgba(0,0,0,.6);
+ text-shadow:0 0 8px currentColor;
+}
+
+.barwrap{
+ width:min(800px,90vw);
+ border:1px solid currentColor;
+ margin-top:12px;
+ height:10px;
+}
+
+.bar{
+ height:100%;
+ width:0%;
+ background:currentColor;
+ transition:width .5s linear;
+}
+
+#app{ display:none; padding:20px; }
+
+button{
+ background:var(--fallout);
+ border:none;
+ padding:10px 16px;
+ border-radius:6px;
+ font-weight:bold;
+ cursor:pointer;
+}
 </style>
 </head>
 
 <body>
 
-<div id="bootTerminalLayer">
- <div class="bootCRT" id="bootCRTText"></div>
- <div class="bootBarWrap"><div class="bootBar" id="bootCRTBar"></div></div>
- <div class="bootHint">CLICK / TAP / SPACE TO SKIP</div>
+<div id="boot">
+<div class="scanlines"></div>
+<div class="crt" id="bootText"></div>
+<div class="barwrap"><div class="bar" id="bootBar"></div></div>
+<div style="margin-top:10px;font-size:12px;">CLICK / SPACE TO SKIP</div>
 </div>
 
-<header>
-  <div class="row space">
-    <div>
-      <h2>PTCB Practice Test</h2>
-      <div class="muted"><small>Single-file build for GitHub Pages.</small></div>
-    </div>
-    <div class="row">
-      <button class="alt" onclick="setTheme('amoled')">AMOLED</button>
-      <button class="alt" onclick="setTheme('navy')">Navy</button>
-      <button class="alt" onclick="setTheme('terminal')">Terminal</button>
-      <button class="alt" onclick="setTheme('purple')">Purple</button>
-      <button class="alt" onclick="setTheme('lab')">Lab</button>
-      <button class="alt" onclick="setTheme('synthwave')">Synthwave</button>
-      <button class="alt" onclick="setTheme('paper')">Paper</button>
-      <button class="alt" onclick="setTheme('fallout')">Fallout</button>
-      <button class="alt" onclick="toggleFX()">Fallout FX</button>
-      <button class="alt" onclick="toggleSound()">UI Sounds</button>
-    </div>
-  </div>
-</header>
-
-<div class="wrap">
-
-  <!-- MENU -->
-  <div id="menu" class="card">
-    <div class="biggrid">
-      <div class="bigbox" onclick="startTest()">
-        <div class="title">Practice Test</div>
-        <div class="desc">90 questions • flags • tips • timer options</div>
-      </div>
-      <div class="bigbox" onclick="goFlashHome()">
-        <div class="title">Flashcards</div>
-        <div class="desc">Multiple flashcard sets for the PTCE</div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:14px;">
-      <h3>Options</h3>
-      <div class="row">
-        <span class="pill"><label><input id="optTimed" type="checkbox" checked /> Timed</label></span>
-
-        <span class="pill">
-          Timer:
-          <select id="timeSelect" title="Choose timer length">
-            <option value="110" selected>PTCE (110 min)</option>
-            <option value="30">30 min</option>
-            <option value="60">1 hour</option>
-            <option value="90">1 hour 30 min</option>
-            <option value="120">2 hours</option>
-            <option value="150">2 hours 30 min</option>
-          </select>
-        </span>
-
-        <span class="pill"><label><input id="optShuffleQ" type="checkbox" checked /> Shuffle questions</label></span>
-        <span class="pill"><label><input id="optRxNav" type="checkbox" checked /> RxNav enrichment (optional)</label></span>
-        <span class="pill"><label><input id="optTips" type="checkbox" checked /> Tips enabled (5 per test)</label></span>
-      </div>
-      <div class="muted"><small id="status"></small></div>
-    </div>
-  </div>
-
-  <!-- TEST -->
-  <div id="test" class="card" style="display:none;">
-    <div class="row space">
-      <div class="row">
-        <span class="pill">Question <b id="qNum">1</b>/90</span>
-        <span class="pill">Answered <b id="answeredCount">0</b></span>
-        <span class="pill">Flagged <b id="flaggedCount">0</b></span>
-        <span class="pill" id="domainPill">—</span>
-        <span class="pill" id="tipsPill">Tips <b id="tipsLeft">5</b></span>
-        <span class="pill" id="timerPill" style="display:none;">Time <b id="timerText">110:00</b></span>
-      </div>
-      <div class="row">
-        <button onclick="submitTest()">Submit</button>
-        <button class="alt" onclick="goMenu()">Main Menu</button>
-      </div>
-    </div>
-
-    <h3 id="question" style="margin-top:12px;"></h3>
-    <div id="choices"></div>
-
-    <div class="row space">
-      <div class="row">
-        <button class="alt" onclick="prevQ()">Prev</button>
-        <button onclick="nextQ()">Next</button>
-        <button id="flagBtn" class="alt tog" onclick="toggleFlag()">Flag</button>
-        <button id="tipBtn" class="alt" onclick="useTip()">Use Tip (50/50)</button>
-      </div>
-      <div class="muted"><small>Leave blank if you want. Submit anytime.</small></div>
-    </div>
-
-    <div id="nav" class="navgrid"></div>
-  </div>
-
-  <!-- RESULTS -->
-  <div id="results" class="card" style="display:none;">
-    <div class="row space">
-      <h3 style="margin:0;">Results</h3>
-      <div class="row">
-        <button onclick="restartTest()">Restart</button>
-        <button class="alt" onclick="goMenu()">Main Menu</button>
-      </div>
-    </div>
-
-    <div id="scoreSummary" class="card" style="margin-top:12px;"></div>
-
-    <div class="card">
-      <h3>Domain Breakdown</h3>
-      <div id="domainBreakdown"></div>
-    </div>
-
-    <div class="card">
-      <h3>Review</h3>
-      <div class="muted"><small>Click a row to jump back into the test at that question.</small></div>
-      <div style="overflow:auto; margin-top:10px;">
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Domain</th>
-              <th>Prompt</th>
-              <th>Your Answer</th>
-              <th>Correct</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="reviewTable"></tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- FLASH HOME -->
-  <div id="flashHome" class="card" style="display:none;">
-    <div class="row space">
-      <h3 style="margin:0;">Flashcards</h3>
-      <button class="alt" onclick="goMenu()">Main Menu</button>
-    </div>
-
-    <div class="row" style="margin-top:10px;">
-      <button onclick="openFlash('MED')">Medications</button>
-      <button onclick="openFlash('SAFE')">Patient Safety</button>
-      <button onclick="openFlash('ORDER')">Order Entry / Math</button>
-      <button onclick="openFlash('FED')">Federal</button>
-      <button class="alt" onclick="openFlash('MIX')">Mixed</button>
-    </div>
-
-    <div class="muted" style="margin-top:10px;"><small>Decks are generated from the same local banks as the test.</small></div>
-  </div>
-
-  <!-- FLASH VIEW -->
-  <div id="flash" class="card" style="display:none;">
-    <div class="row space">
-      <div class="row">
-        <span class="pill">Deck <b id="flashDeckName">—</b></span>
-        <span class="pill">Card <b id="flashPos">1</b>/<b id="flashTotal">1</b></span>
-        <span class="pill">Side <b id="flashSide">Front</b></span>
-      </div>
-      <div class="row">
-        <button onclick="nextFlash()">Next</button>
-        <button class="alt" onclick="goFlashHome()">Decks</button>
-        <button class="alt" onclick="goMenu()">Main Menu</button>
-      </div>
-    </div>
-
-    <div id="flashCard" class="flashcard" style="margin-top:12px;">Tap to Flip</div>
-  </div>
-
+<div id="app">
+<h1>PTCB Practice Test</h1>
+<p>System Loaded</p>
 </div>
 
 <script>
-/* =========================
-   PERSISTED SETTINGS
-   ========================= */
-function setTheme(t){
-  document.documentElement.setAttribute("data-theme", t);
-  localStorage.setItem("theme", t);
-}
-function toggleFX(){
-  const el = document.documentElement;
-  const next = (el.getAttribute("data-fx") === "on") ? "off" : "on";
-  el.setAttribute("data-fx", next);
-  localStorage.setItem("fx", next);
-}
+(function(){
 
-/* UI SOUNDS (WebAudio, no files) */
-let soundEnabled = true;
-function toggleSound(){
-  soundEnabled = !soundEnabled;
-  localStorage.setItem("sound", soundEnabled ? "on" : "off");
-}
-let audioCtx = null;
-function beep(freq=700, duration=0.045){
-  if(!soundEnabled) return;
-  try{
-    if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = "square";
-    osc.frequency.value = freq;
-    gain.gain.value = 0.03;
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    osc.start();
-    osc.stop(audioCtx.currentTime + duration);
-  }catch(_e){}
+const bootLines=[
+"VAULT TEC BIOS REV 7.3",
+"CHECKING MEMORY ADDRESSES...",
+"0xA21FF OK",
+"LOADING MEDICATION DATABASE...",
+"LOADING USP MODULES...",
+"LOADING DEA MODULES...",
+"INITIALIZING TERMINAL...",
+"SYSTEM READY"
+];
+
+let i=0;
+let done=false;
+
+function hexNoise(){
+ const chars="ABCDEF0123456789";
+ let out="0x";
+ for(let i=0;i<12;i++){
+   out+=chars[Math.floor(Math.random()*chars.length)];
+ }
+ return out;
 }
 
-/* Restore prefs */
-(function initPrefs(){
-  const t = localStorage.getItem("theme");
-  if(t) document.documentElement.setAttribute("data-theme", t);
+function beep(){
+ try{
+   const ctx=new (window.AudioContext||window.webkitAudioContext)();
+   const osc=ctx.createOscillator();
+   const gain=ctx.createGain();
+   osc.type="square";
+   osc.frequency.value=900;
+   gain.gain.value=0.02;
+   osc.connect(gain);
+   gain.connect(ctx.destination);
+   osc.start();
+   osc.stop(ctx.currentTime+.03);
+ }catch(e){}
+}
 
-  const fx = localStorage.getItem("fx");
-  if(fx) document.documentElement.setAttribute("data-fx", fx);
+function finish(){
+ if(done) return;
+ done=true;
+ document.getElementById("boot").remove();
+ document.getElementById("app").style.display="block";
+}
 
-  const snd = localStorage.getItem("sound");
-  if(snd === "off") soundEnabled = false;
+function step(){
+ if(done) return;
+
+ const t=document.getElementById("bootText");
+ const bar=document.getElementById("bootBar");
+
+ if(i<bootLines.length){
+   beep();
+   t.innerText += bootLines[i] + " " + hexNoise() + "\n";
+   bar.style.width = ((i+1)/bootLines.length*100)+"%";
+   i++;
+   setTimeout(step, 300+Math.random()*200);
+ }else{
+   setTimeout(finish, 600);
+ }
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+ if(document.documentElement.dataset.theme==="vegas"){
+   document.getElementById("boot").classList.add("vegas");
+ }
+
+ document.getElementById("boot").onclick=finish;
+ document.addEventListener("keydown",e=>{
+   if(e.key===" "||e.key==="Enter") finish();
+ });
+
+ setTimeout(step,200);
+ setTimeout(finish,12000);
+
+});
+
 })();
-
-/* =========================
-   EXAM CONFIG (90 weighted)
-   ========================= */
-const DOMAIN = {
-  MED: "Medications",
-  SAFE: "Patient Safety",
-  ORDER: "Order Entry / Math",
-  FED: "Federal Requirements"
-};
-const COUNTS = { MED:32, SAFE:21, ORDER:20, FED:17 };
-const TOTAL = 90;
-
-/* =========================
-   STATE
-   ========================= */
-let questions = [];       // {domain, stemHTML, choices[4], answerIndex, id}
-let answers = new Map();  // qIndex -> choiceIndex
-let flags = new Set();    // qIndex
-let idx = 0;
-
-let timer = null;
-let timed = true;
-let timeLeft = 110*60;
-
-let tipsEnabled = true;
-let tipsRemaining = 5;
-let eliminated = new Map(); // qIndex -> Set(eliminatedChoiceIndexes)
-
-const statusEl = document.getElementById("status");
-
-/* =========================
-   HELPERS
-   ========================= */
-function shuffle(arr){
-  for(let i=arr.length-1;i>0;i--){
-    const j=Math.floor(Math.random()*(i+1));
-    [arr[i],arr[j]]=[arr[j],arr[i]];
-  }
-  return arr;
-}
-function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
-function uniqBy(arr, keyFn){
-  const seen = new Set();
-  const out = [];
-  for(const x of arr){
-    const k = keyFn(x);
-    if(seen.has(k)) continue;
-    seen.add(k);
-    out.push(x);
-  }
-  return out;
-}
-function stripHtml(s){ return String(s).replace(/<[^>]*>/g,"").trim(); }
-function htmlEscape(s){
-  return String(s)
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;");
-}
-function fmtTime(sec){
-  const m = Math.floor(sec/60);
-  const s = sec%60;
-  return `${m}:${String(s).padStart(2,"0")}`;
-}
-function setView(view){
-  const ids=["menu","test","results","flashHome","flash"];
-  for(const id of ids){
-    document.getElementById(id).style.display = (id===view) ? "" : "none";
-  }
-}
-function updateTop(){
-  document.getElementById("qNum").textContent = String(idx+1);
-  document.getElementById("answeredCount").textContent = String(answers.size);
-  document.getElementById("flaggedCount").textContent = String(flags.size);
-  document.getElementById("domainPill").textContent = questions[idx]?.domain || "—";
-
-  const fb = document.getElementById("flagBtn");
-  fb.classList.toggle("on", flags.has(idx));
-  fb.textContent = flags.has(idx) ? "Flagged" : "Flag";
-
-  document.getElementById("tipsLeft").textContent = String(tipsRemaining);
-  document.getElementById("tipsPill").style.display = tipsEnabled ? "" : "none";
-
-  const tipBtn = document.getElementById("tipBtn");
-  tipBtn.style.display = tipsEnabled ? "" : "none";
-  tipBtn.disabled = !tipsEnabled || tipsRemaining<=0 || eliminated.has(idx);
-  tipBtn.textContent = eliminated.has(idx) ? "Tip Used" : "Use Tip (50/50)";
-}
-function hashId(str){
-  let h=2166136261;
-  for(let i=0;i<str.length;i++){
-    h ^= str.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return "q"+(h>>>0).toString(16);
-}
-function makeFixed(domain, stem, correct, wrongs){
-  const choices = shuffle([correct, ...wrongs]).slice(0,4);
-  const answerIndex = choices.findIndex(x=>stripHtml(x)===stripHtml(correct));
-  const id = hashId(domain+"|"+stripHtml(stem)+"|"+stripHtml(correct));
-  return {domain, stemHTML: stem, choices, answerIndex: Math.max(0,answerIndex), id};
-}
-
-/* =========================
-   OPTIONAL RXNAV (best-effort)
-   ========================= */
-const RXNAV_BASE = "https://rxnav.nlm.nih.gov/REST";
-const RX_SEEDS = [
-  "lisinopril","losartan","metformin","atorvastatin","sertraline","omeprazole","gabapentin","tamsulosin",
-  "albuterol","pantoprazole","amoxicillin","cephalexin","doxycycline","azithromycin","warfarin","clopidogrel",
-  "levothyroxine","fluoxetine","escitalopram","hydrochlorothiazide"
-];
-async function fetchJson(url, signal){
-  const res = await fetch(url, {signal});
-  if(!res.ok) throw new Error("HTTP "+res.status);
-  return await res.json();
-}
-function withTimeout(promiseFactory, ms){
-  const ctrl = new AbortController();
-  const t = setTimeout(()=>ctrl.abort(), ms);
-  return promiseFactory(ctrl.signal).finally(()=>clearTimeout(t));
-}
-function extractBrands(name){
-  const matches = name.match(/\[([^\]]+)\]/g) || [];
-  return matches.map(m=>m.replace(/^\[/,"").replace(/\]$/,"").trim()).filter(Boolean);
-}
-async function rxnavBrandsForIngredient(ingredient, signal){
-  const url = `${RXNAV_BASE}/drugs.json?name=${encodeURIComponent(ingredient)}`;
-  const data = await fetchJson(url, signal);
-  const groups = (data?.drugGroup?.conceptGroup) || [];
-  const brands = new Set();
-  const sbd = groups.find(g=>g.tty==="SBD");
-  for(const c of (sbd?.conceptProperties||[])){
-    const nm = c?.name || "";
-    for(const b of extractBrands(nm)) brands.add(b);
-  }
-  const bn = groups.find(g=>g.tty==="BN");
-  for(const c of (bn?.conceptProperties||[])){
-    if(c?.name) brands.add(c.name.trim());
-  }
-  return Array.from(brands);
-}
-
-/* =========================
-   LOCAL BANKS (expandable “monster” style)
-   ========================= */
-const MEDS = [
-  {g:"atorvastatin", b:["Lipitor"], cls:"statin", ind:"hyperlipidemia"},
-  {g:"rosuvastatin", b:["Crestor"], cls:"statin", ind:"hyperlipidemia"},
-  {g:"simvastatin", b:["Zocor"], cls:"statin", ind:"hyperlipidemia"},
-  {g:"pravastatin", b:["Pravachol"], cls:"statin", ind:"hyperlipidemia"},
-  {g:"lisinopril", b:["Prinivil","Zestril"], cls:"ACE inhibitor", ind:"hypertension"},
-  {g:"losartan", b:["Cozaar"], cls:"ARB", ind:"hypertension"},
-  {g:"valsartan", b:["Diovan"], cls:"ARB", ind:"hypertension"},
-  {g:"amlodipine", b:["Norvasc"], cls:"calcium channel blocker", ind:"hypertension/angina"},
-  {g:"metoprolol", b:["Lopressor","Toprol XL"], cls:"beta blocker", ind:"hypertension/angina"},
-  {g:"carvedilol", b:["Coreg"], cls:"beta blocker", ind:"heart failure"},
-  {g:"hydrochlorothiazide", b:["Microzide"], cls:"thiazide diuretic", ind:"hypertension"},
-  {g:"furosemide", b:["Lasix"], cls:"loop diuretic", ind:"edema"},
-  {g:"spironolactone", b:["Aldactone"], cls:"potassium-sparing diuretic", ind:"heart failure/edema"},
-  {g:"warfarin", b:["Coumadin"], cls:"anticoagulant", ind:"clot prevention"},
-  {g:"apixaban", b:["Eliquis"], cls:"DOAC anticoagulant", ind:"clot prevention"},
-  {g:"rivaroxaban", b:["Xarelto"], cls:"DOAC anticoagulant", ind:"clot prevention"},
-  {g:"clopidogrel", b:["Plavix"], cls:"antiplatelet", ind:"stroke/MI prevention"},
-  {g:"aspirin", b:["Bayer Aspirin"], cls:"antiplatelet/NSAID", ind:"pain/MI prevention"},
-  {g:"metformin", b:["Glucophage"], cls:"biguanide", ind:"type 2 diabetes"},
-  {g:"glipizide", b:["Glucotrol"], cls:"sulfonylurea", ind:"type 2 diabetes"},
-  {g:"insulin glargine", b:["Lantus"], cls:"long-acting insulin", ind:"diabetes"},
-  {g:"levothyroxine", b:["Synthroid","Levoxyl"], cls:"thyroid hormone", ind:"hypothyroidism"},
-  {g:"omeprazole", b:["Prilosec"], cls:"PPI", ind:"GERD"},
-  {g:"pantoprazole", b:["Protonix"], cls:"PPI", ind:"GERD"},
-  {g:"ondansetron", b:["Zofran"], cls:"antiemetic", ind:"nausea/vomiting"},
-  {g:"albuterol", b:["Ventolin","ProAir"], cls:"SABA bronchodilator", ind:"asthma relief"},
-  {g:"fluticasone", b:["Flonase"], cls:"intranasal steroid", ind:"allergic rhinitis"},
-  {g:"sertraline", b:["Zoloft"], cls:"SSRI", ind:"depression/anxiety"},
-  {g:"fluoxetine", b:["Prozac"], cls:"SSRI", ind:"depression"},
-  {g:"escitalopram", b:["Lexapro"], cls:"SSRI", ind:"depression/anxiety"},
-  {g:"gabapentin", b:["Neurontin"], cls:"neuropathic analgesic", ind:"neuropathic pain"},
-  {g:"sumatriptan", b:["Imitrex"], cls:"triptan", ind:"migraine"},
-  {g:"acetaminophen", b:["Tylenol"], cls:"analgesic/antipyretic", ind:"pain/fever"},
-  {g:"ibuprofen", b:["Advil","Motrin"], cls:"NSAID", ind:"pain/fever"},
-  {g:"amoxicillin", b:["Amoxil"], cls:"penicillin antibiotic", ind:"bacterial infection"},
-  {g:"cephalexin", b:["Keflex"], cls:"cephalosporin antibiotic", ind:"bacterial infection"},
-  {g:"azithromycin", b:["Zithromax"], cls:"macrolide antibiotic", ind:"bacterial infection"},
-  {g:"doxycycline", b:["Vibramycin"], cls:"tetracycline antibiotic", ind:"bacterial infection"},
-  {g:"fluconazole", b:["Diflucan"], cls:"antifungal", ind:"fungal infection"},
-  {g:"valacyclovir", b:["Valtrex"], cls:"antiviral", ind:"herpes"},
-  {g:"tamsulosin", b:["Flomax"], cls:"alpha-1 blocker", ind:"BPH"},
-  {g:"sildenafil", b:["Viagra"], cls:"PDE5 inhibitor", ind:"erectile dysfunction"},
-  {g:"prednisone", b:["Deltasone"], cls:"corticosteroid", ind:"inflammation"},
-  {g:"naproxen", b:["Naprosyn","Aleve"], cls:"NSAID", ind:"pain/inflammation"},
-];
-
-const SUFFIX_RULES = [
-  {suffix:"-pril", cls:"ACE inhibitor"},
-  {suffix:"-sartan", cls:"ARB"},
-  {suffix:"-olol", cls:"beta blocker"},
-  {suffix:"-statin", cls:"statin"},
-  {suffix:"-prazole", cls:"PPI"},
-  {suffix:"-cycline", cls:"tetracycline antibiotic"},
-  {suffix:"-vir", cls:"antiviral"},
-  {suffix:"-azole", cls:"antifungal"},
-  {suffix:"-setron", cls:"antiemetic (5-HT3 antagonist)"},
-  {suffix:"-caine", cls:"local anesthetic"}
-];
-
-const LASA_PAIRS = [
-  ["hydralazine","hydroxyzine"],
-  ["dopamine","dobutamine"],
-  ["clonidine","clozapine"],
-  ["vinblastine","vincristine"],
-  ["prednisone","prednisolone"]
-];
-
-const CONVERSIONS = [
-  {q:"1 g equals:", a:"1000 mg"},
-  {q:"1 mg equals:", a:"1000 mcg"},
-  {q:"1 kg equals:", a:"1000 g"},
-  {q:"Convert lb to kg:", a:"kg = lb ÷ 2.2"},
-  {q:"1 tsp equals:", a:"5 mL"},
-  {q:"1 tbsp equals:", a:"15 mL"},
-  {q:"30 mL is approximately:", a:"1 fl oz"},
-];
-
-function buildMedicationPool(){
-  const gens = MEDS.map(m=>m.g);
-  const brands = uniqBy(MEDS.flatMap(m=>m.b), x=>x.toLowerCase());
-  const classes = uniqBy(MEDS.map(m=>m.cls), x=>x.toLowerCase());
-  const inds = uniqBy(MEDS.map(m=>m.ind), x=>x.toLowerCase());
-  const out = [];
-
-  for(const m of MEDS){
-    out.push(makeFixed(DOMAIN.MED,
-      `Which brand name corresponds to the generic <b>${htmlEscape(m.g)}</b>?`,
-      pick(m.b),
-      shuffle(brands.filter(x=>!m.b.map(y=>y.toLowerCase()).includes(x.toLowerCase()))).slice(0,3)
-    ));
-    for(const b of m.b){
-      out.push(makeFixed(DOMAIN.MED,
-        `Which generic corresponds to the brand <b>${htmlEscape(b)}</b>?`,
-        m.g,
-        shuffle(gens.filter(x=>x.toLowerCase()!==m.g.toLowerCase())).slice(0,3)
-      ));
-    }
-    out.push(makeFixed(DOMAIN.MED,
-      `A common indication for <b>${htmlEscape(m.g)}</b> is:`,
-      m.ind,
-      shuffle(inds.filter(x=>x.toLowerCase()!==m.ind.toLowerCase())).slice(0,3)
-    ));
-    out.push(makeFixed(DOMAIN.MED,
-      `<b>${htmlEscape(m.g)}</b> is best classified as a(n):`,
-      m.cls,
-      shuffle(classes.filter(x=>x.toLowerCase()!==m.cls.toLowerCase())).slice(0,3)
-    ));
-  }
-
-  for(const r of SUFFIX_RULES){
-    const wrong = shuffle(SUFFIX_RULES.filter(x=>x.suffix!==r.suffix).map(x=>x.suffix)).slice(0,3);
-    out.push(makeFixed(DOMAIN.MED,
-      `Which suffix most commonly suggests a <b>${htmlEscape(r.cls)}</b>?`,
-      r.suffix,
-      wrong
-    ));
-  }
-
-  for(const [a,b] of LASA_PAIRS){
-    const other = shuffle(gens.filter(x=>x!==a && x!==b)).slice(0,2);
-    out.push(makeFixed(DOMAIN.MED,
-      "Which pair is a common look-alike/sound-alike (LASA) risk?",
-      `${a} / ${b}`,
-      [`${a} / ${other[0]}`, `${other[0]} / ${other[1]}`, `${b} / ${other[1]}`]
-    ));
-  }
-
-  out.push(makeFixed(DOMAIN.MED,
-    "Which medication class is commonly considered <b>high-alert</b> due to risk of severe harm if misused?",
-    "Insulins",
-    ["Stool softeners","Topical antibiotics","Antihistamines"]
-  ));
-
-  return uniqBy(out, q=>q.id);
-}
-
-function buildSafetyPool(){
-  const out = [];
-  const fixed = [
-    ["USP <797> primarily covers:", "Sterile compounding", ["Non-sterile compounding","Hazardous drugs only","Insurance billing"]],
-    ["USP <795> primarily covers:", "Non-sterile compounding", ["Sterile compounding","Hazardous drugs only","DSCSA"]],
-    ["USP <800> primarily covers:", "Hazardous drug handling and safety", ["Sterile compounding only","Insurance requirements","Controlled substance scheduling"]],
-    ["First step in garbing (best practice) is typically:", "Hand hygiene", ["Don gloves","Apply shoe covers","Put on outer gown"]],
-    ["LASA means:", "Look-alike/sound-alike", ["Long-acting/short-acting","Label-all/store-all","Lot-and-serial-audit"]],
-    ["Best practice: leading zero is:", "Write 0.5 mg (not .5 mg)", ["Write .5 mg only","Write 5.0 mg","Avoid decimals completely"]],
-    ["Best practice: trailing zero is:", "Avoid 5.0 mg; write 5 mg", ["Always write 5.0 mg","Write 5.00 mg","Use commas instead"]],
-    ["If a dose looks clinically unsafe, a technician should:", "Refer to the pharmacist for review", ["Change the dose","Fill as written","Call insurance first"]],
-    ["FDA MedWatch is used to report:", "Serious adverse events/product quality problems", ["Theft/loss to DEA","HIPAA violations","Prior authorization requests"]],
-    ["Tall-man lettering is used to:", "Reduce look-alike confusion", ["Increase reimbursement","Replace NDC","Mark controlled drugs only"]],
-  ];
-  for(const x of fixed) out.push(makeFixed(DOMAIN.SAFE, x[0], x[1], x[2]));
-  return uniqBy(out, q=>q.id);
-}
-
-function buildFederalPool(){
-  const out = [];
-  const fixed = [
-    ["DEA form for ordering Schedule II controlled substances:", "DEA Form 222", ["DEA Form 106","DEA Form 41","DEA Form 224"]],
-    ["DEA form to report theft/significant loss of controlled substances:", "DEA Form 106", ["DEA Form 222","DEA Form 41","DEA Form 224"]],
-    ["DEA form commonly associated with destruction documentation:", "DEA Form 41", ["DEA Form 222","DEA Form 106","DEA Form 224"]],
-    ["DEA Form 224 is associated with:", "Registration of controlled substance handlers", ["Ordering Schedule II","Reporting theft/loss","Prescription transfers"]],
-    ["Schedule II prescriptions federally:", "Cannot be refilled", ["Up to 5 refills in 6 months","Unlimited refills","Refill if pharmacist approves"]],
-    ["Typical federal rule for Schedule III–V refills:", "Up to 5 refills within 6 months", ["Unlimited refills","No refills allowed","Exactly 2 refills"]],
-    ["HIPAA primarily protects:", "Patient health information privacy", ["Drug pricing rules","DEA scheduling","NDC formatting"]],
-    ["HIPAA 'minimum necessary' means:", "Only disclose PHI needed for the task", ["Always disclose full profile","Never disclose any PHI","Only pharmacists can see PHI"]],
-    ["DSCSA mainly addresses:", "Drug supply chain security/traceability", ["Only controlled diversion","Insurance formularies","Patient counseling"]],
-    ["A prior authorization (PA) is required when:", "Plan needs approval before coverage", ["Patient wants a cash price","Printer is down","NDC is missing"]],
-    ["A refill-too-soon rejection: best first step is:", "Verify last fill date and days supply", ["Override immediately","Dispense without billing","Change drug without prescriber"]],
-  ];
-  for(const x of fixed) out.push(makeFixed(DOMAIN.FED, x[0], x[1], x[2]));
-  return uniqBy(out, q=>q.id);
-}
-
-function buildOrderPool(){
-  const out = [];
-  const wrongPool = ["10 mg","100 mg","1 mg","10 mcg","100 mcg","1 mcg","1 mL","10 mL","30 mL","2 fl oz","0.5 fl oz","kg = lb × 2.2","1 oz","8 mL","1000 g"];
-  for(const c of CONVERSIONS){
-    out.push(makeFixed(DOMAIN.ORDER, c.q, c.a, shuffle(wrongPool.filter(x=>x!==c.a)).slice(0,3)));
-  }
-
-  function genPedsMgKg(){
-    const lb = pick([22,33,44,55,66,77,88,99]);
-    const kg = Math.round(lb/2.2);
-    const mgkg = pick([5,10,15,20,25]);
-    const doses = pick([2,3,4]);
-    const daily = kg*mgkg;
-    const perDose = Math.round(daily/doses);
-    const stem = `Scenario: Child weighs <b>${lb} lb</b> (round to nearest kg). Rx: <b>${mgkg} mg/kg/day</b> divided <b>${doses} doses/day</b>. What is <b>mg per dose</b>?`;
-    const correct = `${perDose} mg per dose`;
-    const wrong = [`${daily} mg per dose`, `${Math.round(perDose/2)} mg per dose`, `${perDose*2} mg per dose`];
-    return makeFixed(DOMAIN.ORDER, stem, correct, wrong);
-  }
-  function genDaysSupply(){
-    const perDay = pick([1,2,3,4]);
-    const days = pick([7,10,14,30]);
-    const qty = perDay*days;
-    const freq = perDay===1?"once daily":perDay===2?"BID":perDay===3?"TID":"QID";
-    const stem = `Rx: Take 1 tablet <b>${freq}</b> for <b>${days} days</b>. What quantity is needed?`;
-    const correct = `${qty} tablets`;
-    const wrong = [`${days} tablets`, `${qty+perDay} tablets`, `${qty-perDay} tablets`];
-    return makeFixed(DOMAIN.ORDER, stem, correct, wrong);
-  }
-  function genIVRate(){
-    const vol = pick([250,500,750,1000,1250]);
-    const hrs = pick([2,4,6,8,10]);
-    const rate = Math.round(vol/hrs);
-    const stem = `IV infusion: <b>${vol} mL</b> over <b>${hrs} hours</b>. What is the rate (mL/hr)?`;
-    const correct = `${rate} mL/hr`;
-    const wrong = [`${vol} mL/hr`, `${hrs} mL/hr`, `${Math.round(rate*1.5)} mL/hr`];
-    return makeFixed(DOMAIN.ORDER, stem, correct, wrong);
-  }
-
-  for(let i=0;i<140;i++){
-    const r = Math.random();
-    if(r<0.34) out.push(genPedsMgKg());
-    else if(r<0.68) out.push(genDaysSupply());
-    else out.push(genIVRate());
-  }
-
-  out.push(makeFixed(DOMAIN.ORDER,
-    "DAW indicates:",
-    "Dispense As Written/substitution instruction",
-    ["Drug assay weight","Dose after withdrawal","DEA audit window"]
-  ));
-  out.push(makeFixed(DOMAIN.ORDER,
-    "If insurance rejects 'Refill too soon', best first action:",
-    "Verify last fill date, days supply, and entry accuracy",
-    ["Override immediately","Dispense without billing","Change drug without prescriber"]
-  ));
-
-  return uniqBy(out, q=>q.id);
-}
-
-/* =========================
-   BUILD EXAM (with optional RxNav extras)
-   ========================= */
-async function buildExam(){
-  statusEl.textContent = "Building question set…";
-
-  const medPool = buildMedicationPool();
-  const safePool = buildSafetyPool();
-  const orderPool = buildOrderPool();
-  const fedPool = buildFederalPool();
-
-  let rxAdds = [];
-  const useRxNav = document.getElementById("optRxNav").checked;
-  if(useRxNav){
-    statusEl.textContent = "RxNav enabled — fetching a few extras (optional)…";
-    try{
-      const allBrands = uniqBy(MEDS.flatMap(m=>m.b), x=>x.toLowerCase());
-      const seeds = shuffle(RX_SEEDS.slice()).slice(0,10);
-      for(const ing of seeds){
-        const brands = await withTimeout((signal)=>rxnavBrandsForIngredient(ing, signal), 6500).catch(()=>[]);
-        if(brands && brands.length){
-          const brand = pick(brands.slice(0,10));
-          const wrong = shuffle(allBrands.filter(x=>x.toLowerCase()!==brand.toLowerCase())).slice(0,3);
-          rxAdds.push(makeFixed(DOMAIN.MED,
-            `(RxNav) Which brand corresponds to the generic <b>${htmlEscape(ing)}</b>?`,
-            brand,
-            wrong
-          ));
-        }
-        if(rxAdds.length>=8) break;
-      }
-    }catch(e){
-      rxAdds = [];
-    }
-  }
-
-  const medsMerged = uniqBy(rxAdds.concat(medPool), q=>q.id);
-  function pickN(pool, n){ return shuffle(pool.slice()).slice(0,n); }
-
-  questions = []
-    .concat(pickN(medsMerged, COUNTS.MED))
-    .concat(pickN(safePool, COUNTS.SAFE))
-    .concat(pickN(orderPool, COUNTS.ORDER))
-    .concat(pickN(fedPool, COUNTS.FED))
-    .slice(0, TOTAL);
-
-  if(document.getElementById("optShuffleQ").checked){
-    shuffle(questions);
-  }
-
-  statusEl.textContent = "";
-}
-
-/* =========================
-   TIMER
-   ========================= */
-function startTimer(){
-  stopTimer();
-  document.getElementById("timerPill").style.display = timed ? "" : "none";
-  document.getElementById("timerText").textContent = fmtTime(timeLeft);
-  if(!timed) return;
-
-  timer = setInterval(()=>{
-    timeLeft--;
-    document.getElementById("timerText").textContent = fmtTime(Math.max(0,timeLeft));
-    if(timeLeft<=0){
-      stopTimer();
-      submitTest(true);
-    }
-  }, 1000);
-}
-function stopTimer(){
-  if(timer){
-    clearInterval(timer);
-    timer = null;
-  }
-}
-
-/* =========================
-   TIP SYSTEM (50/50)
-   ========================= */
-function useTip(){
-  if(!tipsEnabled) return;
-  if(tipsRemaining<=0) return;
-  if(eliminated.has(idx)) return;
-
-  beep(1200,0.08);
-
-  const q = questions[idx];
-  const wrongIdx = [0,1,2,3].filter(i=>i!==q.answerIndex);
-  shuffle(wrongIdx);
-
-  const elim = new Set([wrongIdx[0], wrongIdx[1]]);
-  eliminated.set(idx, elim);
-  tipsRemaining--;
-
-  // if user selected an eliminated option, clear it
-  const a = answers.get(idx);
-  if(a!==undefined && elim.has(a)){
-    answers.delete(idx);
-  }
-
-  updateTop();
-  renderQuestion();
-}
-
-/* =========================
-   RENDER TEST
-   ========================= */
-function renderQuestion(){
-  const q = questions[idx];
-  updateTop();
-
-  document.getElementById("question").innerHTML = q.stemHTML;
-
-  const selected = answers.get(idx);
-  const groupName = `q_${idx}`; // unique per question (fixes “answering two at once”)
-  const elim = eliminated.get(idx) || new Set();
-
-  document.getElementById("choices").innerHTML = q.choices.map((c,i)=>{
-    const checked = (selected===i) ? "checked" : "";
-    const isDisabled = elim.has(i);
-    const disabledAttr = isDisabled ? "disabled" : "";
-    const disabledClass = isDisabled ? "disabled" : "";
-    const click = isDisabled ? "" : `onclick="selectAnswer(${idx},${i})"`;
-    return `
-      <div class="choice ${disabledClass}" ${click}>
-        <label class="lbl">
-          <input type="radio" name="${groupName}" ${checked} ${disabledAttr}
-                 onchange="selectAnswer(${idx},${i})" />
-          <div>${c}</div>
-        </label>
-      </div>
-    `;
-  }).join("");
-
-  renderNav();
-}
-function renderNav(){
-  document.getElementById("nav").innerHTML = questions.map((_,i)=>{
-    const cls = [
-      "navbtn",
-      answers.has(i) ? "answered" : "",
-      flags.has(i) ? "flagged" : "",
-      i===idx ? "current" : ""
-    ].join(" ");
-    return `<div class="${cls}" onclick="gotoQ(${i})">${i+1}</div>`;
-  }).join("");
-}
-function selectAnswer(qIndex, choiceIndex){
-  const elim = eliminated.get(qIndex);
-  if(elim && elim.has(choiceIndex)) return;
-  answers.set(qIndex, choiceIndex);
-  beep(700,0.03);
-  updateTop();
-  renderNav();
-}
-function gotoQ(i){ idx = i; beep(900,0.04); renderQuestion(); }
-function nextQ(){ if(idx < TOTAL-1){ idx++; beep(900,0.04); renderQuestion(); } }
-function prevQ(){ if(idx > 0){ idx--; beep(500,0.04); renderQuestion(); } }
-function toggleFlag(){
-  beep(620,0.03);
-  if(flags.has(idx)) flags.delete(idx);
-  else flags.add(idx);
-  updateTop();
-  renderNav();
-}
-
-/* =========================
-   RESULTS (separate page)
-   ========================= */
-function submitTest(fromTimer=false){
-  beep(300,0.15);
-  stopTimer();
-
-  let correct=0, incorrect=0, blank=0;
-  const domainStats = {
-    [DOMAIN.MED]: {total:0, correct:0},
-    [DOMAIN.SAFE]: {total:0, correct:0},
-    [DOMAIN.ORDER]: {total:0, correct:0},
-    [DOMAIN.FED]: {total:0, correct:0},
-  };
-
-  for(let i=0;i<questions.length;i++){
-    const q = questions[i];
-    domainStats[q.domain].total++;
-
-    const a = answers.get(i);
-    if(a===undefined){
-      blank++;
-      continue;
-    }
-    if(a===q.answerIndex){
-      correct++;
-      domainStats[q.domain].correct++;
-    }else{
-      incorrect++;
-    }
-  }
-
-  const pct = Math.round((correct/TOTAL)*100);
-  const timeMsg = fromTimer ? "<span class='pill'>Time expired</span>" : "";
-  document.getElementById("scoreSummary").innerHTML = `
-    <div class="row space">
-      <div class="row">
-        <span class="pill">Score <b>${correct}</b>/<b>${TOTAL}</b> (<b>${pct}%</b>)</span>
-        <span class="pill">Incorrect <b>${incorrect}</b></span>
-        <span class="pill">Blank <b>${blank}</b></span>
-        ${timeMsg}
-      </div>
-      <div class="muted"><small>Tip: review flagged + incorrect first.</small></div>
-    </div>
-  `;
-
-  const bd = [];
-  for(const k of [DOMAIN.MED, DOMAIN.SAFE, DOMAIN.ORDER, DOMAIN.FED]){
-    const st = domainStats[k];
-    const p = st.total ? Math.round((st.correct/st.total)*100) : 0;
-    bd.push(`<span class="pill">${k}: <b>${st.correct}</b>/<b>${st.total}</b> (${p}%)</span>`);
-  }
-  document.getElementById("domainBreakdown").innerHTML = `<div class="row">${bd.join("")}</div>`;
-
-  const tbody = document.getElementById("reviewTable");
-  tbody.innerHTML = "";
-  for(let i=0;i<questions.length;i++){
-    const q = questions[i];
-    const a = answers.get(i);
-    const your = (a===undefined) ? "(blank)" : stripHtml(q.choices[a]);
-    const corr = stripHtml(q.choices[q.answerIndex]);
-    const status = (a===undefined) ? "Blank" : (a===q.answerIndex ? "Correct" : "Incorrect");
-    const statusColor = (status==="Correct") ? "color:var(--good)" : (status==="Incorrect") ? "color:var(--bad)" : "color:var(--warn)";
-    const shortPrompt = stripHtml(q.stemHTML).slice(0,120) + (stripHtml(q.stemHTML).length>120 ? "…" : "");
-
-    const tr = document.createElement("tr");
-    tr.style.cursor="pointer";
-    tr.onclick = ()=>{ setView("test"); idx = i; renderQuestion(); };
-    tr.innerHTML = `
-      <td>${i+1}</td>
-      <td>${q.domain}</td>
-      <td>${htmlEscape(shortPrompt)}</td>
-      <td>${htmlEscape(your)}</td>
-      <td>${htmlEscape(corr)}</td>
-      <td style="${statusColor}; font-weight:1000;">${status}${flags.has(i) ? " (flagged)" : ""}</td>
-    `;
-    tbody.appendChild(tr);
-  }
-
-  setView("results");
-}
-
-/* =========================
-   MENU FLOW
-   ========================= */
-async function startTest(){
-  setView("test");
-
-  timed = document.getElementById("optTimed").checked;
-  const minutes = parseInt(document.getElementById("timeSelect").value, 10);
-  timeLeft = minutes * 60;
-
-  tipsEnabled = document.getElementById("optTips").checked;
-  tipsRemaining = tipsEnabled ? 5 : 0;
-  eliminated = new Map();
-
-  answers = new Map();
-  flags = new Set();
-  idx = 0;
-
-  document.getElementById("choices").innerHTML = "";
-  document.getElementById("question").textContent = "Loading questions…";
-  document.getElementById("timerPill").style.display = timed ? "" : "none";
-  document.getElementById("timerText").textContent = fmtTime(timeLeft);
-
-  await buildExam();
-  startTimer();
-  updateTop();
-  renderQuestion();
-}
-function restartTest(){ startTest(); }
-function goMenu(){
-  stopTimer();
-  statusEl.textContent = "";
-  setView("menu");
-}
-
-/* =========================
-   FLASHCARDS
-   ========================= */
-let flashDeck = [];
-let flashDeckName = "";
-let fIndex = 0;
-let fFront = true;
-
-function goFlashHome(){
-  stopTimer();
-  setView("flashHome");
-}
-
-function buildFlashDeck(type){
-  const cards = [];
-
-  for(const m of MEDS){
-    cards.push({deck:"MED", front:`Brand for: ${m.g}`, back:m.b.join(", ")});
-    for(const b of m.b) cards.push({deck:"MED", front:`Generic for: ${b}`, back:m.g});
-    cards.push({deck:"MED", front:`Class: ${m.g}`, back:m.cls});
-    cards.push({deck:"MED", front:`Use: ${m.g}`, back:m.ind});
-  }
-  for(const r of SUFFIX_RULES){
-    cards.push({deck:"MED", front:`Suffix ${r.suffix} suggests`, back:r.cls});
-  }
-  for(const [a,b] of LASA_PAIRS){
-    cards.push({deck:"MED", front:`LASA pair`, back:`${a} / ${b}`});
-  }
-
-  cards.push({deck:"SAFE", front:"USP <795>", back:"Non-sterile compounding"});
-  cards.push({deck:"SAFE", front:"USP <797>", back:"Sterile compounding"});
-  cards.push({deck:"SAFE", front:"USP <800>", back:"Hazardous drug handling safety"});
-  cards.push({deck:"SAFE", front:"Leading zero", back:"Use 0.5 (not .5)"});
-  cards.push({deck:"SAFE", front:"Trailing zero", back:"Avoid 5.0; write 5"});
-
-  for(const c of CONVERSIONS){
-    cards.push({deck:"ORDER", front:c.q, back:c.a});
-  }
-  cards.push({deck:"ORDER", front:"DAW", back:"Dispense As Written (substitution instruction)"});
-  cards.push({deck:"ORDER", front:"Refill too soon", back:"Verify last fill + days supply first"});
-
-  cards.push({deck:"FED", front:"DEA Form 222", back:"Ordering Schedule II controlled substances"});
-  cards.push({deck:"FED", front:"DEA Form 106", back:"Report theft/significant loss"});
-  cards.push({deck:"FED", front:"DEA Form 41", back:"Controlled substance destruction documentation"});
-  cards.push({deck:"FED", front:"DEA Form 224", back:"Controlled substance registration"});
-  cards.push({deck:"FED", front:"HIPAA", back:"Protects PHI privacy; minimum necessary standard"});
-  cards.push({deck:"FED", front:"DSCSA", back:"Supply chain traceability/security"});
-
-  let deck;
-  if(type==="MIX") deck = cards;
-  else deck = cards.filter(c=>c.deck===type);
-
-  flashDeck = shuffle(deck.slice());
-  flashDeckName =
-    type==="MED" ? "Medications" :
-    type==="SAFE" ? "Patient Safety" :
-    type==="ORDER" ? "Order Entry / Math" :
-    type==="FED" ? "Federal" : "Mixed";
-
-  fIndex = 0;
-  fFront = true;
-}
-
-function openFlash(type){
-  beep(880,0.04);
-  setView("flash");
-  buildFlashDeck(type);
-  document.getElementById("flashDeckName").textContent = flashDeckName;
-  renderFlash();
-}
-
-function renderFlash(){
-  const total = Math.max(1, flashDeck.length);
-  const card = flashDeck[fIndex] || {front:"No cards", back:"—"};
-  document.getElementById("flashPos").textContent = String(fIndex+1);
-  document.getElementById("flashTotal").textContent = String(total);
-  document.getElementById("flashSide").textContent = fFront ? "Front" : "Back";
-  document.getElementById("flashCard").textContent = fFront ? card.front : card.back;
-}
-document.getElementById("flashCard").onclick = ()=>{
-  beep(740,0.03);
-  fFront = !fFront;
-  renderFlash();
-};
-function nextFlash(){
-  beep(900,0.04);
-  if(!flashDeck.length) return;
-  fIndex = (fIndex + 1) % flashDeck.length;
-  fFront = true;
-  renderFlash();
-}
-
-/* =========================
-   INIT
-   ========================= */
-setView("menu");
 </script>
+
 </body>
 </html>
