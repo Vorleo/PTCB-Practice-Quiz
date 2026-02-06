@@ -1,0 +1,4002 @@
+[
+  {
+    "question": "MED Question 0?",
+    "correct": "MED Correct 0",
+    "wrong": [
+      "MED Wrong 0A",
+      "MED Wrong 0B",
+      "MED Wrong 0C"
+    ],
+    "explanation": "MED Correct 0 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 1?",
+    "correct": "MED Correct 1",
+    "wrong": [
+      "MED Wrong 1A",
+      "MED Wrong 1B",
+      "MED Wrong 1C"
+    ],
+    "explanation": "MED Correct 1 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 2?",
+    "correct": "MED Correct 2",
+    "wrong": [
+      "MED Wrong 2A",
+      "MED Wrong 2B",
+      "MED Wrong 2C"
+    ],
+    "explanation": "MED Correct 2 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 3?",
+    "correct": "MED Correct 3",
+    "wrong": [
+      "MED Wrong 3A",
+      "MED Wrong 3B",
+      "MED Wrong 3C"
+    ],
+    "explanation": "MED Correct 3 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 4?",
+    "correct": "MED Correct 4",
+    "wrong": [
+      "MED Wrong 4A",
+      "MED Wrong 4B",
+      "MED Wrong 4C"
+    ],
+    "explanation": "MED Correct 4 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 5?",
+    "correct": "MED Correct 5",
+    "wrong": [
+      "MED Wrong 5A",
+      "MED Wrong 5B",
+      "MED Wrong 5C"
+    ],
+    "explanation": "MED Correct 5 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 6?",
+    "correct": "MED Correct 6",
+    "wrong": [
+      "MED Wrong 6A",
+      "MED Wrong 6B",
+      "MED Wrong 6C"
+    ],
+    "explanation": "MED Correct 6 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 7?",
+    "correct": "MED Correct 7",
+    "wrong": [
+      "MED Wrong 7A",
+      "MED Wrong 7B",
+      "MED Wrong 7C"
+    ],
+    "explanation": "MED Correct 7 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 8?",
+    "correct": "MED Correct 8",
+    "wrong": [
+      "MED Wrong 8A",
+      "MED Wrong 8B",
+      "MED Wrong 8C"
+    ],
+    "explanation": "MED Correct 8 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 9?",
+    "correct": "MED Correct 9",
+    "wrong": [
+      "MED Wrong 9A",
+      "MED Wrong 9B",
+      "MED Wrong 9C"
+    ],
+    "explanation": "MED Correct 9 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 10?",
+    "correct": "MED Correct 10",
+    "wrong": [
+      "MED Wrong 10A",
+      "MED Wrong 10B",
+      "MED Wrong 10C"
+    ],
+    "explanation": "MED Correct 10 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 11?",
+    "correct": "MED Correct 11",
+    "wrong": [
+      "MED Wrong 11A",
+      "MED Wrong 11B",
+      "MED Wrong 11C"
+    ],
+    "explanation": "MED Correct 11 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 12?",
+    "correct": "MED Correct 12",
+    "wrong": [
+      "MED Wrong 12A",
+      "MED Wrong 12B",
+      "MED Wrong 12C"
+    ],
+    "explanation": "MED Correct 12 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 13?",
+    "correct": "MED Correct 13",
+    "wrong": [
+      "MED Wrong 13A",
+      "MED Wrong 13B",
+      "MED Wrong 13C"
+    ],
+    "explanation": "MED Correct 13 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 14?",
+    "correct": "MED Correct 14",
+    "wrong": [
+      "MED Wrong 14A",
+      "MED Wrong 14B",
+      "MED Wrong 14C"
+    ],
+    "explanation": "MED Correct 14 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 15?",
+    "correct": "MED Correct 15",
+    "wrong": [
+      "MED Wrong 15A",
+      "MED Wrong 15B",
+      "MED Wrong 15C"
+    ],
+    "explanation": "MED Correct 15 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 16?",
+    "correct": "MED Correct 16",
+    "wrong": [
+      "MED Wrong 16A",
+      "MED Wrong 16B",
+      "MED Wrong 16C"
+    ],
+    "explanation": "MED Correct 16 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 17?",
+    "correct": "MED Correct 17",
+    "wrong": [
+      "MED Wrong 17A",
+      "MED Wrong 17B",
+      "MED Wrong 17C"
+    ],
+    "explanation": "MED Correct 17 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 18?",
+    "correct": "MED Correct 18",
+    "wrong": [
+      "MED Wrong 18A",
+      "MED Wrong 18B",
+      "MED Wrong 18C"
+    ],
+    "explanation": "MED Correct 18 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 19?",
+    "correct": "MED Correct 19",
+    "wrong": [
+      "MED Wrong 19A",
+      "MED Wrong 19B",
+      "MED Wrong 19C"
+    ],
+    "explanation": "MED Correct 19 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 20?",
+    "correct": "MED Correct 20",
+    "wrong": [
+      "MED Wrong 20A",
+      "MED Wrong 20B",
+      "MED Wrong 20C"
+    ],
+    "explanation": "MED Correct 20 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 21?",
+    "correct": "MED Correct 21",
+    "wrong": [
+      "MED Wrong 21A",
+      "MED Wrong 21B",
+      "MED Wrong 21C"
+    ],
+    "explanation": "MED Correct 21 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 22?",
+    "correct": "MED Correct 22",
+    "wrong": [
+      "MED Wrong 22A",
+      "MED Wrong 22B",
+      "MED Wrong 22C"
+    ],
+    "explanation": "MED Correct 22 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 23?",
+    "correct": "MED Correct 23",
+    "wrong": [
+      "MED Wrong 23A",
+      "MED Wrong 23B",
+      "MED Wrong 23C"
+    ],
+    "explanation": "MED Correct 23 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 24?",
+    "correct": "MED Correct 24",
+    "wrong": [
+      "MED Wrong 24A",
+      "MED Wrong 24B",
+      "MED Wrong 24C"
+    ],
+    "explanation": "MED Correct 24 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 25?",
+    "correct": "MED Correct 25",
+    "wrong": [
+      "MED Wrong 25A",
+      "MED Wrong 25B",
+      "MED Wrong 25C"
+    ],
+    "explanation": "MED Correct 25 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 26?",
+    "correct": "MED Correct 26",
+    "wrong": [
+      "MED Wrong 26A",
+      "MED Wrong 26B",
+      "MED Wrong 26C"
+    ],
+    "explanation": "MED Correct 26 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 27?",
+    "correct": "MED Correct 27",
+    "wrong": [
+      "MED Wrong 27A",
+      "MED Wrong 27B",
+      "MED Wrong 27C"
+    ],
+    "explanation": "MED Correct 27 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 28?",
+    "correct": "MED Correct 28",
+    "wrong": [
+      "MED Wrong 28A",
+      "MED Wrong 28B",
+      "MED Wrong 28C"
+    ],
+    "explanation": "MED Correct 28 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 29?",
+    "correct": "MED Correct 29",
+    "wrong": [
+      "MED Wrong 29A",
+      "MED Wrong 29B",
+      "MED Wrong 29C"
+    ],
+    "explanation": "MED Correct 29 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 30?",
+    "correct": "MED Correct 30",
+    "wrong": [
+      "MED Wrong 30A",
+      "MED Wrong 30B",
+      "MED Wrong 30C"
+    ],
+    "explanation": "MED Correct 30 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 31?",
+    "correct": "MED Correct 31",
+    "wrong": [
+      "MED Wrong 31A",
+      "MED Wrong 31B",
+      "MED Wrong 31C"
+    ],
+    "explanation": "MED Correct 31 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 32?",
+    "correct": "MED Correct 32",
+    "wrong": [
+      "MED Wrong 32A",
+      "MED Wrong 32B",
+      "MED Wrong 32C"
+    ],
+    "explanation": "MED Correct 32 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 33?",
+    "correct": "MED Correct 33",
+    "wrong": [
+      "MED Wrong 33A",
+      "MED Wrong 33B",
+      "MED Wrong 33C"
+    ],
+    "explanation": "MED Correct 33 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 34?",
+    "correct": "MED Correct 34",
+    "wrong": [
+      "MED Wrong 34A",
+      "MED Wrong 34B",
+      "MED Wrong 34C"
+    ],
+    "explanation": "MED Correct 34 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 35?",
+    "correct": "MED Correct 35",
+    "wrong": [
+      "MED Wrong 35A",
+      "MED Wrong 35B",
+      "MED Wrong 35C"
+    ],
+    "explanation": "MED Correct 35 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 36?",
+    "correct": "MED Correct 36",
+    "wrong": [
+      "MED Wrong 36A",
+      "MED Wrong 36B",
+      "MED Wrong 36C"
+    ],
+    "explanation": "MED Correct 36 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 37?",
+    "correct": "MED Correct 37",
+    "wrong": [
+      "MED Wrong 37A",
+      "MED Wrong 37B",
+      "MED Wrong 37C"
+    ],
+    "explanation": "MED Correct 37 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 38?",
+    "correct": "MED Correct 38",
+    "wrong": [
+      "MED Wrong 38A",
+      "MED Wrong 38B",
+      "MED Wrong 38C"
+    ],
+    "explanation": "MED Correct 38 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 39?",
+    "correct": "MED Correct 39",
+    "wrong": [
+      "MED Wrong 39A",
+      "MED Wrong 39B",
+      "MED Wrong 39C"
+    ],
+    "explanation": "MED Correct 39 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 40?",
+    "correct": "MED Correct 40",
+    "wrong": [
+      "MED Wrong 40A",
+      "MED Wrong 40B",
+      "MED Wrong 40C"
+    ],
+    "explanation": "MED Correct 40 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 41?",
+    "correct": "MED Correct 41",
+    "wrong": [
+      "MED Wrong 41A",
+      "MED Wrong 41B",
+      "MED Wrong 41C"
+    ],
+    "explanation": "MED Correct 41 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 42?",
+    "correct": "MED Correct 42",
+    "wrong": [
+      "MED Wrong 42A",
+      "MED Wrong 42B",
+      "MED Wrong 42C"
+    ],
+    "explanation": "MED Correct 42 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 43?",
+    "correct": "MED Correct 43",
+    "wrong": [
+      "MED Wrong 43A",
+      "MED Wrong 43B",
+      "MED Wrong 43C"
+    ],
+    "explanation": "MED Correct 43 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 44?",
+    "correct": "MED Correct 44",
+    "wrong": [
+      "MED Wrong 44A",
+      "MED Wrong 44B",
+      "MED Wrong 44C"
+    ],
+    "explanation": "MED Correct 44 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 45?",
+    "correct": "MED Correct 45",
+    "wrong": [
+      "MED Wrong 45A",
+      "MED Wrong 45B",
+      "MED Wrong 45C"
+    ],
+    "explanation": "MED Correct 45 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 46?",
+    "correct": "MED Correct 46",
+    "wrong": [
+      "MED Wrong 46A",
+      "MED Wrong 46B",
+      "MED Wrong 46C"
+    ],
+    "explanation": "MED Correct 46 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 47?",
+    "correct": "MED Correct 47",
+    "wrong": [
+      "MED Wrong 47A",
+      "MED Wrong 47B",
+      "MED Wrong 47C"
+    ],
+    "explanation": "MED Correct 47 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 48?",
+    "correct": "MED Correct 48",
+    "wrong": [
+      "MED Wrong 48A",
+      "MED Wrong 48B",
+      "MED Wrong 48C"
+    ],
+    "explanation": "MED Correct 48 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 49?",
+    "correct": "MED Correct 49",
+    "wrong": [
+      "MED Wrong 49A",
+      "MED Wrong 49B",
+      "MED Wrong 49C"
+    ],
+    "explanation": "MED Correct 49 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 50?",
+    "correct": "MED Correct 50",
+    "wrong": [
+      "MED Wrong 50A",
+      "MED Wrong 50B",
+      "MED Wrong 50C"
+    ],
+    "explanation": "MED Correct 50 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 51?",
+    "correct": "MED Correct 51",
+    "wrong": [
+      "MED Wrong 51A",
+      "MED Wrong 51B",
+      "MED Wrong 51C"
+    ],
+    "explanation": "MED Correct 51 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 52?",
+    "correct": "MED Correct 52",
+    "wrong": [
+      "MED Wrong 52A",
+      "MED Wrong 52B",
+      "MED Wrong 52C"
+    ],
+    "explanation": "MED Correct 52 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 53?",
+    "correct": "MED Correct 53",
+    "wrong": [
+      "MED Wrong 53A",
+      "MED Wrong 53B",
+      "MED Wrong 53C"
+    ],
+    "explanation": "MED Correct 53 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 54?",
+    "correct": "MED Correct 54",
+    "wrong": [
+      "MED Wrong 54A",
+      "MED Wrong 54B",
+      "MED Wrong 54C"
+    ],
+    "explanation": "MED Correct 54 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 55?",
+    "correct": "MED Correct 55",
+    "wrong": [
+      "MED Wrong 55A",
+      "MED Wrong 55B",
+      "MED Wrong 55C"
+    ],
+    "explanation": "MED Correct 55 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 56?",
+    "correct": "MED Correct 56",
+    "wrong": [
+      "MED Wrong 56A",
+      "MED Wrong 56B",
+      "MED Wrong 56C"
+    ],
+    "explanation": "MED Correct 56 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 57?",
+    "correct": "MED Correct 57",
+    "wrong": [
+      "MED Wrong 57A",
+      "MED Wrong 57B",
+      "MED Wrong 57C"
+    ],
+    "explanation": "MED Correct 57 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 58?",
+    "correct": "MED Correct 58",
+    "wrong": [
+      "MED Wrong 58A",
+      "MED Wrong 58B",
+      "MED Wrong 58C"
+    ],
+    "explanation": "MED Correct 58 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 59?",
+    "correct": "MED Correct 59",
+    "wrong": [
+      "MED Wrong 59A",
+      "MED Wrong 59B",
+      "MED Wrong 59C"
+    ],
+    "explanation": "MED Correct 59 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 60?",
+    "correct": "MED Correct 60",
+    "wrong": [
+      "MED Wrong 60A",
+      "MED Wrong 60B",
+      "MED Wrong 60C"
+    ],
+    "explanation": "MED Correct 60 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 61?",
+    "correct": "MED Correct 61",
+    "wrong": [
+      "MED Wrong 61A",
+      "MED Wrong 61B",
+      "MED Wrong 61C"
+    ],
+    "explanation": "MED Correct 61 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 62?",
+    "correct": "MED Correct 62",
+    "wrong": [
+      "MED Wrong 62A",
+      "MED Wrong 62B",
+      "MED Wrong 62C"
+    ],
+    "explanation": "MED Correct 62 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 63?",
+    "correct": "MED Correct 63",
+    "wrong": [
+      "MED Wrong 63A",
+      "MED Wrong 63B",
+      "MED Wrong 63C"
+    ],
+    "explanation": "MED Correct 63 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 64?",
+    "correct": "MED Correct 64",
+    "wrong": [
+      "MED Wrong 64A",
+      "MED Wrong 64B",
+      "MED Wrong 64C"
+    ],
+    "explanation": "MED Correct 64 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 65?",
+    "correct": "MED Correct 65",
+    "wrong": [
+      "MED Wrong 65A",
+      "MED Wrong 65B",
+      "MED Wrong 65C"
+    ],
+    "explanation": "MED Correct 65 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 66?",
+    "correct": "MED Correct 66",
+    "wrong": [
+      "MED Wrong 66A",
+      "MED Wrong 66B",
+      "MED Wrong 66C"
+    ],
+    "explanation": "MED Correct 66 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 67?",
+    "correct": "MED Correct 67",
+    "wrong": [
+      "MED Wrong 67A",
+      "MED Wrong 67B",
+      "MED Wrong 67C"
+    ],
+    "explanation": "MED Correct 67 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 68?",
+    "correct": "MED Correct 68",
+    "wrong": [
+      "MED Wrong 68A",
+      "MED Wrong 68B",
+      "MED Wrong 68C"
+    ],
+    "explanation": "MED Correct 68 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 69?",
+    "correct": "MED Correct 69",
+    "wrong": [
+      "MED Wrong 69A",
+      "MED Wrong 69B",
+      "MED Wrong 69C"
+    ],
+    "explanation": "MED Correct 69 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 70?",
+    "correct": "MED Correct 70",
+    "wrong": [
+      "MED Wrong 70A",
+      "MED Wrong 70B",
+      "MED Wrong 70C"
+    ],
+    "explanation": "MED Correct 70 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 71?",
+    "correct": "MED Correct 71",
+    "wrong": [
+      "MED Wrong 71A",
+      "MED Wrong 71B",
+      "MED Wrong 71C"
+    ],
+    "explanation": "MED Correct 71 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 72?",
+    "correct": "MED Correct 72",
+    "wrong": [
+      "MED Wrong 72A",
+      "MED Wrong 72B",
+      "MED Wrong 72C"
+    ],
+    "explanation": "MED Correct 72 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 73?",
+    "correct": "MED Correct 73",
+    "wrong": [
+      "MED Wrong 73A",
+      "MED Wrong 73B",
+      "MED Wrong 73C"
+    ],
+    "explanation": "MED Correct 73 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 74?",
+    "correct": "MED Correct 74",
+    "wrong": [
+      "MED Wrong 74A",
+      "MED Wrong 74B",
+      "MED Wrong 74C"
+    ],
+    "explanation": "MED Correct 74 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 75?",
+    "correct": "MED Correct 75",
+    "wrong": [
+      "MED Wrong 75A",
+      "MED Wrong 75B",
+      "MED Wrong 75C"
+    ],
+    "explanation": "MED Correct 75 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 76?",
+    "correct": "MED Correct 76",
+    "wrong": [
+      "MED Wrong 76A",
+      "MED Wrong 76B",
+      "MED Wrong 76C"
+    ],
+    "explanation": "MED Correct 76 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 77?",
+    "correct": "MED Correct 77",
+    "wrong": [
+      "MED Wrong 77A",
+      "MED Wrong 77B",
+      "MED Wrong 77C"
+    ],
+    "explanation": "MED Correct 77 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 78?",
+    "correct": "MED Correct 78",
+    "wrong": [
+      "MED Wrong 78A",
+      "MED Wrong 78B",
+      "MED Wrong 78C"
+    ],
+    "explanation": "MED Correct 78 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 79?",
+    "correct": "MED Correct 79",
+    "wrong": [
+      "MED Wrong 79A",
+      "MED Wrong 79B",
+      "MED Wrong 79C"
+    ],
+    "explanation": "MED Correct 79 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 80?",
+    "correct": "MED Correct 80",
+    "wrong": [
+      "MED Wrong 80A",
+      "MED Wrong 80B",
+      "MED Wrong 80C"
+    ],
+    "explanation": "MED Correct 80 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 81?",
+    "correct": "MED Correct 81",
+    "wrong": [
+      "MED Wrong 81A",
+      "MED Wrong 81B",
+      "MED Wrong 81C"
+    ],
+    "explanation": "MED Correct 81 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 82?",
+    "correct": "MED Correct 82",
+    "wrong": [
+      "MED Wrong 82A",
+      "MED Wrong 82B",
+      "MED Wrong 82C"
+    ],
+    "explanation": "MED Correct 82 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 83?",
+    "correct": "MED Correct 83",
+    "wrong": [
+      "MED Wrong 83A",
+      "MED Wrong 83B",
+      "MED Wrong 83C"
+    ],
+    "explanation": "MED Correct 83 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 84?",
+    "correct": "MED Correct 84",
+    "wrong": [
+      "MED Wrong 84A",
+      "MED Wrong 84B",
+      "MED Wrong 84C"
+    ],
+    "explanation": "MED Correct 84 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 85?",
+    "correct": "MED Correct 85",
+    "wrong": [
+      "MED Wrong 85A",
+      "MED Wrong 85B",
+      "MED Wrong 85C"
+    ],
+    "explanation": "MED Correct 85 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 86?",
+    "correct": "MED Correct 86",
+    "wrong": [
+      "MED Wrong 86A",
+      "MED Wrong 86B",
+      "MED Wrong 86C"
+    ],
+    "explanation": "MED Correct 86 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 87?",
+    "correct": "MED Correct 87",
+    "wrong": [
+      "MED Wrong 87A",
+      "MED Wrong 87B",
+      "MED Wrong 87C"
+    ],
+    "explanation": "MED Correct 87 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 88?",
+    "correct": "MED Correct 88",
+    "wrong": [
+      "MED Wrong 88A",
+      "MED Wrong 88B",
+      "MED Wrong 88C"
+    ],
+    "explanation": "MED Correct 88 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 89?",
+    "correct": "MED Correct 89",
+    "wrong": [
+      "MED Wrong 89A",
+      "MED Wrong 89B",
+      "MED Wrong 89C"
+    ],
+    "explanation": "MED Correct 89 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 90?",
+    "correct": "MED Correct 90",
+    "wrong": [
+      "MED Wrong 90A",
+      "MED Wrong 90B",
+      "MED Wrong 90C"
+    ],
+    "explanation": "MED Correct 90 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 91?",
+    "correct": "MED Correct 91",
+    "wrong": [
+      "MED Wrong 91A",
+      "MED Wrong 91B",
+      "MED Wrong 91C"
+    ],
+    "explanation": "MED Correct 91 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 92?",
+    "correct": "MED Correct 92",
+    "wrong": [
+      "MED Wrong 92A",
+      "MED Wrong 92B",
+      "MED Wrong 92C"
+    ],
+    "explanation": "MED Correct 92 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 93?",
+    "correct": "MED Correct 93",
+    "wrong": [
+      "MED Wrong 93A",
+      "MED Wrong 93B",
+      "MED Wrong 93C"
+    ],
+    "explanation": "MED Correct 93 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 94?",
+    "correct": "MED Correct 94",
+    "wrong": [
+      "MED Wrong 94A",
+      "MED Wrong 94B",
+      "MED Wrong 94C"
+    ],
+    "explanation": "MED Correct 94 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 95?",
+    "correct": "MED Correct 95",
+    "wrong": [
+      "MED Wrong 95A",
+      "MED Wrong 95B",
+      "MED Wrong 95C"
+    ],
+    "explanation": "MED Correct 95 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 96?",
+    "correct": "MED Correct 96",
+    "wrong": [
+      "MED Wrong 96A",
+      "MED Wrong 96B",
+      "MED Wrong 96C"
+    ],
+    "explanation": "MED Correct 96 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 97?",
+    "correct": "MED Correct 97",
+    "wrong": [
+      "MED Wrong 97A",
+      "MED Wrong 97B",
+      "MED Wrong 97C"
+    ],
+    "explanation": "MED Correct 97 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 98?",
+    "correct": "MED Correct 98",
+    "wrong": [
+      "MED Wrong 98A",
+      "MED Wrong 98B",
+      "MED Wrong 98C"
+    ],
+    "explanation": "MED Correct 98 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 99?",
+    "correct": "MED Correct 99",
+    "wrong": [
+      "MED Wrong 99A",
+      "MED Wrong 99B",
+      "MED Wrong 99C"
+    ],
+    "explanation": "MED Correct 99 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 100?",
+    "correct": "MED Correct 100",
+    "wrong": [
+      "MED Wrong 100A",
+      "MED Wrong 100B",
+      "MED Wrong 100C"
+    ],
+    "explanation": "MED Correct 100 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 101?",
+    "correct": "MED Correct 101",
+    "wrong": [
+      "MED Wrong 101A",
+      "MED Wrong 101B",
+      "MED Wrong 101C"
+    ],
+    "explanation": "MED Correct 101 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 102?",
+    "correct": "MED Correct 102",
+    "wrong": [
+      "MED Wrong 102A",
+      "MED Wrong 102B",
+      "MED Wrong 102C"
+    ],
+    "explanation": "MED Correct 102 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 103?",
+    "correct": "MED Correct 103",
+    "wrong": [
+      "MED Wrong 103A",
+      "MED Wrong 103B",
+      "MED Wrong 103C"
+    ],
+    "explanation": "MED Correct 103 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 104?",
+    "correct": "MED Correct 104",
+    "wrong": [
+      "MED Wrong 104A",
+      "MED Wrong 104B",
+      "MED Wrong 104C"
+    ],
+    "explanation": "MED Correct 104 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 105?",
+    "correct": "MED Correct 105",
+    "wrong": [
+      "MED Wrong 105A",
+      "MED Wrong 105B",
+      "MED Wrong 105C"
+    ],
+    "explanation": "MED Correct 105 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 106?",
+    "correct": "MED Correct 106",
+    "wrong": [
+      "MED Wrong 106A",
+      "MED Wrong 106B",
+      "MED Wrong 106C"
+    ],
+    "explanation": "MED Correct 106 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 107?",
+    "correct": "MED Correct 107",
+    "wrong": [
+      "MED Wrong 107A",
+      "MED Wrong 107B",
+      "MED Wrong 107C"
+    ],
+    "explanation": "MED Correct 107 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 108?",
+    "correct": "MED Correct 108",
+    "wrong": [
+      "MED Wrong 108A",
+      "MED Wrong 108B",
+      "MED Wrong 108C"
+    ],
+    "explanation": "MED Correct 108 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 109?",
+    "correct": "MED Correct 109",
+    "wrong": [
+      "MED Wrong 109A",
+      "MED Wrong 109B",
+      "MED Wrong 109C"
+    ],
+    "explanation": "MED Correct 109 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 110?",
+    "correct": "MED Correct 110",
+    "wrong": [
+      "MED Wrong 110A",
+      "MED Wrong 110B",
+      "MED Wrong 110C"
+    ],
+    "explanation": "MED Correct 110 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 111?",
+    "correct": "MED Correct 111",
+    "wrong": [
+      "MED Wrong 111A",
+      "MED Wrong 111B",
+      "MED Wrong 111C"
+    ],
+    "explanation": "MED Correct 111 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 112?",
+    "correct": "MED Correct 112",
+    "wrong": [
+      "MED Wrong 112A",
+      "MED Wrong 112B",
+      "MED Wrong 112C"
+    ],
+    "explanation": "MED Correct 112 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 113?",
+    "correct": "MED Correct 113",
+    "wrong": [
+      "MED Wrong 113A",
+      "MED Wrong 113B",
+      "MED Wrong 113C"
+    ],
+    "explanation": "MED Correct 113 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 114?",
+    "correct": "MED Correct 114",
+    "wrong": [
+      "MED Wrong 114A",
+      "MED Wrong 114B",
+      "MED Wrong 114C"
+    ],
+    "explanation": "MED Correct 114 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 115?",
+    "correct": "MED Correct 115",
+    "wrong": [
+      "MED Wrong 115A",
+      "MED Wrong 115B",
+      "MED Wrong 115C"
+    ],
+    "explanation": "MED Correct 115 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 116?",
+    "correct": "MED Correct 116",
+    "wrong": [
+      "MED Wrong 116A",
+      "MED Wrong 116B",
+      "MED Wrong 116C"
+    ],
+    "explanation": "MED Correct 116 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 117?",
+    "correct": "MED Correct 117",
+    "wrong": [
+      "MED Wrong 117A",
+      "MED Wrong 117B",
+      "MED Wrong 117C"
+    ],
+    "explanation": "MED Correct 117 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 118?",
+    "correct": "MED Correct 118",
+    "wrong": [
+      "MED Wrong 118A",
+      "MED Wrong 118B",
+      "MED Wrong 118C"
+    ],
+    "explanation": "MED Correct 118 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 119?",
+    "correct": "MED Correct 119",
+    "wrong": [
+      "MED Wrong 119A",
+      "MED Wrong 119B",
+      "MED Wrong 119C"
+    ],
+    "explanation": "MED Correct 119 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 120?",
+    "correct": "MED Correct 120",
+    "wrong": [
+      "MED Wrong 120A",
+      "MED Wrong 120B",
+      "MED Wrong 120C"
+    ],
+    "explanation": "MED Correct 120 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 121?",
+    "correct": "MED Correct 121",
+    "wrong": [
+      "MED Wrong 121A",
+      "MED Wrong 121B",
+      "MED Wrong 121C"
+    ],
+    "explanation": "MED Correct 121 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 122?",
+    "correct": "MED Correct 122",
+    "wrong": [
+      "MED Wrong 122A",
+      "MED Wrong 122B",
+      "MED Wrong 122C"
+    ],
+    "explanation": "MED Correct 122 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 123?",
+    "correct": "MED Correct 123",
+    "wrong": [
+      "MED Wrong 123A",
+      "MED Wrong 123B",
+      "MED Wrong 123C"
+    ],
+    "explanation": "MED Correct 123 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 124?",
+    "correct": "MED Correct 124",
+    "wrong": [
+      "MED Wrong 124A",
+      "MED Wrong 124B",
+      "MED Wrong 124C"
+    ],
+    "explanation": "MED Correct 124 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 125?",
+    "correct": "MED Correct 125",
+    "wrong": [
+      "MED Wrong 125A",
+      "MED Wrong 125B",
+      "MED Wrong 125C"
+    ],
+    "explanation": "MED Correct 125 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 126?",
+    "correct": "MED Correct 126",
+    "wrong": [
+      "MED Wrong 126A",
+      "MED Wrong 126B",
+      "MED Wrong 126C"
+    ],
+    "explanation": "MED Correct 126 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 127?",
+    "correct": "MED Correct 127",
+    "wrong": [
+      "MED Wrong 127A",
+      "MED Wrong 127B",
+      "MED Wrong 127C"
+    ],
+    "explanation": "MED Correct 127 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 128?",
+    "correct": "MED Correct 128",
+    "wrong": [
+      "MED Wrong 128A",
+      "MED Wrong 128B",
+      "MED Wrong 128C"
+    ],
+    "explanation": "MED Correct 128 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 129?",
+    "correct": "MED Correct 129",
+    "wrong": [
+      "MED Wrong 129A",
+      "MED Wrong 129B",
+      "MED Wrong 129C"
+    ],
+    "explanation": "MED Correct 129 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 130?",
+    "correct": "MED Correct 130",
+    "wrong": [
+      "MED Wrong 130A",
+      "MED Wrong 130B",
+      "MED Wrong 130C"
+    ],
+    "explanation": "MED Correct 130 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 131?",
+    "correct": "MED Correct 131",
+    "wrong": [
+      "MED Wrong 131A",
+      "MED Wrong 131B",
+      "MED Wrong 131C"
+    ],
+    "explanation": "MED Correct 131 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 132?",
+    "correct": "MED Correct 132",
+    "wrong": [
+      "MED Wrong 132A",
+      "MED Wrong 132B",
+      "MED Wrong 132C"
+    ],
+    "explanation": "MED Correct 132 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 133?",
+    "correct": "MED Correct 133",
+    "wrong": [
+      "MED Wrong 133A",
+      "MED Wrong 133B",
+      "MED Wrong 133C"
+    ],
+    "explanation": "MED Correct 133 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 134?",
+    "correct": "MED Correct 134",
+    "wrong": [
+      "MED Wrong 134A",
+      "MED Wrong 134B",
+      "MED Wrong 134C"
+    ],
+    "explanation": "MED Correct 134 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 135?",
+    "correct": "MED Correct 135",
+    "wrong": [
+      "MED Wrong 135A",
+      "MED Wrong 135B",
+      "MED Wrong 135C"
+    ],
+    "explanation": "MED Correct 135 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 136?",
+    "correct": "MED Correct 136",
+    "wrong": [
+      "MED Wrong 136A",
+      "MED Wrong 136B",
+      "MED Wrong 136C"
+    ],
+    "explanation": "MED Correct 136 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 137?",
+    "correct": "MED Correct 137",
+    "wrong": [
+      "MED Wrong 137A",
+      "MED Wrong 137B",
+      "MED Wrong 137C"
+    ],
+    "explanation": "MED Correct 137 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 138?",
+    "correct": "MED Correct 138",
+    "wrong": [
+      "MED Wrong 138A",
+      "MED Wrong 138B",
+      "MED Wrong 138C"
+    ],
+    "explanation": "MED Correct 138 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 139?",
+    "correct": "MED Correct 139",
+    "wrong": [
+      "MED Wrong 139A",
+      "MED Wrong 139B",
+      "MED Wrong 139C"
+    ],
+    "explanation": "MED Correct 139 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 140?",
+    "correct": "MED Correct 140",
+    "wrong": [
+      "MED Wrong 140A",
+      "MED Wrong 140B",
+      "MED Wrong 140C"
+    ],
+    "explanation": "MED Correct 140 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 141?",
+    "correct": "MED Correct 141",
+    "wrong": [
+      "MED Wrong 141A",
+      "MED Wrong 141B",
+      "MED Wrong 141C"
+    ],
+    "explanation": "MED Correct 141 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 142?",
+    "correct": "MED Correct 142",
+    "wrong": [
+      "MED Wrong 142A",
+      "MED Wrong 142B",
+      "MED Wrong 142C"
+    ],
+    "explanation": "MED Correct 142 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 143?",
+    "correct": "MED Correct 143",
+    "wrong": [
+      "MED Wrong 143A",
+      "MED Wrong 143B",
+      "MED Wrong 143C"
+    ],
+    "explanation": "MED Correct 143 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 144?",
+    "correct": "MED Correct 144",
+    "wrong": [
+      "MED Wrong 144A",
+      "MED Wrong 144B",
+      "MED Wrong 144C"
+    ],
+    "explanation": "MED Correct 144 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 145?",
+    "correct": "MED Correct 145",
+    "wrong": [
+      "MED Wrong 145A",
+      "MED Wrong 145B",
+      "MED Wrong 145C"
+    ],
+    "explanation": "MED Correct 145 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 146?",
+    "correct": "MED Correct 146",
+    "wrong": [
+      "MED Wrong 146A",
+      "MED Wrong 146B",
+      "MED Wrong 146C"
+    ],
+    "explanation": "MED Correct 146 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 147?",
+    "correct": "MED Correct 147",
+    "wrong": [
+      "MED Wrong 147A",
+      "MED Wrong 147B",
+      "MED Wrong 147C"
+    ],
+    "explanation": "MED Correct 147 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 148?",
+    "correct": "MED Correct 148",
+    "wrong": [
+      "MED Wrong 148A",
+      "MED Wrong 148B",
+      "MED Wrong 148C"
+    ],
+    "explanation": "MED Correct 148 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 149?",
+    "correct": "MED Correct 149",
+    "wrong": [
+      "MED Wrong 149A",
+      "MED Wrong 149B",
+      "MED Wrong 149C"
+    ],
+    "explanation": "MED Correct 149 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 150?",
+    "correct": "MED Correct 150",
+    "wrong": [
+      "MED Wrong 150A",
+      "MED Wrong 150B",
+      "MED Wrong 150C"
+    ],
+    "explanation": "MED Correct 150 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 151?",
+    "correct": "MED Correct 151",
+    "wrong": [
+      "MED Wrong 151A",
+      "MED Wrong 151B",
+      "MED Wrong 151C"
+    ],
+    "explanation": "MED Correct 151 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 152?",
+    "correct": "MED Correct 152",
+    "wrong": [
+      "MED Wrong 152A",
+      "MED Wrong 152B",
+      "MED Wrong 152C"
+    ],
+    "explanation": "MED Correct 152 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 153?",
+    "correct": "MED Correct 153",
+    "wrong": [
+      "MED Wrong 153A",
+      "MED Wrong 153B",
+      "MED Wrong 153C"
+    ],
+    "explanation": "MED Correct 153 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 154?",
+    "correct": "MED Correct 154",
+    "wrong": [
+      "MED Wrong 154A",
+      "MED Wrong 154B",
+      "MED Wrong 154C"
+    ],
+    "explanation": "MED Correct 154 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 155?",
+    "correct": "MED Correct 155",
+    "wrong": [
+      "MED Wrong 155A",
+      "MED Wrong 155B",
+      "MED Wrong 155C"
+    ],
+    "explanation": "MED Correct 155 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 156?",
+    "correct": "MED Correct 156",
+    "wrong": [
+      "MED Wrong 156A",
+      "MED Wrong 156B",
+      "MED Wrong 156C"
+    ],
+    "explanation": "MED Correct 156 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 157?",
+    "correct": "MED Correct 157",
+    "wrong": [
+      "MED Wrong 157A",
+      "MED Wrong 157B",
+      "MED Wrong 157C"
+    ],
+    "explanation": "MED Correct 157 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 158?",
+    "correct": "MED Correct 158",
+    "wrong": [
+      "MED Wrong 158A",
+      "MED Wrong 158B",
+      "MED Wrong 158C"
+    ],
+    "explanation": "MED Correct 158 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 159?",
+    "correct": "MED Correct 159",
+    "wrong": [
+      "MED Wrong 159A",
+      "MED Wrong 159B",
+      "MED Wrong 159C"
+    ],
+    "explanation": "MED Correct 159 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 160?",
+    "correct": "MED Correct 160",
+    "wrong": [
+      "MED Wrong 160A",
+      "MED Wrong 160B",
+      "MED Wrong 160C"
+    ],
+    "explanation": "MED Correct 160 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 161?",
+    "correct": "MED Correct 161",
+    "wrong": [
+      "MED Wrong 161A",
+      "MED Wrong 161B",
+      "MED Wrong 161C"
+    ],
+    "explanation": "MED Correct 161 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 162?",
+    "correct": "MED Correct 162",
+    "wrong": [
+      "MED Wrong 162A",
+      "MED Wrong 162B",
+      "MED Wrong 162C"
+    ],
+    "explanation": "MED Correct 162 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 163?",
+    "correct": "MED Correct 163",
+    "wrong": [
+      "MED Wrong 163A",
+      "MED Wrong 163B",
+      "MED Wrong 163C"
+    ],
+    "explanation": "MED Correct 163 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 164?",
+    "correct": "MED Correct 164",
+    "wrong": [
+      "MED Wrong 164A",
+      "MED Wrong 164B",
+      "MED Wrong 164C"
+    ],
+    "explanation": "MED Correct 164 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 165?",
+    "correct": "MED Correct 165",
+    "wrong": [
+      "MED Wrong 165A",
+      "MED Wrong 165B",
+      "MED Wrong 165C"
+    ],
+    "explanation": "MED Correct 165 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 166?",
+    "correct": "MED Correct 166",
+    "wrong": [
+      "MED Wrong 166A",
+      "MED Wrong 166B",
+      "MED Wrong 166C"
+    ],
+    "explanation": "MED Correct 166 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 167?",
+    "correct": "MED Correct 167",
+    "wrong": [
+      "MED Wrong 167A",
+      "MED Wrong 167B",
+      "MED Wrong 167C"
+    ],
+    "explanation": "MED Correct 167 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 168?",
+    "correct": "MED Correct 168",
+    "wrong": [
+      "MED Wrong 168A",
+      "MED Wrong 168B",
+      "MED Wrong 168C"
+    ],
+    "explanation": "MED Correct 168 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 169?",
+    "correct": "MED Correct 169",
+    "wrong": [
+      "MED Wrong 169A",
+      "MED Wrong 169B",
+      "MED Wrong 169C"
+    ],
+    "explanation": "MED Correct 169 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 170?",
+    "correct": "MED Correct 170",
+    "wrong": [
+      "MED Wrong 170A",
+      "MED Wrong 170B",
+      "MED Wrong 170C"
+    ],
+    "explanation": "MED Correct 170 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 171?",
+    "correct": "MED Correct 171",
+    "wrong": [
+      "MED Wrong 171A",
+      "MED Wrong 171B",
+      "MED Wrong 171C"
+    ],
+    "explanation": "MED Correct 171 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 172?",
+    "correct": "MED Correct 172",
+    "wrong": [
+      "MED Wrong 172A",
+      "MED Wrong 172B",
+      "MED Wrong 172C"
+    ],
+    "explanation": "MED Correct 172 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 173?",
+    "correct": "MED Correct 173",
+    "wrong": [
+      "MED Wrong 173A",
+      "MED Wrong 173B",
+      "MED Wrong 173C"
+    ],
+    "explanation": "MED Correct 173 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 174?",
+    "correct": "MED Correct 174",
+    "wrong": [
+      "MED Wrong 174A",
+      "MED Wrong 174B",
+      "MED Wrong 174C"
+    ],
+    "explanation": "MED Correct 174 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 175?",
+    "correct": "MED Correct 175",
+    "wrong": [
+      "MED Wrong 175A",
+      "MED Wrong 175B",
+      "MED Wrong 175C"
+    ],
+    "explanation": "MED Correct 175 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 176?",
+    "correct": "MED Correct 176",
+    "wrong": [
+      "MED Wrong 176A",
+      "MED Wrong 176B",
+      "MED Wrong 176C"
+    ],
+    "explanation": "MED Correct 176 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 177?",
+    "correct": "MED Correct 177",
+    "wrong": [
+      "MED Wrong 177A",
+      "MED Wrong 177B",
+      "MED Wrong 177C"
+    ],
+    "explanation": "MED Correct 177 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 178?",
+    "correct": "MED Correct 178",
+    "wrong": [
+      "MED Wrong 178A",
+      "MED Wrong 178B",
+      "MED Wrong 178C"
+    ],
+    "explanation": "MED Correct 178 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 179?",
+    "correct": "MED Correct 179",
+    "wrong": [
+      "MED Wrong 179A",
+      "MED Wrong 179B",
+      "MED Wrong 179C"
+    ],
+    "explanation": "MED Correct 179 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 180?",
+    "correct": "MED Correct 180",
+    "wrong": [
+      "MED Wrong 180A",
+      "MED Wrong 180B",
+      "MED Wrong 180C"
+    ],
+    "explanation": "MED Correct 180 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 181?",
+    "correct": "MED Correct 181",
+    "wrong": [
+      "MED Wrong 181A",
+      "MED Wrong 181B",
+      "MED Wrong 181C"
+    ],
+    "explanation": "MED Correct 181 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 182?",
+    "correct": "MED Correct 182",
+    "wrong": [
+      "MED Wrong 182A",
+      "MED Wrong 182B",
+      "MED Wrong 182C"
+    ],
+    "explanation": "MED Correct 182 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 183?",
+    "correct": "MED Correct 183",
+    "wrong": [
+      "MED Wrong 183A",
+      "MED Wrong 183B",
+      "MED Wrong 183C"
+    ],
+    "explanation": "MED Correct 183 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 184?",
+    "correct": "MED Correct 184",
+    "wrong": [
+      "MED Wrong 184A",
+      "MED Wrong 184B",
+      "MED Wrong 184C"
+    ],
+    "explanation": "MED Correct 184 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 185?",
+    "correct": "MED Correct 185",
+    "wrong": [
+      "MED Wrong 185A",
+      "MED Wrong 185B",
+      "MED Wrong 185C"
+    ],
+    "explanation": "MED Correct 185 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 186?",
+    "correct": "MED Correct 186",
+    "wrong": [
+      "MED Wrong 186A",
+      "MED Wrong 186B",
+      "MED Wrong 186C"
+    ],
+    "explanation": "MED Correct 186 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 187?",
+    "correct": "MED Correct 187",
+    "wrong": [
+      "MED Wrong 187A",
+      "MED Wrong 187B",
+      "MED Wrong 187C"
+    ],
+    "explanation": "MED Correct 187 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 188?",
+    "correct": "MED Correct 188",
+    "wrong": [
+      "MED Wrong 188A",
+      "MED Wrong 188B",
+      "MED Wrong 188C"
+    ],
+    "explanation": "MED Correct 188 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 189?",
+    "correct": "MED Correct 189",
+    "wrong": [
+      "MED Wrong 189A",
+      "MED Wrong 189B",
+      "MED Wrong 189C"
+    ],
+    "explanation": "MED Correct 189 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 190?",
+    "correct": "MED Correct 190",
+    "wrong": [
+      "MED Wrong 190A",
+      "MED Wrong 190B",
+      "MED Wrong 190C"
+    ],
+    "explanation": "MED Correct 190 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 191?",
+    "correct": "MED Correct 191",
+    "wrong": [
+      "MED Wrong 191A",
+      "MED Wrong 191B",
+      "MED Wrong 191C"
+    ],
+    "explanation": "MED Correct 191 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 192?",
+    "correct": "MED Correct 192",
+    "wrong": [
+      "MED Wrong 192A",
+      "MED Wrong 192B",
+      "MED Wrong 192C"
+    ],
+    "explanation": "MED Correct 192 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 193?",
+    "correct": "MED Correct 193",
+    "wrong": [
+      "MED Wrong 193A",
+      "MED Wrong 193B",
+      "MED Wrong 193C"
+    ],
+    "explanation": "MED Correct 193 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 194?",
+    "correct": "MED Correct 194",
+    "wrong": [
+      "MED Wrong 194A",
+      "MED Wrong 194B",
+      "MED Wrong 194C"
+    ],
+    "explanation": "MED Correct 194 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 195?",
+    "correct": "MED Correct 195",
+    "wrong": [
+      "MED Wrong 195A",
+      "MED Wrong 195B",
+      "MED Wrong 195C"
+    ],
+    "explanation": "MED Correct 195 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 196?",
+    "correct": "MED Correct 196",
+    "wrong": [
+      "MED Wrong 196A",
+      "MED Wrong 196B",
+      "MED Wrong 196C"
+    ],
+    "explanation": "MED Correct 196 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 197?",
+    "correct": "MED Correct 197",
+    "wrong": [
+      "MED Wrong 197A",
+      "MED Wrong 197B",
+      "MED Wrong 197C"
+    ],
+    "explanation": "MED Correct 197 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 198?",
+    "correct": "MED Correct 198",
+    "wrong": [
+      "MED Wrong 198A",
+      "MED Wrong 198B",
+      "MED Wrong 198C"
+    ],
+    "explanation": "MED Correct 198 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 199?",
+    "correct": "MED Correct 199",
+    "wrong": [
+      "MED Wrong 199A",
+      "MED Wrong 199B",
+      "MED Wrong 199C"
+    ],
+    "explanation": "MED Correct 199 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 200?",
+    "correct": "MED Correct 200",
+    "wrong": [
+      "MED Wrong 200A",
+      "MED Wrong 200B",
+      "MED Wrong 200C"
+    ],
+    "explanation": "MED Correct 200 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 201?",
+    "correct": "MED Correct 201",
+    "wrong": [
+      "MED Wrong 201A",
+      "MED Wrong 201B",
+      "MED Wrong 201C"
+    ],
+    "explanation": "MED Correct 201 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 202?",
+    "correct": "MED Correct 202",
+    "wrong": [
+      "MED Wrong 202A",
+      "MED Wrong 202B",
+      "MED Wrong 202C"
+    ],
+    "explanation": "MED Correct 202 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 203?",
+    "correct": "MED Correct 203",
+    "wrong": [
+      "MED Wrong 203A",
+      "MED Wrong 203B",
+      "MED Wrong 203C"
+    ],
+    "explanation": "MED Correct 203 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 204?",
+    "correct": "MED Correct 204",
+    "wrong": [
+      "MED Wrong 204A",
+      "MED Wrong 204B",
+      "MED Wrong 204C"
+    ],
+    "explanation": "MED Correct 204 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 205?",
+    "correct": "MED Correct 205",
+    "wrong": [
+      "MED Wrong 205A",
+      "MED Wrong 205B",
+      "MED Wrong 205C"
+    ],
+    "explanation": "MED Correct 205 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 206?",
+    "correct": "MED Correct 206",
+    "wrong": [
+      "MED Wrong 206A",
+      "MED Wrong 206B",
+      "MED Wrong 206C"
+    ],
+    "explanation": "MED Correct 206 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 207?",
+    "correct": "MED Correct 207",
+    "wrong": [
+      "MED Wrong 207A",
+      "MED Wrong 207B",
+      "MED Wrong 207C"
+    ],
+    "explanation": "MED Correct 207 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 208?",
+    "correct": "MED Correct 208",
+    "wrong": [
+      "MED Wrong 208A",
+      "MED Wrong 208B",
+      "MED Wrong 208C"
+    ],
+    "explanation": "MED Correct 208 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 209?",
+    "correct": "MED Correct 209",
+    "wrong": [
+      "MED Wrong 209A",
+      "MED Wrong 209B",
+      "MED Wrong 209C"
+    ],
+    "explanation": "MED Correct 209 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 210?",
+    "correct": "MED Correct 210",
+    "wrong": [
+      "MED Wrong 210A",
+      "MED Wrong 210B",
+      "MED Wrong 210C"
+    ],
+    "explanation": "MED Correct 210 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 211?",
+    "correct": "MED Correct 211",
+    "wrong": [
+      "MED Wrong 211A",
+      "MED Wrong 211B",
+      "MED Wrong 211C"
+    ],
+    "explanation": "MED Correct 211 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 212?",
+    "correct": "MED Correct 212",
+    "wrong": [
+      "MED Wrong 212A",
+      "MED Wrong 212B",
+      "MED Wrong 212C"
+    ],
+    "explanation": "MED Correct 212 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 213?",
+    "correct": "MED Correct 213",
+    "wrong": [
+      "MED Wrong 213A",
+      "MED Wrong 213B",
+      "MED Wrong 213C"
+    ],
+    "explanation": "MED Correct 213 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 214?",
+    "correct": "MED Correct 214",
+    "wrong": [
+      "MED Wrong 214A",
+      "MED Wrong 214B",
+      "MED Wrong 214C"
+    ],
+    "explanation": "MED Correct 214 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 215?",
+    "correct": "MED Correct 215",
+    "wrong": [
+      "MED Wrong 215A",
+      "MED Wrong 215B",
+      "MED Wrong 215C"
+    ],
+    "explanation": "MED Correct 215 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 216?",
+    "correct": "MED Correct 216",
+    "wrong": [
+      "MED Wrong 216A",
+      "MED Wrong 216B",
+      "MED Wrong 216C"
+    ],
+    "explanation": "MED Correct 216 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 217?",
+    "correct": "MED Correct 217",
+    "wrong": [
+      "MED Wrong 217A",
+      "MED Wrong 217B",
+      "MED Wrong 217C"
+    ],
+    "explanation": "MED Correct 217 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 218?",
+    "correct": "MED Correct 218",
+    "wrong": [
+      "MED Wrong 218A",
+      "MED Wrong 218B",
+      "MED Wrong 218C"
+    ],
+    "explanation": "MED Correct 218 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 219?",
+    "correct": "MED Correct 219",
+    "wrong": [
+      "MED Wrong 219A",
+      "MED Wrong 219B",
+      "MED Wrong 219C"
+    ],
+    "explanation": "MED Correct 219 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 220?",
+    "correct": "MED Correct 220",
+    "wrong": [
+      "MED Wrong 220A",
+      "MED Wrong 220B",
+      "MED Wrong 220C"
+    ],
+    "explanation": "MED Correct 220 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 221?",
+    "correct": "MED Correct 221",
+    "wrong": [
+      "MED Wrong 221A",
+      "MED Wrong 221B",
+      "MED Wrong 221C"
+    ],
+    "explanation": "MED Correct 221 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 222?",
+    "correct": "MED Correct 222",
+    "wrong": [
+      "MED Wrong 222A",
+      "MED Wrong 222B",
+      "MED Wrong 222C"
+    ],
+    "explanation": "MED Correct 222 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 223?",
+    "correct": "MED Correct 223",
+    "wrong": [
+      "MED Wrong 223A",
+      "MED Wrong 223B",
+      "MED Wrong 223C"
+    ],
+    "explanation": "MED Correct 223 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 224?",
+    "correct": "MED Correct 224",
+    "wrong": [
+      "MED Wrong 224A",
+      "MED Wrong 224B",
+      "MED Wrong 224C"
+    ],
+    "explanation": "MED Correct 224 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 225?",
+    "correct": "MED Correct 225",
+    "wrong": [
+      "MED Wrong 225A",
+      "MED Wrong 225B",
+      "MED Wrong 225C"
+    ],
+    "explanation": "MED Correct 225 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 226?",
+    "correct": "MED Correct 226",
+    "wrong": [
+      "MED Wrong 226A",
+      "MED Wrong 226B",
+      "MED Wrong 226C"
+    ],
+    "explanation": "MED Correct 226 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 227?",
+    "correct": "MED Correct 227",
+    "wrong": [
+      "MED Wrong 227A",
+      "MED Wrong 227B",
+      "MED Wrong 227C"
+    ],
+    "explanation": "MED Correct 227 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 228?",
+    "correct": "MED Correct 228",
+    "wrong": [
+      "MED Wrong 228A",
+      "MED Wrong 228B",
+      "MED Wrong 228C"
+    ],
+    "explanation": "MED Correct 228 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 229?",
+    "correct": "MED Correct 229",
+    "wrong": [
+      "MED Wrong 229A",
+      "MED Wrong 229B",
+      "MED Wrong 229C"
+    ],
+    "explanation": "MED Correct 229 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 230?",
+    "correct": "MED Correct 230",
+    "wrong": [
+      "MED Wrong 230A",
+      "MED Wrong 230B",
+      "MED Wrong 230C"
+    ],
+    "explanation": "MED Correct 230 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 231?",
+    "correct": "MED Correct 231",
+    "wrong": [
+      "MED Wrong 231A",
+      "MED Wrong 231B",
+      "MED Wrong 231C"
+    ],
+    "explanation": "MED Correct 231 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 232?",
+    "correct": "MED Correct 232",
+    "wrong": [
+      "MED Wrong 232A",
+      "MED Wrong 232B",
+      "MED Wrong 232C"
+    ],
+    "explanation": "MED Correct 232 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 233?",
+    "correct": "MED Correct 233",
+    "wrong": [
+      "MED Wrong 233A",
+      "MED Wrong 233B",
+      "MED Wrong 233C"
+    ],
+    "explanation": "MED Correct 233 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 234?",
+    "correct": "MED Correct 234",
+    "wrong": [
+      "MED Wrong 234A",
+      "MED Wrong 234B",
+      "MED Wrong 234C"
+    ],
+    "explanation": "MED Correct 234 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 235?",
+    "correct": "MED Correct 235",
+    "wrong": [
+      "MED Wrong 235A",
+      "MED Wrong 235B",
+      "MED Wrong 235C"
+    ],
+    "explanation": "MED Correct 235 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 236?",
+    "correct": "MED Correct 236",
+    "wrong": [
+      "MED Wrong 236A",
+      "MED Wrong 236B",
+      "MED Wrong 236C"
+    ],
+    "explanation": "MED Correct 236 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 237?",
+    "correct": "MED Correct 237",
+    "wrong": [
+      "MED Wrong 237A",
+      "MED Wrong 237B",
+      "MED Wrong 237C"
+    ],
+    "explanation": "MED Correct 237 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 238?",
+    "correct": "MED Correct 238",
+    "wrong": [
+      "MED Wrong 238A",
+      "MED Wrong 238B",
+      "MED Wrong 238C"
+    ],
+    "explanation": "MED Correct 238 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 239?",
+    "correct": "MED Correct 239",
+    "wrong": [
+      "MED Wrong 239A",
+      "MED Wrong 239B",
+      "MED Wrong 239C"
+    ],
+    "explanation": "MED Correct 239 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 240?",
+    "correct": "MED Correct 240",
+    "wrong": [
+      "MED Wrong 240A",
+      "MED Wrong 240B",
+      "MED Wrong 240C"
+    ],
+    "explanation": "MED Correct 240 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 241?",
+    "correct": "MED Correct 241",
+    "wrong": [
+      "MED Wrong 241A",
+      "MED Wrong 241B",
+      "MED Wrong 241C"
+    ],
+    "explanation": "MED Correct 241 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 242?",
+    "correct": "MED Correct 242",
+    "wrong": [
+      "MED Wrong 242A",
+      "MED Wrong 242B",
+      "MED Wrong 242C"
+    ],
+    "explanation": "MED Correct 242 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 243?",
+    "correct": "MED Correct 243",
+    "wrong": [
+      "MED Wrong 243A",
+      "MED Wrong 243B",
+      "MED Wrong 243C"
+    ],
+    "explanation": "MED Correct 243 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 244?",
+    "correct": "MED Correct 244",
+    "wrong": [
+      "MED Wrong 244A",
+      "MED Wrong 244B",
+      "MED Wrong 244C"
+    ],
+    "explanation": "MED Correct 244 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 245?",
+    "correct": "MED Correct 245",
+    "wrong": [
+      "MED Wrong 245A",
+      "MED Wrong 245B",
+      "MED Wrong 245C"
+    ],
+    "explanation": "MED Correct 245 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 246?",
+    "correct": "MED Correct 246",
+    "wrong": [
+      "MED Wrong 246A",
+      "MED Wrong 246B",
+      "MED Wrong 246C"
+    ],
+    "explanation": "MED Correct 246 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 247?",
+    "correct": "MED Correct 247",
+    "wrong": [
+      "MED Wrong 247A",
+      "MED Wrong 247B",
+      "MED Wrong 247C"
+    ],
+    "explanation": "MED Correct 247 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 248?",
+    "correct": "MED Correct 248",
+    "wrong": [
+      "MED Wrong 248A",
+      "MED Wrong 248B",
+      "MED Wrong 248C"
+    ],
+    "explanation": "MED Correct 248 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 249?",
+    "correct": "MED Correct 249",
+    "wrong": [
+      "MED Wrong 249A",
+      "MED Wrong 249B",
+      "MED Wrong 249C"
+    ],
+    "explanation": "MED Correct 249 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 250?",
+    "correct": "MED Correct 250",
+    "wrong": [
+      "MED Wrong 250A",
+      "MED Wrong 250B",
+      "MED Wrong 250C"
+    ],
+    "explanation": "MED Correct 250 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 251?",
+    "correct": "MED Correct 251",
+    "wrong": [
+      "MED Wrong 251A",
+      "MED Wrong 251B",
+      "MED Wrong 251C"
+    ],
+    "explanation": "MED Correct 251 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 252?",
+    "correct": "MED Correct 252",
+    "wrong": [
+      "MED Wrong 252A",
+      "MED Wrong 252B",
+      "MED Wrong 252C"
+    ],
+    "explanation": "MED Correct 252 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 253?",
+    "correct": "MED Correct 253",
+    "wrong": [
+      "MED Wrong 253A",
+      "MED Wrong 253B",
+      "MED Wrong 253C"
+    ],
+    "explanation": "MED Correct 253 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 254?",
+    "correct": "MED Correct 254",
+    "wrong": [
+      "MED Wrong 254A",
+      "MED Wrong 254B",
+      "MED Wrong 254C"
+    ],
+    "explanation": "MED Correct 254 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 255?",
+    "correct": "MED Correct 255",
+    "wrong": [
+      "MED Wrong 255A",
+      "MED Wrong 255B",
+      "MED Wrong 255C"
+    ],
+    "explanation": "MED Correct 255 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 256?",
+    "correct": "MED Correct 256",
+    "wrong": [
+      "MED Wrong 256A",
+      "MED Wrong 256B",
+      "MED Wrong 256C"
+    ],
+    "explanation": "MED Correct 256 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 257?",
+    "correct": "MED Correct 257",
+    "wrong": [
+      "MED Wrong 257A",
+      "MED Wrong 257B",
+      "MED Wrong 257C"
+    ],
+    "explanation": "MED Correct 257 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 258?",
+    "correct": "MED Correct 258",
+    "wrong": [
+      "MED Wrong 258A",
+      "MED Wrong 258B",
+      "MED Wrong 258C"
+    ],
+    "explanation": "MED Correct 258 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 259?",
+    "correct": "MED Correct 259",
+    "wrong": [
+      "MED Wrong 259A",
+      "MED Wrong 259B",
+      "MED Wrong 259C"
+    ],
+    "explanation": "MED Correct 259 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 260?",
+    "correct": "MED Correct 260",
+    "wrong": [
+      "MED Wrong 260A",
+      "MED Wrong 260B",
+      "MED Wrong 260C"
+    ],
+    "explanation": "MED Correct 260 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 261?",
+    "correct": "MED Correct 261",
+    "wrong": [
+      "MED Wrong 261A",
+      "MED Wrong 261B",
+      "MED Wrong 261C"
+    ],
+    "explanation": "MED Correct 261 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 262?",
+    "correct": "MED Correct 262",
+    "wrong": [
+      "MED Wrong 262A",
+      "MED Wrong 262B",
+      "MED Wrong 262C"
+    ],
+    "explanation": "MED Correct 262 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 263?",
+    "correct": "MED Correct 263",
+    "wrong": [
+      "MED Wrong 263A",
+      "MED Wrong 263B",
+      "MED Wrong 263C"
+    ],
+    "explanation": "MED Correct 263 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 264?",
+    "correct": "MED Correct 264",
+    "wrong": [
+      "MED Wrong 264A",
+      "MED Wrong 264B",
+      "MED Wrong 264C"
+    ],
+    "explanation": "MED Correct 264 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 265?",
+    "correct": "MED Correct 265",
+    "wrong": [
+      "MED Wrong 265A",
+      "MED Wrong 265B",
+      "MED Wrong 265C"
+    ],
+    "explanation": "MED Correct 265 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 266?",
+    "correct": "MED Correct 266",
+    "wrong": [
+      "MED Wrong 266A",
+      "MED Wrong 266B",
+      "MED Wrong 266C"
+    ],
+    "explanation": "MED Correct 266 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 267?",
+    "correct": "MED Correct 267",
+    "wrong": [
+      "MED Wrong 267A",
+      "MED Wrong 267B",
+      "MED Wrong 267C"
+    ],
+    "explanation": "MED Correct 267 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 268?",
+    "correct": "MED Correct 268",
+    "wrong": [
+      "MED Wrong 268A",
+      "MED Wrong 268B",
+      "MED Wrong 268C"
+    ],
+    "explanation": "MED Correct 268 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 269?",
+    "correct": "MED Correct 269",
+    "wrong": [
+      "MED Wrong 269A",
+      "MED Wrong 269B",
+      "MED Wrong 269C"
+    ],
+    "explanation": "MED Correct 269 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 270?",
+    "correct": "MED Correct 270",
+    "wrong": [
+      "MED Wrong 270A",
+      "MED Wrong 270B",
+      "MED Wrong 270C"
+    ],
+    "explanation": "MED Correct 270 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 271?",
+    "correct": "MED Correct 271",
+    "wrong": [
+      "MED Wrong 271A",
+      "MED Wrong 271B",
+      "MED Wrong 271C"
+    ],
+    "explanation": "MED Correct 271 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 272?",
+    "correct": "MED Correct 272",
+    "wrong": [
+      "MED Wrong 272A",
+      "MED Wrong 272B",
+      "MED Wrong 272C"
+    ],
+    "explanation": "MED Correct 272 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 273?",
+    "correct": "MED Correct 273",
+    "wrong": [
+      "MED Wrong 273A",
+      "MED Wrong 273B",
+      "MED Wrong 273C"
+    ],
+    "explanation": "MED Correct 273 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 274?",
+    "correct": "MED Correct 274",
+    "wrong": [
+      "MED Wrong 274A",
+      "MED Wrong 274B",
+      "MED Wrong 274C"
+    ],
+    "explanation": "MED Correct 274 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 275?",
+    "correct": "MED Correct 275",
+    "wrong": [
+      "MED Wrong 275A",
+      "MED Wrong 275B",
+      "MED Wrong 275C"
+    ],
+    "explanation": "MED Correct 275 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 276?",
+    "correct": "MED Correct 276",
+    "wrong": [
+      "MED Wrong 276A",
+      "MED Wrong 276B",
+      "MED Wrong 276C"
+    ],
+    "explanation": "MED Correct 276 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 277?",
+    "correct": "MED Correct 277",
+    "wrong": [
+      "MED Wrong 277A",
+      "MED Wrong 277B",
+      "MED Wrong 277C"
+    ],
+    "explanation": "MED Correct 277 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 278?",
+    "correct": "MED Correct 278",
+    "wrong": [
+      "MED Wrong 278A",
+      "MED Wrong 278B",
+      "MED Wrong 278C"
+    ],
+    "explanation": "MED Correct 278 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 279?",
+    "correct": "MED Correct 279",
+    "wrong": [
+      "MED Wrong 279A",
+      "MED Wrong 279B",
+      "MED Wrong 279C"
+    ],
+    "explanation": "MED Correct 279 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 280?",
+    "correct": "MED Correct 280",
+    "wrong": [
+      "MED Wrong 280A",
+      "MED Wrong 280B",
+      "MED Wrong 280C"
+    ],
+    "explanation": "MED Correct 280 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 281?",
+    "correct": "MED Correct 281",
+    "wrong": [
+      "MED Wrong 281A",
+      "MED Wrong 281B",
+      "MED Wrong 281C"
+    ],
+    "explanation": "MED Correct 281 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 282?",
+    "correct": "MED Correct 282",
+    "wrong": [
+      "MED Wrong 282A",
+      "MED Wrong 282B",
+      "MED Wrong 282C"
+    ],
+    "explanation": "MED Correct 282 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 283?",
+    "correct": "MED Correct 283",
+    "wrong": [
+      "MED Wrong 283A",
+      "MED Wrong 283B",
+      "MED Wrong 283C"
+    ],
+    "explanation": "MED Correct 283 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 284?",
+    "correct": "MED Correct 284",
+    "wrong": [
+      "MED Wrong 284A",
+      "MED Wrong 284B",
+      "MED Wrong 284C"
+    ],
+    "explanation": "MED Correct 284 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 285?",
+    "correct": "MED Correct 285",
+    "wrong": [
+      "MED Wrong 285A",
+      "MED Wrong 285B",
+      "MED Wrong 285C"
+    ],
+    "explanation": "MED Correct 285 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 286?",
+    "correct": "MED Correct 286",
+    "wrong": [
+      "MED Wrong 286A",
+      "MED Wrong 286B",
+      "MED Wrong 286C"
+    ],
+    "explanation": "MED Correct 286 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 287?",
+    "correct": "MED Correct 287",
+    "wrong": [
+      "MED Wrong 287A",
+      "MED Wrong 287B",
+      "MED Wrong 287C"
+    ],
+    "explanation": "MED Correct 287 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 288?",
+    "correct": "MED Correct 288",
+    "wrong": [
+      "MED Wrong 288A",
+      "MED Wrong 288B",
+      "MED Wrong 288C"
+    ],
+    "explanation": "MED Correct 288 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 289?",
+    "correct": "MED Correct 289",
+    "wrong": [
+      "MED Wrong 289A",
+      "MED Wrong 289B",
+      "MED Wrong 289C"
+    ],
+    "explanation": "MED Correct 289 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 290?",
+    "correct": "MED Correct 290",
+    "wrong": [
+      "MED Wrong 290A",
+      "MED Wrong 290B",
+      "MED Wrong 290C"
+    ],
+    "explanation": "MED Correct 290 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 291?",
+    "correct": "MED Correct 291",
+    "wrong": [
+      "MED Wrong 291A",
+      "MED Wrong 291B",
+      "MED Wrong 291C"
+    ],
+    "explanation": "MED Correct 291 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 292?",
+    "correct": "MED Correct 292",
+    "wrong": [
+      "MED Wrong 292A",
+      "MED Wrong 292B",
+      "MED Wrong 292C"
+    ],
+    "explanation": "MED Correct 292 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 293?",
+    "correct": "MED Correct 293",
+    "wrong": [
+      "MED Wrong 293A",
+      "MED Wrong 293B",
+      "MED Wrong 293C"
+    ],
+    "explanation": "MED Correct 293 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 294?",
+    "correct": "MED Correct 294",
+    "wrong": [
+      "MED Wrong 294A",
+      "MED Wrong 294B",
+      "MED Wrong 294C"
+    ],
+    "explanation": "MED Correct 294 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 295?",
+    "correct": "MED Correct 295",
+    "wrong": [
+      "MED Wrong 295A",
+      "MED Wrong 295B",
+      "MED Wrong 295C"
+    ],
+    "explanation": "MED Correct 295 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 296?",
+    "correct": "MED Correct 296",
+    "wrong": [
+      "MED Wrong 296A",
+      "MED Wrong 296B",
+      "MED Wrong 296C"
+    ],
+    "explanation": "MED Correct 296 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 297?",
+    "correct": "MED Correct 297",
+    "wrong": [
+      "MED Wrong 297A",
+      "MED Wrong 297B",
+      "MED Wrong 297C"
+    ],
+    "explanation": "MED Correct 297 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 298?",
+    "correct": "MED Correct 298",
+    "wrong": [
+      "MED Wrong 298A",
+      "MED Wrong 298B",
+      "MED Wrong 298C"
+    ],
+    "explanation": "MED Correct 298 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 299?",
+    "correct": "MED Correct 299",
+    "wrong": [
+      "MED Wrong 299A",
+      "MED Wrong 299B",
+      "MED Wrong 299C"
+    ],
+    "explanation": "MED Correct 299 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 300?",
+    "correct": "MED Correct 300",
+    "wrong": [
+      "MED Wrong 300A",
+      "MED Wrong 300B",
+      "MED Wrong 300C"
+    ],
+    "explanation": "MED Correct 300 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 301?",
+    "correct": "MED Correct 301",
+    "wrong": [
+      "MED Wrong 301A",
+      "MED Wrong 301B",
+      "MED Wrong 301C"
+    ],
+    "explanation": "MED Correct 301 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 302?",
+    "correct": "MED Correct 302",
+    "wrong": [
+      "MED Wrong 302A",
+      "MED Wrong 302B",
+      "MED Wrong 302C"
+    ],
+    "explanation": "MED Correct 302 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 303?",
+    "correct": "MED Correct 303",
+    "wrong": [
+      "MED Wrong 303A",
+      "MED Wrong 303B",
+      "MED Wrong 303C"
+    ],
+    "explanation": "MED Correct 303 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 304?",
+    "correct": "MED Correct 304",
+    "wrong": [
+      "MED Wrong 304A",
+      "MED Wrong 304B",
+      "MED Wrong 304C"
+    ],
+    "explanation": "MED Correct 304 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 305?",
+    "correct": "MED Correct 305",
+    "wrong": [
+      "MED Wrong 305A",
+      "MED Wrong 305B",
+      "MED Wrong 305C"
+    ],
+    "explanation": "MED Correct 305 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 306?",
+    "correct": "MED Correct 306",
+    "wrong": [
+      "MED Wrong 306A",
+      "MED Wrong 306B",
+      "MED Wrong 306C"
+    ],
+    "explanation": "MED Correct 306 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 307?",
+    "correct": "MED Correct 307",
+    "wrong": [
+      "MED Wrong 307A",
+      "MED Wrong 307B",
+      "MED Wrong 307C"
+    ],
+    "explanation": "MED Correct 307 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 308?",
+    "correct": "MED Correct 308",
+    "wrong": [
+      "MED Wrong 308A",
+      "MED Wrong 308B",
+      "MED Wrong 308C"
+    ],
+    "explanation": "MED Correct 308 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 309?",
+    "correct": "MED Correct 309",
+    "wrong": [
+      "MED Wrong 309A",
+      "MED Wrong 309B",
+      "MED Wrong 309C"
+    ],
+    "explanation": "MED Correct 309 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 310?",
+    "correct": "MED Correct 310",
+    "wrong": [
+      "MED Wrong 310A",
+      "MED Wrong 310B",
+      "MED Wrong 310C"
+    ],
+    "explanation": "MED Correct 310 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 311?",
+    "correct": "MED Correct 311",
+    "wrong": [
+      "MED Wrong 311A",
+      "MED Wrong 311B",
+      "MED Wrong 311C"
+    ],
+    "explanation": "MED Correct 311 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 312?",
+    "correct": "MED Correct 312",
+    "wrong": [
+      "MED Wrong 312A",
+      "MED Wrong 312B",
+      "MED Wrong 312C"
+    ],
+    "explanation": "MED Correct 312 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 313?",
+    "correct": "MED Correct 313",
+    "wrong": [
+      "MED Wrong 313A",
+      "MED Wrong 313B",
+      "MED Wrong 313C"
+    ],
+    "explanation": "MED Correct 313 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 314?",
+    "correct": "MED Correct 314",
+    "wrong": [
+      "MED Wrong 314A",
+      "MED Wrong 314B",
+      "MED Wrong 314C"
+    ],
+    "explanation": "MED Correct 314 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 315?",
+    "correct": "MED Correct 315",
+    "wrong": [
+      "MED Wrong 315A",
+      "MED Wrong 315B",
+      "MED Wrong 315C"
+    ],
+    "explanation": "MED Correct 315 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 316?",
+    "correct": "MED Correct 316",
+    "wrong": [
+      "MED Wrong 316A",
+      "MED Wrong 316B",
+      "MED Wrong 316C"
+    ],
+    "explanation": "MED Correct 316 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 317?",
+    "correct": "MED Correct 317",
+    "wrong": [
+      "MED Wrong 317A",
+      "MED Wrong 317B",
+      "MED Wrong 317C"
+    ],
+    "explanation": "MED Correct 317 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 318?",
+    "correct": "MED Correct 318",
+    "wrong": [
+      "MED Wrong 318A",
+      "MED Wrong 318B",
+      "MED Wrong 318C"
+    ],
+    "explanation": "MED Correct 318 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 319?",
+    "correct": "MED Correct 319",
+    "wrong": [
+      "MED Wrong 319A",
+      "MED Wrong 319B",
+      "MED Wrong 319C"
+    ],
+    "explanation": "MED Correct 319 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 320?",
+    "correct": "MED Correct 320",
+    "wrong": [
+      "MED Wrong 320A",
+      "MED Wrong 320B",
+      "MED Wrong 320C"
+    ],
+    "explanation": "MED Correct 320 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 321?",
+    "correct": "MED Correct 321",
+    "wrong": [
+      "MED Wrong 321A",
+      "MED Wrong 321B",
+      "MED Wrong 321C"
+    ],
+    "explanation": "MED Correct 321 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 322?",
+    "correct": "MED Correct 322",
+    "wrong": [
+      "MED Wrong 322A",
+      "MED Wrong 322B",
+      "MED Wrong 322C"
+    ],
+    "explanation": "MED Correct 322 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 323?",
+    "correct": "MED Correct 323",
+    "wrong": [
+      "MED Wrong 323A",
+      "MED Wrong 323B",
+      "MED Wrong 323C"
+    ],
+    "explanation": "MED Correct 323 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 324?",
+    "correct": "MED Correct 324",
+    "wrong": [
+      "MED Wrong 324A",
+      "MED Wrong 324B",
+      "MED Wrong 324C"
+    ],
+    "explanation": "MED Correct 324 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 325?",
+    "correct": "MED Correct 325",
+    "wrong": [
+      "MED Wrong 325A",
+      "MED Wrong 325B",
+      "MED Wrong 325C"
+    ],
+    "explanation": "MED Correct 325 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 326?",
+    "correct": "MED Correct 326",
+    "wrong": [
+      "MED Wrong 326A",
+      "MED Wrong 326B",
+      "MED Wrong 326C"
+    ],
+    "explanation": "MED Correct 326 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 327?",
+    "correct": "MED Correct 327",
+    "wrong": [
+      "MED Wrong 327A",
+      "MED Wrong 327B",
+      "MED Wrong 327C"
+    ],
+    "explanation": "MED Correct 327 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 328?",
+    "correct": "MED Correct 328",
+    "wrong": [
+      "MED Wrong 328A",
+      "MED Wrong 328B",
+      "MED Wrong 328C"
+    ],
+    "explanation": "MED Correct 328 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 329?",
+    "correct": "MED Correct 329",
+    "wrong": [
+      "MED Wrong 329A",
+      "MED Wrong 329B",
+      "MED Wrong 329C"
+    ],
+    "explanation": "MED Correct 329 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 330?",
+    "correct": "MED Correct 330",
+    "wrong": [
+      "MED Wrong 330A",
+      "MED Wrong 330B",
+      "MED Wrong 330C"
+    ],
+    "explanation": "MED Correct 330 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 331?",
+    "correct": "MED Correct 331",
+    "wrong": [
+      "MED Wrong 331A",
+      "MED Wrong 331B",
+      "MED Wrong 331C"
+    ],
+    "explanation": "MED Correct 331 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 332?",
+    "correct": "MED Correct 332",
+    "wrong": [
+      "MED Wrong 332A",
+      "MED Wrong 332B",
+      "MED Wrong 332C"
+    ],
+    "explanation": "MED Correct 332 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 333?",
+    "correct": "MED Correct 333",
+    "wrong": [
+      "MED Wrong 333A",
+      "MED Wrong 333B",
+      "MED Wrong 333C"
+    ],
+    "explanation": "MED Correct 333 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 334?",
+    "correct": "MED Correct 334",
+    "wrong": [
+      "MED Wrong 334A",
+      "MED Wrong 334B",
+      "MED Wrong 334C"
+    ],
+    "explanation": "MED Correct 334 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 335?",
+    "correct": "MED Correct 335",
+    "wrong": [
+      "MED Wrong 335A",
+      "MED Wrong 335B",
+      "MED Wrong 335C"
+    ],
+    "explanation": "MED Correct 335 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 336?",
+    "correct": "MED Correct 336",
+    "wrong": [
+      "MED Wrong 336A",
+      "MED Wrong 336B",
+      "MED Wrong 336C"
+    ],
+    "explanation": "MED Correct 336 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 337?",
+    "correct": "MED Correct 337",
+    "wrong": [
+      "MED Wrong 337A",
+      "MED Wrong 337B",
+      "MED Wrong 337C"
+    ],
+    "explanation": "MED Correct 337 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 338?",
+    "correct": "MED Correct 338",
+    "wrong": [
+      "MED Wrong 338A",
+      "MED Wrong 338B",
+      "MED Wrong 338C"
+    ],
+    "explanation": "MED Correct 338 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 339?",
+    "correct": "MED Correct 339",
+    "wrong": [
+      "MED Wrong 339A",
+      "MED Wrong 339B",
+      "MED Wrong 339C"
+    ],
+    "explanation": "MED Correct 339 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 340?",
+    "correct": "MED Correct 340",
+    "wrong": [
+      "MED Wrong 340A",
+      "MED Wrong 340B",
+      "MED Wrong 340C"
+    ],
+    "explanation": "MED Correct 340 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 341?",
+    "correct": "MED Correct 341",
+    "wrong": [
+      "MED Wrong 341A",
+      "MED Wrong 341B",
+      "MED Wrong 341C"
+    ],
+    "explanation": "MED Correct 341 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 342?",
+    "correct": "MED Correct 342",
+    "wrong": [
+      "MED Wrong 342A",
+      "MED Wrong 342B",
+      "MED Wrong 342C"
+    ],
+    "explanation": "MED Correct 342 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 343?",
+    "correct": "MED Correct 343",
+    "wrong": [
+      "MED Wrong 343A",
+      "MED Wrong 343B",
+      "MED Wrong 343C"
+    ],
+    "explanation": "MED Correct 343 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 344?",
+    "correct": "MED Correct 344",
+    "wrong": [
+      "MED Wrong 344A",
+      "MED Wrong 344B",
+      "MED Wrong 344C"
+    ],
+    "explanation": "MED Correct 344 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 345?",
+    "correct": "MED Correct 345",
+    "wrong": [
+      "MED Wrong 345A",
+      "MED Wrong 345B",
+      "MED Wrong 345C"
+    ],
+    "explanation": "MED Correct 345 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 346?",
+    "correct": "MED Correct 346",
+    "wrong": [
+      "MED Wrong 346A",
+      "MED Wrong 346B",
+      "MED Wrong 346C"
+    ],
+    "explanation": "MED Correct 346 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 347?",
+    "correct": "MED Correct 347",
+    "wrong": [
+      "MED Wrong 347A",
+      "MED Wrong 347B",
+      "MED Wrong 347C"
+    ],
+    "explanation": "MED Correct 347 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 348?",
+    "correct": "MED Correct 348",
+    "wrong": [
+      "MED Wrong 348A",
+      "MED Wrong 348B",
+      "MED Wrong 348C"
+    ],
+    "explanation": "MED Correct 348 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 349?",
+    "correct": "MED Correct 349",
+    "wrong": [
+      "MED Wrong 349A",
+      "MED Wrong 349B",
+      "MED Wrong 349C"
+    ],
+    "explanation": "MED Correct 349 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 350?",
+    "correct": "MED Correct 350",
+    "wrong": [
+      "MED Wrong 350A",
+      "MED Wrong 350B",
+      "MED Wrong 350C"
+    ],
+    "explanation": "MED Correct 350 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 351?",
+    "correct": "MED Correct 351",
+    "wrong": [
+      "MED Wrong 351A",
+      "MED Wrong 351B",
+      "MED Wrong 351C"
+    ],
+    "explanation": "MED Correct 351 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 352?",
+    "correct": "MED Correct 352",
+    "wrong": [
+      "MED Wrong 352A",
+      "MED Wrong 352B",
+      "MED Wrong 352C"
+    ],
+    "explanation": "MED Correct 352 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 353?",
+    "correct": "MED Correct 353",
+    "wrong": [
+      "MED Wrong 353A",
+      "MED Wrong 353B",
+      "MED Wrong 353C"
+    ],
+    "explanation": "MED Correct 353 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 354?",
+    "correct": "MED Correct 354",
+    "wrong": [
+      "MED Wrong 354A",
+      "MED Wrong 354B",
+      "MED Wrong 354C"
+    ],
+    "explanation": "MED Correct 354 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 355?",
+    "correct": "MED Correct 355",
+    "wrong": [
+      "MED Wrong 355A",
+      "MED Wrong 355B",
+      "MED Wrong 355C"
+    ],
+    "explanation": "MED Correct 355 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 356?",
+    "correct": "MED Correct 356",
+    "wrong": [
+      "MED Wrong 356A",
+      "MED Wrong 356B",
+      "MED Wrong 356C"
+    ],
+    "explanation": "MED Correct 356 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 357?",
+    "correct": "MED Correct 357",
+    "wrong": [
+      "MED Wrong 357A",
+      "MED Wrong 357B",
+      "MED Wrong 357C"
+    ],
+    "explanation": "MED Correct 357 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 358?",
+    "correct": "MED Correct 358",
+    "wrong": [
+      "MED Wrong 358A",
+      "MED Wrong 358B",
+      "MED Wrong 358C"
+    ],
+    "explanation": "MED Correct 358 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 359?",
+    "correct": "MED Correct 359",
+    "wrong": [
+      "MED Wrong 359A",
+      "MED Wrong 359B",
+      "MED Wrong 359C"
+    ],
+    "explanation": "MED Correct 359 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 360?",
+    "correct": "MED Correct 360",
+    "wrong": [
+      "MED Wrong 360A",
+      "MED Wrong 360B",
+      "MED Wrong 360C"
+    ],
+    "explanation": "MED Correct 360 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 361?",
+    "correct": "MED Correct 361",
+    "wrong": [
+      "MED Wrong 361A",
+      "MED Wrong 361B",
+      "MED Wrong 361C"
+    ],
+    "explanation": "MED Correct 361 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 362?",
+    "correct": "MED Correct 362",
+    "wrong": [
+      "MED Wrong 362A",
+      "MED Wrong 362B",
+      "MED Wrong 362C"
+    ],
+    "explanation": "MED Correct 362 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 363?",
+    "correct": "MED Correct 363",
+    "wrong": [
+      "MED Wrong 363A",
+      "MED Wrong 363B",
+      "MED Wrong 363C"
+    ],
+    "explanation": "MED Correct 363 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 364?",
+    "correct": "MED Correct 364",
+    "wrong": [
+      "MED Wrong 364A",
+      "MED Wrong 364B",
+      "MED Wrong 364C"
+    ],
+    "explanation": "MED Correct 364 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 365?",
+    "correct": "MED Correct 365",
+    "wrong": [
+      "MED Wrong 365A",
+      "MED Wrong 365B",
+      "MED Wrong 365C"
+    ],
+    "explanation": "MED Correct 365 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 366?",
+    "correct": "MED Correct 366",
+    "wrong": [
+      "MED Wrong 366A",
+      "MED Wrong 366B",
+      "MED Wrong 366C"
+    ],
+    "explanation": "MED Correct 366 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 367?",
+    "correct": "MED Correct 367",
+    "wrong": [
+      "MED Wrong 367A",
+      "MED Wrong 367B",
+      "MED Wrong 367C"
+    ],
+    "explanation": "MED Correct 367 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 368?",
+    "correct": "MED Correct 368",
+    "wrong": [
+      "MED Wrong 368A",
+      "MED Wrong 368B",
+      "MED Wrong 368C"
+    ],
+    "explanation": "MED Correct 368 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 369?",
+    "correct": "MED Correct 369",
+    "wrong": [
+      "MED Wrong 369A",
+      "MED Wrong 369B",
+      "MED Wrong 369C"
+    ],
+    "explanation": "MED Correct 369 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 370?",
+    "correct": "MED Correct 370",
+    "wrong": [
+      "MED Wrong 370A",
+      "MED Wrong 370B",
+      "MED Wrong 370C"
+    ],
+    "explanation": "MED Correct 370 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 371?",
+    "correct": "MED Correct 371",
+    "wrong": [
+      "MED Wrong 371A",
+      "MED Wrong 371B",
+      "MED Wrong 371C"
+    ],
+    "explanation": "MED Correct 371 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 372?",
+    "correct": "MED Correct 372",
+    "wrong": [
+      "MED Wrong 372A",
+      "MED Wrong 372B",
+      "MED Wrong 372C"
+    ],
+    "explanation": "MED Correct 372 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 373?",
+    "correct": "MED Correct 373",
+    "wrong": [
+      "MED Wrong 373A",
+      "MED Wrong 373B",
+      "MED Wrong 373C"
+    ],
+    "explanation": "MED Correct 373 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 374?",
+    "correct": "MED Correct 374",
+    "wrong": [
+      "MED Wrong 374A",
+      "MED Wrong 374B",
+      "MED Wrong 374C"
+    ],
+    "explanation": "MED Correct 374 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 375?",
+    "correct": "MED Correct 375",
+    "wrong": [
+      "MED Wrong 375A",
+      "MED Wrong 375B",
+      "MED Wrong 375C"
+    ],
+    "explanation": "MED Correct 375 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 376?",
+    "correct": "MED Correct 376",
+    "wrong": [
+      "MED Wrong 376A",
+      "MED Wrong 376B",
+      "MED Wrong 376C"
+    ],
+    "explanation": "MED Correct 376 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 377?",
+    "correct": "MED Correct 377",
+    "wrong": [
+      "MED Wrong 377A",
+      "MED Wrong 377B",
+      "MED Wrong 377C"
+    ],
+    "explanation": "MED Correct 377 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 378?",
+    "correct": "MED Correct 378",
+    "wrong": [
+      "MED Wrong 378A",
+      "MED Wrong 378B",
+      "MED Wrong 378C"
+    ],
+    "explanation": "MED Correct 378 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 379?",
+    "correct": "MED Correct 379",
+    "wrong": [
+      "MED Wrong 379A",
+      "MED Wrong 379B",
+      "MED Wrong 379C"
+    ],
+    "explanation": "MED Correct 379 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 380?",
+    "correct": "MED Correct 380",
+    "wrong": [
+      "MED Wrong 380A",
+      "MED Wrong 380B",
+      "MED Wrong 380C"
+    ],
+    "explanation": "MED Correct 380 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 381?",
+    "correct": "MED Correct 381",
+    "wrong": [
+      "MED Wrong 381A",
+      "MED Wrong 381B",
+      "MED Wrong 381C"
+    ],
+    "explanation": "MED Correct 381 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 382?",
+    "correct": "MED Correct 382",
+    "wrong": [
+      "MED Wrong 382A",
+      "MED Wrong 382B",
+      "MED Wrong 382C"
+    ],
+    "explanation": "MED Correct 382 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 383?",
+    "correct": "MED Correct 383",
+    "wrong": [
+      "MED Wrong 383A",
+      "MED Wrong 383B",
+      "MED Wrong 383C"
+    ],
+    "explanation": "MED Correct 383 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 384?",
+    "correct": "MED Correct 384",
+    "wrong": [
+      "MED Wrong 384A",
+      "MED Wrong 384B",
+      "MED Wrong 384C"
+    ],
+    "explanation": "MED Correct 384 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 385?",
+    "correct": "MED Correct 385",
+    "wrong": [
+      "MED Wrong 385A",
+      "MED Wrong 385B",
+      "MED Wrong 385C"
+    ],
+    "explanation": "MED Correct 385 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 386?",
+    "correct": "MED Correct 386",
+    "wrong": [
+      "MED Wrong 386A",
+      "MED Wrong 386B",
+      "MED Wrong 386C"
+    ],
+    "explanation": "MED Correct 386 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 387?",
+    "correct": "MED Correct 387",
+    "wrong": [
+      "MED Wrong 387A",
+      "MED Wrong 387B",
+      "MED Wrong 387C"
+    ],
+    "explanation": "MED Correct 387 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 388?",
+    "correct": "MED Correct 388",
+    "wrong": [
+      "MED Wrong 388A",
+      "MED Wrong 388B",
+      "MED Wrong 388C"
+    ],
+    "explanation": "MED Correct 388 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 389?",
+    "correct": "MED Correct 389",
+    "wrong": [
+      "MED Wrong 389A",
+      "MED Wrong 389B",
+      "MED Wrong 389C"
+    ],
+    "explanation": "MED Correct 389 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 390?",
+    "correct": "MED Correct 390",
+    "wrong": [
+      "MED Wrong 390A",
+      "MED Wrong 390B",
+      "MED Wrong 390C"
+    ],
+    "explanation": "MED Correct 390 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 391?",
+    "correct": "MED Correct 391",
+    "wrong": [
+      "MED Wrong 391A",
+      "MED Wrong 391B",
+      "MED Wrong 391C"
+    ],
+    "explanation": "MED Correct 391 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 392?",
+    "correct": "MED Correct 392",
+    "wrong": [
+      "MED Wrong 392A",
+      "MED Wrong 392B",
+      "MED Wrong 392C"
+    ],
+    "explanation": "MED Correct 392 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 393?",
+    "correct": "MED Correct 393",
+    "wrong": [
+      "MED Wrong 393A",
+      "MED Wrong 393B",
+      "MED Wrong 393C"
+    ],
+    "explanation": "MED Correct 393 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 394?",
+    "correct": "MED Correct 394",
+    "wrong": [
+      "MED Wrong 394A",
+      "MED Wrong 394B",
+      "MED Wrong 394C"
+    ],
+    "explanation": "MED Correct 394 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 395?",
+    "correct": "MED Correct 395",
+    "wrong": [
+      "MED Wrong 395A",
+      "MED Wrong 395B",
+      "MED Wrong 395C"
+    ],
+    "explanation": "MED Correct 395 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 396?",
+    "correct": "MED Correct 396",
+    "wrong": [
+      "MED Wrong 396A",
+      "MED Wrong 396B",
+      "MED Wrong 396C"
+    ],
+    "explanation": "MED Correct 396 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 397?",
+    "correct": "MED Correct 397",
+    "wrong": [
+      "MED Wrong 397A",
+      "MED Wrong 397B",
+      "MED Wrong 397C"
+    ],
+    "explanation": "MED Correct 397 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 398?",
+    "correct": "MED Correct 398",
+    "wrong": [
+      "MED Wrong 398A",
+      "MED Wrong 398B",
+      "MED Wrong 398C"
+    ],
+    "explanation": "MED Correct 398 is correct because it aligns with PTCE competency standards."
+  },
+  {
+    "question": "MED Question 399?",
+    "correct": "MED Correct 399",
+    "wrong": [
+      "MED Wrong 399A",
+      "MED Wrong 399B",
+      "MED Wrong 399C"
+    ],
+    "explanation": "MED Correct 399 is correct because it aligns with PTCE competency standards."
+  }
+]
