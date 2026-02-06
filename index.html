@@ -1,73 +1,236 @@
 
 <!doctype html>
-<html>
+<html lang="en" data-theme="fallout">
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>PTCB Practice Test</title>
-
-<link rel="icon" href="favicon.png" type="image/png">
+<link rel="icon" href="favicon.png" type="image/png"/>
 
 <style>
-body{font-family:system-ui;background:#071208;color:#7cff9e;margin:0}
-.boot{position:fixed;inset:0;background:black;color:#7cff9e;display:flex;align-items:center;justify-content:center;flex-direction:column}
-.bar{width:0;height:10px;background:#7cff9e;transition:width 2.5s linear}
-.container{padding:20px}
-button{padding:10px 18px;margin:6px;background:#7cff9e;color:black;border:none;border-radius:8px;font-weight:bold}
+body{margin:0;background:#071208;color:#7cff9e;font-family:ui-monospace,monospace}
+.wrap{padding:20px;max-width:1500px;margin:auto}
+.card{border:1px solid #1f4a2d;background:#0b1c0f;padding:16px;border-radius:12px;margin-bottom:16px}
+button{background:#7cff9e;color:black;border:none;border-radius:8px;padding:10px 16px;font-weight:800;margin:4px;cursor:pointer}
+.choice{border:1px solid #1f4a2d;padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer}
+.navgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:12px}
+.navbtn{border:1px solid #1f4a2d;padding:8px;text-align:center;border-radius:6px;cursor:pointer}
+.boot{position:fixed;inset:0;background:black;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.bootLog{height:140px;width:80%;overflow:hidden;border:1px solid #1f4a2d;padding:8px;margin-bottom:10px}
+.barWrap{width:80%;border:1px solid #1f4a2d;height:10px}
+.bar{height:100%;width:0;background:#7cff9e;transition:width 3s linear}
 </style>
 </head>
 
 <body>
 
 <div id="boot" class="boot">
-<h2>PIP-BOY INITIALIZING</h2>
-<div style="width:80%;border:1px solid #7cff9e"><div id="bar" class="bar"></div></div>
-<p>Tap / Click / Press Space to Skip</p>
+<div id="bootLog" class="bootLog"></div>
+<div class="barWrap"><div class="bar" id="bootBar"></div></div>
+<p>Tap / Click / Space to Skip</p>
 </div>
 
-<div id="app" class="container" style="display:none">
-<h2>PTCB Practice Test</h2>
-<button onclick="start()">Start Practice Test</button>
-<div id="status"></div>
+<div class="wrap">
+
+<div id="menu" class="card" style="display:none">
+<button onclick="startTest()">Practice Test</button>
+<button onclick="goFlash()">Flashcards</button>
+</div>
+
+<div id="test" class="card" style="display:none">
+<h3 id="question"></h3>
+<div id="choices"></div>
+<button onclick="prevQ()">Prev</button>
+<button onclick="nextQ()">Next</button>
+<button onclick="submitTest()">Submit</button>
+<div id="nav" class="navgrid"></div>
+</div>
+
+<div id="results" class="card" style="display:none">
+<h3>Results</h3>
+<div id="score"></div>
+<div id="explain"></div>
+<button onclick="goMenu()">Menu</button>
+</div>
+
+<div id="flash" class="card" style="display:none">
+<h3 id="flashQ"></h3>
+<div id="flashA"></div>
+<button onclick="nextFlash()">Next</button>
+<button onclick="goMenu()">Menu</button>
+</div>
+
 </div>
 
 <script>
 
-let BANK={med:[],safe:[],order:[],fed:[]};
-
-async function loadData(){
- BANK.med = await fetch("./med_bank.json").then(r=>r.json());
- BANK.safe = await fetch("./safety_bank.json").then(r=>r.json());
- BANK.order = await fetch("./order_bank.json").then(r=>r.json());
- BANK.fed = await fetch("./federal_bank.json").then(r=>r.json());
+// ---------- Boot ----------
+let bootLines=[
+"Vault Tec BIOS... OK",
+"Loading Medication Database...",
+"Loading Safety Systems...",
+"Loading Federal Compliance...",
+"Initializing UI...",
+"Ready."
+];
+let bootIndex=0;
+function bootStep(){
+ let log=document.getElementById("bootLog");
+ if(bootIndex<bootLines.length){
+   log.innerHTML+=bootLines[bootIndex]+"<br>";
+   bootIndex++;
+   setTimeout(bootStep,400);
+ } else {
+   document.getElementById("bootBar").style.width="100%";
+   setTimeout(endBoot,600);
+ }
 }
-
-function finishBoot(){
+function endBoot(){
  document.getElementById("boot").style.display="none";
- document.getElementById("app").style.display="";
+ document.getElementById("menu").style.display="";
 }
-
-document.addEventListener("DOMContentLoaded", ()=>{
- let bar=document.getElementById("bar");
- setTimeout(()=>bar.style.width="100%",100);
- setTimeout(finishBoot,2500);
-
- document.getElementById("boot").onclick=finishBoot;
- document.addEventListener("keydown",e=>{
-   if(e.code==="Space"||e.key==="Enter") finishBoot();
- });
-
- loadData();
+document.addEventListener("DOMContentLoaded",()=>{
+ setTimeout(bootStep,300);
+ setTimeout(endBoot,8000);
+ document.getElementById("boot").onclick=endBoot;
 });
 
-function start(){
- document.getElementById("status").innerText =
- "Banks Loaded → Med: "+BANK.med.length+
- " | Safety: "+BANK.safe.length+
- " | Order: "+BANK.order.length+
- " | Federal: "+BANK.fed.length;
+// ---------- Load JSON ----------
+let BANK={MED:[],SAFE:[],ORDER:[],FED:[]};
+async function loadBanks(){
+ BANK.MED = await fetch("./med_bank.json").then(r=>r.json());
+ BANK.SAFE = await fetch("./safety_bank.json").then(r=>r.json());
+ BANK.ORDER = await fetch("./order_bank.json").then(r=>r.json());
+ BANK.FED = await fetch("./federal_bank.json").then(r=>r.json());
+}
+loadBanks();
+
+// ---------- Explanation Engine ----------
+function buildExplanation(questionText, correctAnswer){
+ let q = questionText.toLowerCase();
+
+ if(q.includes("generic")){
+   return correctAnswer + " is the generic name. Generic names are the standard non‑brand medication names used clinically and in most prescribing systems.";
+ }
+
+ if(q.includes("brand")){
+   return correctAnswer + " is the brand name marketed by a manufacturer. Brand names are trademarked, while generics are universal.";
+ }
+
+ if(q.includes("schedule ii") || q.includes("c2")){
+   return correctAnswer + " is correct because Schedule II controlled substances cannot be refilled under federal law and require a new prescription each fill.";
+ }
+
+ if(q.includes("dea")){
+   return correctAnswer + " is correct because this DEA form is specifically assigned to that controlled substance function under federal regulation.";
+ }
+
+ if(q.includes("mg") || q.includes("ml") || q.includes("mcg")){
+   return correctAnswer + " is correct based on standard pharmacy dose calculation and unit conversion rules used in medication dosing.";
+ }
+
+ if(q.includes("garb") || q.includes("hand hygiene")){
+   return correctAnswer + " is correct because proper sterile or hazardous compounding garbing procedures always begin with hand hygiene to prevent contamination.";
+ }
+
+ return correctAnswer + " is correct based on standard pharmacy practice and regulatory guidance.";
+}
+
+// ---------- Test ----------
+let questions=[];
+let answers={};
+let idx=0;
+
+function buildTest(){
+ questions=[];
+ function pick(arr,n){
+   for(let i=0;i<n;i++){
+     let q=arr[Math.floor(Math.random()*arr.length)];
+     questions.push({
+       q:q[0],
+       correct:q[1],
+       wrong:q[2],
+       explanation: buildExplanation(q[0], q[1])
+     });
+   }
+ }
+ pick(BANK.MED,32);
+ pick(BANK.SAFE,21);
+ pick(BANK.ORDER,20);
+ pick(BANK.FED,17);
+}
+
+function startTest(){
+ document.getElementById("menu").style.display="none";
+ document.getElementById("test").style.display="";
+ buildTest();
+ idx=0;
+ renderQ();
+}
+
+function renderQ(){
+ let q=questions[idx];
+ document.getElementById("question").innerHTML=q.q;
+ let opts=[q.correct,...q.wrong].sort(()=>Math.random()-.5);
+ document.getElementById("choices").innerHTML=opts.map(o=>
+   `<div class="choice" onclick="answers[${idx}]='${o}'">${o}</div>`
+ ).join("");
+ renderNav();
+}
+
+function renderNav(){
+ document.getElementById("nav").innerHTML=questions.map((_,i)=>
+   `<div class="navbtn" onclick="idx=${i};renderQ()">${i+1}</div>`
+ ).join("");
+}
+
+function nextQ(){ if(idx<questions.length-1){idx++;renderQ();} }
+function prevQ(){ if(idx>0){idx--;renderQ();} }
+
+function submitTest(){
+ let correct=0;
+ let expHTML="";
+ questions.forEach((q,i)=>{
+   let a=answers[i];
+   if(a===q.correct) correct++;
+   expHTML+=`<p><b>Q${i+1}</b><br>
+   Your Answer: ${a||"Blank"}<br>
+   Correct Answer: ${q.correct}<br>
+   Why: ${q.explanation}
+   </p>`;
+ });
+ document.getElementById("test").style.display="none";
+ document.getElementById("results").style.display="";
+ document.getElementById("score").innerHTML=`Score ${correct}/90`;
+ document.getElementById("explain").innerHTML=expHTML;
+}
+
+function goMenu(){
+ document.getElementById("results").style.display="none";
+ document.getElementById("flash").style.display="none";
+ document.getElementById("menu").style.display="";
+}
+
+// ---------- Flash ----------
+let flashList=[];
+let flashIdx=0;
+function goFlash(){
+ document.getElementById("menu").style.display="none";
+ document.getElementById("flash").style.display="";
+ flashList=BANK.MED.slice(0,200);
+ flashIdx=0;
+ renderFlash();
+}
+function renderFlash(){
+ let f=flashList[flashIdx];
+ document.getElementById("flashQ").innerHTML=f[0];
+ document.getElementById("flashA").innerHTML=f[1];
+}
+function nextFlash(){
+ flashIdx=(flashIdx+1)%flashList.length;
+ renderFlash();
 }
 
 </script>
-
 </body>
 </html>
