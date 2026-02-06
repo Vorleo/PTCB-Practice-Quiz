@@ -7,15 +7,10 @@
 <title>PTCB Practice Test</title>
 
 <style>
-:root{
- --fallout:#7cff9e;
- --vegas:#ffb347;
-}
-
 body{
  margin:0;
  background:#020403;
- color:var(--fallout);
+ color:#7cff9e;
  font-family:ui-monospace, monospace;
 }
 
@@ -27,56 +22,41 @@ body{
  flex-direction:column;
  justify-content:center;
  align-items:center;
- z-index:999999;
- overflow:hidden;
-}
-
-#boot.vegas{
- background:#0b0703;
- color:var(--vegas);
+ z-index:99999;
 }
 
 .scanlines{
  position:absolute;
  inset:0;
- pointer-events:none;
- background:repeating-linear-gradient(
-   rgba(0,0,0,.3) 0px,
-   rgba(0,0,0,.3) 2px,
-   transparent 2px,
-   transparent 6px
- );
- opacity:.7;
+ background:repeating-linear-gradient(rgba(0,0,0,.3) 0px, rgba(0,0,0,.3) 2px, transparent 2px, transparent 6px);
 }
 
 .crt{
  width:min(800px,90vw);
- height:280px;
- border:1px solid currentColor;
+ height:260px;
+ border:1px solid #7cff9e;
  padding:12px;
  overflow:hidden;
  background:rgba(0,0,0,.6);
- text-shadow:0 0 8px currentColor;
 }
 
 .barwrap{
  width:min(800px,90vw);
- border:1px solid currentColor;
- margin-top:12px;
+ border:1px solid #7cff9e;
+ margin-top:10px;
  height:10px;
 }
 
 .bar{
  height:100%;
  width:0%;
- background:currentColor;
- transition:width .5s linear;
+ background:#7cff9e;
 }
 
-#app{ display:none; padding:20px; }
+#app{display:none;padding:20px}
 
 button{
- background:var(--fallout);
+ background:#7cff9e;
  border:none;
  padding:10px 16px;
  border-radius:6px;
@@ -92,95 +72,78 @@ button{
 <div class="scanlines"></div>
 <div class="crt" id="bootText"></div>
 <div class="barwrap"><div class="bar" id="bootBar"></div></div>
-<div style="margin-top:10px;font-size:12px;">CLICK / SPACE TO SKIP</div>
 </div>
 
 <div id="app">
 <h1>PTCB Practice Test</h1>
-<p>System Loaded</p>
+<button onclick="startTest()">Start Test</button>
+<div id="questionArea"></div>
 </div>
 
 <script>
+let banks={};
+async function loadBanks(){
+ banks.med = await fetch("med_bank.json").then(r=>r.json());
+ banks.safe = await fetch("safety_bank.json").then(r=>r.json());
+ banks.order = await fetch("order_bank.json").then(r=>r.json());
+ banks.fed = await fetch("federal_bank.json").then(r=>r.json());
+}
+loadBanks();
+
+let test=[];
+let idx=0;
+let answers={};
+
+function buildTest(){
+ test=[];
+ function pick(arr,n){
+  for(let i=0;i<n;i++){
+    test.push(arr[Math.floor(Math.random()*arr.length)]);
+  }
+ }
+ pick(banks.med,32);
+ pick(banks.safe,21);
+ pick(banks.order,20);
+ pick(banks.fed,17);
+}
+
+function startTest(){
+ buildTest();
+ idx=0;
+ showQ();
+}
+
+function showQ(){
+ let q=test[idx];
+ let opts=[q.correct,...q.wrong].sort(()=>Math.random()-.5);
+ document.getElementById("questionArea").innerHTML =
+ `<h3>${q.question}</h3>` +
+ opts.map(o=>`<div onclick="answers[${idx}]='${o}'">${o}</div>`).join("");
+}
+
 (function(){
-
-const bootLines=[
-"VAULT TEC BIOS REV 7.3",
-"CHECKING MEMORY ADDRESSES...",
-"0xA21FF OK",
-"LOADING MEDICATION DATABASE...",
-"LOADING USP MODULES...",
-"LOADING DEA MODULES...",
-"INITIALIZING TERMINAL...",
-"SYSTEM READY"
+const lines=[
+"VAULT TEC BIOS",
+"CHECKING MEMORY",
+"LOADING DATABASE",
+"INITIALIZING TERMINAL",
+"READY"
 ];
-
 let i=0;
-let done=false;
-
-function hexNoise(){
- const chars="ABCDEF0123456789";
- let out="0x";
- for(let i=0;i<12;i++){
-   out+=chars[Math.floor(Math.random()*chars.length)];
- }
- return out;
-}
-
-function beep(){
- try{
-   const ctx=new (window.AudioContext||window.webkitAudioContext)();
-   const osc=ctx.createOscillator();
-   const gain=ctx.createGain();
-   osc.type="square";
-   osc.frequency.value=900;
-   gain.gain.value=0.02;
-   osc.connect(gain);
-   gain.connect(ctx.destination);
-   osc.start();
-   osc.stop(ctx.currentTime+.03);
- }catch(e){}
-}
-
-function finish(){
- if(done) return;
- done=true;
- document.getElementById("boot").remove();
- document.getElementById("app").style.display="block";
-}
-
 function step(){
- if(done) return;
-
- const t=document.getElementById("bootText");
- const bar=document.getElementById("bootBar");
-
- if(i<bootLines.length){
-   beep();
-   t.innerText += bootLines[i] + " " + hexNoise() + "\n";
-   bar.style.width = ((i+1)/bootLines.length*100)+"%";
-   i++;
-   setTimeout(step, 300+Math.random()*200);
+ let t=document.getElementById("bootText");
+ let b=document.getElementById("bootBar");
+ if(i<lines.length){
+  t.innerText+=lines[i]+"\n";
+  b.style.width=((i+1)/lines.length*100)+"%";
+  i++;
+  setTimeout(step,400);
  }else{
-   setTimeout(finish, 600);
+  document.getElementById("boot").remove();
+  document.getElementById("app").style.display="block";
  }
 }
-
-document.addEventListener("DOMContentLoaded",()=>{
-
- if(document.documentElement.dataset.theme==="vegas"){
-   document.getElementById("boot").classList.add("vegas");
- }
-
- document.getElementById("boot").onclick=finish;
- document.addEventListener("keydown",e=>{
-   if(e.key===" "||e.key==="Enter") finish();
- });
-
- setTimeout(step,200);
- setTimeout(finish,12000);
-
-});
-
+document.addEventListener("DOMContentLoaded",()=>setTimeout(step,200));
 })();
 </script>
 
