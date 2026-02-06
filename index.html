@@ -674,6 +674,99 @@ tr:hover{ background:rgba(255,255,255,.04); cursor:pointer; }
 </div>
 
 <script>
+
+function __enforce90__(arr){
+  if(!Array.isArray(arr)) return arr;
+  if(arr.length === 90) return arr;
+  if(arr.length > 90) return arr.slice(0,90);
+  // If short, pad by re-picking from all banks to reach 90 (shouldn't happen if banks are healthy)
+  const all = (BANKS?.MED||[]).concat(BANKS?.SAFE||[]).concat(BANKS?.ORDER||[]).concat(BANKS?.FED||[]);
+  while(arr.length < 90 && all.length){
+    const q = all[Math.floor(Math.random()*all.length)];
+    arr.push(q);
+  }
+  return arr;
+}
+
+
+
+/* =========================
+   BANK LOADING (robust)
+   - Tries multiple relative paths
+   - Prevents blank test/flashcards if banks aren't ready yet
+   ========================= */
+const __BANK_PATHS__ = {
+  MED: ["./med_bank.json","med_bank.json","./data/med_bank.json","data/med_bank.json"],
+  SAFE:["./safety_bank.json","safety_bank.json","./data/safety_bank.json","data/safety_bank.json"],
+  ORDER:["./order_bank.json","order_bank.json","./data/order_bank.json","data/order_bank.json"],
+  FED:["./federal_bank.json","federal_bank.json","./data/federal_bank.json","data/federal_bank.json"]
+};
+
+async function __fetchFirstJson__(paths){
+  let lastErr = null;
+  for(const p of paths){
+    try{
+      const res = await fetch(p, { cache: "no-store" });
+      if(!res.ok) throw new Error(`HTTP ${res.status} for ${p}`);
+      return await res.json();
+    }catch(e){
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error("Unable to fetch JSON bank");
+}
+
+function __showBankError__(msg){
+  // Try to show in a safe place without altering layout
+  const el = document.querySelector("#questionText") || document.querySelector("#contentPanel") || document.body;
+  if(el && el !== document.body){
+    el.textContent = msg;
+  }else{
+    console.error(msg);
+    alert(msg);
+  }
+}
+
+async function __ensureBanksLoaded__(){
+  try{
+    // Many builds keep BANKS and banksReady; respect either
+    if(typeof banksReady !== "undefined" && banksReady) return true;
+    if(typeof BANKS === "undefined") return false;
+
+    // If a loadBanks() already exists, prefer it (but still verify)
+    if(typeof loadBanks === "function"){
+      try{ await loadBanks(); }catch(_e){ /* fall through to direct */ }
+    }
+
+    // Direct load fallback (fills BANKS.* if empty)
+    const needsMED = !BANKS.MED || (Array.isArray(BANKS.MED) && BANKS.MED.length===0);
+    const needsSAFE = !BANKS.SAFE || (Array.isArray(BANKS.SAFE) && BANKS.SAFE.length===0);
+    const needsORDER = !BANKS.ORDER || (Array.isArray(BANKS.ORDER) && BANKS.ORDER.length===0);
+    const needsFED = !BANKS.FED || (Array.isArray(BANKS.FED) && BANKS.FED.length===0);
+
+    if(needsMED) BANKS.MED = (await __fetchFirstJson__(__BANK_PATHS__.MED)) || [];
+    if(needsSAFE) BANKS.SAFE = (await __fetchFirstJson__(__BANK_PATHS__.SAFE)) || [];
+    if(needsORDER) BANKS.ORDER = (await __fetchFirstJson__(__BANK_PATHS__.ORDER)) || [];
+    if(needsFED) BANKS.FED = (await __fetchFirstJson__(__BANK_PATHS__.FED)) || [];
+
+    // Mark ready flags if they exist
+    if(typeof banksReady !== "undefined") banksReady = true;
+    if(typeof banksLoaded !== "undefined") banksLoaded = true;
+
+    // Final sanity check
+    const ok = (BANKS.MED?.length>0 && BANKS.SAFE?.length>0 && BANKS.ORDER?.length>0 && BANKS.FED?.length>0);
+    if(!ok){
+      __showBankError__("Banks loaded but appear empty. Verify JSON files are in the same folder as index.html (or in /data).");
+      return false;
+    }
+    return true;
+  }catch(e){
+    __showBankError__("Could not load question banks. Make sure the JSON files are deployed with the site.\n\nDetails: " + (e?.message || e));
+    return false;
+  }
+}
+
+
 /* =========================
    SETTINGS + AUDIO
    ========================= */
@@ -943,7 +1036,10 @@ function show(view){
   DOM("flashView").style.display = (view==="flash") ? "" : "none";
 }
 
-function startTest(){
+async function startT
+  const __ok = await __ensureBanksLoaded__();
+  if(!__ok) return;
+est(){
   beep(880,0.03);
   buildTest();
   show("test");
@@ -1222,7 +1318,10 @@ function buildFlashList(deckKey){
   }
   return shuffle(pick(deckKey)).slice(0,500);
 }
-function startFlash(deckKey){
+async function start
+  const __ok = await __ensureBanksLoaded__();
+  if(!__ok) return;
+Flash(deckKey){
   flashDeck = deckKey;
   flashList = buildFlashList(deckKey);
   flashPos = 0;
