@@ -674,99 +674,6 @@ tr:hover{ background:rgba(255,255,255,.04); cursor:pointer; }
 </div>
 
 <script>
-
-function __enforce90__(arr){
-  if(!Array.isArray(arr)) return arr;
-  if(arr.length === 90) return arr;
-  if(arr.length > 90) return arr.slice(0,90);
-  // If short, pad by re-picking from all banks to reach 90 (shouldn't happen if banks are healthy)
-  const all = (BANKS?.MED||[]).concat(BANKS?.SAFE||[]).concat(BANKS?.ORDER||[]).concat(BANKS?.FED||[]);
-  while(arr.length < 90 && all.length){
-    const q = all[Math.floor(Math.random()*all.length)];
-    arr.push(q);
-  }
-  return arr;
-}
-
-
-
-/* =========================
-   BANK LOADING (robust)
-   - Tries multiple relative paths
-   - Prevents blank test/flashcards if banks aren't ready yet
-   ========================= */
-const __BANK_PATHS__ = {
-  MED: ["./med_bank.json","med_bank.json","./data/med_bank.json","data/med_bank.json"],
-  SAFE:["./safety_bank.json","safety_bank.json","./data/safety_bank.json","data/safety_bank.json"],
-  ORDER:["./order_bank.json","order_bank.json","./data/order_bank.json","data/order_bank.json"],
-  FED:["./federal_bank.json","federal_bank.json","./data/federal_bank.json","data/federal_bank.json"]
-};
-
-async function __fetchFirstJson__(paths){
-  let lastErr = null;
-  for(const p of paths){
-    try{
-      const res = await fetch(p, { cache: "no-store" });
-      if(!res.ok) throw new Error(`HTTP ${res.status} for ${p}`);
-      return await res.json();
-    }catch(e){
-      lastErr = e;
-    }
-  }
-  throw lastErr || new Error("Unable to fetch JSON bank");
-}
-
-function __showBankError__(msg){
-  // Try to show in a safe place without altering layout
-  const el = document.querySelector("#questionText") || document.querySelector("#contentPanel") || document.body;
-  if(el && el !== document.body){
-    el.textContent = msg;
-  }else{
-    console.error(msg);
-    alert(msg);
-  }
-}
-
-async function __ensureBanksLoaded__(){
-  try{
-    // Many builds keep BANKS and banksReady; respect either
-    if(typeof banksReady !== "undefined" && banksReady) return true;
-    if(typeof BANKS === "undefined") return false;
-
-    // If a loadBanks() already exists, prefer it (but still verify)
-    if(typeof loadBanks === "function"){
-      try{ await loadBanks(); }catch(_e){ /* fall through to direct */ }
-    }
-
-    // Direct load fallback (fills BANKS.* if empty)
-    const needsMED = !BANKS.MED || (Array.isArray(BANKS.MED) && BANKS.MED.length===0);
-    const needsSAFE = !BANKS.SAFE || (Array.isArray(BANKS.SAFE) && BANKS.SAFE.length===0);
-    const needsORDER = !BANKS.ORDER || (Array.isArray(BANKS.ORDER) && BANKS.ORDER.length===0);
-    const needsFED = !BANKS.FED || (Array.isArray(BANKS.FED) && BANKS.FED.length===0);
-
-    if(needsMED) BANKS.MED = (await __fetchFirstJson__(__BANK_PATHS__.MED)) || [];
-    if(needsSAFE) BANKS.SAFE = (await __fetchFirstJson__(__BANK_PATHS__.SAFE)) || [];
-    if(needsORDER) BANKS.ORDER = (await __fetchFirstJson__(__BANK_PATHS__.ORDER)) || [];
-    if(needsFED) BANKS.FED = (await __fetchFirstJson__(__BANK_PATHS__.FED)) || [];
-
-    // Mark ready flags if they exist
-    if(typeof banksReady !== "undefined") banksReady = true;
-    if(typeof banksLoaded !== "undefined") banksLoaded = true;
-
-    // Final sanity check
-    const ok = (BANKS.MED?.length>0 && BANKS.SAFE?.length>0 && BANKS.ORDER?.length>0 && BANKS.FED?.length>0);
-    if(!ok){
-      __showBankError__("Banks loaded but appear empty. Verify JSON files are in the same folder as index.html (or in /data).");
-      return false;
-    }
-    return true;
-  }catch(e){
-    __showBankError__("Could not load question banks. Make sure the JSON files are deployed with the site.\n\nDetails: " + (e?.message || e));
-    return false;
-  }
-}
-
-
 /* =========================
    SETTINGS + AUDIO
    ========================= */
@@ -834,6 +741,7 @@ function initTerminalBG(){
    ========================= */
 const DOM = (id)=>document.getElementById(id);
 let BANKS = { MED:[], SAFE:[], ORDER:[], FED:[] };
+let banksReady = false;
 const DOMAIN_COUNTS = { MED:32, SAFE:21, ORDER:20, FED:17 };
 const DOMAIN_LABEL = { MED:"Medications", SAFE:"Patient Safety", ORDER:"Order Entry", FED:"Federal Requirements" };
 
@@ -848,17 +756,26 @@ function normalizeBankItem(item){
   return null;
 }
 async function loadBanks(){
-  const [med, safe, order, fed] = await Promise.all([
-    fetch("./med_bank.json").then(r=>r.json()),
-    fetch("./safety_bank.json").then(r=>r.json()),
-    fetch("./order_bank.json").then(r=>r.json()),
-    fetch("./federal_bank.json").then(r=>r.json())
-  ]);
+  try{
+    const [med, safe, order, fed] = await Promise.all([
+      fetch("./med_bank.json", {cache:"no-store"}).then(r=>r.json()),
+      fetch("./safety_bank.json", {cache:"no-store"}).then(r=>r.json()),
+      fetch("./order_bank.json", {cache:"no-store"}).then(r=>r.json()),
+      fetch("./federal_bank.json", {cache:"no-store"}).then(r=>r.json())
+    ]);
   BANKS.MED = med.map(normalizeBankItem).filter(Boolean);
   BANKS.SAFE = safe.map(normalizeBankItem).filter(Boolean);
   BANKS.ORDER = order.map(normalizeBankItem).filter(Boolean);
   BANKS.FED = fed.map(normalizeBankItem).filter(Boolean);
+  banksReady = true;
   DOM("status").textContent = `Loaded ✓ MED ${BANKS.MED.length} SAFE ${BANKS.SAFE.length} ORDER ${BANKS.ORDER.length} FED ${BANKS.FED.length}`;
+
+  }catch(err){
+    console.error("Bank load failed:", err);
+    banksReady = false;
+    DOM("status").textContent = "Banks failed to load (check JSON files).";
+    throw err;
+  }
 }
 
 /* =========================
@@ -880,7 +797,7 @@ function runBoot(){
 "   \\ \\/ / _` | | | | | __|  | |/ _ \\ / _ \\",
 "    \\  / (_| | |_| | | |_  _| | (_) |  __/",
 "     \\/ \\__,_|\\__,_|_|\\__| \\___/\\___/ \\___|",
-"            V A U L T - T E C              "
+"           P T C E  P R A C T I C E  T O O L        "
   ].join("\n");
 
   const lines=[
@@ -904,7 +821,7 @@ function runBoot(){
   const checksum = ()=>`CHK ${hex(8)}:${hex(8)} OK`;
 
   let i=0, done=false, cursorOn=true;
-  crt.textContent = logo + "\n\n";
+  crt.textContent = logo + "\n" + "A Vault Tec program by Joshua Vorhies" + "\n\n";
 
   const cursorTimer = setInterval(()=>{
     if(done) return;
@@ -1036,11 +953,12 @@ function show(view){
   DOM("flashView").style.display = (view==="flash") ? "" : "none";
 }
 
-async function startT
-  const __ok = await __ensureBanksLoaded__();
-  if(!__ok) return;
-est(){
+async function startTest(){
   beep(880,0.03);
+  if(!banksReady){
+    DOM("status").textContent = "Loading banks…";
+    try{ await loadBanks(); }catch(e){ alert("Banks failed to load. Check that med_bank.json, safety_bank.json, order_bank.json, federal_bank.json are in the repo root."); return; }
+  }
   buildTest();
   show("test");
   buildNavGrid();
@@ -1318,10 +1236,7 @@ function buildFlashList(deckKey){
   }
   return shuffle(pick(deckKey)).slice(0,500);
 }
-async function start
-  const __ok = await __ensureBanksLoaded__();
-  if(!__ok) return;
-Flash(deckKey){
+async function startFlash(deckKey){
   flashDeck = deckKey;
   flashList = buildFlashList(deckKey);
   flashPos = 0;
@@ -1354,44 +1269,34 @@ DOM("flashCard").addEventListener("click", flipFlash);
 document.addEventListener("DOMContentLoaded", ()=>{
   applySavedSettings();
   initTerminalBG();
+  // Show menu immediately (banks load in background)
+  show("menu");
+  // Start boot animation (purely visual)
+  try{ runBoot(); }catch(e){ console.error("boot error", e); }
 
-  // Start boot immediately (never block UI)
-  try{ runBoot(); }catch(e){ console.error("boot error", e); const l=DOM("bootTerminalLayer"); if(l){ l.style.display="none"; } }
-
-  // Show menu immediately (banks can finish loading in the background)
-  try{ show("menu"); }catch(e){ /* ignore */ }
-
-  // Load banks in background; update status when done
-  try{
-    DOM("status").textContent = "Loading banks…";
-    Promise.resolve(loadBanks()).then(()=>{
-      DOM("status").textContent = "Ready.";
-    }).catch((e)=>{
-      console.error("loadBanks error", e);
-      DOM("status").textContent = "Banks failed to load (check JSON files).";
-    });
-  }catch(e){
-    console.error(e);
-  }
+  DOM("status").textContent = "Loading banks…";
+  loadBanks().then(()=>{
+    DOM("status").textContent = "Ready.";
+  }).catch(()=>{
+    // status set in loadBanks catch
+  });
 });
 
-/* SAFE BOOT FAILSAFE (non-blocking)
-   Guarantees you can always exit the boot overlay even if animations or bank loads fail.
-*/
+/* BOOT EXIT HOTKEYS (always available) */
 (function(){
-  function hideBoot(){
-    const layer = document.getElementById("bootTerminalLayer");
-    if(!layer) return;
-    layer.style.opacity = "0";
-    setTimeout(()=>{ try{ layer.remove(); }catch(_e){ layer.style.display="none"; } }, 250);
+  const layer = document.getElementById("bootTerminalLayer");
+  if(!layer) return;
+  function finish(){
+    layer.style.opacity="0";
+    setTimeout(()=>{ try{ layer.remove(); }catch(_e){ layer.style.display="none"; } }, 300);
   }
-  window.addEventListener("keydown",(e)=>{
-    if(e.code==="Space" || e.code==="Enter" || e.key===" " || e.key==="Enter") hideBoot();
+  layer.addEventListener("click", finish, {passive:true});
+  document.addEventListener("keydown", (e)=>{
+    if(e.key==="Enter" || e.key===" " || e.code==="Space") finish();
   });
-  window.addEventListener("click", ()=>hideBoot(), {passive:true});
-  window.addEventListener("touchstart", ()=>hideBoot(), {passive:true});
-  setTimeout(()=>hideBoot(), 4500);
+  setTimeout(finish, 6000);
 })();
+
 </script>
 
 </body>
