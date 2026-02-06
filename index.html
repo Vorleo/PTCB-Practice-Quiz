@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="fallout">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTCB Practice Test</title>
+
+<style>
+body{
+ margin:0;
+ background:#020403;
+ color:#7cff9e;
+ font-family: ui-monospace, monospace;
+}
+
+/* ===== Boot ===== */
+#boot{
+ position:fixed;
+ inset:0;
+ background:#020403;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ z-index:999999;
+}
+
+.scanlines{
+ position:absolute;
+ inset:0;
+ background:repeating-linear-gradient(rgba(0,0,0,.3) 0px, rgba(0,0,0,.3) 2px, transparent 2px, transparent 6px);
+}
+
+.crt{
+ width:min(900px,92vw);
+ height:320px;
+ border:1px solid #7cff9e;
+ padding:14px;
+ overflow:hidden;
+ background:rgba(0,0,0,.7);
+ text-shadow:0 0 8px #7cff9e;
+ white-space:pre-wrap;
+}
+
+.barwrap{
+ width:min(900px,92vw);
+ border:1px solid #7cff9e;
+ margin-top:12px;
+ height:12px;
+}
+
+.bar{
+ height:100%;
+ width:0%;
+ background:#7cff9e;
+ transition:width .4s linear;
+}
+
+/* ===== Old Dense Tool Style ===== */
+
+#app{
+ display:none;
+ padding:16px;
+}
+
+.panel{
+ border:1px solid #7cff9e;
+ padding:14px;
+ margin-bottom:14px;
+}
+
+button{
+ background:#7cff9e;
+ border:none;
+ padding:10px 14px;
+ margin:6px;
+ font-weight:bold;
+ cursor:pointer;
+}
+
+.choice{
+ border:1px solid #7cff9e;
+ padding:8px;
+ margin-bottom:6px;
+ cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="boot">
+<div class="scanlines"></div>
+<div class="crt" id="bootText"></div>
+<div class="barwrap"><div class="bar" id="bootBar"></div></div>
+</div>
+
+<div id="app">
+
+<div class="panel">
+<h2>PTCB Practice Test</h2>
+<button onclick="startTest()">Start Test</button>
+</div>
+
+<div class="panel" id="questionPanel"></div>
+
+</div>
+
+<script>
+
+/* ===== JSON LOAD ===== */
+let BANKS={};
+async function loadBanks(){
+ BANKS.med = await fetch("med_bank.json").then(r=>r.json());
+ BANKS.safe = await fetch("safety_bank.json").then(r=>r.json());
+ BANKS.order = await fetch("order_bank.json").then(r=>r.json());
+ BANKS.fed = await fetch("federal_bank.json").then(r=>r.json());
+}
+loadBanks();
+
+/* ===== TEST ENGINE ===== */
+
+let test=[];
+let idx=0;
+let answers={};
+
+function pick(arr,n){
+ let out=[];
+ while(out.length<n){
+  out.push(arr[Math.floor(Math.random()*arr.length)]);
+ }
+ return out;
+}
+
+function buildTest(){
+ test=[
+ ...pick(BANKS.med,32),
+ ...pick(BANKS.safe,21),
+ ...pick(BANKS.order,20),
+ ...pick(BANKS.fed,17)
+ ];
+}
+
+function startTest(){
+ buildTest();
+ idx=0;
+ renderQ();
+}
+
+function renderQ(){
+ let q=test[idx];
+ let opts=[q.correct,...q.wrong].sort(()=>Math.random()-.5);
+
+ document.getElementById("questionPanel").innerHTML=
+ `<h3>Q ${idx+1} / 90</h3>
+ <div>${q.question}</div>
+ `+
+ opts.map(o=>`<div class="choice" onclick="answers[${idx}]='${o}'">${o}</div>`).join("")+
+ `<br>
+ <button onclick="prev()">Prev</button>
+ <button onclick="next()">Next</button>
+ <button onclick="submitTest()">Submit</button>`;
+}
+
+function next(){ if(idx<89){ idx++; renderQ(); }}
+function prev(){ if(idx>0){ idx--; renderQ(); }}
+
+function submitTest(){
+ let correct=0;
+ test.forEach((q,i)=>{
+  if(answers[i]===q.correct) correct++;
+ });
+ alert("Score: "+correct+"/90");
+}
+
+/* ===== Fallout Boot ===== */
+
+(function(){
+
+const lines=[
+"VAULT TEC BIOS REV 7.3",
+"CHECKING MEMORY ADDRESSES...",
+"LOADING MEDICATION DATABASE...",
+"LOADING PATIENT SAFETY PROTOCOLS...",
+"LOADING FEDERAL REGULATION MODULES...",
+"INITIALIZING TERMINAL INTERFACE...",
+"SYSTEM READY"
+];
+
+let i=0;
+
+function hex(){
+ const c="ABCDEF0123456789";
+ let o="0x";
+ for(let i=0;i<10;i++) o+=c[Math.floor(Math.random()*c.length)];
+ return o;
+}
+
+function step(){
+ let t=document.getElementById("bootText");
+ let b=document.getElementById("bootBar");
+
+ if(i<lines.length){
+  t.innerText += lines[i]+" "+hex()+"\n";
+  b.style.width=((i+1)/lines.length*100)+"%";
+  i++;
+  setTimeout(step,350+Math.random()*150);
+ }else{
+  document.getElementById("boot").remove();
+  document.getElementById("app").style.display="block";
+ }
+}
+
+document.addEventListener("DOMContentLoaded",()=>setTimeout(step,200));
+
+})();
+
+</script>
+
+</body>
+</html>
