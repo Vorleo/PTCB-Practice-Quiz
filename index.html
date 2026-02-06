@@ -1,1322 +1,173 @@
+
 <!DOCTYPE html>
-<html lang="en" data-theme="fallout" data-fx="on">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PTCB Practice Tool</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PTCE Practice Tool</title>
+
 <style>
-/* =========================
-   THEME TOKENS
-   ========================= */
-:root{
-  --bg:#020403;
-  --card:#071208;
-  --card2:#041006;
-  --text:#c8ffd8;
-  --muted:#86ffad;
-  --border:#2cff82;
-  --accent:#7cff9e;
-  --accent2:#9affbf;
-  --shadow:0 14px 30px rgba(0,0,0,.55);
-  --chip:rgba(124,255,158,.10);
-  --danger:#ff6b6b;
-  --warn:#ffd56a;
-  --ok:#7cff9e;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-html[data-theme="vegas"]{
-  --bg:#0b0703;
-  --card:#1a1209;
-  --card2:#120b05;
-  --text:#ffe4be;
-  --muted:#ffd49a;
-  --border:#7a4b16;
-  --accent:#ffb347;
-  --accent2:#ffd49a;
-  --shadow:0 14px 30px rgba(0,0,0,.70);
-  --chip:rgba(255,180,71,.10);
-  --danger:#ff6b6b;
-  --warn:#ffd56a;
-  --ok:#ffb347;
-}
-
-html[data-theme="amoled"]{
-  --bg:#000000;
-  --card:#080808;
-  --card2:#050505;
-  --text:#e9e9e9;
-  --muted:#bdbdbd;
-  --border:#2a2a2a;
-  --accent:#e9e9e9;
-  --accent2:#bdbdbd;
-  --shadow:0 14px 30px rgba(0,0,0,.85);
-  --chip:rgba(255,255,255,.07);
-  --danger:#ff6b6b;
-  --warn:#ffd56a;
-  --ok:#8cffc0;
-}
-
-html[data-theme="navy"]{
-  --bg:#040a1a;
-  --card:#07142e;
-  --card2:#051024;
-  --text:#d7e6ff;
-  --muted:#a9c2ff;
-  --border:#2b5cff;
-  --accent:#a9c2ff;
-  --accent2:#d7e6ff;
-  --shadow:0 14px 30px rgba(0,0,0,.70);
-  --chip:rgba(43,92,255,.12);
-  --danger:#ff6b6b;
-  --warn:#ffd56a;
-  --ok:#8cc1ff;
-}
-
-/* =========================
-   BASE LAYOUT (dense "tool" feel)
-   ========================= */
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
 body{
   margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--mono);
-  overflow-x:hidden;
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#00ff9c;
 }
-a{ color:inherit; }
-#terminalBG{
+
+#boot{
   position:fixed;
   inset:0;
-  pointer-events:none;
-  opacity:0;
-  z-index:0;
-  white-space:pre;
-  font-size:11px;
-  line-height:13px;
-  transform:translateY(0);
-}
-html[data-theme="fallout"] #terminalBG,
-html[data-theme="vegas"] #terminalBG{
-  opacity:.06;
-  animation:termScroll 40s linear infinite;
-}
-@keyframes termScroll{ from{transform:translateY(0)} to{transform:translateY(-50%)} }
-
-/* FX overlays */
-#fxOverlay{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:2;
-  opacity:0;
-}
-html[data-fx="on"] #fxOverlay{ opacity:1; }
-#fxOverlay::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:repeating-linear-gradient(
-    rgba(0,0,0,.25) 0px,
-    rgba(0,0,0,.25) 2px,
-    transparent 2px,
-    transparent 6px
-  );
-  opacity:.65;
-}
-#fxOverlay::after{
-  content:"";
-  position:absolute;
-  inset:-10%;
-  background:radial-gradient(circle at center, rgba(255,255,255,.12), transparent 55%);
-  opacity:.55;
-}
-html[data-theme="fallout"] #fxOverlay::after{
-  background:radial-gradient(circle at center, rgba(124,255,158,.18), transparent 55%);
-}
-html[data-theme="vegas"] #fxOverlay::after{
-  background:radial-gradient(circle at center, rgba(255,180,71,.18), transparent 55%);
-}
-
-.wrap{
-  position:relative;
-  z-index:3;
-  padding:14px;
-  max-width:1200px;
-  margin:0 auto;
-  min-height:100%;
+  background:black;
   display:flex;
   flex-direction:column;
-  gap:12px;
-}
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:12px;
-}
-.brand{
-  border:1px solid var(--border);
-  background:linear-gradient(180deg, var(--card), var(--card2));
-  box-shadow:var(--shadow);
-  border-radius:10px;
-  padding:12px 12px 10px;
-  min-width:260px;
-}
-.brand h1{
-  margin:0 0 4px;
-  font-size:18px;
-  letter-spacing:.06em;
-}
-.brand .sub{
-  font-size:12px;
-  color:var(--muted);
-  opacity:.85;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
 }
 
-.controls{
-  flex:1;
-  border:1px solid var(--border);
-  background:linear-gradient(180deg, var(--card), var(--card2));
-  box-shadow:var(--shadow);
-  border-radius:10px;
-  padding:10px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+#boot pre{
+  font-size:14px;
+  text-align:center;
+  color:#00ff9c;
 }
-.row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  align-items:center;
-}
-.row.space{ justify-content:space-between; }
-.pill{
-  display:inline-flex;
-  gap:6px;
-  align-items:center;
-  padding:6px 10px;
-  border:1px solid var(--border);
-  background:var(--chip);
-  border-radius:999px;
-  font-size:12px;
-}
-.pill b{ font-weight:800; }
 
-.btn{
-  appearance:none;
-  border:1px solid var(--border);
-  background:transparent;
-  color:var(--text);
-  padding:8px 10px;
-  border-radius:10px;
-  font-family:inherit;
-  font-size:12px;
+#app{
+  display:none;
+  padding:20px;
+}
+
+button{
+  padding:10px 16px;
+  margin:8px;
+  background:#002b1a;
+  color:#00ff9c;
+  border:1px solid #00ff9c;
   cursor:pointer;
-  transition:transform .05s ease, background .15s ease;
 }
-.btn:hover{ background:rgba(255,255,255,.05); }
-.btn:active{ transform:translateY(1px); }
-.btn.primary{
-  background:var(--accent);
-  color:#001006;
-  border-color:transparent;
-  font-weight:900;
-}
-html[data-theme="amoled"] .btn.primary{ color:#000; }
-.btn.danger{
-  border-color:var(--danger);
-  color:var(--danger);
-}
-.btn.small{ padding:6px 8px; border-radius:9px; }
-.btn.toggle.on{
-  background:var(--accent);
-  color:#001006;
-  border-color:transparent;
-  font-weight:900;
-}
-.btn:disabled{ opacity:.5; cursor:not-allowed; }
 
 .card{
-  border:1px solid var(--border);
-  background:linear-gradient(180deg, var(--card), var(--card2));
-  box-shadow:var(--shadow);
-  border-radius:10px;
-  padding:12px;
+  border:1px solid #00ff9c;
+  padding:16px;
+  margin:16px 0;
 }
-.card h2, .card h3{
-  margin:0 0 8px;
-  letter-spacing:.05em;
-}
-.muted{ color:var(--muted); opacity:.85; }
-
-.grid2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-@media (max-width:900px){
-  .grid2{ grid-template-columns:1fr; }
-  .brand{ min-width:auto; }
-}
-
-.menuBox{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.menuBox .desc{ font-size:12px; color:var(--muted); }
-
-/* =========================
-   TEST UI
-   ========================= */
-#testView{ display:none; }
-.testHeader{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:10px;
-}
-.testHeader .left{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-.testHeader .right{
-  display:flex;
-  gap:8px;
-  align-items:center;
-}
-.bigNum{
-  font-size:22px;
-  font-weight:900;
-  letter-spacing:.05em;
-}
-.question{
-  font-size:15px;
-  line-height:1.35;
-  border:1px solid var(--border);
-  background:rgba(0,0,0,.15);
-  border-radius:10px;
-  padding:10px;
-}
-.choices{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  margin-top:10px;
-}
-.choice{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  border:1px solid var(--border);
-  background:rgba(0,0,0,.10);
-  border-radius:10px;
-  padding:10px;
-}
-.choice input{ margin-top:2px; }
-.choice.elim{
-  opacity:.45;
-  text-decoration:line-through;
-}
-.choice span{ line-height:1.25; }
-
-.navWrap{
-  margin-top:12px;
-  display:flex;
-  gap:12px;
-  flex-direction:column;
-}
-.navGrid{
-  display:grid;
-  grid-template-columns:repeat(15, minmax(0,1fr));
-  gap:6px;
-}
-@media (max-width:900px){
-  .navGrid{ grid-template-columns:repeat(10, minmax(0,1fr)); }
-}
-@media (max-width:520px){
-  .navGrid{ grid-template-columns:repeat(9, minmax(0,1fr)); gap:5px; }
-}
-.navbtn{
-  width:100%;
-  min-height:32px;
-  border-radius:8px;
-  border:1px solid var(--border);
-  background:transparent;
-  color:var(--text);
-  font-family:inherit;
-  font-size:12px;
-  cursor:pointer;
-  position:relative;
-}
-.navbtn.cur{ outline:2px solid var(--accent); outline-offset:1px; }
-.navbtn.ans{ background:rgba(255,255,255,.06); }
-.navbtn.flag::after{
-  content:"⚑";
-  position:absolute;
-  top:2px;
-  right:6px;
-  font-size:10px;
-  color:var(--warn);
-}
-
-/* =========================
-   RESULTS
-   ========================= */
-#resultsView{ display:none; }
-.tableWrap{
-  overflow:auto;
-  border:1px solid var(--border);
-  border-radius:10px;
-}
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:12px;
-}
-th, td{
-  border-bottom:1px solid rgba(255,255,255,.08);
-  padding:8px 10px;
-  vertical-align:top;
-}
-tr.good td{ color:var(--ok); }
-tr.bad td{ color:var(--danger); }
-tr.warn td{ color:var(--warn); }
-tr:hover{ background:rgba(255,255,255,.04); cursor:pointer; }
-
-/* =========================
-   FLASHCARDS
-   ========================= */
-#flashHomeView, #flashView{ display:none; }
-.flashCard{
-  user-select:none;
-  cursor:pointer;
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:18px;
-  background:rgba(0,0,0,.12);
-  min-height:160px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  font-size:15px;
-  line-height:1.35;
-}
-
-/* =========================
-   BOOT
-   ========================= */
-#bootTerminalLayer{
-  position:fixed;
-  inset:0;
-  background:#020403;
-  color:#7cff9e;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  z-index:999999;
-  overflow:hidden;
-}
-#bootTerminalLayer.vegas{
-  background:#0b0703;
-  color:#ffb347;
-}
-#bootTerminalLayer::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:repeating-linear-gradient(rgba(0,0,0,.30) 0px, rgba(0,0,0,.30) 2px, transparent 2px, transparent 6px);
-  opacity:.75;
-  animation:bootScanMove 6s linear infinite;
-}
-#bootTerminalLayer::after{
-  content:"";
-  position:absolute;
-  inset:-20%;
-  pointer-events:none;
-  background:radial-gradient(circle at center, rgba(124,255,158,.18), transparent 55%);
-  opacity:.7;
-}
-#bootTerminalLayer.vegas::after{
-  background:radial-gradient(circle at center, rgba(255,180,71,.18), transparent 55%);
-}
-@keyframes bootScanMove{from{transform:translateY(-60px)}to{transform:translateY(60px)}}
-.bootCRT{
-  width:min(760px,92vw);
-  height:280px;
-  border:1px solid currentColor;
-  padding:14px;
-  overflow:hidden;
-  background:rgba(0,0,0,.70);
-  box-shadow:0 0 35px rgba(0,255,120,.18);
-  font-size:13px;
-  line-height:1.45;
-  letter-spacing:.03em;
-  white-space:pre-wrap;
-  text-shadow: 0 0 8px rgba(124,255,158,.28), 0 0 18px rgba(124,255,158,.12);
-}
-#bootTerminalLayer.vegas .bootCRT{
-  box-shadow:0 0 35px rgba(255,180,71,.16);
-  text-shadow: 0 0 8px rgba(255,180,71,.30), 0 0 18px rgba(255,180,71,.14);
-}
-.bootBarWrap{ width:min(760px,92vw); height:10px; border:1px solid currentColor; margin-top:16px; }
-.bootBar{ height:100%; width:0%; background:currentColor; transition:width .35s linear; }
-.bootHint{ margin-top:14px; font-size:12px; opacity:.7; }
-
 </style>
 </head>
-<body>
-<div id="terminalBG" aria-hidden="true"></div>
-<div id="fxOverlay" aria-hidden="true"></div>
 
-<!-- BOOT -->
-<div id="bootTerminalLayer" aria-hidden="true">
-  <div class="bootCRT" id="bootCRTText"></div>
-  <div class="bootBarWrap"><div class="bootBar" id="bootCRTBar"></div></div>
-  <div class="bootHint">CLICK / TAP / SPACE TO SKIP</div>
+<body>
+
+<div id="boot">
+<pre id="bootLogo"></pre>
+<button onclick="skipBoot()">ENTER</button>
 </div>
 
-<div class="wrap">
-  <div class="topbar">
-    <div class="brand">
-      <h1>PTCB PRACTICE TOOL</h1>
-      <div class="sub">Dense console UI • JSON banks • 90Q weighted build</div>
-    </div>
+<div id="app">
+<h1>PTCE PRACTICE TOOL</h1>
+<button onclick="startTest()">Practice Test</button>
+<button onclick="startFlash()">Flashcards</button>
 
-    <div class="controls">
-      <div class="row space">
-        <div class="row" style="gap:6px;">
-          <button class="btn small" onclick="setTheme('fallout')">Fallout</button>
-          <button class="btn small" onclick="setTheme('vegas')">New Vegas</button>
-          <button class="btn small" onclick="setTheme('amoled')">AMOLED</button>
-          <button class="btn small" onclick="setTheme('navy')">Navy</button>
-        </div>
-        <div class="row" style="gap:6px;">
-          <button class="btn small toggle" id="fxBtn" onclick="toggleFX()">FX</button>
-          <button class="btn small toggle" id="soundBtn" onclick="toggleSound()">SND</button>
-        </div>
-      </div>
-
-      <div class="row" style="gap:10px;">
-        <span class="pill">Status: <b id="status">Loading…</b></span>
-        <span class="pill" id="timerPill" style="display:none;">Time: <b id="timerText">00:00</b></span>
-        <span class="pill" id="tipsPill" style="display:none;">Tips: <b id="tipsLeft">0</b></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- MENU -->
-  <div id="menuView" class="grid2">
-    <div class="card menuBox">
-      <h2>Practice Test</h2>
-      <div class="desc">90 questions, weighted by domain. Submit anytime. Flags, tips, and timer presets.</div>
-
-      <div class="row" style="margin-top:8px;">
-        <span class="pill">Shuffle questions <input id="optShuffleQ" type="checkbox" checked style="margin-left:6px;"></span>
-        <span class="pill">Timed <input id="optTimed" type="checkbox" checked style="margin-left:6px;"></span>
-        <span class="pill">Tips (50/50) <input id="optTips" type="checkbox" checked style="margin-left:6px;"></span>
-      </div>
-
-      <div class="row" style="margin-top:8px;">
-        <span class="pill">Timer preset:
-          <select id="timeSelect" style="margin-left:6px; background:transparent; color:var(--text); border:1px solid var(--border); border-radius:8px; padding:4px;">
-            <option value="110">PTCE (110 min)</option>
-            <option value="30">30 min</option>
-            <option value="60">60 min</option>
-            <option value="90">90 min</option>
-            <option value="120">120 min</option>
-            <option value="150">150 min</option>
-          </select>
-        </span>
-      </div>
-
-      <div class="row" style="margin-top:10px;">
-        <button class="btn primary" onclick="startTest()">Start Test</button>
-      </div>
-    </div>
-
-    <div class="card menuBox">
-      <h2>Flashcards</h2>
-      <div class="desc">Multiple sets aligned to the PTCE domains. Tap card to flip.</div>
-      <div class="row" style="margin-top:10px;">
-        <button class="btn primary" onclick="goFlashHome()">Open Flashcards</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- TEST -->
-  <div id="testView" class="card">
-    <div class="testHeader">
-      <div class="left">
-        <span class="pill">Q <b id="qNum">1</b>/90</span>
-        <span class="pill">Domain: <b id="domainPill">Medications</b></span>
-        <span class="pill">Answered <b id="answeredCount">0</b></span>
-        <span class="pill">Flagged <b id="flaggedCount">0</b></span>
-      </div>
-      <div class="right">
-        <button class="btn danger" onclick="submitTest()">Submit</button>
-      </div>
-    </div>
-
-    <div class="question" id="question"></div>
-    <div class="choices" id="choices"></div>
-
-    <div class="row space" style="margin-top:10px;">
-      <div class="row">
-        <button class="btn" onclick="prevQ()">Prev</button>
-        <button class="btn toggle" id="flagBtn" onclick="toggleFlag()">Flag</button>
-        <button class="btn" onclick="nextQ()">Next</button>
-      </div>
-      <div class="row">
-        <button class="btn" id="tipBtn" onclick="useTip()">Use Tip (50/50)</button>
-        <button class="btn" onclick="goMenu()">Menu</button>
-      </div>
-    </div>
-
-    <div class="navWrap">
-      <div class="muted"><small>Jump to question:</small></div>
-      <div class="navGrid" id="nav"></div>
-    </div>
-  </div>
-
-  <!-- RESULTS -->
-  <div id="resultsView" class="card">
-    <div class="row space">
-      <h2 style="margin:0;">Results</h2>
-      <div class="row">
-        <button class="btn" onclick="restartTest()">Retake</button>
-        <button class="btn" onclick="goMenu()">Menu</button>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:10px;">
-      <div id="scoreSummary"></div>
-      <div class="row" id="domainBreakdown" style="margin-top:8px; gap:8px;"></div>
-    </div>
-
-    <div class="row" style="margin-top:10px;">
-      <span class="pill">Review filter:
-        <select id="reviewFilter" style="margin-left:6px; background:transparent; color:var(--text); border:1px solid var(--border); border-radius:8px; padding:4px;">
-          <option value="all">All</option>
-          <option value="missed">Missed + Blank</option>
-          <option value="flagged">Flagged</option>
-        </select>
-      </span>
-    </div>
-
-    <div class="tableWrap" style="margin-top:10px;">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th><th>Domain</th><th>Question</th><th>Your Answer</th><th>Correct</th><th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="reviewTable"></tbody>
-      </table>
-    </div>
-
-    <div class="card" id="explainPanel" style="display:none; margin-top:10px;">
-      <h3 style="margin:0 0 6px;">Why the Correct Answer is Correct</h3>
-      <div class="muted"><small id="explainMeta"></small></div>
-      <div id="explainBody" style="margin-top:10px; white-space:pre-wrap;"></div>
-    </div>
-  </div>
-
-  <!-- FLASH HOME -->
-  <div id="flashHomeView" class="card">
-    <div class="row space">
-      <h2 style="margin:0;">Flashcards</h2>
-      <button class="btn" onclick="goMenu()">Menu</button>
-    </div>
-    <div class="muted"><small>Select a domain deck:</small></div>
-    <div class="row" style="margin-top:10px; flex-wrap:wrap;">
-      <button class="btn primary" data-deck="MED">Medications</button>
-      <button class="btn primary" data-deck="SAFE">Patient Safety</button>
-      <button class="btn primary" data-deck="ORDER">Order Entry</button>
-      <button class="btn primary" data-deck="FED">Federal</button>
-      <button class="btn primary" data-deck="MIX">Mixed</button>
-    </div>
-  </div>
-
-  <!-- FLASH -->
-  <div id="flashView" class="card">
-    <div class="row space">
-      <div class="row">
-        <span class="pill"><b id="flashDeckName">Deck</b></span>
-        <span class="pill">Card <b id="flashPos">1</b>/<b id="flashTotal">1</b></span>
-        <span class="pill">Side <b id="flashSide">Front</b></span>
-      </div>
-      <div class="row">
-        <button class="btn" onclick="backToFlashHome()">Decks</button>
-        <button class="btn" onclick="goMenu()">Menu</button>
-      </div>
-    </div>
-
-    <div class="flashCard" id="flashCard" title="Tap to flip"></div>
-
-    <div class="row space" style="margin-top:10px;">
-      <div class="row">
-        <button class="btn" onclick="prevFlash()">Prev</button>
-        <button class="btn" onclick="flipFlash()">Flip</button>
-        <button class="btn" onclick="nextFlash()">Next</button>
-      </div>
-    </div>
-  </div>
-
+<div id="content"></div>
 </div>
 
 <script>
-/* =========================
-   SETTINGS + AUDIO
-   ========================= */
-let soundOn = true;
-function beep(freq=880, dur=0.035){
-  if(!soundOn) return;
-  try{
-    const ctx = beep._ctx || (beep._ctx = new (window.AudioContext||window.webkitAudioContext)());
-    const o = ctx.createOscillator();
-    const g = ctx.createGain();
-    o.type="square";
-    o.frequency.value=freq;
-    g.gain.value=0.02;
-    o.connect(g); g.connect(ctx.destination);
-    o.start();
-    o.stop(ctx.currentTime + dur);
-  }catch(e){}
-}
-function setTheme(t){
-  document.documentElement.setAttribute("data-theme", t);
-  localStorage.setItem("theme", t);
-  // boot theme if still visible
-  const boot = document.getElementById("bootTerminalLayer");
-  if(boot) boot.classList.toggle("vegas", t==="vegas");
-}
-function toggleFX(){
-  const el = document.documentElement;
-  const next = (el.getAttribute("data-fx")==="on") ? "off" : "on";
-  el.setAttribute("data-fx", next);
-  localStorage.setItem("fx", next);
-  document.getElementById("fxBtn").classList.toggle("on", next==="on");
-  beep(next==="on"?920:520, 0.03);
-}
-function toggleSound(){
-  soundOn = !soundOn;
-  localStorage.setItem("sound", soundOn ? "on" : "off");
-  document.getElementById("soundBtn").classList.toggle("on", soundOn);
-  beep(soundOn?980:520, 0.03);
-}
-function applySavedSettings(){
-  const t = localStorage.getItem("theme");
-  const fx = localStorage.getItem("fx");
-  const snd = localStorage.getItem("sound");
-  if(t) document.documentElement.setAttribute("data-theme", t);
-  if(fx) document.documentElement.setAttribute("data-fx", fx);
-  soundOn = snd ? (snd==="on") : true;
-  document.getElementById("fxBtn").classList.toggle("on", (document.documentElement.getAttribute("data-fx")==="on"));
-  document.getElementById("soundBtn").classList.toggle("on", soundOn);
+
+const logo = `
+██████╗ ████████╗ ██████╗ ███████╗
+██╔══██╗╚══██╔══╝██╔════╝ ██╔════╝
+██████╔╝   ██║   ██║      █████╗
+██╔═══╝    ██║   ██║      ██╔══╝
+██║        ██║   ╚██████╗ ███████╗
+╚═╝        ╚═╝    ╚═════╝ ╚══════╝
+
+PTCE PRACTICE TOOL
+A Vault Tec program by Joshua Vorhies
+`;
+
+document.getElementById("bootLogo").textContent = logo;
+
+function skipBoot(){
+  document.getElementById("boot").style.display="none";
+  document.getElementById("app").style.display="block";
 }
 
-/* =========================
-   TERMINAL BG
-   ========================= */
-function initTerminalBG(){
-  const el = document.getElementById("terminalBG");
-  let block="";
-  for(let i=0;i<260;i++){
-    block += "VAULT-TEC LOG :: " + (Math.random().toString(16).slice(2,10)).toUpperCase() + "\n";
-  }
-  el.textContent = block + "\n" + block;
+// ---------- SAFE RELATIVE FETCH ----------
+
+async function safeFetch(name){
+  const path = "./" + name;
+  const res = await fetch(path);
+  if(!res.ok) throw new Error(name+" failed to load");
+  return res.json();
 }
 
-/* =========================
-   BANKS (Option 2 JSON)
-   ========================= */
-const DOM = (id)=>document.getElementById(id);
-let BANKS = { MED:[], SAFE:[], ORDER:[], FED:[] };
-let banksReady = false;
-const DOMAIN_COUNTS = { MED:32, SAFE:21, ORDER:20, FED:17 };
-const DOMAIN_LABEL = { MED:"Medications", SAFE:"Patient Safety", ORDER:"Order Entry", FED:"Federal Requirements" };
+// ---------- LOAD BANKS ----------
 
-function normalizeBankItem(item){
-  if(!item) return null;
+let BANKS = null;
 
-  if(item.choices && typeof item.answerIndex === "number"){
-    return item;
-  }
-
-  if(item.question && item.correct && Array.isArray(item.wrong)){
-    const wrong = item.wrong
-      .filter(x => x && x !== item.correct)
-      .slice(0,3);
-
-    if(wrong.length < 3) return null;
-
-    return {
-      question: item.question,
-      correct: item.correct,
-      wrong: wrong,
-      explanation: item.explanation || ""
-    };
-  }
-
-  return null;
-}
-  if(Array.isArray(item) && item.length>=3){
-    return { question:item[0], correct:item[1], wrong:item[2], explanation:"" };
-  }
-  return null;
-}
 async function loadBanks(){
-  try{
-    const [med, safe, order, fed] = await Promise.all([
-      fetch("./med_bank.json", {cache:"no-store"}).then(r=>r.json()),
-      fetch("./safety_bank.json", {cache:"no-store"}).then(r=>r.json()),
-      fetch("./order_bank.json", {cache:"no-store"}).then(r=>r.json()),
-      fetch("./federal_bank.json", {cache:"no-store"}).then(r=>r.json())
-    ]);
-  BANKS.MED = med.map(normalizeBankItem).filter(Boolean);
-  BANKS.SAFE = safe.map(normalizeBankItem).filter(Boolean);
-  BANKS.ORDER = order.map(normalizeBankItem).filter(Boolean);
-  BANKS.FED = fed.map(normalizeBankItem).filter(Boolean);
-  banksReady = true;
-  DOM("status").textContent = `Loaded ✓ MED ${BANKS.MED.length} SAFE ${BANKS.SAFE.length} ORDER ${BANKS.ORDER.length} FED ${BANKS.FED.length}`;
+  if(BANKS) return BANKS;
 
-  }catch(err){
-    console.error("Bank load failed:", err);
-    banksReady = false;
-    DOM("status").textContent = "Banks failed to load (check JSON files).";
-    throw err;
-  }
+  const [med,safety,order,federal] = await Promise.all([
+    safeFetch("med_bank.json"),
+    safeFetch("safety_bank.json"),
+    safeFetch("order_bank.json"),
+    safeFetch("federal_bank.json")
+  ]);
+
+  BANKS = {med,safety,order,federal};
+  return BANKS;
 }
 
-/* =========================
-   BOOT (with logo + checksum + cursor + ticks)
-   ========================= */
-function runBoot(){
-  const layer = DOM("bootTerminalLayer");
-  const crt = DOM("bootCRTText");
-  const bar = DOM("bootCRTBar");
-  if(!layer || !crt || !bar) return;
+// ---------- TEST ----------
 
-  const theme = document.documentElement.getAttribute("data-theme") || "fallout";
-  layer.classList.toggle("vegas", theme==="vegas");
-
-  const logo = [
-" __      __        _ _     _____          ",
-" \\ \\    / /       | | |   |_   _|         ",
-"  \\ \\  / /_ _ _   _| | |_   | | ___   ___ ",
-"   \\ \\/ / _` | | | | | __|  | |/ _ \\ / _ \\",
-"    \\  / (_| | |_| | | |_  _| | (_) |  __/",
-"     \\/ \\__,_|\\__,_|_|\\__| \\___/\\___/ \\___|",
-"           P T C E  P R A C T I C E  T O O L        "
-  ].join("\n");
-
-  const lines=[
-    "VAULT TEC BIOS REV 7.3",
-    "CHECKING MEMORY ADDRESSES...",
-    "LOADING MEDICATION DATABASE...",
-    "LOADING PATIENT SAFETY PROTOCOLS...",
-    "LOADING USP / DEA REGULATION MODULES...",
-    "CALIBRATING DISPLAY DRIVER...",
-    "INITIALIZING TERMINAL INTERFACE...",
-    "SYSTEM READY."
-  ];
-
-  function hex(n){
-    const chars="ABCDEF0123456789";
-    let out="";
-    for(let i=0;i<n;i++) out += chars[Math.floor(Math.random()*chars.length)];
-    return out;
-  }
-  const noiseAddr = ()=>"0x"+hex(10+Math.floor(Math.random()*6));
-  const checksum = ()=>`CHK ${hex(8)}:${hex(8)} OK`;
-
-  let i=0, done=false, cursorOn=true;
-  crt.textContent = logo + "\n" + "A Vault Tec program by Joshua Vorhies" + "\n\n";
-
-  const cursorTimer = setInterval(()=>{
-    if(done) return;
-    const t = crt.textContent;
-    const last = t.slice(-1);
-    const next = cursorOn ? "█" : " ";
-    if(last==="█" || last===" "){
-      crt.textContent = t.slice(0,-1) + next;
-    }else{
-      crt.textContent = t + next;
-    }
-    cursorOn = !cursorOn;
-  }, 420);
-
-  function appendLine(line){
-    let t = crt.textContent;
-    const last = t.slice(-1);
-    if(last==="█" || last===" ") crt.textContent = t.slice(0,-1);
-    crt.textContent += line + "\n";
-    crt.scrollTop = crt.scrollHeight;
-  }
-  function finish(){
-    if(done) return;
-    done=true;
-    clearInterval(cursorTimer);
-    layer.style.opacity="0";
-    setTimeout(()=>layer.remove(), 450);
-  }
-  function step(){
-    if(done) return;
-    beep(theme==="vegas" ? 660 : 920, 0.03);
-    if(i < lines.length){
-      let line = lines[i];
-      if(Math.random() > 0.55) line += " " + noiseAddr();
-      if(Math.random() > 0.72) line += " | " + checksum();
-      appendLine(line);
-      bar.style.width = Math.min(100, ((i+1)/lines.length)*100) + "%";
-      i++;
-      setTimeout(step, 360 + Math.random()*220);
-    }else{
-      appendLine("PRESS ANY KEY TO CONTINUE");
-      setTimeout(finish, 900);
-    }
-  }
-
-  layer.addEventListener("click", finish, {passive:true});
-  document.addEventListener("keydown", (e)=>{
-    if(e.key==="Enter" || e.key===" " || e.code==="Space") finish();
-  });
-
-  setTimeout(step, 220);
-  setTimeout(finish, 11000);
-}
-
-/* =========================
-   TEST STATE
-   ========================= */
-let test = [];
-let answers = new Array(90).fill(null);
-let flags = new Array(90).fill(false);
-let eliminated = new Array(90).fill(null).map(()=>new Set());
-let current = 0;
-let tipsLeft = 0;
-
-let timer = { enabled:true, totalSeconds:110*60, remaining:110*60, handle:null };
-
-function shuffle(arr){
-  for(let i=arr.length-1;i>0;i--){
-    const j=Math.floor(Math.random()*(i+1));
-    [arr[i],arr[j]]=[arr[j],arr[i]];
-  }
-  return arr;
-}
-function pickWithCycle(domain, n){
-  const src = BANKS[domain] || [];
-  const out = [];
-  if(src.length===0) return out;
-  let pool = shuffle([...src]);
-  while(out.length < n){
-    if(pool.length===0) pool = shuffle([...src]);
-    out.push(pool.pop());
-  }
-  return out;
-}
-function buildTest(){
-  const shuffleQ = DOM("optShuffleQ").checked;
-  timer.enabled = DOM("optTimed").checked;
-  const tipsOn = DOM("optTips").checked;
-
-  tipsLeft = tipsOn ? 5 : 0;
-  DOM("tipsLeft").textContent = String(tipsLeft);
-  DOM("tipsPill").style.display = tipsOn ? "" : "none";
-  DOM("tipBtn").style.display = tipsOn ? "" : "none";
-
-  const mins = parseInt(DOM("timeSelect").value,10) || 110;
-  timer.totalSeconds = mins*60;
-  timer.remaining = timer.totalSeconds;
-  DOM("timerPill").style.display = timer.enabled ? "" : "none";
-  updateTimerText();
-
-  answers = new Array(90).fill(null);
-  flags = new Array(90).fill(false);
-  eliminated = new Array(90).fill(null).map(()=>new Set());
-  current = 0;
-
-  const parts = [
-    ...pickWithCycle("MED", DOMAIN_COUNTS.MED).map(x=>({domain:"MED", src:x})),
-    ...pickWithCycle("SAFE", DOMAIN_COUNTS.SAFE).map(x=>({domain:"SAFE", src:x})),
-    ...pickWithCycle("ORDER", DOMAIN_COUNTS.ORDER).map(x=>({domain:"ORDER", src:x})),
-    ...pickWithCycle("FED", DOMAIN_COUNTS.FED).map(x=>({domain:"FED", src:x}))
-  ];
-
-  test = parts.map(p=>{
-    const q = p.src;
-    const choices = shuffle([q.correct, ...q.wrong].slice(0,4));
-    const correctIndex = choices.indexOf(q.correct);
-    return { domain:p.domain, prompt:q.question, choices, correctIndex, explanation:q.explanation||"" };
-  });
-
-  if(shuffleQ) shuffle(test);
-  test = test.slice(0,90);
-}
-
-function show(view){
-  DOM("menuView").style.display = (view==="menu") ? "" : "none";
-  DOM("testView").style.display = (view==="test") ? "" : "none";
-  DOM("resultsView").style.display = (view==="results") ? "" : "none";
-  DOM("flashHomeView").style.display = (view==="flashHome") ? "" : "none";
-  DOM("flashView").style.display = (view==="flash") ? "" : "none";
+function shuffle(a){
+  return a.sort(()=>Math.random()-0.5);
 }
 
 async function startTest(){
-  beep(880,0.03);
-  if(!banksReady){
-    DOM("status").textContent = "Loading banks…";
-    try{ await loadBanks(); }catch(e){ alert("Banks failed to load. Check that med_bank.json, safety_bank.json, order_bank.json, federal_bank.json are in the repo root."); return; }
-  }
-  buildTest();
-  show("test");
-  buildNavGrid();
-  renderQuestion(0);
-  updateCounts();
-  startTimerIfNeeded();
-}
+  const banks = await loadBanks();
 
-function goMenu(){
-  stopTimer();
-  show("menu");
-  DOM("explainPanel").style.display="none";
-}
-function restartTest(){
-  stopTimer();
-  startTest();
-}
+  let pool = [
+    ...banks.med,
+    ...banks.safety,
+    ...banks.order,
+    ...banks.federal
+  ];
 
-function buildNavGrid(){
-  const nav = DOM("nav");
-  nav.innerHTML = "";
-  for(let i=0;i<90;i++){
-    const b = document.createElement("button");
-    b.className = "navbtn";
-    b.textContent = String(i+1);
-    b.onclick = ()=>renderQuestion(i);
-    nav.appendChild(b);
-  }
-}
+  pool = shuffle(pool).slice(0,90);
 
-function setDomainPill(domain){
-  DOM("domainPill").textContent = DOMAIN_LABEL[domain] || domain;
-}
+  let html = "<h2>Test (90 Questions)</h2>";
 
-function renderQuestion(i){
-  current = i;
-  const q = test[i];
-  DOM("qNum").textContent = String(i+1);
-  setDomainPill(q.domain);
-  DOM("question").textContent = q.prompt;
-
-  const wrap = DOM("choices");
-  wrap.innerHTML = "";
-  q.choices.forEach((txt, idx)=>{
-    const row = document.createElement("label");
-    row.className = "choice";
-    if(eliminated[i].has(idx)) row.classList.add("elim");
-
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.name = "q_"+i;                 // UNIQUE PER Q (fixes multi-answer bug)
-    input.value = String(idx);
-    input.checked = (answers[i]===idx);
-    input.disabled = eliminated[i].has(idx);
-    input.onchange = ()=>{
-      answers[i]=idx;
-      updateCounts();
-      paintNav();
-    };
-
-    const span = document.createElement("span");
-    span.textContent = txt;
-
-    row.appendChild(input);
-    row.appendChild(span);
-    wrap.appendChild(row);
-  });
-
-  DOM("flagBtn").classList.toggle("on", !!flags[i]);
-  DOM("tipBtn").disabled = (tipsLeft<=0);
-  paintNav();
-}
-
-function paintNav(){
-  const nodes = DOM("nav").querySelectorAll(".navbtn");
-  nodes.forEach((b, i)=>{
-    b.classList.toggle("cur", i===current);
-    b.classList.toggle("ans", answers[i]!==null);
-    b.classList.toggle("flag", flags[i]);
-  });
-}
-
-function updateCounts(){
-  DOM("answeredCount").textContent = String(answers.filter(x=>x!==null).length);
-  DOM("flaggedCount").textContent = String(flags.filter(Boolean).length);
-}
-
-function nextQ(){ beep(740,0.02); if(current<89) renderQuestion(current+1); }
-function prevQ(){ beep(700,0.02); if(current>0) renderQuestion(current-1); }
-
-function toggleFlag(){
-  flags[current] = !flags[current];
-  DOM("flagBtn").classList.toggle("on", flags[current]);
-  updateCounts();
-  paintNav();
-  beep(flags[current]?980:520,0.03);
-}
-
-function useTip(){
-  if(tipsLeft<=0) return;
-  const q = test[current];
-  const candidates = [];
-  for(let i=0;i<q.choices.length;i++){
-    if(i!==q.correctIndex && !eliminated[current].has(i)) candidates.push(i);
-  }
-  shuffle(candidates);
-  const toElim = candidates.slice(0,2);
-  toElim.forEach(i=>eliminated[current].add(i));
-
-  if(answers[current]!==null && eliminated[current].has(answers[current])){
-    answers[current]=null;
-  }
-
-  tipsLeft--;
-  DOM("tipsLeft").textContent = String(tipsLeft);
-  DOM("tipBtn").disabled = tipsLeft<=0;
-  beep(880,0.04);
-  renderQuestion(current);
-}
-
-/* =========================
-   TIMER
-   ========================= */
-function formatTime(sec){
-  const m = Math.floor(sec/60);
-  const s = sec%60;
-  return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
-}
-function updateTimerText(){ DOM("timerText").textContent = formatTime(timer.remaining); }
-function startTimerIfNeeded(){
-  stopTimer();
-  if(!timer.enabled) return;
-  updateTimerText();
-  timer.handle = setInterval(()=>{
-    timer.remaining = Math.max(0, timer.remaining-1);
-    updateTimerText();
-    if(timer.remaining<=0){
-      stopTimer();
-      submitTest();
-    }
-  }, 1000);
-}
-function stopTimer(){
-  if(timer.handle){ clearInterval(timer.handle); timer.handle=null; }
-}
-
-/* =========================
-   RESULTS + EXPLANATIONS
-   ========================= */
-let reviewRows = [];
-
-function submitTest(){
-  beep(1100,0.05);
-  stopTimer();
-
-  let correct=0;
-  const domainStats = { MED:{t:0,c:0}, SAFE:{t:0,c:0}, ORDER:{t:0,c:0}, FED:{t:0,c:0} };
-  reviewRows = [];
-
-  for(let i=0;i<90;i++){
-    const q=test[i];
-    const a=answers[i];
-    const isCorrect = (a!==null && a===q.correctIndex);
-    if(isCorrect) correct++;
-    domainStats[q.domain].t++;
-    if(isCorrect) domainStats[q.domain].c++;
-
-    reviewRows.push({
-      idx:i,
-      domain:q.domain,
-      prompt:q.prompt,
-      your: a===null ? "" : q.choices[a],
-      correct: q.choices[q.correctIndex],
-      status: isCorrect ? "Correct" : (a===null ? "Blank" : "Incorrect"),
-      explanation: q.explanation || ""
-    });
-  }
-
-  const pct = Math.round((correct/90)*100);
-  DOM("scoreSummary").innerHTML = `
-    <div class="row space">
-      <div>
-        <div class="bigNum">${pct}%</div>
-        <div class="muted"><small>${correct}/90 correct</small></div>
+  pool.forEach((q,i)=>{
+    const choices = shuffle([q.correct, ...(q.wrong||[]).slice(0,3)]);
+    html+=`
+      <div class="card">
+        <b>Q${i+1}. ${q.question}</b><br>
+        ${choices.map(c=>`<div>${c}</div>`).join("")}
       </div>
-      <div class="row">
-        <span class="pill">Answered <b>${answers.filter(x=>x!==null).length}</b></span>
-        <span class="pill">Flagged <b>${flags.filter(Boolean).length}</b></span>
-      </div>
-    </div>
-  `;
-
-  const bd = DOM("domainBreakdown");
-  bd.innerHTML = "";
-  for(const k of ["MED","SAFE","ORDER","FED"]){
-    const st = domainStats[k];
-    const p = st.t ? Math.round((st.c/st.t)*100) : 0;
-    const div = document.createElement("div");
-    div.className = "pill";
-    div.innerHTML = `${DOMAIN_LABEL[k]}: <b>${st.c}/${st.t}</b> (${p}%)`;
-    bd.appendChild(div);
-  }
-
-  DOM("reviewFilter").value = "all";
-  renderReviewTable();
-  DOM("explainPanel").style.display="none";
-  show("results");
-}
-
-function renderReviewTable(){
-  const filter = DOM("reviewFilter").value;
-  const tbody = DOM("reviewTable");
-  tbody.innerHTML = "";
-
-  const filtered = reviewRows.filter(r=>{
-    if(filter==="all") return true;
-    if(filter==="missed") return r.status!=="Correct";
-    if(filter==="flagged") return !!flags[r.idx];
-    return true;
-  });
-
-  filtered.forEach(r=>{
-    const tr = document.createElement("tr");
-    tr.className = (r.status==="Correct") ? "good" : (r.status==="Blank" ? "warn" : "bad");
-    tr.innerHTML = `
-      <td>${r.idx+1}</td>
-      <td>${DOMAIN_LABEL[r.domain]}</td>
-      <td>${escapeHTML(trim(r.prompt))}</td>
-      <td>${escapeHTML(r.your)}</td>
-      <td>${escapeHTML(r.correct)}</td>
-      <td>${r.status}</td>
     `;
-    tr.onclick = ()=>{
-      // show explanation + jump back to question
-      DOM("explainPanel").style.display = "";
-      DOM("explainMeta").textContent = `Q${r.idx+1} • ${DOMAIN_LABEL[r.domain]} • Correct: ${r.correct}`;
-      DOM("explainBody").textContent = r.explanation || "(No explanation available yet for this question.)";
-      // jump to question view
-      show("test");
-      renderQuestion(r.idx);
-      paintNav();
-      // keep explanation visible on return?
-    };
-    tbody.appendChild(tr);
   });
+
+  document.getElementById("content").innerHTML = html;
 }
 
-DOM("reviewFilter").addEventListener("change", renderReviewTable);
+// ---------- FLASH ----------
 
-function trim(s){
-  const t = (s||"").replace(/\s+/g," ").trim();
-  return t.length>120 ? t.slice(0,117)+"..." : t;
-}
-function escapeHTML(s){
-  return String(s||"").replace(/[&<>"']/g, c=>({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
-}
+async function startFlash(){
+  const banks = await loadBanks();
 
-/* =========================
-   FLASHCARDS
-   ========================= */
-let flashDeck="MED";
-let flashList=[];
-let flashPos=0;
-let flashShowingAnswer=false;
+  let html = "<h2>Flashcards</h2>";
 
-function goFlashHome(){
-  beep(820,0.03);
-  show("flashHome");
-}
-function buildFlashList(deckKey){
-  const pick = (k)=> (BANKS[k]||[]).slice(0,500);
-  if(deckKey==="MIX"){
-    const mix = [...pick("MED"), ...pick("SAFE"), ...pick("ORDER"), ...pick("FED")];
-    return shuffle(mix).slice(0,500);
-  }
-  return shuffle(pick(deckKey)).slice(0,500);
-}
-async function startFlash(deckKey){
-  flashDeck = deckKey;
-  flashList = buildFlashList(deckKey);
-  flashPos = 0;
-  flashShowingAnswer = false;
-  DOM("flashDeckName").textContent = deckKey==="MIX" ? "Mixed Review" : DOMAIN_LABEL[deckKey];
-  show("flash");
-  renderFlash();
-}
-function renderFlash(){
-  const item = flashList[flashPos];
-  DOM("flashPos").textContent = String(flashPos+1);
-  DOM("flashTotal").textContent = String(flashList.length);
-  DOM("flashSide").textContent = flashShowingAnswer ? "Back" : "Front";
-  DOM("flashCard").textContent = flashShowingAnswer ? item.correct : item.question;
-}
-function flipFlash(){ flashShowingAnswer=!flashShowingAnswer; renderFlash(); beep(760,0.02); }
-function nextFlash(){ flashPos=(flashPos+1)%flashList.length; flashShowingAnswer=false; renderFlash(); beep(700,0.02); }
-function prevFlash(){ flashPos=(flashPos-1+flashList.length)%flashList.length; flashShowingAnswer=false; renderFlash(); beep(680,0.02); }
-function backToFlashHome(){ show("flashHome"); }
-
-/* Wire deck buttons */
-document.querySelectorAll("[data-deck]").forEach(btn=>{
-  btn.addEventListener("click", ()=>startFlash(btn.getAttribute("data-deck")));
-});
-DOM("flashCard").addEventListener("click", flipFlash);
-
-/* =========================
-   INIT
-   ========================= */
-document.addEventListener("DOMContentLoaded", ()=>{
-  applySavedSettings();
-  initTerminalBG();
-  // Show menu immediately (banks load in background)
-  show("menu");
-  // Start boot animation (purely visual)
-  try{ runBoot(); }catch(e){ console.error("boot error", e); }
-
-  DOM("status").textContent = "Loading banks…";
-  loadBanks().then(()=>{
-    DOM("status").textContent = "Ready.";
-  }).catch(()=>{
-    // status set in loadBanks catch
+  banks.med.slice(0,20).forEach(c=>{
+    html+=`
+      <div class="card">
+        <b>${c.question}</b><br>
+        ${c.correct}
+      </div>
+    `;
   });
-});
 
-/* BOOT EXIT HOTKEYS (always available) */
-(function(){
-  const layer = document.getElementById("bootTerminalLayer");
-  if(!layer) return;
-  function finish(){
-    layer.style.opacity="0";
-    setTimeout(()=>{ try{ layer.remove(); }catch(_e){ layer.style.display="none"; } }, 300);
-  }
-  layer.addEventListener("click", finish, {passive:true});
-  document.addEventListener("keydown", (e)=>{
-    if(e.key==="Enter" || e.key===" " || e.code==="Space") finish();
-  });
-  setTimeout(finish, 6000);
-})();
+  document.getElementById("content").innerHTML = html;
+}
 
 </script>
-
 </body>
 </html>
