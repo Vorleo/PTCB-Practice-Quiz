@@ -1,0 +1,802 @@
+[
+  {
+    "question": "Safety Question 0?",
+    "correct": "Safety Correct 0",
+    "wrong": [
+      "Safety Wrong 0A",
+      "Safety Wrong 0B",
+      "Safety Wrong 0C"
+    ],
+    "explanation": "Safety Correct 0 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 1?",
+    "correct": "Safety Correct 1",
+    "wrong": [
+      "Safety Wrong 1A",
+      "Safety Wrong 1B",
+      "Safety Wrong 1C"
+    ],
+    "explanation": "Safety Correct 1 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 2?",
+    "correct": "Safety Correct 2",
+    "wrong": [
+      "Safety Wrong 2A",
+      "Safety Wrong 2B",
+      "Safety Wrong 2C"
+    ],
+    "explanation": "Safety Correct 2 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 3?",
+    "correct": "Safety Correct 3",
+    "wrong": [
+      "Safety Wrong 3A",
+      "Safety Wrong 3B",
+      "Safety Wrong 3C"
+    ],
+    "explanation": "Safety Correct 3 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 4?",
+    "correct": "Safety Correct 4",
+    "wrong": [
+      "Safety Wrong 4A",
+      "Safety Wrong 4B",
+      "Safety Wrong 4C"
+    ],
+    "explanation": "Safety Correct 4 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 5?",
+    "correct": "Safety Correct 5",
+    "wrong": [
+      "Safety Wrong 5A",
+      "Safety Wrong 5B",
+      "Safety Wrong 5C"
+    ],
+    "explanation": "Safety Correct 5 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 6?",
+    "correct": "Safety Correct 6",
+    "wrong": [
+      "Safety Wrong 6A",
+      "Safety Wrong 6B",
+      "Safety Wrong 6C"
+    ],
+    "explanation": "Safety Correct 6 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 7?",
+    "correct": "Safety Correct 7",
+    "wrong": [
+      "Safety Wrong 7A",
+      "Safety Wrong 7B",
+      "Safety Wrong 7C"
+    ],
+    "explanation": "Safety Correct 7 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 8?",
+    "correct": "Safety Correct 8",
+    "wrong": [
+      "Safety Wrong 8A",
+      "Safety Wrong 8B",
+      "Safety Wrong 8C"
+    ],
+    "explanation": "Safety Correct 8 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 9?",
+    "correct": "Safety Correct 9",
+    "wrong": [
+      "Safety Wrong 9A",
+      "Safety Wrong 9B",
+      "Safety Wrong 9C"
+    ],
+    "explanation": "Safety Correct 9 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 10?",
+    "correct": "Safety Correct 10",
+    "wrong": [
+      "Safety Wrong 10A",
+      "Safety Wrong 10B",
+      "Safety Wrong 10C"
+    ],
+    "explanation": "Safety Correct 10 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 11?",
+    "correct": "Safety Correct 11",
+    "wrong": [
+      "Safety Wrong 11A",
+      "Safety Wrong 11B",
+      "Safety Wrong 11C"
+    ],
+    "explanation": "Safety Correct 11 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 12?",
+    "correct": "Safety Correct 12",
+    "wrong": [
+      "Safety Wrong 12A",
+      "Safety Wrong 12B",
+      "Safety Wrong 12C"
+    ],
+    "explanation": "Safety Correct 12 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 13?",
+    "correct": "Safety Correct 13",
+    "wrong": [
+      "Safety Wrong 13A",
+      "Safety Wrong 13B",
+      "Safety Wrong 13C"
+    ],
+    "explanation": "Safety Correct 13 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 14?",
+    "correct": "Safety Correct 14",
+    "wrong": [
+      "Safety Wrong 14A",
+      "Safety Wrong 14B",
+      "Safety Wrong 14C"
+    ],
+    "explanation": "Safety Correct 14 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 15?",
+    "correct": "Safety Correct 15",
+    "wrong": [
+      "Safety Wrong 15A",
+      "Safety Wrong 15B",
+      "Safety Wrong 15C"
+    ],
+    "explanation": "Safety Correct 15 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 16?",
+    "correct": "Safety Correct 16",
+    "wrong": [
+      "Safety Wrong 16A",
+      "Safety Wrong 16B",
+      "Safety Wrong 16C"
+    ],
+    "explanation": "Safety Correct 16 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 17?",
+    "correct": "Safety Correct 17",
+    "wrong": [
+      "Safety Wrong 17A",
+      "Safety Wrong 17B",
+      "Safety Wrong 17C"
+    ],
+    "explanation": "Safety Correct 17 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 18?",
+    "correct": "Safety Correct 18",
+    "wrong": [
+      "Safety Wrong 18A",
+      "Safety Wrong 18B",
+      "Safety Wrong 18C"
+    ],
+    "explanation": "Safety Correct 18 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 19?",
+    "correct": "Safety Correct 19",
+    "wrong": [
+      "Safety Wrong 19A",
+      "Safety Wrong 19B",
+      "Safety Wrong 19C"
+    ],
+    "explanation": "Safety Correct 19 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 20?",
+    "correct": "Safety Correct 20",
+    "wrong": [
+      "Safety Wrong 20A",
+      "Safety Wrong 20B",
+      "Safety Wrong 20C"
+    ],
+    "explanation": "Safety Correct 20 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 21?",
+    "correct": "Safety Correct 21",
+    "wrong": [
+      "Safety Wrong 21A",
+      "Safety Wrong 21B",
+      "Safety Wrong 21C"
+    ],
+    "explanation": "Safety Correct 21 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 22?",
+    "correct": "Safety Correct 22",
+    "wrong": [
+      "Safety Wrong 22A",
+      "Safety Wrong 22B",
+      "Safety Wrong 22C"
+    ],
+    "explanation": "Safety Correct 22 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 23?",
+    "correct": "Safety Correct 23",
+    "wrong": [
+      "Safety Wrong 23A",
+      "Safety Wrong 23B",
+      "Safety Wrong 23C"
+    ],
+    "explanation": "Safety Correct 23 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 24?",
+    "correct": "Safety Correct 24",
+    "wrong": [
+      "Safety Wrong 24A",
+      "Safety Wrong 24B",
+      "Safety Wrong 24C"
+    ],
+    "explanation": "Safety Correct 24 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 25?",
+    "correct": "Safety Correct 25",
+    "wrong": [
+      "Safety Wrong 25A",
+      "Safety Wrong 25B",
+      "Safety Wrong 25C"
+    ],
+    "explanation": "Safety Correct 25 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 26?",
+    "correct": "Safety Correct 26",
+    "wrong": [
+      "Safety Wrong 26A",
+      "Safety Wrong 26B",
+      "Safety Wrong 26C"
+    ],
+    "explanation": "Safety Correct 26 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 27?",
+    "correct": "Safety Correct 27",
+    "wrong": [
+      "Safety Wrong 27A",
+      "Safety Wrong 27B",
+      "Safety Wrong 27C"
+    ],
+    "explanation": "Safety Correct 27 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 28?",
+    "correct": "Safety Correct 28",
+    "wrong": [
+      "Safety Wrong 28A",
+      "Safety Wrong 28B",
+      "Safety Wrong 28C"
+    ],
+    "explanation": "Safety Correct 28 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 29?",
+    "correct": "Safety Correct 29",
+    "wrong": [
+      "Safety Wrong 29A",
+      "Safety Wrong 29B",
+      "Safety Wrong 29C"
+    ],
+    "explanation": "Safety Correct 29 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 30?",
+    "correct": "Safety Correct 30",
+    "wrong": [
+      "Safety Wrong 30A",
+      "Safety Wrong 30B",
+      "Safety Wrong 30C"
+    ],
+    "explanation": "Safety Correct 30 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 31?",
+    "correct": "Safety Correct 31",
+    "wrong": [
+      "Safety Wrong 31A",
+      "Safety Wrong 31B",
+      "Safety Wrong 31C"
+    ],
+    "explanation": "Safety Correct 31 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 32?",
+    "correct": "Safety Correct 32",
+    "wrong": [
+      "Safety Wrong 32A",
+      "Safety Wrong 32B",
+      "Safety Wrong 32C"
+    ],
+    "explanation": "Safety Correct 32 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 33?",
+    "correct": "Safety Correct 33",
+    "wrong": [
+      "Safety Wrong 33A",
+      "Safety Wrong 33B",
+      "Safety Wrong 33C"
+    ],
+    "explanation": "Safety Correct 33 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 34?",
+    "correct": "Safety Correct 34",
+    "wrong": [
+      "Safety Wrong 34A",
+      "Safety Wrong 34B",
+      "Safety Wrong 34C"
+    ],
+    "explanation": "Safety Correct 34 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 35?",
+    "correct": "Safety Correct 35",
+    "wrong": [
+      "Safety Wrong 35A",
+      "Safety Wrong 35B",
+      "Safety Wrong 35C"
+    ],
+    "explanation": "Safety Correct 35 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 36?",
+    "correct": "Safety Correct 36",
+    "wrong": [
+      "Safety Wrong 36A",
+      "Safety Wrong 36B",
+      "Safety Wrong 36C"
+    ],
+    "explanation": "Safety Correct 36 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 37?",
+    "correct": "Safety Correct 37",
+    "wrong": [
+      "Safety Wrong 37A",
+      "Safety Wrong 37B",
+      "Safety Wrong 37C"
+    ],
+    "explanation": "Safety Correct 37 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 38?",
+    "correct": "Safety Correct 38",
+    "wrong": [
+      "Safety Wrong 38A",
+      "Safety Wrong 38B",
+      "Safety Wrong 38C"
+    ],
+    "explanation": "Safety Correct 38 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 39?",
+    "correct": "Safety Correct 39",
+    "wrong": [
+      "Safety Wrong 39A",
+      "Safety Wrong 39B",
+      "Safety Wrong 39C"
+    ],
+    "explanation": "Safety Correct 39 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 40?",
+    "correct": "Safety Correct 40",
+    "wrong": [
+      "Safety Wrong 40A",
+      "Safety Wrong 40B",
+      "Safety Wrong 40C"
+    ],
+    "explanation": "Safety Correct 40 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 41?",
+    "correct": "Safety Correct 41",
+    "wrong": [
+      "Safety Wrong 41A",
+      "Safety Wrong 41B",
+      "Safety Wrong 41C"
+    ],
+    "explanation": "Safety Correct 41 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 42?",
+    "correct": "Safety Correct 42",
+    "wrong": [
+      "Safety Wrong 42A",
+      "Safety Wrong 42B",
+      "Safety Wrong 42C"
+    ],
+    "explanation": "Safety Correct 42 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 43?",
+    "correct": "Safety Correct 43",
+    "wrong": [
+      "Safety Wrong 43A",
+      "Safety Wrong 43B",
+      "Safety Wrong 43C"
+    ],
+    "explanation": "Safety Correct 43 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 44?",
+    "correct": "Safety Correct 44",
+    "wrong": [
+      "Safety Wrong 44A",
+      "Safety Wrong 44B",
+      "Safety Wrong 44C"
+    ],
+    "explanation": "Safety Correct 44 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 45?",
+    "correct": "Safety Correct 45",
+    "wrong": [
+      "Safety Wrong 45A",
+      "Safety Wrong 45B",
+      "Safety Wrong 45C"
+    ],
+    "explanation": "Safety Correct 45 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 46?",
+    "correct": "Safety Correct 46",
+    "wrong": [
+      "Safety Wrong 46A",
+      "Safety Wrong 46B",
+      "Safety Wrong 46C"
+    ],
+    "explanation": "Safety Correct 46 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 47?",
+    "correct": "Safety Correct 47",
+    "wrong": [
+      "Safety Wrong 47A",
+      "Safety Wrong 47B",
+      "Safety Wrong 47C"
+    ],
+    "explanation": "Safety Correct 47 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 48?",
+    "correct": "Safety Correct 48",
+    "wrong": [
+      "Safety Wrong 48A",
+      "Safety Wrong 48B",
+      "Safety Wrong 48C"
+    ],
+    "explanation": "Safety Correct 48 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 49?",
+    "correct": "Safety Correct 49",
+    "wrong": [
+      "Safety Wrong 49A",
+      "Safety Wrong 49B",
+      "Safety Wrong 49C"
+    ],
+    "explanation": "Safety Correct 49 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 50?",
+    "correct": "Safety Correct 50",
+    "wrong": [
+      "Safety Wrong 50A",
+      "Safety Wrong 50B",
+      "Safety Wrong 50C"
+    ],
+    "explanation": "Safety Correct 50 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 51?",
+    "correct": "Safety Correct 51",
+    "wrong": [
+      "Safety Wrong 51A",
+      "Safety Wrong 51B",
+      "Safety Wrong 51C"
+    ],
+    "explanation": "Safety Correct 51 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 52?",
+    "correct": "Safety Correct 52",
+    "wrong": [
+      "Safety Wrong 52A",
+      "Safety Wrong 52B",
+      "Safety Wrong 52C"
+    ],
+    "explanation": "Safety Correct 52 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 53?",
+    "correct": "Safety Correct 53",
+    "wrong": [
+      "Safety Wrong 53A",
+      "Safety Wrong 53B",
+      "Safety Wrong 53C"
+    ],
+    "explanation": "Safety Correct 53 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 54?",
+    "correct": "Safety Correct 54",
+    "wrong": [
+      "Safety Wrong 54A",
+      "Safety Wrong 54B",
+      "Safety Wrong 54C"
+    ],
+    "explanation": "Safety Correct 54 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 55?",
+    "correct": "Safety Correct 55",
+    "wrong": [
+      "Safety Wrong 55A",
+      "Safety Wrong 55B",
+      "Safety Wrong 55C"
+    ],
+    "explanation": "Safety Correct 55 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 56?",
+    "correct": "Safety Correct 56",
+    "wrong": [
+      "Safety Wrong 56A",
+      "Safety Wrong 56B",
+      "Safety Wrong 56C"
+    ],
+    "explanation": "Safety Correct 56 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 57?",
+    "correct": "Safety Correct 57",
+    "wrong": [
+      "Safety Wrong 57A",
+      "Safety Wrong 57B",
+      "Safety Wrong 57C"
+    ],
+    "explanation": "Safety Correct 57 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 58?",
+    "correct": "Safety Correct 58",
+    "wrong": [
+      "Safety Wrong 58A",
+      "Safety Wrong 58B",
+      "Safety Wrong 58C"
+    ],
+    "explanation": "Safety Correct 58 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 59?",
+    "correct": "Safety Correct 59",
+    "wrong": [
+      "Safety Wrong 59A",
+      "Safety Wrong 59B",
+      "Safety Wrong 59C"
+    ],
+    "explanation": "Safety Correct 59 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 60?",
+    "correct": "Safety Correct 60",
+    "wrong": [
+      "Safety Wrong 60A",
+      "Safety Wrong 60B",
+      "Safety Wrong 60C"
+    ],
+    "explanation": "Safety Correct 60 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 61?",
+    "correct": "Safety Correct 61",
+    "wrong": [
+      "Safety Wrong 61A",
+      "Safety Wrong 61B",
+      "Safety Wrong 61C"
+    ],
+    "explanation": "Safety Correct 61 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 62?",
+    "correct": "Safety Correct 62",
+    "wrong": [
+      "Safety Wrong 62A",
+      "Safety Wrong 62B",
+      "Safety Wrong 62C"
+    ],
+    "explanation": "Safety Correct 62 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 63?",
+    "correct": "Safety Correct 63",
+    "wrong": [
+      "Safety Wrong 63A",
+      "Safety Wrong 63B",
+      "Safety Wrong 63C"
+    ],
+    "explanation": "Safety Correct 63 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 64?",
+    "correct": "Safety Correct 64",
+    "wrong": [
+      "Safety Wrong 64A",
+      "Safety Wrong 64B",
+      "Safety Wrong 64C"
+    ],
+    "explanation": "Safety Correct 64 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 65?",
+    "correct": "Safety Correct 65",
+    "wrong": [
+      "Safety Wrong 65A",
+      "Safety Wrong 65B",
+      "Safety Wrong 65C"
+    ],
+    "explanation": "Safety Correct 65 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 66?",
+    "correct": "Safety Correct 66",
+    "wrong": [
+      "Safety Wrong 66A",
+      "Safety Wrong 66B",
+      "Safety Wrong 66C"
+    ],
+    "explanation": "Safety Correct 66 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 67?",
+    "correct": "Safety Correct 67",
+    "wrong": [
+      "Safety Wrong 67A",
+      "Safety Wrong 67B",
+      "Safety Wrong 67C"
+    ],
+    "explanation": "Safety Correct 67 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 68?",
+    "correct": "Safety Correct 68",
+    "wrong": [
+      "Safety Wrong 68A",
+      "Safety Wrong 68B",
+      "Safety Wrong 68C"
+    ],
+    "explanation": "Safety Correct 68 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 69?",
+    "correct": "Safety Correct 69",
+    "wrong": [
+      "Safety Wrong 69A",
+      "Safety Wrong 69B",
+      "Safety Wrong 69C"
+    ],
+    "explanation": "Safety Correct 69 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 70?",
+    "correct": "Safety Correct 70",
+    "wrong": [
+      "Safety Wrong 70A",
+      "Safety Wrong 70B",
+      "Safety Wrong 70C"
+    ],
+    "explanation": "Safety Correct 70 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 71?",
+    "correct": "Safety Correct 71",
+    "wrong": [
+      "Safety Wrong 71A",
+      "Safety Wrong 71B",
+      "Safety Wrong 71C"
+    ],
+    "explanation": "Safety Correct 71 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 72?",
+    "correct": "Safety Correct 72",
+    "wrong": [
+      "Safety Wrong 72A",
+      "Safety Wrong 72B",
+      "Safety Wrong 72C"
+    ],
+    "explanation": "Safety Correct 72 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 73?",
+    "correct": "Safety Correct 73",
+    "wrong": [
+      "Safety Wrong 73A",
+      "Safety Wrong 73B",
+      "Safety Wrong 73C"
+    ],
+    "explanation": "Safety Correct 73 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 74?",
+    "correct": "Safety Correct 74",
+    "wrong": [
+      "Safety Wrong 74A",
+      "Safety Wrong 74B",
+      "Safety Wrong 74C"
+    ],
+    "explanation": "Safety Correct 74 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 75?",
+    "correct": "Safety Correct 75",
+    "wrong": [
+      "Safety Wrong 75A",
+      "Safety Wrong 75B",
+      "Safety Wrong 75C"
+    ],
+    "explanation": "Safety Correct 75 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 76?",
+    "correct": "Safety Correct 76",
+    "wrong": [
+      "Safety Wrong 76A",
+      "Safety Wrong 76B",
+      "Safety Wrong 76C"
+    ],
+    "explanation": "Safety Correct 76 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 77?",
+    "correct": "Safety Correct 77",
+    "wrong": [
+      "Safety Wrong 77A",
+      "Safety Wrong 77B",
+      "Safety Wrong 77C"
+    ],
+    "explanation": "Safety Correct 77 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 78?",
+    "correct": "Safety Correct 78",
+    "wrong": [
+      "Safety Wrong 78A",
+      "Safety Wrong 78B",
+      "Safety Wrong 78C"
+    ],
+    "explanation": "Safety Correct 78 is correct because it follows pharmacy workflow and regulatory standards."
+  },
+  {
+    "question": "Safety Question 79?",
+    "correct": "Safety Correct 79",
+    "wrong": [
+      "Safety Wrong 79A",
+      "Safety Wrong 79B",
+      "Safety Wrong 79C"
+    ],
+    "explanation": "Safety Correct 79 is correct because it follows pharmacy workflow and regulatory standards."
+  }
+]
