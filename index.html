@@ -277,63 +277,60 @@ body::before{
 }
 
 
-/* ===== No Page Scroll Layout ===== */
+/* ===== Header smaller + allow page scroll ===== */
 html, body {
-  height: 100%;
-  overflow: hidden;
+  height: auto;
+  overflow-y: auto;
+}
+
+header {
+  padding: 6px 10px !important;
+}
+
+header .title h1 {
+  font-size: 16px !important;
+}
+
+header .themes {
+  gap: 4px !important;
 }
 
 main.wrap {
-  height: calc(100vh - 72px);
-  overflow: auto;
-  padding-bottom: 40px;
+  height: auto !important;
+  overflow: visible !important;
 }
 
-/* Prevent header overlap */
-header {
-  height: 72px;
-}
-
-/* Mobile Safe Layout */
+/* Mobile specific */
 @media (max-width: 768px) {
 
   header {
-    height: auto;
-    padding: 8px;
+    padding: 6px !important;
   }
 
-  main.wrap {
-    height: calc(100vh - 110px);
-    padding: 10px;
+  header .title h1 {
+    font-size: 15px !important;
   }
 
-  .grid2 {
-    grid-template-columns: 1fr;
-  }
-
-  .panel {
-    padding: 12px;
+  .btn {
+    padding: 6px 8px;
+    font-size: 11px;
   }
 
   .qgrid {
-    grid-template-columns: repeat(6, 1fr) !important;
+    grid-template-columns: repeat(5, 1fr) !important;
   }
 
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
+}
 
-  .topbar-right {
-    width: 100%;
-    justify-content: space-between;
-  }
 
-  .qtext {
-    font-size: 15px;
-  }
-
+/* ===== Force theme variable isolation ===== */
+[data-theme="amoled"],
+[data-theme="navy"],
+[data-theme="pink"],
+[data-theme="vermillion"],
+[data-theme="fallout"],
+[data-theme="vegas"] {
+  background: var(--bg) !important;
 }
 
 </style>
@@ -664,15 +661,24 @@ header {
     const PTCE_COUNTS = { meds:32, federal:17, safety:21, order:20 }; // sum 90
 
     
-// ===== Deduplicate Questions By Text =====
-function dedupeQuestions(arr){
+function dedupeQuestionsKeepCount(arr, targetCount){
   const seen = new Set();
-  return arr.filter(q => {
+  const unique = [];
+
+  for(const q of arr){
     const key = (q.question || "").trim().toLowerCase();
-    if(seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+    if(!seen.has(key)){
+      seen.add(key);
+      unique.push(q);
+    }
+  }
+
+  // If dedupe removed too many, refill from original pool
+  while(unique.length < targetCount && arr.length){
+    unique.push(arr[Math.floor(Math.random()*arr.length)]);
+  }
+
+  return unique.slice(0, targetCount);
 }
 
 // ---------- Test state ----------
@@ -721,7 +727,7 @@ function dedupeQuestions(arr){
         ...pickFromBank(b.safety, PTCE_COUNTS.safety),
         ...pickFromBank(b.order, PTCE_COUNTS.order),
       ];
-      qs = dedupeQuestions(qs);
+      qs = dedupeQuestionsKeepCount(qs, 90);
       shuffle(qs);
     
       return { ok:true, questions: qs };
