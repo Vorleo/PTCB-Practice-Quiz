@@ -4,7 +4,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>PTCB Practice Test</title>
-<link rel="icon" href="favicon.png" type="image/png" />
 
 <style>
 /* =========================
@@ -128,8 +127,6 @@ html[data-theme="fallout"]{
   --chip:rgba(124,255,158,.10);
   --shadow:0 12px 30px rgba(0,0,0,.70);
 }
-
-html[data-theme="vegas"]{--bg:#0b0703;--card:#1a1209;--text:#ffd49a;--muted:#ffc46a;--border:#5a3a16;--accent:#ffd49a;--accent2:#ffb347;--chip:rgba(255,180,71,.12);--shadow:0 12px 30px rgba(0,0,0,.72);}
 html[data-theme="fallout"] body{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
   text-shadow: 0 0 6px rgba(124,255,158,.35);
@@ -332,47 +329,9 @@ select{
   .navgrid{ grid-template-columns:repeat(8,1fr); }
   .flashcard{ font-size:18px; padding:28px; }
 }
-/* =========================
-   BOOT + TERMINAL SCROLL (Fallout / New Vegas)
-   ========================= */
-.terminal-scroll{
-  position:fixed; inset:0; pointer-events:none;
-  opacity:.08; font-size:12px; white-space:pre; line-height:14px;
-  transform:translateY(0);
-  display:none;
-}
-html[data-theme="fallout"] .terminal-scroll,
-html[data-theme="vegas"] .terminal-scroll{display:block;}
-@keyframes termScroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
-html[data-theme="fallout"] .terminal-scroll,
-html[data-theme="vegas"] .terminal-scroll{animation:termScroll 46s linear infinite;}
 
-.boot{
-  position:fixed; inset:0; background:#000; color:var(--accent);
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-  z-index:999; padding:18px; text-align:center; font-family:var(--mono);
-}
-.boot .title{font-size:22px;font-weight:1000;letter-spacing:.08em;}
-.boot .bootLog{
-  width:min(720px,94vw); height:160px; overflow:hidden;
-  border:1px solid var(--border); border-radius:12px;
-  padding:10px; margin-top:14px;
-  background:rgba(127,127,127,.06);
-  text-align:left;
-}
-.boot .barWrap{
-  width:min(720px,94vw); height:10px; border:1px solid var(--border);
-  border-radius:999px; margin-top:14px; overflow:hidden; background:rgba(127,127,127,.08);
-}
-.boot .bar{height:100%; width:0%; background:var(--accent);}
-.boot .hint{margin-top:14px; font-size:12px; opacity:.75;}
-.boot .glow{position:absolute; inset:0; pointer-events:none;
-  background:radial-gradient(circle at center, rgba(255,255,255,.10), transparent 60%);
-  opacity:.45;
-}
-
-/* ===== FIXED FALLOUT TERMINAL BOOT ===== */
-#bootOverlay{
+/* ===== FALLOUT / NEW VEGAS TERMINAL BOOT (INTEGRATED) ===== */
+#bootTerminalLayer{
  position:fixed;
  inset:0;
  background:#020403;
@@ -382,38 +341,39 @@ html[data-theme="vegas"] .terminal-scroll{animation:termScroll 46s linear infini
  flex-direction:column;
  justify-content:center;
  align-items:center;
- z-index:9999;
+ z-index:999999;
 }
 
-#bootOverlay.vegas{
+#bootTerminalLayer.vegas{
  background:#0b0703;
  color:#ffb347;
 }
 
-.bootTerminal{
- width:min(700px,90vw);
- height:220px;
+.bootCRT{
+ width:min(760px,92vw);
+ height:260px;
  border:1px solid currentColor;
- padding:12px;
+ padding:14px;
  overflow:hidden;
- background:rgba(0,0,0,.65);
- box-shadow:0 0 25px rgba(0,255,120,.15);
+ background:rgba(0,0,0,.7);
+ box-shadow:0 0 35px rgba(0,255,120,.18);
  font-size:13px;
- line-height:1.4;
+ line-height:1.45;
+ letter-spacing:.03em;
 }
 
 .bootBarWrap{
- width:min(700px,90vw);
- height:8px;
+ width:min(760px,92vw);
+ height:10px;
  border:1px solid currentColor;
- margin-top:16px;
+ margin-top:18px;
 }
 
 .bootBar{
  height:100%;
  width:0%;
  background:currentColor;
- transition:width 3s linear;
+ transition:width 3.2s linear;
 }
 
 .bootHint{
@@ -426,17 +386,12 @@ html[data-theme="vegas"] .terminal-scroll{animation:termScroll 46s linear infini
 </head>
 
 <body>
-<!-- BOOT (theme-aware, skippable, never locks) -->
-<div id="boot" class="boot" tabindex="0" role="button" aria-label="Boot screen (tap to skip)">
-  <div class="glow"></div>
-  <div class="title" id="bootTitle">PIP-BOY OS</div>
-  <div class="bootLog" id="bootLog"></div>
-  <div class="barWrap"><div class="bar" id="bootBar"></div></div>
-  <div class="hint">Tap / click / Space / Enter to skip</div>
-</div>
 
-<!-- Terminal background (Fallout / New Vegas themes only) -->
-<pre id="terminalScroll" class="terminal-scroll" aria-hidden="true"></pre>
+<div id="bootTerminalLayer">
+ <div class="bootCRT" id="bootCRTText"></div>
+ <div class="bootBarWrap"><div class="bootBar" id="bootCRTBar"></div></div>
+ <div class="bootHint">CLICK / TAP / SPACE TO SKIP</div>
+</div>
 
 <header>
   <div class="row space">
@@ -549,17 +504,6 @@ html[data-theme="vegas"] .terminal-scroll{animation:termScroll 46s linear infini
       <div id="domainBreakdown"></div>
     </div>
 
-<div class="card">
-  <h3>Explanations</h3>
-  <div class="muted"><small>Shows the correct answer and why it’s correct for answered/blank questions.</small></div>
-  <div class="row" style="margin-top:10px;">
-    <button class="alt" onclick="setExplainFilter('all')">All</button>
-    <button class="alt" onclick="setExplainFilter('missed')">Missed + Blank</button>
-    <button class="alt" onclick="setExplainFilter('flagged')">Flagged</button>
-  </div>
-  <div id="explanationsBox" style="margin-top:10px;"></div>
-</div>
-
     <div class="card">
       <h3>Review</h3>
       <div class="muted"><small>Click a row to jump back into the test at that question.</small></div>
@@ -603,171 +547,23 @@ html[data-theme="vegas"] .terminal-scroll{animation:termScroll 46s linear infini
   <div id="flash" class="card" style="display:none;">
     <div class="row space">
       <div class="row">
-        <span class="pill">Deck <b id="flashDeckName">—</b></function deriveExplanation(domain, stemHTML, correctHTML){
-  const stem = stripHtml(stemHTML).toLowerCase();
-  const correct = stripHtml(correctHTML);
+        <span class="pill">Deck <b id="flashDeckName">—</b></span>
+        <span class="pill">Card <b id="flashPos">1</b>/<b id="flashTotal">1</b></span>
+        <span class="pill">Side <b id="flashSide">Front</b></span>
+      </div>
+      <div class="row">
+        <button onclick="nextFlash()">Next</button>
+        <button class="alt" onclick="goFlashHome()">Decks</button>
+        <button class="alt" onclick="goMenu()">Main Menu</button>
+      </div>
+    </div>
 
-  // Medication naming
-  if(stem.includes("generic") && stem.includes("brand")){
-    return `${correct} is the correct choice because it matches the requested generic/brand mapping (generic names are standardized; brands are trademarked).`;
-  }
-  if(stem.includes("generic for brand")){
-    return `${correct} is correct because it is the standardized generic name for that brand medication.`;
-  }
-  if(stem.includes("brand name corresponds") || stem.includes("brand for")){
-    return `${correct} is correct because it is the manufacturer brand name associated with that generic medication.`;
-  }
+    <div id="flashCard" class="flashcard" style="margin-top:12px;">Tap to Flip</div>
+  </div>
 
-  // Indications / class
-  if(stem.includes("indication") || stem.includes("used to treat") || stem.includes("treats")){
-    return `${correct} is correct because that is a common primary indication for the medication/class referenced in the question.`;
-  }
-  if(stem.includes("class") || stem.includes("therapeutic class")){
-    return `${correct} is correct because it is the therapeutic class that best matches the medication described.`;
-  }
+</div>
 
-  // DEA / controlled substances
-  if(stem.includes("dea form")){
-    return `${correct} is correct because that DEA form is specifically designated for that controlled substance function under federal requirements.`;
-  }
-  if(stem.includes("schedule ii") || stem.includes("schedule 2") || stem.includes("c-ii") || stem.includes("c2")){
-    return `${correct} is correct because Schedule II controlled substances have the strictest dispensing rules and generally cannot be refilled—each fill requires a new prescription.`;
-  }
-
-  // USP / compounding / garbing
-  if(stem.includes("garb") || stem.includes("hand hygiene") || stem.includes("aseptic") || stem.includes("sterile") || stem.includes("usp")){
-    return `${correct} is correct because contamination control and USP workflow require specific sequencing (hand hygiene and appropriate garbing) to protect the preparation and the patient.`;
-  }
-
-  // Math / conversions / dosing
-  if(/[0-9]/.test(stem) && (stem.includes("mg") || stem.includes("mcg") || stem.includes("ml") || stem.includes("l") || stem.includes("kg") || stem.includes("g") || stem.includes("qty") || stem.includes("days"))){
-    return `${correct} is correct based on standard pharmacy calculations (unit conversion, days supply, dose, or quantity determination) using the values given in the question.`;
-  }
-
-  // Insurance / workflow
-  if(stem.includes("reject") || stem.includes("prior authorization") || stem.includes("pa") || stem.includes("refill too soon") || stem.includes("workflow")){
-    return `${correct} is correct because it matches the standard pharmacy workflow step to resolve that situation safely and correctly.`;
-  }
-
-  // Patient safety
-  if(domain===DOMAIN.SAFE || stem.includes("safety") || stem.includes("error") || stem.includes("counsel") || stem.includes("identify") || stem.includes("allergy")){
-    return `${correct} is correct because it best matches common patient safety practice (verification, identification, counseling, and error prevention).`;
-  }
-
-  return `${correct} is correct because it matches standard pharmacy practice and the requirements implied by the question prompt.`;
-}
-
-/* =========================
-   BOOT_CONTROLLER_V1 (theme-aware, safe skip)
-   ========================= */
-(function(){
-  const boot = document.getElementById("boot");
-  const logEl = document.getElementById("bootLog");
-  const barEl = document.getElementById("bootBar");
-  const titleEl = document.getElementById("bootTitle");
-  const termEl = document.getElementById("terminalScroll");
-
-  function currentTheme(){
-    return document.documentElement.getAttribute("data-theme") || "amoled";
-  }
-
-  function applyThemeText(){
-    const t = currentTheme();
-    if(titleEl){
-      titleEl.textContent = (t==="vegas") ? "PIP-BOY OS — NEW VEGAS" :
-                          (t==="fallout") ? "PIP-BOY OS — VAULT-TEC" :
-                          "PTCB PRACTICE TEST";
-    }
-  }
-
-  // Fill terminal background with repeating faux logs (only visible on Fallout/Vegas)
-  function fillTerminal(){
-    if(!termEl) return;
-    const t = currentTheme();
-    if(t!=="fallout" && t!=="vegas"){ termEl.textContent=""; return; }
-    const amber = (t==="vegas");
-    const lines = [];
-    const prefix = amber ? "[NV]" : "[VT]";
-    const msgs = [
-      "VAULT-TEC DIAGNOSTICS… OK",
-      "RX PROFILE INDEX… OK",
-      "CONTROLLED LOG AUDIT… OK",
-      "USP WORKFLOW CHECK… OK",
-      "DISPENSE QUEUE… OK",
-      "COUNSELING PROMPTS… OK",
-      "FORMULARY CACHE… OK",
-      "RADIOACTIVE VIBES… OK"
-    ];
-    for(let i=0;i<520;i++){
-      lines.push(prefix+" "+msgs[i%msgs.length]);
-    }
-    termEl.textContent = lines.join("\n");
-  }
-
-  let done=false;
-  function finish(){
-    if(done) return;
-    done=true;
-    if(boot) boot.style.display="none";
-    // No layout changes: just reveal whatever view is already set (menu is default hidden then shown by app init)
-    // If app hasn't shown menu yet, this still won't block.
-  }
-
-  function addLine(s){
-    if(!logEl) return;
-    logEl.innerHTML += s + "<br>";
-    logEl.scrollTop = logEl.scrollHeight;
-  }
-
-  const steps = [
-    "Vault-Tec BIOS… OK",
-    "Loading local banks… OK",
-    "Preparing exam engine… OK",
-    "Initializing themes… OK",
-    "Rendering interface… OK",
-    "Ready."
-  ];
-  let i=0;
-  function step(){
-    if(done) return;
-    applyThemeText();
-    fillTerminal();
-    addLine(steps[Math.min(i, steps.length-1)]);
-    const pct = Math.round(((i+1)/steps.length)*100);
-    if(barEl) barEl.style.width = pct + "%";
-    i++;
-    if(i>=steps.length){
-      setTimeout(finish, 420);
-      return;
-    }
-    setTimeout(step, 320);
-  }
-
-  function bindSkip(){
-    if(!boot) return;
-    boot.addEventListener("click", finish, {passive:true});
-    boot.addEventListener("touchstart", finish, {passive:true});
-    boot.addEventListener("keydown", (e)=>{ if(e.key==="Enter"||e.key===" "||e.code==="Space") finish(); });
-  }
-
-  document.addEventListener("DOMContentLoaded", ()=>{
-    applyThemeText();
-    fillTerminal();
-    bindSkip();
-    setTimeout(step, 120);
-    setTimeout(finish, 9000); // absolute failsafe
-  });
-
-  // When theme changes, refresh terminal/title
-  const _oldSetTheme = window.setTheme;
-  window.setTheme = function(t){
-    if(typeof _oldSetTheme === "function") _oldSetTheme(t);
-    // Re-apply after theme switch
-    setTimeout(()=>{applyThemeText(); fillTerminal();}, 0);
-  };
-})();
-
-
+<script>
 /* =========================
    PERSISTED SETTINGS
    ========================= */
@@ -848,35 +644,6 @@ let eliminated = new Map(); // qIndex -> Set(eliminatedChoiceIndexes)
 const statusEl = document.getElementById("status");
 
 /* =========================
-   EXTERNAL_JSON_BANKS_V1 (optional)
-   If JSON files exist in repo root, they override local banks.
-   Format: [{question, correct, wrong:[...], explanation}]
-   ========================= */
-let EXTERNAL = { MED:null, SAFE:null, ORDER:null, FED:null };
-async function tryLoadExternalBanks(){
-  async function loadOne(fn){
-    const res = await fetch(fn, {cache:"no-store"});
-    if(!res.ok) throw new Error("missing");
-    const data = await res.json();
-    if(!Array.isArray(data)) throw new Error("bad");
-    return data;
-  }
-  try{
-    const [m,s,o,f] = await Promise.all([
-      loadOne("./med_bank.json"),
-      loadOne("./safety_bank.json"),
-      loadOne("./order_bank.json"),
-      loadOne("./federal_bank.json"),
-    ]);
-    EXTERNAL.MED=m; EXTERNAL.SAFE=s; EXTERNAL.ORDER=o; EXTERNAL.FED=f;
-    statusEl.textContent = `Loaded JSON banks: Med ${m.length} • Safety ${s.length} • Order ${o.length} • Federal ${f.length}`;
-  }catch(e){
-    // silently fall back to local monster banks
-  }
-}
-document.addEventListener("DOMContentLoaded", ()=>{ tryLoadExternalBanks(); });
-
-/* =========================
    HELPERS
    ========================= */
 function shuffle(arr){
@@ -942,34 +709,11 @@ function hashId(str){
   }
   return "q"+(h>>>0).toString(16);
 }
-function buildExternalPool(key, data){
-  const domain = DOMAIN[key];
-  const pool = [];
-  for(const item of data){
-    if(!item) continue;
-    const stem = item.question || item.stemHTML || "";
-    const correct = item.correct ?? "";
-    const wrongs = item.wrong || item.wrongs || [];
-    const explanation = item.explanation || deriveExplanation(domain, stem, correct);
-    pool.push(makeFixed(domain, stem, correct, shuffle(wrongs).slice(0,3), explanation));
-  }
-  // de-dup
-  const seen = new Set();
-  const ded = [];
-  for(const q of pool){
-    if(seen.has(q.id)) continue;
-    seen.add(q.id);
-    ded.push(q);
-  }
-  return shuffle(ded);
-}
-
-function makeFixed(domain, stem, correct, wrongs, explanation){
+function makeFixed(domain, stem, correct, wrongs){
   const choices = shuffle([correct, ...wrongs]).slice(0,4);
   const answerIndex = choices.findIndex(x=>stripHtml(x)===stripHtml(correct));
   const id = hashId(domain+"|"+stripHtml(stem)+"|"+stripHtml(correct));
-  const why = explanation || deriveExplanation(domain, stem, correct);
-  return {domain, stemHTML: stem, choices, answerIndex: Math.max(0,answerIndex), id, explanation: why};
+  return {domain, stemHTML: stem, choices, answerIndex: Math.max(0,answerIndex), id};
 }
 
 /* =========================
@@ -1094,7 +838,6 @@ const CONVERSIONS = [
 ];
 
 function buildMedicationPool(){
-  if(EXTERNAL.MED) return buildExternalPool('MED', EXTERNAL.MED);
   const gens = MEDS.map(m=>m.g);
   const brands = uniqBy(MEDS.flatMap(m=>m.b), x=>x.toLowerCase());
   const classes = uniqBy(MEDS.map(m=>m.cls), x=>x.toLowerCase());
@@ -1154,7 +897,6 @@ function buildMedicationPool(){
 }
 
 function buildSafetyPool(){
-  if(EXTERNAL.SAFE) return buildExternalPool('SAFE', EXTERNAL.SAFE);
   const out = [];
   const fixed = [
     ["USP <797> primarily covers:", "Sterile compounding", ["Non-sterile compounding","Hazardous drugs only","Insurance billing"]],
@@ -1173,7 +915,6 @@ function buildSafetyPool(){
 }
 
 function buildFederalPool(){
-  if(EXTERNAL.FED) return buildExternalPool('FED', EXTERNAL.FED);
   const out = [];
   const fixed = [
     ["DEA form for ordering Schedule II controlled substances:", "DEA Form 222", ["DEA Form 106","DEA Form 41","DEA Form 224"]],
@@ -1193,7 +934,6 @@ function buildFederalPool(){
 }
 
 function buildOrderPool(){
-  if(EXTERNAL.ORDER) return buildExternalPool('ORDER', EXTERNAL.ORDER);
   const out = [];
   const wrongPool = ["10 mg","100 mg","1 mg","10 mcg","100 mcg","1 mcg","1 mL","10 mL","30 mL","2 fl oz","0.5 fl oz","kg = lb × 2.2","1 oz","8 mL","1000 g"];
   for(const c of CONVERSIONS){
@@ -1501,7 +1241,6 @@ function submitTest(fromTimer=false){
   }
 
   setView("results");
-  renderExplanations();
 }
 
 /* =========================
@@ -1616,64 +1355,6 @@ function renderFlash(){
   document.getElementById("flashPos").textContent = String(fIndex+1);
   document.getElementById("flashTotal").textContent = String(total);
   document.getElementById("flashSide").textContent = fFront ? "Front" : "Back";
-  document.getElementById("flashCard").textContent = fFront ? card.front : card.back;
-}
-document.getElementById("flashCard").onclick = ()=>{
-  beep(740,0.03);
-  fFront = !fFront;
-  renderFlash();
-};
-function nextFlash(){
-  beep(900,0.04);
-  if(!flashDeck.length) return;
-  fIndex = (fIndex + 1) % flashDeck.length;
-  fFront = true;
-  renderFlash();
-}
-
-/* =========================
-   INIT
-   ========================= */
-setView("menu");
-
-
-let explainFilter = "missed";
-function setExplainFilter(v){
-  explainFilter = v;
-  renderExplanations();
-}
-function renderExplanations(){
-  const box = document.getElementById("explanationsBox");
-  if(!box) return;
-  const rows = [];
-  for(let i=0;i<questions.length;i++){
-    const q = questions[i];
-    const a = answers.get(i);
-    const isBlank = (a===undefined);
-    const isCorrect = (!isBlank && a===q.answerIndex);
-    const isFlagged = flags.has(i);
-    if(explainFilter==="missed" && (isCorrect)) continue;
-    if(explainFilter==="flagged" && (!isFlagged)) continue;
-
-    const your = isBlank ? "(blank)" : stripHtml(q.choices[a]);
-    const corr = stripHtml(q.choices[q.answerIndex]);
-    const why = q.explanation || deriveExplanation(q.domain, q.stemHTML, q.choices[q.answerIndex]);
-
-    rows.push(
-      `<div class="q" style="margin-top:10px;">
-        <div class="row space">
-          <div><b>Q${i+1}</b> <span class="pill">${q.domain}</span> ${isFlagged?'<span class="pill">Flagged</span>':''}</div>
-          <button class="alt" onclick="setView('test'); idx=${i}; renderQuestion();">Jump</button>
-        </div>
-        <div style="margin-top:8px;">${q.stemHTML}</div>
-        <div class="muted" style="margin-top:8px;"><small>Your answer: <b>${htmlEscape(your)}</b></small></div>
-        <div style="margin-top:6px;">Correct answer: <b>${htmlEscape(corr)}</b></div>
-        <div class="muted" style="margin-top:6px;"><small>Why: ${htmlEscape(why)}</small></div>
-      </div>`
-    );
-  }
-  box.innerHTML = rows.length ? rows.join("") : `<div class="muted"><small>No questions match this filter.</small></div>`;
-}  document.getElementById("flashSide").textContent = fFront ? "Front" : "Back";
   document.getElementById("flashCard").textContent = fFront ? card.front : card.back;
 }
 document.getElementById("flashCard").onclick = ()=>{
