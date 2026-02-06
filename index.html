@@ -237,7 +237,106 @@
     /* ensure theme affects panels on home */
     .panel, .topbar, .qgrid, .qcard, .resItem, .fcCard{border-color:var(--border);}
 
-  </style>
+  
+/* ===== Enhanced CRT Effects ===== */
+.fx-layer.scanlines{
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.12) 0px,
+      rgba(255,255,255,0.12) 1px,
+      rgba(0,0,0,0) 2px,
+      rgba(0,0,0,0) 4px
+    );
+  animation: crtFlicker 6s infinite;
+}
+
+@keyframes crtFlicker{
+  0% { opacity: .16; }
+  50% { opacity: .22; }
+  100% { opacity: .16; }
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.65) 100%);
+  mix-blend-mode:multiply;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:-2%;
+  pointer-events:none;
+  background: rgba(44,255,130,0.04);
+  filter: blur(8px);
+}
+
+
+/* ===== No Page Scroll Layout ===== */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+main.wrap {
+  height: calc(100vh - 72px);
+  overflow: auto;
+  padding-bottom: 40px;
+}
+
+/* Prevent header overlap */
+header {
+  height: 72px;
+}
+
+/* Mobile Safe Layout */
+@media (max-width: 768px) {
+
+  header {
+    height: auto;
+    padding: 8px;
+  }
+
+  main.wrap {
+    height: calc(100vh - 110px);
+    padding: 10px;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 12px;
+  }
+
+  .qgrid {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .topbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .qtext {
+    font-size: 15px;
+  }
+
+}
+
+</style>
 </head>
 <body>
   <div class="fx-layer scanlines"></div>
@@ -564,7 +663,19 @@
     // Medications 35%, Federal 18.75%, Patient Safety 23.75%, Order Entry 22.5%
     const PTCE_COUNTS = { meds:32, federal:17, safety:21, order:20 }; // sum 90
 
-    // ---------- Test state ----------
+    
+// ===== Deduplicate Questions By Text =====
+function dedupeQuestions(arr){
+  const seen = new Set();
+  return arr.filter(q => {
+    const key = (q.question || "").trim().toLowerCase();
+    if(seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+// ---------- Test state ----------
     const TEST = {
       questions: [],
       idx: 0,
@@ -603,13 +714,16 @@
       if(totalAvailable < 20){
         return { ok:false, msg:"Banks failed to load or are too small. Make sure the 4 JSON files are in the same folder as index.html on GitHub Pages." };
       }
-      const qs = [
+      
+      let qs = [
         ...pickFromBank(b.med, PTCE_COUNTS.meds),
         ...pickFromBank(b.federal, PTCE_COUNTS.federal),
         ...pickFromBank(b.safety, PTCE_COUNTS.safety),
         ...pickFromBank(b.order, PTCE_COUNTS.order),
       ];
+      qs = dedupeQuestions(qs);
       shuffle(qs);
+    
       return { ok:true, questions: qs };
     }
 
