@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="en" data-theme="amoled">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PTCE Study Tool</title>
+<style>
+body{margin:0;background:#000;color:#fff;font-family:Arial;}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid #333;}
+.themeBar{display:flex;gap:6px;flex-wrap:wrap;}
+.title{font-weight:bold;font-size:18px;}
+.btn{background:#111;border:1px solid #444;color:#fff;padding:6px 10px;border-radius:6px;cursor:pointer;}
+.wrap{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.card{border:1px solid #444;padding:16px;border-radius:12px;background:#0a0a0a;}
+@media(max-width:800px){.wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="title">PTCE Study Tool</div>
+<div class="themeBar">
+<button class="btn">AMOLED</button>
+<button class="btn">Fallout</button>
+<button class="btn">New Vegas</button>
+<button class="btn">Pink</button>
+<button class="btn">Navy</button>
+<button class="btn">Vermillion</button>
+</div>
+</header>
+
+<main class="wrap">
+<div class="card">
+<h2>Practice Test</h2>
+<p>90 Questions • 2026 Weighting • Flag • Timed • Local Banks</p>
+<button class="btn">Start Test</button>
+</div>
+
+<div class="card">
+<h2>Flashcards</h2>
+<p>Select PTCE section → Study cards</p>
+<button class="btn">Open Flashcards</button>
+</div>
+</main>
+
+</body>
+</html>
