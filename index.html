@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTCE Study Tool</title>
+<link rel='icon' href='favicon.png'>
+
+<style>
+body{
+ margin:0;
+ font-family: Consolas, monospace;
+ background:#0c0c0c;
+ color:#e8e8e8;
+}
+
+/* ===== OLD UI PANEL STYLE ===== */
+.panel{
+ border:2px solid var(--accent);
+ margin:14px;
+ padding:14px;
+ border-radius:8px;
+ background:rgba(0,0,0,0.65);
+}
+
+button{
+ background:var(--accent);
+ color:black;
+ border:none;
+ padding:10px 16px;
+ margin:6px;
+ font-weight:bold;
+ border-radius:6px;
+ cursor:pointer;
+}
+
+.choice{
+ border:2px solid var(--accent);
+ padding:10px;
+ margin:8px 0;
+ border-radius:6px;
+ cursor:pointer;
+}
+
+/* ===== THEMES ===== */
+:root { --accent:#3cffb3; }
+[data-theme="default"] { --accent:#3cffb3; }
+[data-theme="vegas"] { --accent:#ffb347; }
+[data-theme="pink"] { --accent:#ff77cc; }
+[data-theme="navy"] { --accent:#6aa6ff; }
+
+/* ===== CRT SCANLINES TOGGLE ===== */
+.crt::after{
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ background: repeating-linear-gradient(
+   rgba(0,0,0,0.25) 0px,
+   rgba(0,0,0,0.25) 2px,
+   transparent 2px,
+   transparent 5px
+ );
+ mix-blend-mode:multiply;
+}
+
+/* ===== BOOT ===== */
+#boot{
+ position:fixed;
+ inset:0;
+ background:black;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ flex-direction:column;
+ color:#3cffb3;
+ z-index:9999;
+}
+
+.bootBox{
+ border:2px solid #3cffb3;
+ padding:24px;
+ width:80%;
+ max-width:700px;
+ text-align:left;
+ white-space:pre;
+}
+
+.progress{ height:10px; width:80%; max-width:700px; border:1px solid #3cffb3; margin-top:12px; }
+.progressFill{ height:100%; width:0%; background:#3cffb3; transition:.4s linear; }
+</style>
+</head>
+
+<body class="crt">
+
+<div id="boot">
+<div class="bootBox" id="bootText">
+ ____ _____ ____ _____ 
+|  _ \_   _/ ___| ____|
+| |_) || || |   |  _|  
+|  __/ | || |___| |___ 
+|_|    |_| \____|_____|
+
+PTCE STUDY TOOL
+</div>
+<div style="margin-top:10px">A Vault-Tec program by Joshua Vorhies</div>
+<div class="progress"><div class="progressFill" id="bootBar"></div></div>
+</div>
+
+<div id="app" style="display:none">
+
+<div class="panel">
+<h2>PTCE Study Tool</h2>
+
+<button onclick="setTheme('default')">Default</button>
+<button onclick="setTheme('vegas')">New Vegas</button>
+<button onclick="setTheme('pink')">Pink</button>
+<button onclick="setTheme('navy')">Navy</button>
+
+<button onclick="toggleCRT()">Toggle CRT</button>
+</div>
+
+<div class="panel">
+<button onclick="startTest()">Start Test</button>
+<button onclick="startFlash()">Flashcards</button>
+</div>
+
+<div class="panel" id="contentPanel">
+Loading Banks...
+</div>
+
+</div>
+
+<script>
+
+function setTheme(t){ document.documentElement.setAttribute("data-theme",t); }
+
+function toggleCRT(){ document.body.classList.toggle("crt"); }
+
+let BANKS={};
+let banksLoaded=false;
+
+async function loadBanks(){
+ BANKS.med=await fetch("med_bank.json").then(r=>r.json());
+ BANKS.safe=await fetch("safety_bank.json").then(r=>r.json());
+ BANKS.order=await fetch("order_bank.json").then(r=>r.json());
+ BANKS.fed=await fetch("federal_bank.json").then(r=>r.json());
+ banksLoaded=true;
+ document.getElementById("contentPanel").innerHTML="Banks Loaded. Ready.";
+}
+loadBanks();
+
+/* ===== BOOT ===== */
+(function(){
+ let lines=[
+ "Loading Medication Database...",
+ "Loading Safety Protocols...",
+ "Loading Order Entry Engine...",
+ "Loading Federal Compliance Data...",
+ "Starting PTCE Interface..."
+ ];
+ let i=0;
+ function step(){
+  let bar=document.getElementById("bootBar");
+  if(i<lines.length){
+   document.getElementById("bootText").textContent += "\n"+lines[i];
+   bar.style.width=((i+1)/lines.length*100)+"%";
+   i++;
+   setTimeout(step,450);
+  } else {
+   document.getElementById("boot").style.display="none";
+   document.getElementById("app").style.display="block";
+  }
+ }
+ setTimeout(step,700);
+})();
+
+/* ===== TEST ENGINE ===== */
+let test=[];
+let idx=0;
+let answers={};
+
+function pick(arr,n){
+ let o=[];
+ while(o.length<n) o.push(arr[Math.floor(Math.random()*arr.length)]);
+ return o;
+}
+
+function buildTest(){
+ test=[
+ ...pick(BANKS.med,32),
+ ...pick(BANKS.safe,21),
+ ...pick(BANKS.order,20),
+ ...pick(BANKS.fed,17)
+ ];
+}
+
+function startTest(){
+ if(!banksLoaded) return alert("Still loading banks...");
+ buildTest();
+ idx=0;
+ answers={};
+ renderQ();
+}
+
+function renderQ(){
+ let q=test[idx];
+ let opts=[q.correct,...q.wrong].sort(()=>Math.random()-.5);
+
+ document.getElementById("contentPanel").innerHTML =
+ `<h3>Question ${idx+1} / 90</h3>
+ <div>${q.question}</div>`+
+ opts.map(o=>`<div class="choice" onclick="answers[${idx}]='${o}'; renderQ();">${o}</div>`).join("")+
+ `<br>
+ <button onclick="prev()">Prev</button>
+ <button onclick="next()">Next</button>
+ <button onclick="submitTest()">Submit</button>`;
+}
+
+function next(){ if(idx<89){ idx++; renderQ(); } }
+function prev(){ if(idx>0){ idx--; renderQ(); } }
+
+function submitTest(){
+ let c=0;
+ test.forEach((q,i)=>{ if(answers[i]===q.correct) c++; });
+ alert("Score "+c+"/90");
+}
+
+/* ===== FLASH ===== */
+let flash=[];
+let fIdx=0;
+
+function startFlash(){
+ if(!banksLoaded) return alert("Still loading banks...");
+ flash=BANKS.med.slice(0,200);
+ fIdx=0;
+ showFlash();
+}
+
+function showFlash(){
+ let f=flash[fIdx];
+ document.getElementById("contentPanel").innerHTML =
+ `<h3>Flashcard ${fIdx+1}</h3>
+ <div>${f.question}</div>
+ <div><b>${f.correct}</b></div>
+ <button onclick="nextFlash()">Next</button>
+ <button onclick="exitFlash()">Exit</button>`;
+}
+
+function nextFlash(){ fIdx=(fIdx+1)%flash.length; showFlash(); }
+function exitFlash(){ document.getElementById("contentPanel").innerHTML="Exited Flashcards."; }
+
+</script>
+
+</body>
+</html>
